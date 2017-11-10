@@ -1,4 +1,6 @@
-![ga](http://mobbook.generalassemb.ly/ga_cog.png)
+
+<img height="150" src="https://pbs.twimg.com/profile_images/813584000082214912/5U3iZVs-.jpg" />
+
 # Welcome to WDI
 
 ### Instructors
