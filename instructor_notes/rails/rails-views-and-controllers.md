@@ -70,7 +70,7 @@ To get started, clone down the following repo:
 **Note**: If you have trouble setting up, please "#SlackTheBack"
 
 ```bash
-git clone https://github.com/ATL-WDI-Curriculum/tunr-views-and-controllers
+git clone https://git.generalassemb.ly/atl-wdi/tunr-views-and-controllers
 cd tunr-views-and-controllers
 git checkout starter-code
 git checkout -b inclass
