@@ -362,7 +362,7 @@ With this knowledge of how to manipulate the DOM, you now know the secret weapon
 
 ##### Exercise #1 - GA DOM Mod
 
-[GA Dom Instructions (using Vanilla Javascript)](https://github.com/ATL-WDI-Curriculum/atl-wdi/tree/master/labs/javaScript/ga-dom.md)
+[GA Dom Instructions (using Vanilla Javascript)](https://git.generalassemb.ly/atl-wdi/wdi-curriculum/tree/master/labs/javaScript/ga-dom.md)
 
 <br />
 

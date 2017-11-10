@@ -66,7 +66,7 @@ Showcase your skills: Add a new route and link to it.
 
 ## Use UI Router with Webpack
 
-Let's load up [a Webpack-ready project](https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/angular_lessons/labs/criminals-ui-router-starter).
+Let's load up [a Webpack-ready project](https://git.generalassemb.ly/atl-wdi/wdi-curriculum-10/tree/master/angular_lessons/labs/criminals-ui-router-starter).
 
 The name of the `npm` package was `@uirouter/angularjs` so let's install that and `--save` it to our dependencies.
 

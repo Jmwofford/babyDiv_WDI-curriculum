@@ -261,7 +261,7 @@ Note that when placing a tag inside another tag, you should indent the new tag t
 
 As a quick review, I will give you some examples of broken HTML and you tell me what's wrong with them. 
 
-[HTML Fixit](https://github.com/ATL-WDI-Curriculum/atl-wdi-10/blob/master/instructor_notes/unit_01/html/html-fixit.md)
+[HTML Fixit](https://git.generalassemb.ly/atl-wdi/wdi-curriculum-10/blob/master/instructor_notes/unit_01/html/html-fixit.md)
 
 <hr>
 
@@ -576,9 +576,9 @@ See [HTML5 New Elements](http://www.w3schools.com/html/html5_new_elements.asp)
 
 ## Other Topics
 
-For information on accessibility and search engine optimization, see [Accessibility and SEO](https://github.com/ATL-WDI-Curriculum/atl-wdi-10/blob/master/instructor_notes/unit_01/html/accessibility-and-seo.md).
+For information on accessibility and search engine optimization, see [Accessibility and SEO](https://git.generalassemb.ly/atl-wdi/wdi-curriculum-10/blob/master/instructor_notes/unit_01/html/accessibility-and-seo.md).
 
-For information on HTML5 Boilerplate, see [HTML5 Boilerplate](https://github.com/ATL-WDI-Curriculum/atl-wdi-10/blob/master/instructor_notes/unit_01/html/html5-boilerplate.md).
+For information on HTML5 Boilerplate, see [HTML5 Boilerplate](https://git.generalassemb.ly/atl-wdi/wdi-curriculum-10/blob/master/instructor_notes/unit_01/html/html5-boilerplate.md).
 
 ---
 

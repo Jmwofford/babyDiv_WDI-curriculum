@@ -56,7 +56,7 @@ We'll talk about submitting bug reports later.
 
 ## The Wiki
 
-Our classroom exists on GitHub as part of our class [repository](https://github.com/ATL-WDI-Curriculum/atl-wdi-10/wiki).
+Our classroom exists on GitHub as part of our class [repository](https://git.generalassemb.ly/atl-wdi/wdi-curriculum-10/wiki).
 
 It also contains walkthroughs on how to submit homework, how to make a Bug Report, how to submit a new page to the Wiki, links to documentation, podcasts, newsletters, books and _many, many_ other things.
 
