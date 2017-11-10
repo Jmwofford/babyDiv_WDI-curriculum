@@ -52,9 +52,9 @@
 - Unit 5: Interview Preparation and Final Project
 
 
-#### [Class Wiki!](https://github.com/ATL-WDI-Curriculum/atl-wdi/wiki)
+#### [Class Wiki!](https://git.generalassemb.ly/atl-wdi/wdi-curriculum/wiki)
 
-#### [Bug Journal](https://github.com/ATL-WDI-Curriculum/atl-wdi-10/wiki/Bug-Journal)
+#### [Bug Journal](https://git.generalassemb.ly/atl-wdi/wdi-curriculum-10/wiki/Bug-Journal)
 
 #### Google Calendar Schedule
 
