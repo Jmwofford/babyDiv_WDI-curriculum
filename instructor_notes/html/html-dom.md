@@ -512,7 +512,7 @@ The most important thing to remember is that these tags and attributes are suppo
 
 **YOU DO**
 
-Go to this [HTML Practice Exercise](https://github.com/ATL-WDI-Exercises/html-dom/blob/master/html_practice_exercise.md) and follow the instructions to build a basic webpage in 15 minutes. Based on the screenshots of your sites, sent to me in slack, I will then choose a student to demo what they have built.
+Go to this [HTML Practice Exercise](https://git.generalassemb.ly/atl-wdi/HTML-DOM/blob/master/html_practice_exercise.md) and follow the instructions to build a basic webpage in 15 minutes. Based on the screenshots of your sites, sent to me in slack, I will then choose a student to demo what they have built.
 
 <br />
 
@@ -532,12 +532,12 @@ Go to this [HTML Practice Exercise](https://github.com/ATL-WDI-Exercises/html-do
 
 ## Exercise #1
 
-cd into your `~/Desktop/ga/labs/unit-01` folder.  Fork this [HTML/DOM](https://github.com/ATL-WDI-Exercises/html-dom) repo, and then clone it into your folder.  Using HTML tags only (don't worry about CSS), use the starter code below to recreate the Document Outline for the following website:
+cd into your `~/Desktop/ga/labs/unit-01` folder.  Fork this [HTML/DOM](https://git.generalassemb.ly/atl-wdi/HTML-DOM) repo, and then clone it into your folder.  Using HTML tags only (don't worry about CSS), use the starter code below to recreate the Document Outline for the following website:
 
 [How We Use Energy](http://needtoknow.nas.edu/energy/energy-use/)
 
-* [Starter Code](https://github.com/ATL-WDI-Exercises/html-dom/blob/master/energy_dom_outline/energy_document_outline.html)
-* [Finished Code](https://github.com/ATL-WDI-Exercises/html-dom/blob/master/energy_dom_outline/energy_document_outline_fin.html)
+* [Starter Code](https://git.generalassemb.ly/atl-wdi/HTML-DOM/blob/master/energy_dom_outline/energy_document_outline.html)
+* [Finished Code](https://git.generalassemb.ly/atl-wdi/HTML-DOM/blob/master/energy_dom_outline/energy_document_outline_fin.html)
 
 ## Exercise #2
 

@@ -243,7 +243,7 @@ We're going to using 2 APIs for this app:
 Let's start out by cloning some starter code. The starter code is generated from `create-react-app` but has some additional styling, fonts, and includes axios.
 
 ```bash
-  git clone https://github.com/ATL-WDI-Exercises/react-ajax
+  git clone https://git.generalassemb.ly/atl-wdi/React-Ajax
   cd react-ajax
   npm install 
   npm start

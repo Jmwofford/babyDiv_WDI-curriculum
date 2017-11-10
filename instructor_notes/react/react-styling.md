@@ -313,7 +313,7 @@ Here are a few of the most common:
 ## YOU DO
 
 For the remainder of the first half of class, you will be working on styling an Instagram clone.  
-  1. Clone this repo: [React InstaClone](https://github.com/ATL-WDI-Curriculum/React-InstaClone )
+  1. Clone this repo: [React InstaClone](https://git.generalassemb.ly/atl-wdi/React-InstaClone)
   2. Checkout the `starter-code` branch.
   3. This application has all of the structure and logic to build a basic clone of the [Instagram Desktop page](https://www.instagram.com/).  Your mission is to use `styled-components` to recreate the styles seen on the Instagram site.
   4. If you get stuck along the way, you can check out a deployed version of the app [here](https://wdi11-instaclone.herokuapp.com/) or check out the `solution-code` branch for hints.
