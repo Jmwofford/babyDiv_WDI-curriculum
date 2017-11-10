@@ -72,7 +72,7 @@ Most importantly a **technical demonstration** of your app which:
 
 ### Before you start creating your repo or coding.
 
-Read [Git Collaboration Workflow](https://github.com/ATL-WDI-Exercises/project-vagabond/blob/master/git-collaboration-workflow.md)
+Read [Git Collaboration Workflow](https://git.generalassemb.ly/atl-wdi/project-vagabond/blob/master/git-collaboration-workflow.md)
 
 ---
 

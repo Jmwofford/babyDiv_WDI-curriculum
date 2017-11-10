@@ -525,7 +525,7 @@ git clone <YOUR_PLANET_REPO_URL>
  
 1. Go to the link below, this is going to be our class repo where you will receive your morning exercises, classwork, and homework. 
 
-https://github.com/ATL-WDI-Curriculum/atl-wdi-10
+https://git.generalassemb.ly/atl-wdi/wdi-curriculum-10
 
 2. Click Fork (on the upper right), and select your name to create your own fork of the repo.  (If you only have access to one github name, it will create the fork in your own repo automatically.)
 3. Click on the Green Clone of download Button on the right hand side, you will see:

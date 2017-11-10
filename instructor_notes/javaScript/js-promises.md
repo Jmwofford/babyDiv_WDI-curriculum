@@ -309,12 +309,12 @@ Notice that we only have one `.catch` block at the end.  This is another great f
 - We will be consuming Promise objects when we interact with our MongoDB database and when we make API calls to a server.
 
 ## Independent Practice
-[Promises lab starter code](https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/labs/unit_02/javaScript/promises/js-promises-lab-starter)
+[Promises lab starter code](https://git.generalassemb.ly/atl-wdi/wdi-curriculum-10/tree/master/labs/unit_02/javaScript/promises/js-promises-lab-starter)
 <br>
 ## For more info on how to build a Promise object (Only if you feel really cozy with consuming promises)
   [Promises In The Wild](https://davidwalsh.name/promises)
   
-  [Building Promises Lab](https://github.com/ATL-WDI-Curriculum/atl-wdi/tree/master/labs/javaScript/promises/js-promises-lab-starter)
+  [Building Promises Lab](https://git.generalassemb.ly/atl-wdi/wdi-curriculum/tree/master/labs/javaScript/promises/js-promises-lab-starter)
 
 
 ## Additional Resources

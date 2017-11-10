@@ -261,7 +261,7 @@ Note that when placing a tag inside another tag, you should indent the new tag t
 
 As a quick review, I will give you some examples of broken HTML and you tell me what's wrong with them. 
 
-[HTML Fixit](https://github.com/ATL-WDI-Curriculum/atl-wdi-10/blob/master/instructor_notes/unit_01/html/html-fixit.md)
+[HTML Fixit](https://git.generalassemb.ly/atl-wdi/wdi-curriculum-10/blob/master/instructor_notes/unit_01/html/html-fixit.md)
 
 <hr>
 
@@ -512,7 +512,7 @@ The most important thing to remember is that these tags and attributes are suppo
 
 **YOU DO**
 
-Go to this [HTML Practice Exercise](https://github.com/ATL-WDI-Exercises/html-dom/blob/master/html_practice_exercise.md) and follow the instructions to build a basic webpage in 15 minutes. Based on the screenshots of your sites, sent to me in slack, I will then choose a student to demo what they have built.
+Go to this [HTML Practice Exercise](https://git.generalassemb.ly/atl-wdi/HTML-DOM/blob/master/html_practice_exercise.md) and follow the instructions to build a basic webpage in 15 minutes. Based on the screenshots of your sites, sent to me in slack, I will then choose a student to demo what they have built.
 
 <br />
 
@@ -532,12 +532,12 @@ Go to this [HTML Practice Exercise](https://github.com/ATL-WDI-Exercises/html-do
 
 ## Exercise #1
 
-cd into your `~/Desktop/ga/labs/unit-01` folder.  Fork this [HTML/DOM](https://github.com/ATL-WDI-Exercises/html-dom) repo, and then clone it into your folder.  Using HTML tags only (don't worry about CSS), use the starter code below to recreate the Document Outline for the following website:
+cd into your `~/Desktop/ga/labs/unit-01` folder.  Fork this [HTML/DOM](https://git.generalassemb.ly/atl-wdi/HTML-DOM) repo, and then clone it into your folder.  Using HTML tags only (don't worry about CSS), use the starter code below to recreate the Document Outline for the following website:
 
 [How We Use Energy](http://needtoknow.nas.edu/energy/energy-use/)
 
-* [Starter Code](https://github.com/ATL-WDI-Exercises/html-dom/blob/master/energy_dom_outline/energy_document_outline.html)
-* [Finished Code](https://github.com/ATL-WDI-Exercises/html-dom/blob/master/energy_dom_outline/energy_document_outline_fin.html)
+* [Starter Code](https://git.generalassemb.ly/atl-wdi/HTML-DOM/blob/master/energy_dom_outline/energy_document_outline.html)
+* [Finished Code](https://git.generalassemb.ly/atl-wdi/HTML-DOM/blob/master/energy_dom_outline/energy_document_outline_fin.html)
 
 ## Exercise #2
 
@@ -576,9 +576,9 @@ See [HTML5 New Elements](http://www.w3schools.com/html/html5_new_elements.asp)
 
 ## Other Topics
 
-For information on accessibility and search engine optimization, see [Accessibility and SEO](https://github.com/ATL-WDI-Curriculum/atl-wdi-10/blob/master/instructor_notes/unit_01/html/accessibility-and-seo.md).
+For information on accessibility and search engine optimization, see [Accessibility and SEO](https://git.generalassemb.ly/atl-wdi/wdi-curriculum-10/blob/master/instructor_notes/unit_01/html/accessibility-and-seo.md).
 
-For information on HTML5 Boilerplate, see [HTML5 Boilerplate](https://github.com/ATL-WDI-Curriculum/atl-wdi-10/blob/master/instructor_notes/unit_01/html/html5-boilerplate.md).
+For information on HTML5 Boilerplate, see [HTML5 Boilerplate](https://git.generalassemb.ly/atl-wdi/wdi-curriculum-10/blob/master/instructor_notes/unit_01/html/html5-boilerplate.md).
 
 ---
 

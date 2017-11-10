@@ -767,10 +767,10 @@ https://github.com/marenwoodruff/css-animation
 
 Look at these links and complete as many of these exercises as you can:
 
-* [CSS Accordion](https://github.com/ATL-WDI-Curriculum/atl-wdi-9/tree/master/unit_01/w05d04/student_labs/css-accordion)
-* [DolphinCat!](https://github.com/ATL-WDI-Curriculum/atl-wdi-9/tree/master/unit_01/w05d04/student_labs/dolphin-cat-css-animations)
-* [CSS Airbnb](https://github.com/ATL-WDI-Curriculum/atl-wdi-9/tree/master/unit_01/w05d04/student_labs/css-airbnb)
-* [Hyrule Potion Shop](https://github.com/ATL-WDI-Curriculum/atl-wdi-9/tree/master/unit_01/w05d04/student_labs/hyrule_potion_shop)
+* [CSS Accordion](https://git.generalassemb.ly/atl-wdi/wdi-curriculum-9/tree/master/unit_01/w05d04/student_labs/css-accordion)
+* [DolphinCat!](https://git.generalassemb.ly/atl-wdi/wdi-curriculum-9/tree/master/unit_01/w05d04/student_labs/dolphin-cat-css-animations)
+* [CSS Airbnb](https://git.generalassemb.ly/atl-wdi/wdi-curriculum-9/tree/master/unit_01/w05d04/student_labs/css-airbnb)
+* [Hyrule Potion Shop](https://git.generalassemb.ly/atl-wdi/wdi-curriculum-9/tree/master/unit_01/w05d04/student_labs/hyrule_potion_shop)
 
 <br />
 

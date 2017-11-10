@@ -139,7 +139,7 @@ You will be writing your code in:
 
 Work together, help each other, and also use the debugging slack channel.
 
-You can use the criminals app as your guide: https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/angular_lessons/labs/criminals-ui-router-starter
+You can use the criminals app as your guide: https://git.generalassemb.ly/atl-wdi/wdi-curriculum-10/tree/master/angular_lessons/labs/criminals-ui-router-starter
 
 ## :bug: Bug Report
 

@@ -26,4 +26,4 @@ Tutorialspoint- https://www.tutorialspoint.com/mongodb/
 Scotch.io- https://scotch.io/tutorials/an-introduction-to-mongodb
 
 #### Practice Node and Express
-https://github.com/ATL-WDI-Curriculum/atl-wdi/tree/master/homework/express/practice-node-and-express-with-nodeschool
+https://git.generalassemb.ly/atl-wdi/wdi-curriculum/tree/master/homework/express/practice-node-and-express-with-nodeschool

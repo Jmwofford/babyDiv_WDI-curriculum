@@ -46,7 +46,7 @@ Note: It's a great sign when a company has RESTful routes. Before interviewing, 
 
 AJAX (Asyncronous Javascript And Xml) is the term to describe getting data from a server without doing a full-page refresh.
 
-In a [previous lesson](https://github.com/ATL-WDI-Curriculum/atl-wdi-9/blob/master/unit_03/w09d01/instructor_notes/ajax_with_jquery.md) you used AJAX calls to grab GIFs.
+In a [previous lesson](https://git.generalassemb.ly/atl-wdi/wdi-curriculum-9/blob/master/unit_03/w09d01/instructor_notes/ajax_with_jquery.md) you used AJAX calls to grab GIFs.
 
 ``` javascript
 var ajax = $.get('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&rating=pg')
@@ -136,7 +136,7 @@ function PresidentsController($http, SomeOtherThing) {
 
 ## Go through example of full FE to BE
 
-We have created some [starter code](https://github.com/ATL-WDI-Curriculum/atl-wdi-9/blob/master/unit_03/w09d04/student_labs/presidents-app-starter-code-single-app-version) that includes a RESTful API MEN stack back-end and a basic Angular front-end.
+We have created some [starter code](https://git.generalassemb.ly/atl-wdi/wdi-curriculum-9/blob/master/unit_03/w09d04/student_labs/presidents-app-starter-code-single-app-version) that includes a RESTful API MEN stack back-end and a basic Angular front-end.
 
 Together, we will re-create presidents#index, #new, and #create. Then we'll have a lab where you'll work in pairs to do presidents#destroy. If you finish early, do #edit and #update.
 
