@@ -97,7 +97,7 @@ Why did we do that? Because we installed using brew cask, it created a command i
 
 Let's test it out.
 
-### Set up Spectacle and Flycut
+### Set up Spectacle, iTerm, and Flycut
 
 We're going to install one more application using brew cask. It's an App called Spectacle—[documentation](https://github.com/eczarny/spectacle)—which is going to make organizing your screen much simpler!
 
