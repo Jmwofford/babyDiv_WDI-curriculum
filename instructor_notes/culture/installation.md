@@ -93,7 +93,7 @@ You should already have VS Code installed but I'm going to ask you to uninstall 
 $ brew cask install visual-studio-code
 ```
 
-Why did we do that? Because we installed using brew cask, it created a command in our terminal so if we run the command `atom` and we give it a file or directory name/path it will open it in Atom.
+Why did we do that? Because we installed using brew cask, it created a command in our terminal so if we run the command `code` and we give it a file or directory name/path it will open it in VSCode.
 
 Let's test it out.
 
