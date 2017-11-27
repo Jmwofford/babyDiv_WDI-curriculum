@@ -443,7 +443,7 @@ validates :age, numericality: true
 <br>
 
 ## Migrations/Validations Exercise
-[Can be found here](https://github.com/ATL-WDI-Exercises/rails-active-record-migrations)
+[Can be found here](https://git.generalassemb.ly/atl-wdi/Rails-Active-Record-Migrations)
 
 ## Further Reading
 

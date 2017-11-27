@@ -349,5 +349,5 @@ $ touch server.js
 
 ## Extra Exercises
 
-2. [99 Bottles](https://github.com/ATL-WDI-Exercises/99_bottles_express)
-3. [Ultimate Compliment](https://github.com/ATL-WDI-Exercises/compliment-express)
+2. [99 Bottles](https://git.generalassemb.ly/ga-wdi-exercises/99_bottles_express)
+3. [Ultimate Compliment](https://git.generalassemb.ly/ga-wdi-exercises/compliment-express)

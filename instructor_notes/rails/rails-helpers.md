@@ -80,7 +80,7 @@ Path helpers can be used in controllers & views.
 
 ### Exercise (10 minutes - 00:25)
 
-1. Check out `tunr-rails-helpers` [here](https://github.com/ATL-WDI-Curriculum/tunr_rails_helpers)
+1. Check out `tunr-rails-helpers` [here](https://git.generalassemb.ly/ga-wdi-exercises/tunr_rails_helpers)
 2. Run the following commands
 ```
   rbenv install 2.2.0
