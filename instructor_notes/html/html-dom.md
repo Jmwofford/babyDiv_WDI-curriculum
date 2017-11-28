@@ -3,7 +3,7 @@
 ## Table of Contents
 * [Learning Objectives](#learning-objectives)
 * [Preparation](#preparation)
-* [Differentation between HTML and DOM](#differentation-between-html-and-dom)
+* [Differentiation between HTML and DOM](#differentiation-between-html-and-dom)
 * [Introduction to HTML tags](#introduction-to-html-tags)
 * [Creating a table in HTML](#creating-a-table-in-html)
 * [Google Chrome Developer Tools](#google-chrome-developer-tools)
@@ -30,7 +30,7 @@ This morning we are going to take a look at the DOM and how we can use the Chrom
 
 <details>
 <summary>To start, can someone describe the difference between HTML and the DOM in their own words?</summary>
-The DOM (Document Object Model) is the browser's intrepretation of the HTML. Your browser creates objects out of the HTML elements.
+The DOM (Document Object Model) is the browser's interpretation of the HTML. Your browser creates objects out of the HTML elements.
 
 examples: 
 
@@ -106,7 +106,7 @@ The `<head>` section is for metadata, which gives the browser information about 
 The `<body>` section is for the visible content on a web page.  As well as our JavaScript `<script>` tags. Where do they go?
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <!-- document metadata goes here. -->
