@@ -44,7 +44,7 @@ competencies: Front-end intro
 - Adjust element spacing using padding and margin
 - Create floating elements to position content removed from the standard document flow
 - Explain the difference between and use cases of static, relative, fixed, & absolute positioning
-- Create a page with multicolumn layout
+- Create a page with multi-column layout
 
 ## Preparation
 *Before this lesson, students should already be able to:*
@@ -62,12 +62,21 @@ All HTML elements can be considered boxes. Even if you see a circle, it's living
 The CSS box model describes this principal - a box wraps around all HTML elements, and it consists of: margins, borders, padding, and the actual content.  This model allows us to place a border around elements and space elements in relation to other elements.
 
 With CSS properties and values, it is possible to apply specific styles to each of these elements, and change the way they behave and/or display on the page.
-## Layout: Turn & Talk (5 / 10)
 
-Spend 2 minutes talking with a partner about html and the DOM elements we have learned so far and how how css box model might help you  to control layout.
+## We Do: Let's Find the Boxes (5 min)
+Open your browser to [Product Hunt](https://www.producthunt.com/).  Using the idea that every HTML element is just a box, draw out some borders for each element on the page. What HTML tags do you think was used for each element?
 
-- What is an HTML element?
-- How can we view the box model?
+<details>
+  <summary>Snippet to See Boxes</summary>
+  
+```css
+  * {
+      box-sizing: border-box;
+      border: 1px solid red !important;
+  }
+```
+
+</details>
 
 ## Box Model Demo - Codealong (5 mins)
 
@@ -155,7 +164,7 @@ But what do these different layers mean, and how are they relating to one anothe
 
 ### Layers of the Box Model - Codealong (15 mins)
 
-Let's get go into some more detail and practice with each of these elements of The Box Model.
+Let's go into some more detail and practice with each of these elements of The Box Model.
 
 
 ### Margin
@@ -170,10 +179,10 @@ If you want to specify a particular margin, to a particular side, you can do it 
 
 ```css
 div {
-  margin-top: /*some value*/
-  margin-right: /*some value*/
-  margin-bottom: /*some value*/
-  margin-left: /*some-value*/
+  margin-top: /*some value*/;
+  margin-right: /*some value*/;
+  margin-bottom: /*some value*/;
+  margin-left: /*some-value*/;
 }
 
 ```
@@ -370,7 +379,7 @@ You rarely explicitly declare `position:static` like this because it is the defa
 
 ### Fixed Positioning
 
-An element with fixed position is positioned relative to the browser window.  It will not move even if the window is scrolled, so a fixed positioned element will stay right where it is creating an effect a bit like the old school "frames" days.
+An element with fixed position is positioned relative to the browser window.  It will not move even if the window is scrolled, so a fixed positioned element will stay right where it is creating an effect a bit like the old school "frames" days.  This is sometimes used to create nav bars that never disappear.
 
 Try it out:
 
@@ -552,7 +561,7 @@ Lets go back to our CSS and change our "square2" div's positioning from float:le
 ## Addtional Resources
 [box model w3 schools video](https://www.youtube.com/watch?v=lPm8lK4C7nc)
 
-[w3 schools boxmodel] (http://www.w3schools.com/css/css_boxmodel.asp)
+[w3 schools box model](http://www.w3schools.com/css/css_boxmodel.asp)
 
 [Intro to CSS FEWD Slides](http://jrosebud.github.io/lesson02/#/18)
 
