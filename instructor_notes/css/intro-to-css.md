@@ -1,3 +1,4 @@
+
 # Intro to CSS
 
 ## Learning Objectives
@@ -16,31 +17,35 @@
 
 ## Hook: The Power of CSS (5 min / 10:00)
 
+<img src="https://huangxuan.me/css-sucks-2015/attach/joke/css_is_awesome.png" width="300" >
+
 To start this lesson, I want to mosey on over to my favorite website, [GA ATL Instagram](https://www.instagram.com/_gaatlanta/?hl=en). It's pretty great. It's pretty fancy. But what would it be without CSS? Take 1 minute to talk with the people around you about how this wonder of the modern web would look different without CSS, and how that would impact your interactions with the site.
 
-**Exercise** (1min) Share some ideas, then download the chrome dev tool- Web Developer, and click on the option to mute the stylesheets. Discuss anything that surprises you.
+**Exercise** (1min) Share some ideas, then download the chrome dev tool- [Web Developer](https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?hl=en-US), and click on the option to mute the stylesheets. Discuss anything that surprises you.
 
-CSS is powerful. There is such a wide breadth of things to learn about CSS and honestly, you could probably teach a whole 12-weeks just learning its capabilities, nuances, and subtleties. The goal of this class isn't to do a rundown of every possible CSS selector, but to have you guys walk away with a solid foundation of how to approach the task of styling your sites. As you use it consistently you realize that, while sometimes [frustrating]( http://gph.is/1heneJM?tc=1), CSS provides a powerful toolkit for making your UI more usuable, marketable, and generally awesome!  It helps keep your users coming back.  
+CSS is powerful. There is such a wide breadth of things to learn about CSS and you could probably spend a whole 12-weeks just learning its capabilities, nuances, and subtleties. 
+
+The goal of this class isn't to do a rundown of every possible CSS selector and trick, but to have you guys walk away with a solid foundation of how to professionally style and present your sites and applications. As you use it consistently you realize that, while sometimes frustrating, CSS provides a powerful toolkit for making your UI more usable, marketable, and generally awesome!  It helps keep your users coming back.  
 
 > Fist to Five: How confident are you about CSS? Five is, "Move over, I could teach this class myself". One is more like, "C-what-what, now?"
 
 ## In-line vs head vs external stylesheets (20 min)
 
-You are welcome to code along, but it may be better just to follow along for the first bit. The second half of call will be all hand-ons, and the notes for everything will be available in lesson plan
+You are welcome to code along, but it may be better just to follow along for the first bit. 
 
-At the crux of it all, the primary concept of CSS is to select an HTML element and then do something to it. ie. I want to take the body element, and I want to apply a background color to it.
+At the crux of it all, the primary concept behind CSS is to select an HTML element and then do something to it. 
 
-Let's get started by creating a new html webpage that we will call `index.html` in `~/Desktop/ga`:
+Here are just a few things you can do with CSS
+- Move HTML elements around the page.
+- Make HTML elements larger or smaller.
+- Change font types, colors, and size.
+- Create layouts that dynamically change based on devise size.
+- Animate elements on the page.
 
-```bash
-$ `cd ~/Desktop/ga`
-$ `mkdir intro-to-css`
-$ `cd intro-to-css`
-$ `touch index.html`
-$ `subl .`
-```
+We will touch on all of these things over the next couple days.  There are hundreds of CSS selectors/properties out there, so we don't expect you to memorize all of these.  Use tools like the [MDN CSS Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference), [CSS Almanac](https://css-tricks.com/almanac/), and [Codepen](https://codepen.io/pens/) to help you practice and improve your CSS skills.
 
-Let's throw some dummy content into HTML inside of our `index.html`:
+
+Let's throw some dummy content into HTML inside of an `index.html`:
 
 ```html
 <!DOCTYPE html>
@@ -69,9 +74,9 @@ So one way that we can style elements in HTML is in the tag itself. These are ca
 ### Exercise (2 min)
 Take a two minutes and chat with your partner about why this particular way of styling an element might not be the greatest approach? See if you can think of some specific scenarios when using inline styles would be a disadvantage...
 
-### Don't use Inline Styles
+### Don't Use Inline Styles!!
 
-Don't use inline styles if you can avoid it. They are very specific! (More on this in a minute)
+Don't use inline styles if you can avoid it. They are very specific and they make it extremely difficult to manage as your program gets larger! 
 
 ### Styles in the head tag
 
@@ -125,7 +130,7 @@ External stylesheets help keep your CSS dry (avoid duplicate styles), easier to 
 
 ### Separation of Concerns
 
-The other big advantage of the external stylesheet approach is that it preserves your Separation of Concerns. It is possible to style web pages using HTML alone. We did this in the early 2000s using mostly images and table borders. CSS allows us to separate the styles of our website/app from the content and behavior:
+The other big advantage of the external stylesheet approach is that it preserves your Separation of Concerns. It is possible to style web pages using HTML alone. We did this in the 90s/early 2000s using mostly images and table borders. CSS allows us to separate the styles of our website/app from the content and behavior:
 
 - HTML
   - Content
