@@ -15,7 +15,7 @@ competencies: Course Prep
 - install `homebrew` and `brew cask`
 - install `Node` w/ brew
 - install `Spectacle` w/ brew cask
-- uninstall and install `Atom` w/ brew cask
+- uninstall and install `Visual Studio Code` w/ brew cask
 - Verify git is installed
 
 
@@ -64,7 +64,7 @@ We're going install Node using brew. We're going to learn a lot about Node over 
 1. Run the following command from any directory:
 
   ```bash
-  brew install node 7.0.0
+  brew install node
   ```
 
 ## Installing Brew Cask
@@ -87,23 +87,25 @@ According the [documentation](https://caskroom.github.io/) we need to run the fo
 
 Now you'll be able to install regular applications like Chrome using the command `$ brew cask install`
 
-You should already have Atom installed but I'm going to ask you to uninstall it by dragging the application to the trash and emptying it. Then we're going to install Atom using brew cask.
+You should already have VS Code installed but I'm going to ask you to uninstall it by dragging the application to the trash and emptying it. Then we're going to install VS Code using brew cask.
 
 ```bash
-$ brew cask install atom
+$ brew cask install visual-studio-code
 ```
 
-Why did we do that? Because we installed using brew cask, it created a command in our terminal so if we run the command `atom` and we give it a file or directory name/path it will open it in Atom.
+Why did we do that? Because we installed using brew cask, it created a command in our terminal so if we run the command `code` and we give it a file or directory name/path it will open it in VSCode.
 
 Let's test it out.
 
-### Set up Spectacle
+### Set up Spectacle, iTerm, and Flycut
 
 We're going to install one more application using brew cask. It's an App called Spectacle—[documentation](https://github.com/eczarny/spectacle)—which is going to make organizing your screen much simpler!
 
 1. install spectacle using `brew cask`
   ```bash
   $ brew cask install spectacle
+  $ brew cask install flycut
+  $ brew cask install iterm2
   ```
 
 2. Open up your System Preferences
@@ -112,3 +114,15 @@ We're going to install one more application using brew cask. It's an App called 
 
   Spectacle gives you the ability to move your windows around quickly so you're not wasting time dragging your mouse around
   ![](.md_resources/specs.gif)
+
+### Extra: Command Line Helpers w/ Bash-It
+
+You might notice the instructors command line looks a little different than what you have.  Over time, you may find all sorts of tools and scripts to customize your development environment.  
+
+One popular tool is called [Bash-It](https://github.com/Bash-it/bash-it). Bash-it is a collection of a lot of different scripts and tools to help you be a more effective developer.  It includes helpers that keep track of git, provide more colors, and is highly customizable.  
+
+You can install bash-it by running the following commands
+```
+$ git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
+$ ~/.bash_it/install.sh --silent
+```
