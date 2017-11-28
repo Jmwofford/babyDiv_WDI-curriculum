@@ -78,28 +78,6 @@ $ ls ~/.ssh/id_rsa
 
 <br />
 
-4. You are also going to install brew cask and atom/sublime and [spectacle](https://www.spectacleapp.com/).
-
-- [Brew Caskroom](https://caskroom.github.io/)
-
-```
-$ brew tap caskroom/cask
-```
-
-5. Restart your terminal. Now you'll be able to install regular applications like Chrome. You will only want to follow these steps if you:
-
-- Haven't installed atom or Sublime
-- Have installed Atom or Sublime, but haven't set up the sym link.
-
-But what's a [sym link](https://en.wikipedia.org/wiki/Symbolic_link)? Well, ideally you should be able to open files from  your terminal/bash using the command subl/atom and the file/directory name.
-
-```bash
-$ brew cask install sublime-text3
-$ brew cask install spectacle
-```
-
-<br />
-
 ## Configure your Git Prompt
 
 1. Run through the commands below.  The touch command will create your git-prompt file.  The subl command will open that file in sublime.  Then, click on this link and copy/paste its contents into your `~/.git-prompt.sh`- [git prompt contents](https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh ) 
@@ -139,7 +117,7 @@ export PS1='\u:\W$(__git_ps1 " (%s)")\$ '
 4. Set your default editor:
 
 ```bash
-$ git config --global core.editor "subl -n -w"
+$ git config --global core.editor "code -n -w"
 $ git config --list
 ```
 
@@ -189,10 +167,6 @@ Hi your Username! You\'ve succesfully authenticated, but GitHub does not provide
 ```
 
 Congratulations! You now have **Git** and **GitHub** set up and configured.
-
----
-
-## [Linux or Windows Instructions](http://docs.railsbridge.org/installfest/choose_your_operating_system)
 
 ---
 
