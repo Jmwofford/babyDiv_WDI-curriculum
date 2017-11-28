@@ -425,7 +425,6 @@ Let's do this together:
 ![](https://help.github.com/assets/images/help/repository/repo-create.png)
 3. Name your repository `planets`
 ![](https://help.github.com/assets/images/help/repository/repo-create-name.png)
-4. **Initialize this repository with a README** (Only so that we can practice `git pull`.  You wouldn't normally do this.)
 4. Click the big green Create Repository button
 5. We now need to connect our local Git repo with our remote repository on GitHub. We have to add a "remote" repository, an address where we can send our local files to be stored.
 
@@ -611,8 +610,5 @@ Don't get frustrated by all of the new commands because we will have plenty of t
 
 ## BREAK
 
-
-## Labtime
-[Code School Git](https://try.github.io/levels/1/challenges/1)
 
 If you finish before lunch, finish reading the remaining chapters on git: https://swcarpentry.github.io/git-novice/05-history/
