@@ -42,9 +42,9 @@ examples:
 
 <br />
 
-**WE DO:** Goto [Kickass App](http://kickassapp.com/) and use it. What is happening?
+**WE DO:** Goto [Kickass App](https://kickassapp.com/) and use it. What is happening?
 
-We are going to get into DOM manipulation next week, but to demonstrate the difference between an _HTML_ document and the _DOM_ that is created from the _HTML_ document, let's go to the [Jezebel](http://jezebel.com/) website and play around with some headlines.
+We are going to get into DOM manipulation next week, but to demonstrate the difference between an _HTML_ document and the _DOM_ that is created from the _HTML_ document, let's go to the [Jezebel](https://jezebel.com/) website and play around with some headlines.
 
 Using the Chrome DevTools Inspector (What's the shortcut?), and alter something on the page.
 
@@ -151,7 +151,7 @@ This statement will highlight the main content div, and we can click through and
 
 ### **WE DO**
 
-- Go to [Jezebel](http://jezebel.com/).
+- Go to [Jezebel](https://jezebel.com/).
 - In the console, type `document.getElementsByClassName('headline')[0];`
   - We will discuss this more later, but getElementsByClassName, returns an array/list of items with that class.  Arrays are zero-indexed, which means that they start with zero, so we need to add that number in square brackets to highlight the first title. 
   - This will highlight the first news title on the page.
@@ -232,7 +232,7 @@ Note that when placing a tag inside another tag, you should indent the new tag t
 
 ```html
 <a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee" target="_blank">
-  <img src="http://www.misiide.net/images/2013/03/Tim-Berners-Lee.jpg" alt="A picture of Tim Berners-Lee!" />
+  <img src="https://www.misiide.net/images/2013/03/Tim-Berners-Lee.jpg" alt="A picture of Tim Berners-Lee!" />
 </a>
 ```
 
@@ -255,19 +255,19 @@ Note that when placing a tag inside another tag, you should indent the new tag t
 
 <br />
 
-![We Do](http://i.imgur.com/6Kce0ca.png)
+![We Do](https://i.imgur.com/6Kce0ca.png)
 
 ### WE DO - (10m)
 
 As a quick review, I will give you some examples of broken HTML and you tell me what's wrong with them. 
 
-[HTML Fixit](https://git.generalassemb.ly/atl-wdi/wdi-curriculum-10/blob/master/instructor_notes/unit_01/html/html-fixit.md)
+[HTML Fixit](https://git.generalassemb.ly/atl-wdi/wdi-curriculum/blob/master/instructor_notes/html/html-fixit.md)
 
 <hr>
 
 <br />
 
-![We Do](http://i.imgur.com/6Kce0ca.png)
+![We Do](https://i.imgur.com/6Kce0ca.png)
 
 # WE DO - CODE ALONG - 90 min 
 
@@ -289,30 +289,35 @@ Every site should start with these 5 tags:
 </html>
 ```
 
-1. **The DOCTYPE tag** is special and doesn't get a closing tag.  It also is the only tag that can have non-alpha-numeric (letters/numbers) values in it.
-2. **html tag**: shows where the html begins
-3. **head tag**: contains content specifically for the browser, not the user, to see (e.g.- meta tags, google analytics scripts). 
+1. **DOCTYPE tag**: The DOCTYPE is special and doesn't get a closing tag.  It also is the only tag that can have non-alpha-numeric (letters/numbers) values in it.  We will always have `<!DOCTYPE html>` at the top of our html files because it indicates that this page uses HTML5.
+2. **html tag**: Shows where the html begins.  This will be the parent tag for all other elements.
+3. **head tag**: Contains content specifically for the browser, not the user, to see (e.g.- meta tags, google analytics scripts). 
   - The `head` section is important for search engines, as it helps provide additional information about the website. Anything within the opening and closing `<head>` tags will **NOT** be displayed on the page.
+  - It is also common to link your CSS and JS files in the `head`.
   - The `<head>` tags are placed right after the opening `<html>` tag, and before the opening `<body>` tag.
-4. **body tag**: contains all the content that the user will see when viewing the html in a web browser like Chrome, Firefox, etc.
+4. **body tag**: Contains all the content that the user will see when viewing the html in a web browser like Chrome, Firefox, etc.
 5. **title tag**: This is what shows up in your browser tab.
 
 **The DOCTYPE + these are the 4 pairs of tags: html, head, title and body that are mandatory for every web page** 
 
 <br />
 
-### Meta Tags
+### Head Specific Tags
 
 | Element        | Description                                               |
 |:-------------- |:--------------------------------------------------------- |
+| `<title>`       | determines the title that is shown on your browser tab|
 | `<link>`       | used to load a CSS file - it is a self closing tag. |
 | `<script>`     | used to load a JavaScript file or for embedding JavaScript code. |
+| `<meta>`     | represents meta-data, like keywords for search engine optimization or browser-specific instructions |
+
+**You will rarely use `meta` tags in this course, but they are very important for SEO**
 
 **Although any script tags should really be at the bottom of your html page**
 
 <details>
 <summary>Does anyone know why?</summary>
-If your script tags are placed in the head of your document, your html will wait to render until the javaScript has been loaded.  Therefore, it is best to place it at just before your closing body tag.
+If your script tags are placed in the head of your document, your html will wait to render until the JavaScript has been loaded.  Therefore, it is best to place it at just before your closing body tag.
 </details>
 
 <br />
@@ -328,7 +333,7 @@ If your script tags are placed in the head of your document, your html will wait
     - `mkdir html-css-intro`
     - `cd` into the folder - `cd html-css-intro`
     - `touch index.html`
-    - `subl .`
+    - `code .`
     - Create the basic html structure
 2. Add the meta tags for external `css` and `javascript` files.
     - `<link rel="stylesheet" type="text/css" href="style.css" />`
@@ -357,31 +362,31 @@ For example: `<p></p>` - paragraph tag, block element, used for basic text on a 
 
 ### Specific Structural Elements
 
-Of course a website is more than just headers and paragraphs.  It has many sections to it that a normal outline doesn't.  Here are some of the more common tags we use to give structure to the page"
+Of course a website is more than just headers and paragraphs.  It has many sections to it that a normal outline doesn't.  Here are some of the more common tags we use to give structure to the page.  These structural tags do not have any built in styling like `h1` or `p`, but they do make your HTML more expressive and many search engines use these tags when indexing the page.
 
-See also [HTML5 New Elements](http://www.w3schools.com/html/html5_new_elements.asp)
+See also [HTML5 "New" Elements](https://www.w3schools.com/html/html5_new_elements.asp)
 
 #### All HTML5 Elements
 ##### header
-  - could contain elements like a logo and a nav bar.  Perhaps the title of the page too?
+  - Could contain elements like a logo and a nav bar.  Perhaps the title of the page too?
 
 ##### footer
-  - could contain disclaimers, copyrights, and less important links (privacy, terms and conditions, legal, etc).
+  - Could contain disclaimers, copyrights, and less important links (privacy, terms and conditions, legal, etc).
 
 ##### main
-  - the bulk of your site goes in here
+  - The bulk of your site goes in here.
 
 ##### section
-  - within some of the tags listed above, there can be different sections.  Use this tag to block off those sections.
+  - Within some of the tags listed above, there can be different sections.  Use this tag to block off those sections.
 
 ##### nav
-  - this will hold navigation links
+  - This will hold navigation links.
 
 ##### article
-  - if you're writing a blog, or have a page with many self contained sections, you might think about using the article tag
+  - If you're writing a blog, or have a page with many self contained sections, you might think about using the article tag.
 
 ##### aside
-  - this is for tangential material.  Sidebars, inserts, etc.
+  - This is for tangential material.  Sidebars, inserts, etc.
 
 <br />
 
@@ -401,10 +406,10 @@ In the `index.html` file you created earlier...
 Sometimes we need a tag that doesn't quite fit into any of the previously defined categories.  If this is the case, we can use one of two generic tags.
 
 ##### div
-  - used to block out chunks of content
+  - Used to block out chunks of content.
 
 ##### span
-  - use inline, to separate out small bits of content (e.g. letters, words, sentences, etc)
+  - Used inline, to separate out small bits of content (e.g. letters, words, sentences, etc)
 
 ### Elements
 
@@ -443,10 +448,10 @@ In the `index.html` file you created earlier...
 
 ### Decorative Elements
 
-Some elements do not contain content and instead are purely for decoration.  Elements that do not contain content are written like so- `<no-content-tag/>`.  Note it is a self-closing tag/there is no closing tag and the slash comes before the final `>`
+Some elements do not contain content and instead are purely for decoration.  Elements that do not contain content are written like so- `<no-content-tag/>`.  This is an example of a self-closing tag. Notice the slash that comes before the final `>`.  Technically, HTML doesn't care if you have the self-closing tag, but it makes your code more readable if you include them.
 
 ##### hr
-  - horizontal rule, `<hr>` creates a divider
+  - horizontal rule, `<hr />` creates a divider
 
 ##### br
   - break, `<br />`, starts a new line in a chunk of text.
@@ -473,7 +478,7 @@ We can add more meaning to a tag by adding "attributes" to it.  It looks like `<
 
 ##### a
   - Anchor tag.  Creates a clickable link to another page.  It uses the `href` attribute to do so.
-  - example: `<a href="http://www.google.com">This link will go to Google</a>`
+  - example: `<a href="https://www.google.com">This link will go to Google</a>`
   - note that the actual URL (location) of the page is hidden, and that only the content is shown.
 
 ##### img
@@ -483,12 +488,12 @@ We can add more meaning to a tag by adding "attributes" to it.  It looks like `<
 
 ##### video
   - like `img` but links to a video
-  - example: `<video src="http://www.w3schools.com/html/mov_bbb.mp4"/>`
+  - example: `<video src="https://www.w3schools.com/html/mov_bbb.mp4"/>`
   - also has attributes like `autoplay`, `controls`, `loop`
 
 ##### audio
   - like `img` and `video`
-  - example: `<audio controls="true" src="http://www.w3schools.com/tags/horse.mp3" />`
+  - example: `<audio controls="true" src="https://www.w3schools.com/tags/horse.mp3" />`
 
 <br />
 
@@ -498,7 +503,7 @@ In the `index.html` file you created earlier...
 
 1. Add a link to your GitHub repo in the `footer` section of your page.
 2. Add an image to your page
-- Make sure that you add an alt tag
+3. Make sure that you add an alt tag
 
 <br />
 
@@ -512,7 +517,7 @@ The most important thing to remember is that these tags and attributes are suppo
 
 **YOU DO**
 
-Go to this [HTML Practice Exercise](https://git.generalassemb.ly/atl-wdi/HTML-DOM/blob/master/html_practice_exercise.md) and follow the instructions to build a basic webpage in 15 minutes. Based on the screenshots of your sites, sent to me in slack, I will then choose a student to demo what they have built.
+Go to this [HTML Practice Exercise](https://git.generalassemb.ly/atl-wdi/HTML-DOM/blob/master/html_practice_exercise.md) and follow the instructions to build a basic webpage in 15 minutes. Based on the screenshots of your sites, sent to me in Slack, I will then choose a student to demo what they have built.
 
 <br />
 
@@ -528,13 +533,13 @@ Go to this [HTML Practice Exercise](https://git.generalassemb.ly/atl-wdi/HTML-DO
 
 ---
 
-![Imgur](http://i.imgur.com/WzTTdIe.jpg)
+![Imgur](https://i.imgur.com/WzTTdIe.jpg)
 
 ## Exercise #1
 
-cd into your `~/Desktop/ga/labs/unit-01` folder.  Fork this [HTML/DOM](https://git.generalassemb.ly/atl-wdi/HTML-DOM) repo, and then clone it into your folder.  Using HTML tags only (don't worry about CSS), use the starter code below to recreate the Document Outline for the following website:
+cd into your `~/Desktop/ga/labs/` folder.  Fork this [HTML/DOM](https://git.generalassemb.ly/atl-wdi/HTML-DOM) repo, and then clone it into your folder.  Using HTML tags only (don't worry about CSS), use the starter code below to recreate the Document Outline for the following website:
 
-[How We Use Energy](http://needtoknow.nas.edu/energy/energy-use/)
+[How We Use Energy](https://needtoknow.nas.edu/energy/energy-use/)
 
 * [Starter Code](https://git.generalassemb.ly/atl-wdi/HTML-DOM/blob/master/energy_dom_outline/energy_document_outline.html)
 * [Finished Code](https://git.generalassemb.ly/atl-wdi/HTML-DOM/blob/master/energy_dom_outline/energy_document_outline_fin.html)
@@ -570,7 +575,7 @@ We will play with this functionality more when we dig deeper into CSS.
 
 ## HTML 5 Tags
 
-See [HTML5 New Elements](http://www.w3schools.com/html/html5_new_elements.asp)
+See [HTML5 New Elements](https://www.w3schools.com/html/html5_new_elements.asp)
 
 ---
 
@@ -587,12 +592,12 @@ For information on HTML5 Boilerplate, see [HTML5 Boilerplate](https://git.genera
 * [HTML and CSS review](https://github.com/ATL-WDI-Curriculum/html-dom/blob/master/html_css_review.pdf)
 * [Online HTML live editor](https://thimble.webmaker.org/en-US/projects/wrangler/)
 * [HTML element reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
-* [HTML Elements by Category](http://www.w3schools.com/tags/ref_byfunc.asp)
+* [HTML Elements by Category](https://www.w3schools.com/tags/ref_byfunc.asp)
 * [HTML5 element reference](https://developer.mozilla.org/en/docs/Web/Guide/HTML/HTML5/HTML5_element_list)
-* [Tim Berners-Lee](http://www.w3.org/People/Berners-Lee)
-* [Evolution of the Web - Great Link](http://www.evolutionoftheweb.com/)
-* [Stack Overflow: What is the difference between Section and Div](http://stackoverflow.com/questions/6939864/what-is-the-difference-between-section-and-div)
-* [HTML5 Doctor](http://html5doctor.com/)
-* [HTML5 Validator](http://html5.validator.nu/)
-* [Semantic HTML](http://en.wikipedia.org/wiki/Semantic_HTML)
+* [Tim Berners-Lee](https://www.w3.org/People/Berners-Lee)
+* [Evolution of the Web - Great Link](https://www.evolutionoftheweb.com/)
+* [Stack Overflow: What is the difference between Section and Div](https://stackoverflow.com/questions/6939864/what-is-the-difference-between-section-and-div)
+* [HTML5 Doctor](https://html5doctor.com/)
+* [HTML5 Validator](https://html5.validator.nu/)
+* [Semantic HTML](https://en.wikipedia.org/wiki/Semantic_HTML)
 * [CSS Tricks](https://css-tricks.com/dom/)
