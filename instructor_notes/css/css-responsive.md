@@ -1,5 +1,11 @@
 # Responsive CSS
 
+## Lesson Objectives
+
+- Define what it means to design an application with a Mobile First approach
+- Use Media Queries to change CSS at various sizes.
+- Utilize responsive CSS properties. (vw/vh & em/rem) 
+
 ## What is a Responsive Website
 
 A responsive website *responds* dynamically to the browser's screen size (or window size) so that the content is always presented in an appealing and easy-to-read layout.

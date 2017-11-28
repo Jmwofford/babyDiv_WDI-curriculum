@@ -537,12 +537,9 @@ Go to this [HTML Practice Exercise](https://git.generalassemb.ly/atl-wdi/HTML-DO
 
 ## Exercise #1
 
-cd into your `~/Desktop/ga/labs/` folder.  Fork this [HTML/DOM](https://git.generalassemb.ly/atl-wdi/HTML-DOM) repo, and then clone it into your folder.  Using HTML tags only (don't worry about CSS), use the starter code below to recreate the Document Outline for the following website:
+[HTML Practice and Review Lab](https://git.generalassemb.ly/atl-wdi/wdi-curriculum/blob/master/labs/html/html-practice-and-review.md)
 
-[How We Use Energy](https://needtoknow.nas.edu/energy/energy-use/)
-
-* [Starter Code](https://git.generalassemb.ly/atl-wdi/HTML-DOM/blob/master/energy_dom_outline/energy_document_outline.html)
-* [Finished Code](https://git.generalassemb.ly/atl-wdi/HTML-DOM/blob/master/energy_dom_outline/energy_document_outline_fin.html)
+Don't worry much about the styling here.  Focus on the structure first, and then add styling once you finish.
 
 ## Exercise #2
 
