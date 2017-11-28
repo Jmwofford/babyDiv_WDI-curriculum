@@ -138,7 +138,7 @@ The above example can be found at this [codepen](http://codepen.io/drmikeh/pen/W
 
 ## Exercise - CSS Diner
 
-Play [CSS Diner](http://flukeout.github.io/) to learn more about CSS Selectors. See if you can finish all 26 levels.
+Play [CSS Diner](http://flukeout.github.io/) to learn more about CSS Selectors. See if you can finish all 32 levels.
 
 ---
 
