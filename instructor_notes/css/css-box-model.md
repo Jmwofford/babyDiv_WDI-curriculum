@@ -147,7 +147,7 @@ Notice the body, the container, and each of the divs are surrounded by a red bor
 
 The image below illustrates the box model and what you should have seen in your dev tools:
 
-![box-model](http://s6.postimg.org/gi8r6c341/css_box_model.png)
+![box-model](https://s6.postimg.org/gi8r6c341/css_box_model.png)
 
 _From [www.theslate.org](http://www.theslate.org)_
 
@@ -242,10 +242,10 @@ Padding becomes more apparent when we have "stuff" inside the box. If we're talk
 ```html
 <div id="container">
   <p>Hi there!</p>
-    <div id="square1"></div>
-    <div id="square2"></div>
-    <div id="square3"></div>
-    <div id="square4"></div>
+  <div id="square1"></div>
+  <div id="square2"></div>
+  <div id="square3"></div>
+  <div id="square4"></div>
 </div>
 ```
 
@@ -267,7 +267,7 @@ Cool, right? Each HTML element gets its own box to live in.
 
 As you saw, the outermost box of each element went all the way across the page. This is why, until now, your HTML elements have been sitting on top of one another: by default, they take up the full width of the page.
 
-We can change all this with the first positioning property we'll learn, the `display` property and the four values we can use: inline, block, inline-block, and none.
+We can change all this with the first positioning property we'll learn, the `display` property and the four values we can use (for now...): inline, block, inline-block, and none.
 
 * An **inline** element has no line break before or after it. This makes the element sit on the same line as another element, but without formatting it like a block. It only takes up as much width as it needs (not the whole line). Inline places all your elements on a single line. The bad news is that it doesn't maintain their "box"ness
 
@@ -432,7 +432,7 @@ Declaring `position:relative` allows you to position the element top, bottom, le
 The float property specifies whether or not a box (or an element) should float; essentially, it determines whether text will be wrapped around the element.
 
 <p style="text-align: center">
-<img src='https://cloud.githubusercontent.com/assets/40461/8234489/3b61ef02-15d4-11e5-8864-435fb6e0c3cc.png'>
+  <img src='https://cloud.githubusercontent.com/assets/40461/8234489/3b61ef02-15d4-11e5-8864-435fb6e0c3cc.png'>
 </p>
 
 Note that "absolutely positioned" elements ignore the float property as they are removed from the normal document flow.
@@ -446,7 +446,7 @@ There are four valid values for the float property. "Left" and "right" float ele
 All elements will float next to floated items until they are specifically cleared. Think about the text on the page.
 
 <p style="text-align: center">
-<img src="https://cloud.githubusercontent.com/assets/40461/8234478/287c1156-15d4-11e5-9901-ba9090a5bf70.png">
+  <img src="https://cloud.githubusercontent.com/assets/40461/8234478/287c1156-15d4-11e5-9901-ba9090a5bf70.png">
 </p>
 
 ### Using position, floats, and clears to create columns - Code along (20 mins)
@@ -508,7 +508,7 @@ We can reveal those missing divs by declaring their absolute position in the bot
 
 This works fine when we know the exact sizes of our elements but what if we were building something like a blog and we had text in those columns or surrounding them? We won't always know the exact amount of text or their font sizes. This is where floats can help us.
 
-### Floats to create multicolumn layouts
+### Floats to create multi-column layouts
 
 If our element sizes are variable or dynamic we can use floats to allow text/other elements to wrap around the floated element.  To illustrate this, lets first go to a favorite ipsum generator and grab four paragraphs of text.
 
@@ -521,9 +521,9 @@ Your html should like this:
     <div id="container">
         <div id="square1"></div>
         <div id="square2"></div>
-        (4 paragraphs of ipsum)
         <div id="square3"></div>
         <div id="square4"></div>
+        (4 paragraphs of ipsum)
     </div>
 
 ```
@@ -568,6 +568,6 @@ Lets go back to our CSS and change our "square2" div's positioning from float:le
 
 ## Sample Quiz Questions
 
-*  What is the margin of the box model?
+* What is the margin of the box model?
 * What is the padding of the box model?
 * Where is the border in the box model?

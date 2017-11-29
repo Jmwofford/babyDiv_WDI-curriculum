@@ -5,6 +5,7 @@
 - Define what it means to design an application with a Mobile First approach
 - Use Media Queries to change CSS at various sizes.
 - Utilize responsive CSS properties. (vw/vh & em/rem) 
+- Understand the use case for responsive CSS layout tools (i.e. Flexbox)
 
 ## What is a Responsive Website
 
