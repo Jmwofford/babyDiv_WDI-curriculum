@@ -17,15 +17,7 @@
 
 ## Hook
 
-[The Five Obstructions](http://www.imdb.com/title/tt0354575/) is one of my favorite films.  Jorgan Leth created a short in 1967, entitled _The Perfect Human_.  
-
-Lars Von Trier (a Danish director most known for _Dancer in the Dark_ and _Dogville_) saw this short and thought that it was so perfect that he wondered whether Leth could re-create it.  
-
-Von Trier is part of a wave of directors that thought that in order to create new pieces of art, they should place restrictions on each other.  Von Trier 'dares' Jordan Leth to re-create his famous short, with restrictions that are decided upon by Von Trier.  One of the restrictions is to create an animated short.
-
-Let's watch it: [The Five Obstructions Animation](https://www.youtube.com/watch?v=9-Y1PhOt6sM).
-
-<br />
+CSS Animations are a great way to add a layer of polish to your design. Good design inspires trust, so adding little touches to your work is a great way to impress users (and potential employers!).  Today we will look at the various ways add animations and subtle transitions only using CSS.
 
 ## Intro
 
@@ -38,13 +30,13 @@ Today we will be covering 3 major topics:
 
 **Transitions** let us tell the browser how to smoothly change a property over time. For example, if the height of an element changes (due to a :hover selector), then we can tell the browser to use a transition to change the height gradually over 1 second.
 
-**Transforms** are a set of CSS properties that take an element and transform it's shape, e.g. rotating it, scaling it, skewing it, etc.
+**Transforms** are a set of new-ish CSS properties that take an element and transform it's shape, e.g. rotating it, scaling it, skewing it, etc.
 
 **Animations** are similar to transitions, in that they let us change properties over time, but they give us more control over how those changes happen.
 
 For example, we have more control over how the animation repeats, we can change between multiple values at once, etc.
 
-**Vendor Prefixes** - A prefix provides browser support for features that are not fully supported.  If you are using chrome, you will not need to add a prefix to any of the properties used this lesson, but in general, it's a good idea to check **Can I Use** (http://www.caniuse.com) to see if you need to use prefixes to support most users/browsers. For CSS Animations, you should use prefixes to ensure support for Safari, IE, and other browsers.
+**Vendor Prefixes** - A prefix provides browser support for features that are not fully supported.  If you are using Chrome, you will not need to add a prefix to any of the properties used this lesson, but in general, it's a good idea to check **Can I Use** (http://www.caniuse.com) to see if you need to use prefixes to support most users/browsers. For CSS Animations, you should use prefixes to ensure support for Safari, IE, and other browsers.
 
 **Vendor Prefixes**
     <br />
@@ -56,40 +48,23 @@ For example, we have more control over how the animation repeats, we can change 
     <br />
     -ms = IE
 
-The easiest way to do this is with **prefix free** (http://leaverou.github.io/prefixfree/).
+The easiest way to do this is with **prefix free** (http://leaverou.github.io/prefixfree/).  Later on, we will use tools called pre-processors to handle these prefixes for us.
 
 ---
 <br />
 
-<!-- ## Group Breakouts
-
-Each group will have 20 minutes to prepare a short explanation / demo of their assigned topic. Your demos should take **no longer than 5 minutes**. Explore the next topic if you finish yours.
-
-| Group | Topic                                              |
-|-------|----------------------------------------------------|
-| 1     | CSS Transforms (No animation)                      |
-| 2     | CSS Transitions                                    |
-| 3     | CSS Animations (basic keyframes and syntax)        |
-| 4     | CSS Animations (timing functions)                  |
-| 5     | CSS Animations (iterations / repeats / direction ) |
-
-<br /> -->
-
 ## Traditional Animation vs Computer Animation
 
-1. In traditional (hand-drawn) animations, there were two kinds of animators
-    - Keyframe artist
-        - Draws the main frames for the animation- the starting and ending points of any smooth transition.  Their position is measured in frames on a strip of film.
-    - Inbetweener  (tweener)
-        - Fills in the frames between each keyframe, so it looks fluid
 
-2. In computer animation, the developer acts as the keyframe artist, and the computer is the 'tweener'.
+CSS uses the same basic concepts found in hand-drawn animation - Keyframes:
 
-<br />
+![Keyframes!](https://www.utdallas.edu/atec/midori/Handouts/history_files/key_n_inbetween.jpg)
 
-![](http://www.ubelly.com/wp-content/uploads/2012/01/keyframes.png)
+In the above image, the the left and right-most drawings are **Keyframes** - they define the starting or ending point of a smooth transition. The drawings between the left and right-most image are **Inbetweens** - they don't have to be drawn on a storyboard, because the animator can assume what they will look like without a visual reference.
 
-<br />
+In web-based animations, Keyframes work the same way - the represent the beginning or ending state of the element being animated. However, our Inbetweens will be generated by code, instead of being filled in by hand later.
+
+Let's think about css changes on hover events.  When we add a `hover` pseudo class, we define changes to be made before and after an action. These two class states represent our keyframes. The changes are sudden and jerky, making it more lik watching a storyboard instead of an animated movie - we get the idea, but its not much fun to watch.
 
 ## Create Basic Transitions in CSS
 
@@ -112,8 +87,6 @@ Each group will have 20 minutes to prepare a short explanation / demo of their a
 <html>
     <head>
         <title>CSS Animations</title>
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="main.css" />
     </head>
     <body>
@@ -231,7 +204,7 @@ Next, add a transition property:
 
 ![](http://i.imgur.com/ylb6WX9.gif)
 
-##### in the index.html, in the main container, under your previous squares, add the html below:
+##### In the index.html, in the main container, under your previous squares, add the html below:
 
 1. Create a 100px by 100px square box that has a background color of tomato, with a class of `square2`.
 
