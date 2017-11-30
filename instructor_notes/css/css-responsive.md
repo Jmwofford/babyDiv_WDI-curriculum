@@ -1,295 +1,239 @@
-# Responsive CSS
+# Responsive Web Design
 
-## Lesson Objectives
+## Learning Objectives
 
-- Define what it means to design an application with a Mobile First approach
-- Use Media Queries to change CSS at various sizes.
-- Utilize responsive CSS properties. (vw/vh & em/rem) 
-- Understand the use case for responsive CSS layout tools (i.e. Flexbox)
+- Explain the difference between a responsive website and a mobile-specific website.
+- Compare mobile-first to desktop-first responsive design
+- Use media queries to adjust styles for different viewport sizes.
+- Identify and use relative units like `em`, `rem`, `vh`, `vw`, etc..
+- List the different media query values and their conditions.
+- Use the iOS simulator, Safari console, and Chrome Dev tools to debug responsive CSS.
 
-## What is a Responsive Website
+## Opening (5 min)
 
-A responsive website *responds* dynamically to the browser's screen size (or window size) so that the content is always presented in an appealing and easy-to-read layout.
+Ultimately we are trying to answer the question:
 
-> Author's Note: Much of the material in this lesson has been shamelessly taken from [w3schools](http://www.w3schools.com/css/css_rwd_intro.asp).
+>How do we build web applications and sites for an optimal interaction experience on a multitude of devices?
 
----
+### How we got here
 
-## Why Responsive
+In the beginning, there was no CSS. Every site looked nearly identical. As styling web pages became more common,
+developers began structuring their pages with table layouts and fixed-width CSS.
 
-The strongest argument for building _responsive_ websites is that users will visit our site using a multitude of devices each having a different screen size, resolution, and aspect ratio.
+Many designers still ask
 
-You will want to design your website (typically your CSS) to layout your page relative to the size of the browser window.
+>What are the most common dimensions for a website design?
 
-This is possible via the use of _media queries_!
+## You tell me! http://screensiz.es (5 min)
 
-| Device        | Layout        | Typical Width       |
-|:-------------:|:-------------:|:-------------------:|
-| Desktop       | ![Desktop](https://i.imgur.com/ha5Hf4e.png) | 1200px and up
-| Tablet        | ![Tablet](https://i.imgur.com/n6nVlFS.png)   | 992px and up
-| Phone         | ![Phone](https://i.imgur.com/n6nVlFS.png)     | 768px and up
+## You do: Turn and Talk (10 min)
 
+What makes a design fixed? What makes a design fluid? What makes a site responsive?
 
-Here is an example that uses floats to create a 12 column grid:
+Check out [mediaqueri.es](http://mediaqueri.es) for inspiration.
 
-```html
-<div class="header">
-  <h1>Chania</h1>
-</div>
-<div class="row">
-  <div class="col-3 menu">
-    <ul>
-      <li>The Flight</li>
-      <li>The City</li>
-      <li>The Island</li>
-      <li>The Food</li>
-    </ul>
-  </div>
-  <div class="col-9">
-    <h1>The City</h1>
-    <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
-    <p>Resize the browser window to see how the content respond to the resizing.</p>
-  </div>
-</div>
-```
+## Mobile Specific Sites (5 min)
+
+One way to create optimal experiences for mobile users is a dedicated mobile site.
+
+You know you're on one when you see `m.` in the url!
+
+Compare https://m.ups.com with https://ups.com
+
+![](https://imgs.xkcd.com/comics/server_attention_span.png)
+
+Avoid these... please.
+
+## The Three Components of Responsive Web Design (10 min)
+
+1. Flexible (or Fluid) Grids
+1. Flexible Images (or Media)
+1. Media Specific Layouts
+
+## Flexible Grids
+
+A grid based layout which adjusts with screen size.
+
+Coming soon to a lesson near you.
+
+## Flexible Images
+
+We need images that fit their containers.  By default, images will try to take up as much space as it's initial dimensions.  This can cause some pain when you size up and size down your picture, especially if you are trying to control the size of your elements via a parent `div`.
+
+It turns `max-width: 100%` is the answer.  Most of the time.  For any media.
+
+Even as our flexible container resizes, shrinking or enlarging our image, the image’s aspect ratio remains intact.
 
 ```css
-* {
-    box-sizing: border-box;
-}
-.row::after {
-    content: "";
-    clear: both;
-    display: block;
-}
-[class*="col-"] {
-    float: left;
-    padding: 15px;
-}
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-html {
-    font-family: "Lucida Sans", sans-serif;
-}
-.header {
-    background-color: #9933cc;
-    color: #ffffff;
-    padding: 15px;
-}
-.menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-.menu li {
-    padding: 8px;
-    margin-bottom: 7px;
-    background-color :#33b5e5;
-    color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-.menu li:hover {
-    background-color: #0099cc;
+img,
+embed,
+object,
+video {
+  max-width: 100%;
+  height: auto;
 }
 ```
 
-[Building a Responsive Grid - Part 1](http://codepen.io/drmikeh/pen/NAyZZA?editors=1100#0)
+## Media Queries
 
-> Notice that the webpage in the above example does not look good when you resize the browser window to a very small width. Let's see how we can fix that using _media queries_.
-
----
-
-## What is a Media Query?
-
-A _Media Query_ is a CSS technique introduced in CSS3. It uses the @media rule to include a block of CSS properties only if a certain condition is true.
-
-### Example
-
-If the browser window is smaller than 500px, the background color will change to lightblue:
+Another common way to adjust the styles depending on the device's size is by using media queries:
 
 ```css
-@media only screen and (max-width: 500px) {
-  body {
-    background-color: lightblue;
+body{
+  background: papayawhip;
+}
+
+@media (max-width: 400px){
+  body{
+    background: tomato;
   }
 }
 ```
 
-The above _media query_ will be active whenever the following conditions are true:
+Using media queries, we can group our css rules according to the size of our expected viewing devises.  This media query says, if our viewport is less than 400px, use the following css rules.
 
-* we are displaying to a _screen_ (as opposed to a _printer_)
-* the viewport is at most 500px
+The 400px corresponds to the device's viewport.  A device's viewport is different from both its screen size and resolution.  Check out [this article](http://www.quirksmode.org/mobile/viewports.html) if you're interested in why.
 
-If one of the conditions is not true, then the embedded CSS rules will not be active (the background-color will *not* be `lightblue`).
+Other possible values include
 
-Here is a simple example: [Gentle Introduction to Media Queries - Part 1](http://codepen.io/drmikeh/pen/XKEXbp?editors=1100)
+```
+/* these are most commonly used */
+min-width | max-width | min-height | max-height
 
-Let's look at another example:
-
-```html
-<p class="small-screen">This is a small screen</p>
-<p class="medium-screen">This is a medium screen</p>
-<p class="large-screen">This is a large screen</p>
+/* these are possible, but less common */
+| width | height
+| device-width | min-device-width | max-device-width
+| device-height | min-device-height | max-device-height
+| aspect-ratio | min-aspect-ratio | max-aspect-ratio | max-device-aspect-ratio
+| device-aspect-ratio | min-device-aspect-ratio |
+| color | min-color | max-color
+| color-index | min-color-index | max-color-index
+| monochrome | min-monochrome | max-monochrome
+| resolution | min-resolution | max-resolution
+| scan | grid
 ```
 
-```css
-.small-screen, .medium-screen, .large-screen {
-  display: none;
-}
-@media only screen and (max-width: 399px) {
-  body { background-color: lightblue; }
-  .small-screen { display: block; }
-}
-@media only screen and (min-width: 400px) and (max-width: 767px) {
-   body { background-color: lightgreen; }
-  .small-screen { display: none; }
-  .medium-screen { display: block; }
-}
-@media only screen and (min-width: 768px) {
-   body { background-color: lightyellow; }
-  .small-screen { display: none; }
-  .medium-screen { display: none; }
-  .large-screen { display: block; }
-}
-```
+## You do: Media Queries (15 min)
 
-Here we are using 3 media queries to control both the background color of the `body` *and* which paragraphs are displayed on the page.
+### Step 1
 
-Here is the codepen for this example: [Gentle Introduction to Media Queries - Part 2](http://codepen.io/drmikeh/pen/WxzQWB?editors=1100)
+Working with the example above, create a [jsfiddle](https://jsfiddle.net/), [codepen](http://codepen.io/pen/), or [webpage](http://justinjackson.ca/words.html) that includes at least two media queries.
 
-## Using a Media Query to Add a Breakpoint (and thus control the layout for different size viewports)
+When the viewport is less than 800px wide, make the background yellow. When the viewport is less
+than 400px wide, make the background green.
 
-So how do we use _media queries_ to make our CSS more responsive?
+![](https://dl.dropboxusercontent.com/s/o8xh3hdql9oijo2/mediaqueries.gif?dl=0)
 
-Remember this example: [Building a Responsive Grid - Part 1](http://codepen.io/drmikeh/pen/NAyZZA?editors=1100#0)
+### Step 2
 
-Let's add a _media query_ to change the layout of the page whenever the viewport is small.
-If we add the following CSS then we can change the layout for small viewports:
+Try out a few of the properties above. You can combine media queries to get several different results.
 
-```css
-/* Let's add a break point using a media query */
-@media only screen and (max-width: 500px) {
-  /* For mobile phones: */
-  [class*="col-"] {
-      width: 100%;
-  }
-}
-```
+i.e. what combination of media queries could produce the following grid as the viewport [changes size](http://maximin.tv/srm/)?
 
-Using a _media query_ in this way creates a _breakpoint_, a point at which changing the viewport size affects the layout of the page in a specific way that we have defined.
+| green     | yellow | red    |
+|-----------|--------|--------|
+| turqouise | green  | purple |
 
-> We can use _media queries_ to add a breakpoint where certain parts of the layout will behave differently on each side of the breakpoint.
+[Like this.](http://recordit.co/UfnuMHQbWa)
 
+### Media Query Logical Operators
 
-[Building a Responsive Grid - Part 2](http://codepen.io/drmikeh/pen/JKLYxN)
+You should have just seen these in your research.
 
-## The _Responsive_ Holy Grail Layout
-
-![Holy Grail](https://i.imgur.com/hzZprf4.png)
-
-The _Holy Grail Layout_ is a common problem in CSS to layout a page. We want to make it _responsive_ as well so that it has the following behavior:
-
-| Device        | Layout        | Typical Width       |
-|:-------------:|:-------------:|:-------------------:|
-| Desktop       | ![Desktop](https://i.imgur.com/ha5Hf4e.png) | 1200px and up
-| Tablet        | ![Tablet](https://i.imgur.com/n6nVlFS.png)   | 992px and up
-| Phone         | ![Phone](https://i.imgur.com/n6nVlFS.png)     | 768px and up
-
-Example:
-
-```html
-<header><h2>Header</h2></header>
-<section>
-  <article>
-    <h1>Article contents</h1>
-    <div class="contents">
-      <p>I would not, could not in a tree. Not in a car! You let me be. I do not like them in a box. I do not like them with a fox I do not like them in a house I do mot like them with a mouse I do not like them here or there. I do not like them anywhere. I do not like green eggs and ham. I do not like them, Sam-I-am.
-      </p>
-    </div>
-  </article>
-  <nav><h2>Navbar contents</h2></nav>
-  <aside><h2>Sidebar contents</h2></aside>
-</section>
-<footer><h2>Footer</h2></footer>
-```
-
-```css
-body {
-  padding: 2em;
-  background-color: #6D899F;
-}
-h1, h2 {
-  text-align: center;
-}
-p {
-  text-align: left;
-}
-header, footer {
-  background-color: #ffa;
-  padding: 5px;
-}
-section {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
-article {
-  order: 2;
-  flex: 3;
-  background-color: #BCD39B;
-}
-nav {
-  order: 1;
-  flex: 1;
-  background-color: #CE9B64;
-}
-aside {
-  order: 3;
-  flex: 1;
-  background-color: #62626D;
-}
-article, nav, aside {
-  padding: 1em;
-}
-
-/* mobile layout */
-/* @media (max-width: 480px) { */
-@media only screen and (max-width: 480px) {
-  section {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-  }
-  article { order: 1; }
-  nav     { order: 2; }
-  aside   { order: 3; }
-}
-```
-
-Here is the above example as a codepen: [Holy Grail Layout with Flexbox](http://codepen.io/drmikeh/pen/NAyVpg?editors=1100)
-
-> TRY THIS: Open the above codepen and click on the "Change View" button to go to the "Full page" view. Then open Chrome's _Dev Tools_ and click on the "Toggle Device toolbar" button to see what the above codepen looks like on different devices and viewport sizes. You can use this tool to test your own web sites to see how responsive they are!
-
+Q. How do we "and" two media queries?
 ---
 
-## Summary
+> A. The "and"  clause
 
-Responsive layout has become increasingly important as tablets and smart phones have become increasingly popular. We want to design our web site to look great and be UX friendly on any devise. By using modern CSS layout methods (such as _media queries_ and _flexbox_) we can ___finally___ achieve the _Holy Grail_ of web page design!
+```css
+@media (min-width: 700px) and (orientation: landscape) { ... }
+```
 
+
+Q. How do we "or" two media queries?
 ---
 
-## References
+> A.  Comma separated List
 
-* [Using Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-* [Holy Grail Layout - Wikipedia](https://en.wikipedia.org/wiki/Holy_Grail_(web_design))
-* [What is a Grid-View?](http://www.w3schools.com/css/css_rwd_grid.asp)
+```css
+@media (min-width: 700px), handheld and (orientation: landscape)
+```
+
+Q. What does the "not" keyword do?
+---
+
+> A. Applies to the whole media query and returns true if the media query would otherwise return false (such as monochrome on a color display or a screen width of 600px with a min-width: 700px feature query).  [See more here](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#not)
+
+
+## Mobile first vs Desktop first
+
+Q. What is the difference between starting with the smallest viewport and applying styles as the viewport size increases
+and starting with the largest viewport size as the default?
+---
+
+> A. See below.
+
+Q. Do the order of the media queries matter?
+---
+
+> A. Yes.
+
+Q. Do media queries affect specificity?
+---
+
+> A. No.
+
+[Read more](https://css-tricks.com/logic-in-media-queries/)
+
+## Relative units of measurement
+
+So far, we've been working with pixels (absolute unit of measurement) and percentages (relative unit of measurements)
+
+### You Do: Research the following units (30 min)
+
+Form groups with your tables to research, discuss (15 min), and demo one of the following pair:
+
+- %
+- em and rem
+- vh and vw
+- vmin and vmax
+
+## Questions
+
+1. What are the three components of responsive web design?
+2. How do we "and" two media queries?
+3. What is the name of the design pattern where the initial designs support mobile, then we move to larger devices?
+
+## You Do: 007 Exercise (20 min)
+
+Pair Program This Exercise
+
+https://github.com/ga-dc/responsive_007
+
+## We do: Check it out w/ Chrome dev tools (15 min)
+
+Be sure to include
+
+```html
+<meta name="viewport" content="width=device-width">
+```
+
+>Mobile Safari introduced the "viewport meta tag" to let web developers control the viewport's size and scale. Many other mobile browsers now support this tag, although it is not part of any web standard.  This setting makes the width of the browser’s viewport equal to the width of the device’s screen.
+
+## Cheatsheet:
+
+- Sizes, sizes, and more sizes
+- fluid media: `img, embed, object, video { max-width: 1 };`
+- `@media (max-width: 400px) { ... }`
+- min/max-width, min/max-height
+- And: `@media (max-width: 400px) and (orientation: portrait) { ... }`
+- Or (comma separated): `@media (min-width: 700px), handheld and (orientation: landscape) { ... }`
+
+## Resources
+
+- The post that introduced us to [responsive web design](http://alistapart.com/article/responsive-web-design)
+- http://screensiz.es
+- http://mediaqueri.es
+- Media Query [Logical Operators](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Logical_operators)
+- [Viewports](http://www.quirksmode.org/mobile/viewports.html)
+- Book: Responsive Web Design, Ethan Marcotte
