@@ -51,12 +51,12 @@ creator:
 
 Today, we are going to look at **primitive** data types in JavaScript, of which there are 6:  
     
-- strings
-- booleans
-- numbers
-- null
-- undefined
-- symbols (new in ES2015 - we will discuss ES2015 a little later) 
+- **String**
+- **boolean**
+- **Number**
+- **null**
+- **undefined**
+- **Symbols (new in ES2015 - we will discuss ES2015 a little later)**
     
 <br />
 
