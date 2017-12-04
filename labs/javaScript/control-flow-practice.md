@@ -12,7 +12,7 @@ Using an if/else expression, create a script that prompts the user for their age
 ### 2. Grade.js
 Output the following letter grade from a variable with with a test score. 
 
-Based on the user input, display either "A", "B", "C", "D", or "F", for an score that is an integer between 0 and 100. Try and use a `switch` statement.
+Based on the user input, display either "A", "B", "C", "D", or "F", for an score that is an integer between 0 and 100. 
 
 ### 3. Pluralizer.js
 Take an input like
@@ -22,6 +22,22 @@ thing = "cat"
 count = "5"
 ```
 and output the pluralized form of the word like "5 cats" or "1 dog".
+
+### 4. OrderDiscounts.js (try to use a `switch` statement)
+
+Write a switch statement that can calculate the total order amount (including shipping) for each discount below:
+
+const firstOrder = {
+ discountCode: "FREE_SHIPPING",
+ shippingAmount: 123.4,
+ orderTotal: 55.55
+}
+
+const secondOrder = {
+ discountCode: "HALF_OFF_ORDER_TOTAL",
+ shippingAmount: 12.34,
+ orderTotal: 23.34
+}
 
 ### BONUS - Fizz Buzz
 Further challenges if desired:

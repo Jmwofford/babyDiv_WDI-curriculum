@@ -208,7 +208,7 @@ Form groups with your tables to research, discuss (15 min), and demo one of the 
 
 Pair Program This Exercise
 
-https://github.com/ga-dc/responsive_007
+https://git.generalassemb.ly/ga-wdi-exercises/responsive_007
 
 ## We do: Check it out w/ Chrome dev tools (15 min)
 

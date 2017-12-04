@@ -49,17 +49,15 @@ creator:
 
 <br />
 
-<!-- I am a huge [Gustav Klimt](https://i.imgur.com/1EOSuCm.jpg) fan.  I actually created a reproduction of this piece, _The Kiss_, by Klimt for our turquoise living room wall.  I also love puzzles.  This is part of why I love development, as I think of every problem as a puzzle and work on bite-sized pieces as I go along.  My family gave me this puzzle for Christmas, combining two of my loves. -->
-
-Today, we are going to look at **primitive** data types in JavaScript, of which there are 6- 
-    - strings
-    - booleans
-    - numbers
-    - null
-    - undefined
-    - symbols (new in ES2015- we will discuss ES2015 next Friday) 
-We will continue onto **complex** data types on Monday.
-
+Today, we are going to look at **primitive** data types in JavaScript, of which there are 6:  
+    
+- **String**
+- **boolean**
+- **Number**
+- **null**
+- **undefined**
+- **Symbols (new in ES2015 - we will discuss ES2015 a little later)**
+    
 <br />
 
 ## YOU DO (10m)
