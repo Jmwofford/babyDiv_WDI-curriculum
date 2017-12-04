@@ -25,7 +25,7 @@
 <a name="opening"></a>
 ## Introduction to Functions (25 min)
 
-![Imgur](http://i.imgur.com/ylb6WX9.gif)
+![Imgur](https://i.imgur.com/ylb6WX9.gif)
 
 &#x1F535; Take 15 minutes and read this:
 
