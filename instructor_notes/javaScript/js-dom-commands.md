@@ -50,7 +50,7 @@ body {
 }
 ```
 
-What happened? When we have are looking at CSS via the DOM, we are able to do whatever we want to change it!  But remember that if you refresh the page, everything will re-render in the way that it was originally intentioned and you will lose your changes!  Your browser will have sent a new request and received a new response back - aka the default HTML + CSS files and folders associated with the `lifehacker` endpoint.
+What happened? When we have are looking at CSS via the DOM, we are able to do whatever we want to change it!  But remember that if you refresh the page, everything will re-render in the way that it was originally intended and you will lose your changes!  Your browser will have sent a new request and received a new response back - aka the default HTML + CSS files and folders associated with the `lifehacker` endpoint.
 
 A few other things to try:
 
