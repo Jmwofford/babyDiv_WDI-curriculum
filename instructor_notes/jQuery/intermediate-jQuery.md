@@ -40,22 +40,27 @@ http://getbootstrap.com/css/
 ```html
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Welcome Back to jQuery</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    </head>
-    <body>
 
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-        <script src="js/app.js"></script>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Welcome Back to jQuery</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
 </html>
 ```
 
 #### Starting HTML
 
 We are going to display a list homes for sell in Lake Arrowhead. Here's some HTML to get us started - replace the existing `<body>` tags with the following:
+
 ```html
 <body class="container">
 
@@ -102,7 +107,7 @@ We are going to display a list homes for sell in Lake Arrowhead. Here's some HTM
     <br>
     <button id="addHome" class="btn btn-danger">Add Home</button>
     
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 ```
@@ -215,6 +220,7 @@ $('#addHome').click(function($event){
     console.log(this);
 });
 ```
+
 Refresh the page and open the console to see what the `$event` argument (jQuery's _event_ object) passed in by jQuery looks like and what `this` is set to.
 
 jQuery's _event_ object can come in handy, especially when listening to mouse events. It is this object for example that would make writing a drawing or paint application possible.
@@ -226,6 +232,7 @@ $('#addHome').on('click', function() {
     console.log(this);
 });
 ```
+
 In all cases, note that if you don't need to use the _event_ argument, you don't have to include it.
 
 [These docs](http://api.jquery.com/category/events/) have a complete list of event methods.
