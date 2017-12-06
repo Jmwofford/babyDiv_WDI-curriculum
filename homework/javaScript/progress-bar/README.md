@@ -16,6 +16,12 @@ recommend that you make a commit every time that you pass a new test, in
 addition to any other time you feel might be appropriate (e.g. just before
 trying out something new).
 
+## Reference
+- [`document.getElementById`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)
+- [`document.getElementsByClassName`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName)
+- [`node.textContent`](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent)
+- [`HTMLElement.style`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style)
+
 ## Instructions
 
 You are going to help complete a simple website that counts down from 100 down

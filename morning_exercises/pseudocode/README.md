@@ -23,7 +23,7 @@ const barrel = (small, large, total) => {
   //your code here
 };
 
-barrels(2,3,825) => 141
+barrels(2,5,825) => 141
 ```
 
 
