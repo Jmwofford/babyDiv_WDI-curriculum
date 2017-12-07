@@ -13,7 +13,7 @@
 
 Programming at its most basic level is the process developers undergo to instruct a computer to perform a task. But there are a number of programmatic approaches that can be taken to enable your computer to solve a specific problem. We call these approaches **programming paradigms.**
 
-So far in WDI, we've largely relied on the *procedural programming* paradigm, which is the notion of writing a series of step-by-step instructions for your computer to carry out.
+So far in WDI, we've largely relied on the **procedural programming** paradigm, which is the notion of writing a series of step-by-step instructions for your computer to carry out.
 
 Earlier, we dipped our toes into the **object-oriented programming** paradigm. This design pattern allows us to considerably DRY up our code to achieve ***abstraction***, ***encapsulation*** and ***modularity***.
 
@@ -58,11 +58,12 @@ We also avoid the **side-effect** of modifying an external variable. As discusse
 Here's an example of an impure function:
 
 ```js
-let age = 27
-function increaseAgeBy(int){
-  return age += int
+let myAge = 27
+const increaseAge = (years) => {
+  return myAge += years;
 }
-increaseAgeBy(2)
+
+increaseAge(2);
 ```
 
 <details>
@@ -79,11 +80,12 @@ increaseAgeBy(2)
 We can make this function pure by not changing anything outside the function. Instead, we modify the parameter, which is in the scope of the function.
 
 ```js
-let age = 27
-function increaseAgeBy(myAge,int){
-  return myAge += int
+let myAge = 27
+const increaseAge = (age, years) => {
+  return age + years
 }
-increaseAgeBy(age, 2)
+
+increaseAge(20, 2)
 ```
 
 <details>
@@ -99,28 +101,29 @@ objects outside of the function. Immutability, the idea of not changing data at 
 Why does the example below violate this concept of Immutability?
 
 ```js
-let instructor = {
+const instructor = {
   name: 'Jomie',
-  age: 999
+  age: 27
 }
 
-instructor.name = "Jamie"
+instructor.age = 20
 ```
 If we wanted to make this change without violating Immutability, we could create a function that would return a **new** and **separate** version of `instructor` without modifying `instructor` directly:
 
 ```js
 let instructor = {
-  name: 'Jomie',
-  age: 999
+  name: 'Defintely Not Jamie',
+  age: 27
 }
 
-function updateName(instructor, newName) {
+function updateName(instructor, newAge, newName) {
   let newInstructor = {...instructor}
   newInstructor.name = newName
+  newInstructor.age = newAge
   return newInstructor
 }
 
-let jamie = updateName(instructor, "Jamie")
+let jamie = updateName(instructor, 20, `Jamie`)
 ```
 
 > let newInstructor = {...instructor} is an example of a destructured object. In other words, it is a clone of the original instructor object.
