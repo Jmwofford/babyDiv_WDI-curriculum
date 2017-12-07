@@ -111,7 +111,7 @@
 ### `onClickNewCounter(event)`
 
 ```markdown
-1.  It locates
+1.  It creates a new counter in the JS array
 2.  It creates a new UI component to correspond with that new counter.
 3.  It does not return anything.
 ```
