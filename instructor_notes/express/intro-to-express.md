@@ -331,7 +331,6 @@ Did anyone run into any issues?
 
 <br />
 
-
 ## Query Parameters
 
 Our base route is a fixed path to a specific resource (like an html page, a piece of data in our database, an image, etc.) and we can augment or support that path by providing parameters.

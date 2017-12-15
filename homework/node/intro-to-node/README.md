@@ -2,7 +2,7 @@
 
 # Homework : Intro to Node
 
-![image](http://thisdavej.com/wp-content/uploads/2016/02/nodejs-logo.png)
+![image](https://thisdavej.com/wp-content/uploads/2016/02/nodejs-logo.png)
 
 ## Setup
 
