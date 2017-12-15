@@ -233,7 +233,7 @@ Get together with your buddy. Remember: We are here and you can still ask questi
 
 http://expressjs.com/en/starter/basic-routing.html
 
-1. Write a second route underneath the first that listens for `/greeting` and responds with `'Hey, WDI 12!'`
+1. Write a second route underneath the first that listens for `/greeting` and responds with `'Hey, WDI 13!'`
 
 1. Write a third route underneath the that one that listens for `/rihanna` and responds with `"Work work work work work"`
 
@@ -241,11 +241,11 @@ http://expressjs.com/en/starter/basic-routing.html
 <summary>SOLUTION</summary>
 
 ```javascript
-app.get('/greeting', function(req, res) {
-  res.send('HEY, WDI 12!');
+app.get('/greeting', (req, res) => {
+  res.send('HEY, WDI 13!');
 });
 
-app.get('/rihanna', function(req, res) {
+app.get('/rihanna', (req, res) => {
   res.send("Work work work work work");
 });
 ```
@@ -312,7 +312,7 @@ Try this URL: `http://localhost:3000/schmitty`. What is returned?
 
 ### Why are params important?
 
-Eventually, we will use "wildcard" params to grab specific information from our app. For example, if we were builing a Facebook replica, and we wanted to grab a specific friend of a specific user, we might build a route that looks like this:
+Eventually, we will use "wildcard" params to grab specific information from our app. For example, if we were building a Facebook replica, and we wanted to grab a specific friend of a specific user, we might build a route that looks like this:
 
 `http://localhost:3000/users/:user_id/friends/:friend_id`
 
