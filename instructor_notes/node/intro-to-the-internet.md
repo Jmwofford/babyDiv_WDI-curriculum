@@ -24,7 +24,7 @@ creator:
 
 Think about how the internet works.  There are 4 high level terms that describe how the entire internet works. Take a few minutes and discuss what these terms mean with the person beside you.
 
-![](http://i.imgur.com/vh2LsEz.jpg)
+![](https://i.imgur.com/vh2LsEz.jpg)
 
 I'm going to call on a couple of you, but would also like you all to type your own answer into Slack as we discuss!
 
@@ -45,7 +45,7 @@ Trying to define just what the internet is can be difficult.  At it's highest le
 
 This is just the tip of the iceberg concerning how the internet has changed society as we know it. Despite this impact, the technical concepts can be boiled down to pretty simple terms.
 
-![](http://imgur.com/KelmRFQ.jpg)
+![](https://imgur.com/KelmRFQ.jpg)
 
 1. The **client** (aka the user's computer) sends a **request** out in the form of a URL.
 
@@ -59,7 +59,7 @@ This is just the tip of the iceberg concerning how the internet has changed soci
 
 Let's look at one more example of this: 
 
-![](http://imgur.com/AdJA3h4.jpg)
+![](https://imgur.com/AdJA3h4.jpg)
 
 ### Seeing The Internet In Action
 
@@ -136,7 +136,7 @@ hash/fragment | the URI fragment is generally used by the client to identify som
 
 <br />
 
-_The Schema above is from [Tuts +](http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)_
+_The Schema above is from [Tuts +](https://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)_
 
 When someone types `http://google.com` in a web browser, a new cycle resulting in an HTTP Request/ Response is initiated.  Essentially, your browser is saying:
 
