@@ -3,16 +3,15 @@ title: Express - Router
 type: lesson
 duration: '1:30'
 creator:
-    name: Matt Huntington, adapted by Colin Hart
-    class: WDIr-R2D2
+    name: Matt Huntington/Colin Hart/Jamie King
+    class: WDI13
 ---
 
 # Express - The Router
 
 ## Lesson Objectives
-1. Describe the DRY principle
-2. Describe the Single Responsibility Principle
-3. MVC
+1. Describe the DRY principle and the concept of Code Smells
+2. Use the Single Responsibility Principle to explain the concept of MVC
 4. Use the express Router to:
   - Bring the C of MVC
   - Dry up our routes
@@ -29,7 +28,26 @@ creator:
 
 <br />
 
+## Intro
+
+Let's take a look at all of the things we have done so far in our single server.js file.
+
+- Import express, handlebars, and other dependencies.
+- Declared which view engine to use as our templating language.
+- Create multiple routes that listens for a request and provides a response.
+- Define what port our server lives on.
+
+Just these four things are starting to make our server.js file pretty large and unmaintainable.  Imagine what this 
+code would look like if it were also connected to a database and had dozens and dozens of routes! Today we will 
+examine some best practices regarding breaking up our code into smaller, more readable pieces.
+
 ## DRY and Code Smells
+### Code Smells
+<img style="float:left; margin: 0 20px 20px 0;" width="300" src="https://cdn-images-1.medium.com/max/1600/1*_xk8HBrdtVr3snK9rZ6Jlg.jpeg" />
+
+For many of us, this large `server.js` file starts to not feel like a best practice.  It doesn't fit in with many of the rules that we've talked about in the past like DRY and Separation of Concerns.  These feelings can help push you to noticing symptoms that can possibly indicate a deeper problem in your code.  This is commonly referred to as a `Code Smell`.
+
+Leaving Code Smells unaddressed can easily lead to difficult to maintain or unmaintainable code down the line.  We want to do our best to avoid writing smelly code.  One easy way to make sure our code is maintainable and scalable over the long term is to utilize established design patterns, keep our code separated into many files instead of one giant file, and constantly looking for opportunities to make our code better through **merciless** refactoring.
 
 **Don't Repeat Yourself**
 
@@ -51,7 +69,7 @@ The **DRY** principle is aimed at reducing repetition within your code.
 
 **MVC** is an application architectural pattern. So far we have been writing everything in the server file, the views directory, and our data file.
 
-You can imagine that each of these pieces will get larger and larger.    
+You can imagine that each of these pieces will get larger and larger.
 
 <br />
 
