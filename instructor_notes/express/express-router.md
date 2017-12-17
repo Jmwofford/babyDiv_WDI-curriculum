@@ -10,7 +10,7 @@ creator:
 # Express - The Router
 
 ## Lesson Objectives
-1. Describe the DRY principle and the concept of Code Smells
+1. Get rid of Code Smells by utilizing the DRY principle and other best practices
 2. Use the Single Responsibility Principle to explain the concept of MVC
 4. Use the express Router to:
   - Bring the C of MVC
@@ -49,9 +49,11 @@ For many of us, this large `server.js` file starts to not feel like a best pract
 
 Leaving Code Smells unaddressed can easily lead to difficult to maintain or unmaintainable code down the line.  We want to do our best to avoid writing smelly code.  One easy way to make sure our code is maintainable and scalable over the long term is to utilize established design patterns, keep our code separated into many files instead of one giant file, and constantly looking for opportunities to make our code better through **merciless** refactoring.
 
+### Keeping the Smell Out
+
 **Don't Repeat Yourself**
 
-The **DRY** principle is aimed at reducing repetition within your code.
+The **DRY** principle is aimed at reducing repetition within your code.  This makes your code easier to maintain as it grows and prevents unnecessary bloat.
 
 > "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system."
 
@@ -63,13 +65,13 @@ The **DRY** principle is aimed at reducing repetition within your code.
 
 <br />
 
-## MVC
+## Model View Controller
 
-**Model, View Controller**
+**MVC** is an application architectural pattern that allows us to utilize the single responsibility principle. So far we have been writing everything in the server file, the views directory, and our data file.
 
-**MVC** is an application architectural pattern. So far we have been writing everything in the server file, the views directory, and our data file.
+You can imagine that each of these pieces will get larger and larger.  Through the use of the MVC pattern, we will be able to break our code into smaller, more flexible parts
 
-You can imagine that each of these pieces will get larger and larger.
+<img height="400" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/1200px-MVC-Process.svg.png" />
 
 <br />
 
