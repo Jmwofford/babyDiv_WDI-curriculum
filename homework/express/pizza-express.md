@@ -26,7 +26,7 @@ flag down an instructor right away.
 2. `cd` into the `pizza-express` folder
 3. Initialize npm with `npm init`
   - Hit enter to accept the defaults
-4. Install Express `npm install express --save`
+4. Install Express `npm install express`
 5. Verify express was installed locally by checking `package.json`:
 
  ```json
@@ -42,16 +42,16 @@ flag down an instructor right away.
 // app.js
 
 //require express package
-var express = require('express');
+const express = require('express');
 //save an express module as 'app'
-var app     = express();
+const app     = express();
 // assigning 3000 as our port
-var port    = 3000;
+const PORT    =  process.env.PORT || 3000;
 
 // tells the server to listen for requests on port 3000
-app.listen(port, function(){
+app.listen(PORT, function(){
   console.log("==========================")
-  console.log('LISTENING ON PORT ' + port);
+  console.log(`LISTENING ON PORT ${port}`);
   console.log("==========================")
 });
 ```
@@ -98,7 +98,7 @@ app.get('/topping/:type', function(req, res, next) {
 ### Part 3: Express Views & Handlebars
 We are going to add views to your Pizza Express app and spice things up.
 
-1. In the `pizza-express` directory, install and set up Handlebars: `npm install --save hbs`
+1. In the `pizza-express` directory, install and set up Handlebars: `npm install hbs`
 2. Double check package.json to make sure it was installed
 3. In `app.js` require hbs + set up the view engine:
 
@@ -106,7 +106,6 @@ We are going to add views to your Pizza Express app and spice things up.
 var hbs = require('hbs');
 
 app.set("view engine", "hbs");
-app.set('views', './views');
 ```
 
 4. Create a `views` folder in `pizza-express`. We are going to create 4 view (Handlebars) files, 1 for each route + 1 layout file. Make sure these are INSIDE the `views` folder:
@@ -118,7 +117,7 @@ app.set('views', './views');
 5. git add, and git commit with the message "set up hbs views"
 
 <details><summary>.. Stuck?</summary>
-- Make sure you installed Handlebars properly with `npm install hbs --save` in the correct (current working) directory `pizza-express`
+- Make sure you installed Handlebars properly with `npm install hbS` in the correct (current working) directory `pizza-express`
 
 - Make sure your folder structure is correctly set up. It should look something like this:
 
@@ -157,7 +156,7 @@ Our outcome will LOOK the same on the client, but we'll change things "under the
 ```javascript
 //app.js
 
-app.get("/test/:someValue", function(req, res, next){
+app.get("/test/:someValue", (req, res, next) => {
   res.render("index.hbs", {
     message: req.params.someValue
   });
