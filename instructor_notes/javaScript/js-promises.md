@@ -1,19 +1,5 @@
 # JavaScript Promises
 
-<style type="text/css">
-summary {
-	font-size: 1.25em;
-	font-weight: bold;
-}
-
-summary.header {
-	padding-bottom: 0.3em;
-	font-size: 1.5em;
-	border-bottom: 1px solid #eaecef;
-}
-</style>
-
-
 ## Objectives
 
 * Describe the anatomy of a Promise
@@ -74,17 +60,17 @@ What are some examples of a Promise in the real world? What's a scenario in whic
 Check out this setup: 
   
   1. Jim is the one person in all of Comcast media who can help you with you get your internet to work correctly.
-  - Naturally, Jim is very popular.
-  - Jim is always available by phone, but he can only talk to one person at a time.
-  - Some people naturally want to talk to Jim for a MUCH longer time than others... which angers some of his other customers and increases the total wait time.
+  2. Naturally, Jim is very popular.
+  3. Jim is always available by phone, but he can only talk to one person at a time.
+  4. Some people naturally want to talk to Jim for a MUCH longer time than others... which angers some of his other customers and increases the total wait time.
 
 This is an example of synchronous communication.  In the example, he would listen and address people's problems, but was only able to help one person at a time.
 
 Let's use this same metaphor to explain what we mean when we talk about asynchronicity.
 
   1. Jim buys a answering machine for all of his phone calls.
-  - Customers now leave a message, and wait for Jim to call back.
-  - This allows Jim to respond to messages as soon as he has an answer, without keeping other customers on hold.
+  2. Customers now leave a message, and wait for Jim to call back.
+  3. This allows Jim to respond to messages as soon as he has an answer, without keeping other customers on hold.
 
 
 Promises in JavaScript are like these answering machines.  It allows us to write responses for code that takes a while to prepare.
