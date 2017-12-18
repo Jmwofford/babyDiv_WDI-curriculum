@@ -1,5 +1,19 @@
 # JavaScript Promises
 
+<style type="text/css">
+summary {
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+summary.header {
+	padding-bottom: 0.3em;
+	font-size: 1.5em;
+	border-bottom: 1px solid #eaecef;
+}
+</style>
+
+
 ## Objectives
 
 * Describe the anatomy of a Promise
@@ -7,27 +21,30 @@
 * Correctly use a Promise chain
 * Handle errors while working with Promises
 
-<br>
-
 ## Introduction
 
 Welcome to the Promise land! Promises drive a lot of modern programming practices, and it is what allows Node apps to operate asynchronously.  Today's lesson largely covers WHY and HOW to use a promise, and starting with the next class we will utilize these concepts to fetch data from MongoDB.
 
-### You Do (10 minutes)
-
-Read this: [Promises For Dummies](https://scotch.io/tutorials/javascript-promises-for-dummies)
+<details>
+	<summary>You Do (10 Minutes)</summary>
+	
+Read this: [Promises For Dummies](https://scotch.io/tutorials/javascript-promises-for-dummies). 
 
 If you read this yesterday, go through and read it again! What did you pick up this time that you didn't see before?
+</details>
 
-### Think, Pair, Share
+<details>
+	<summary>Think, Pair, Share</summary>
+	
 What are some examples of a Promise in the real world? What's a scenario in which you would want to 'chain' Promises together in the real world?
+</details>
 
 <!-- https://spring.io/understanding/javascript-promises -->
 
-<br>
-
-### Non-Blocking Code in JavaScript
-
+## Non-Blocking Code in JavaScript
+<details>
+  <summary>Pop Quiz!</summary>
+  
   Pop quiz! In the code below, which word will get printed first?
 
   ```js
@@ -43,46 +60,65 @@ What are some examples of a Promise in the real world? What's a scenario in whic
   console.log('Red');
   console.log('Blue');
   ```
+</details>
 
   JavaScript code is _non-blocking_ -- this means that each line of code begins
   to execute as soon as it possibly can, even if a previous line of code hasn't finished executing.
   
-  ### Synchronicity
-  Check out this setup: 
-  - Jim is the one person in all of Comcast media who can help you with you get your internet to work correctly.
+  
+## Synchronicity
+
+<details>
+<summary>Comcast Example</summary>
+  
+Check out this setup: 
+  
+  1. Jim is the one person in all of Comcast media who can help you with you get your internet to work correctly.
   - Naturally, Jim is very popular.
   - Jim is always available by phone, but he can only talk to one person at a time.
   - Some people naturally want to talk to Jim for a MUCH longer time than others... which angers some of his other customers and increases the total wait time.
 
-  This is an example of synchronous communication.  In the example, he would listen and address people's problems, but was only able to help one person at a time.
+This is an example of synchronous communication.  In the example, he would listen and address people's problems, but was only able to help one person at a time.
 
-  Let's use this same metaphor to explain what we mean when we talk about asynchronicity.
-  - Jim buys a answering machine for all of his phone calls.
+Let's use this same metaphor to explain what we mean when we talk about asynchronicity.
+
+  1. Jim buys a answering machine for all of his phone calls.
   - Customers now leave a message, and wait for Jim to call back.
   - This allows Jim to respond to messages as soon as he has an answer, without keeping other customers on hold.
 
 
-  Promises in JavaScript are like these answering machines.  It allows us to write responses for code that takes a while to prepare.
+Promises in JavaScript are like these answering machines.  It allows us to write responses for code that takes a while to prepare.
+</details>
 
-  These are some events that use Promises to handle asynchronous code:
+<details>
+<summary>Things that use promises</summary>
+
+These are some events that use Promises to handle asynchronous code:
+  
   - Waiting for a **response to an HTTP request**.
   - Waiting for a **database** to retrieve/modify a piece of data.
   - Hitting a 3rd party API for **authentication** (Facebook, Twitter, etc)
   - Waiting on **DOM events** (driven by user interaction).
 
-  These are some examples of asynchronous code that don't use Promises out of the box:
+These are some examples of asynchronous code that don't use Promises out of the box:
+
   - Waiting for a **timer** to run out.
   - Waiting for the **filesystem** to read from, or to write to, a file.
 
 In all of these examples, your JavaScript code is _waiting for something to happen_, and there's no telling how long that 'something' will take.
+</details>
 
 Even though all of this sounds new, we've already seen an alternative way to handle code that is waiting for something to happen. 
 
-### Think, Pair, Share
+
+<details>
+<summary>Think, Pair, Share</summary>
+
 Talk to the person next to you and discuss how we have handled _waiting for something to happen_ before.  Write out 2-3 examples of when and how you have done this previously.
+</details>
 
-
-## Dealing with Async
+<details>
+<summary>Previous Ways We've Dealt with Async Calls</summary>
 
 So how can we tell our code to wait for something to finish?  Node actually uses the same approach that the browser does -- callbacks.
 
@@ -97,8 +133,7 @@ By setting a callback as an event handler, we can defer its execution until the 
    //Do stuff when a user makes an interaction in the browser
  })
   ```
-
-<br>
+</details>
 
 ## "Callback Hell" : Drawbacks to Callbacks
 
@@ -106,10 +141,12 @@ By setting a callback as an event handler, we can defer its execution until the 
   there's _more than one_ 'slow' thing we have to deal with?
 
   ![Stamp](https://media2.giphy.com/media/1xkMJIvxeKiDS/200w.gif)
-
   ![Staple](https://media3.giphy.com/media/l2JI9JdUDjxVbd20g/200w.gif)
 
-  For instance, let's say we need to do all of the following:
+<details>
+<summary>Callback Hell Example</summary>
+
+For instance, let's say we need to do all of the following:
 
   1. Read in data from a file
   2. Parse the data as CSV content
@@ -156,16 +193,18 @@ Maybe something like this?
   Or how about this? 
 
   ![](http://i.imgur.com/EGGwaXP.png)
+  
+  ![](https://i.imgur.com/KqDiYWQ.png)
 
   ![Head Bang](https://media4.giphy.com/media/OT69wDOihxqEw/200w.gif)
 
   Wow, that's some deep nesting. This makes code looks complicated and messy.
   It's not easy to follow.  And it isn't DRY -- do you really need a separate system for handling errors at every stage in the
   process?
-  
-<br>
+</details>
 
-## Drawbacks to Callbacks
+<details>
+<summary>Drawbacks to Callbacks</summary>
 
 Asynchronous code necessitates callbacks.
 But dealing with lots of callbacks can be tricky:
@@ -177,12 +216,12 @@ But dealing with lots of callbacks can be tricky:
 -  As projects become more complex it becomes exponentially harder to refactor and add features.
 
 Fortunately, there's a better way: Promises.
-
-<br>
-
-
+</details>
 
 ## Why Promises?
+
+<details>
+<summary>Explanation</summary>
 
 Promises are an alternative to directly using callbacks.  The concept of promises in programming have been around for decades, but it first rose to prominence in JavaScript after jQuery introduced something called a deferred object.  This resulted in an explosion of JavaScript libraries vying to find the clearest and most efficient way to handle async code.  Libraries like `bluebird`, `q`, and `async` were very popular options.  As web development became more and more focused on getting data from a variety of endpoints through APIs, these libraries became absolutely necessary for a JavaScript developer.
 
@@ -195,8 +234,10 @@ Promises are going to present us with several key advantages over traditional ca
 - Unlike callbacks, Promises clarify the order of execution.
   - This means that Promises are easier to read and it is clear what happens when.
 - Promises simplify error handling.
+</details> 
 
-### Anatomy of a Promise
+<details>
+<summary>Anatomy of a Promise</summary>
 
 A Promise object is a special object in JS that will always have one of 3 states.
 
@@ -240,14 +281,19 @@ is invoked and passed the value (usually an `Error` object) the promised rejecte
 with as its argument.  This handler can be really valuable when trying to debug.
 
 What are some scenarios where you imagine an Error may occur when fetching information from a database?
+</details>
 
-<br>
-
-## Promises Example
+<details>
+<summary>Promises Example</summary>
 
 A promise is like an IOU in real life. When you go to a restaurant, you pay money and in return are _promised_ food in the near future.  When you put in your order there can be plenty of orders being worked on at once.  Each order gets delivered as soon as it is finished, and it is delivered for you to eat.  Additionally, there is a possibility that something goes wrong.  Your food is overcooked, your order gets lost, etc.  When something goes wrong, the restaurant will explicitly let you know (hopefully).
+</details>
 
-## I DO: Using Promises to fetch data from an API
+## I DO: 
+
+<details>
+<Summary>Using Promises to fetch data from an API</summary>
+
 Later in the class, we will be using JavaScript to get info from 3rd party servers by utilizing APIs.  In simplest terms, an API is simply a server where various requests can be made and responses can be delivered in JSON.  (We will go into more detail later)
 
 In this example, I am using a database called [OMDB, the Open Movie Database](http://www.omdbapi.com/).  This will allow me to hit an endpoint using a JavaScript library called `axios` and use promises to console log a successful response.
@@ -267,8 +313,13 @@ axios.get("http://www.omdbapi.com/?apikey=d31f1a94&s=starwars")
     console.log(error.response.data)
   })
 ```
+</details>
 
-### Chaining Promises Together
+<details>
+<summary>Chaining Promises Together</summary>
+
+![](https://i.imgur.com/QpPS6zT.png)
+
 As you build promises, you may find that you need to make multiple calls to a database or API.  Promises allow developers to take this more advanced logic and still present it in a clean way.
 
 **AGAIN** Watch me do this.  We will go more in depth on APIs in the future, for now we should focus on the `.then` and `.catch` methods.
@@ -302,6 +353,7 @@ axios.get("http://www.omdbapi.com/?apikey=d31f1a94&s=star%20wars")
 As our request becomes more complicated, it's now easy to add another `.then()` callback and we can keep our async code in check in a clean way.
 
 Notice that we only have one `.catch` block at the end.  This is another great feature of promises.  If ANY of our promises fail, then that single `.catch` block will be called and we can guarantee consistent actions across any error.
+</details>
 
 ## Recap
 - Promises allow us to make really complex async code readable and clean.
@@ -309,13 +361,15 @@ Notice that we only have one `.catch` block at the end.  This is another great f
 - We will be consuming Promise objects when we interact with our MongoDB database and when we make API calls to a server.
 
 ## Independent Practice
-[Promises lab starter code](https://git.generalassemb.ly/atl-wdi/wdi-curriculum-10/tree/master/labs/unit_02/javaScript/promises/js-promises-lab-starter)
+[Promises Lab - Starter Code](https://git.generalassemb.ly/atl-wdi/wdi-curriculum-10/tree/master/labs/unit_02/javaScript/promises/js-promises-lab-starter)
 <br>
-## For more info on how to build a Promise object (Only if you feel really cozy with consuming promises)
-  [Promises In The Wild](https://davidwalsh.name/promises)
-  
-  [Building Promises Lab](https://git.generalassemb.ly/atl-wdi/wdi-curriculum/tree/master/labs/javaScript/promises/js-promises-lab-starter)
+## For more info on how to build a Promise object
+<details>
+<summary>(Only if you feel really cozy with consuming promises)</summary>
 
+  - [Promises In The Wild](https://davidwalsh.name/promises)
+  - [Building Promises Lab](https://git.generalassemb.ly/atl-wdi/wdi-curriculum/tree/master/labs/javaScript/promises/js-promises-lab-starter)
+</details>
 
 ## Additional Resources
 
