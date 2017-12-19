@@ -40,7 +40,7 @@ Because of these weaknesses, the emerging pattern in the React community is to m
 ### Redefining the Separation of Concerns
 The idea behind bringing HTML, CSS, AND JavaScript into one single file may sound crazy at first.  We've spent weeks talking about how the Separation of Concerns allows our code to be easier to read and debug.  Traditionally, we maintain the Separation of Concerns on the front end by separating the entire document's structure(HTML), styling (CSS), and logic (JS). However, in React we redefine our SoC by building small components that house a single elements structure, styling, and logic within one file.
 
-![](http://i.imgur.com/8sXcykD.png)
+![](https://i.imgur.com/8sXcykD.png)
 
 ### The Rise of Inline Styles
 Since component driven design is a relatively new pattern, there is not a single best pattern to date. One of the first common patterns and still an extremely popular option is to use inline styles.  You can checkout the slide deck of the talk that introduced this concept [here](https://speakerdeck.com/vjeux/react-css-in-js)
