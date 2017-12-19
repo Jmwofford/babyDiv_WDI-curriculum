@@ -289,7 +289,7 @@ Watch me do this, and focus in on how `.then()` and `.catch()` is allowing us to
 ```
 const axios = require("axios")
 
-axios.get("http://www.omdbapi.com/?apikey=d31f1a94&s=starwars")
+axios.get("http://www.omdbapi.com/?apikey=28cbce7c&s=starwars")
   .then((response) => {
     console.log("Success!")
     console.log(response.data)
@@ -314,7 +314,7 @@ As you build promises, you may find that you need to make multiple calls to a da
 const axios = require("axios")
 
 //Search for all movies that match Star Wars
-axios.get("http://www.omdbapi.com/?apikey=d31f1a94&s=star%20wars")
+axios.get("http://www.omdbapi.com/?apikey=28cbce7c&s=star%20wars")
   .then((response) => {
     //Get the ID of the first response and search for more info on that specific movie.
     console.log("Search Success!")
@@ -323,7 +323,7 @@ axios.get("http://www.omdbapi.com/?apikey=d31f1a94&s=star%20wars")
     const firstId = response.data['Search'][0].imdbID
     console.log("Id of the first movie", firstId);
     //Make a second API call to a third party API
-    return axios.get(`http://www.omdbapi.com/?apikey=d31f1a94&i=${firstId}`)
+    return axios.get(`http://www.omdbapi.com/?apikey=28cbce7c&i=${firstId}`)
   })
   .then((response) => {
     console.log("Second Api call success!");
