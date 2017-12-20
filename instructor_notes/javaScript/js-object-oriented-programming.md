@@ -52,6 +52,7 @@ What's nice about the above code snippet? How does it compare to this...
   <summary> 
     <strong>Some thoughts...</strong>
   </summary >
+
   > * Related properties and methods are packaged together. 
   > * Fewer global variables. 
   > * Readability.
@@ -124,7 +125,7 @@ Making all of these similar objects by hand is just tedious. What
 if we could build a function that makes them for us?
 
 ### You Do : Create a `makeCar` Function(10 minutes / 0: 25)
-> 5 minutes exercise.5 minutes review.
+> 5 minutes exercise. 5 minutes review.
 
 Define a function `makeCar` that takes two parameters - `model` and `color` - and returns an object literal representing a car using those params.
 
