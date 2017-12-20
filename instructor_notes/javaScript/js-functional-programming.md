@@ -11,6 +11,9 @@
 
 ## Framing (5 minutes)
 
+<details>
+<summary>Details</summary>
+
 Programming at its most basic level is the process developers undergo to instruct a computer to perform a task. But there are a number of programmatic approaches that can be taken to enable your computer to solve a specific problem. We call these approaches **programming paradigms.**
 
 So far in WDI, we've largely relied on the **procedural programming** paradigm, which is the notion of writing a series of step-by-step instructions for your computer to carry out.
@@ -18,8 +21,12 @@ So far in WDI, we've largely relied on the **procedural programming** paradigm, 
 Earlier, we dipped our toes into the **object-oriented programming** paradigm. This design pattern allows us to considerably DRY up our code to achieve ***abstraction***, ***encapsulation*** and ***modularity***.
 
 Let's look at another programming paradigm...
+</details>
 
 ## Why Functional Programming? (10 minutes)
+
+<details>
+<summary>Details</summary>
 
 Though Object Oriented Programming is historically the most popular programming paradigm, functional programming has made a recent resurgence due to the popularity of libraries like React and Redux. But it's far from being a new concept. Lisp, one of the first programming languages ever created -- back in the 1950s -- had already embraced the paradigm.
 
@@ -30,6 +37,7 @@ Though Object Oriented Programming is historically the most popular programming 
 [Javascript is cool now.](http://blog.salsitasoft.com/why-now/)
 
 When [Brendan Eich](http://blog.salsitasoft.com/why-now/) created Javascript for his then-employer Netscape, he was ordered by management to make the language look like Java. He obliged somewhat and gave Javascript some key functional programming features. As the language exploded in popularity, Javascript developers are now taking advantage of these features.
+</details>
 
 ## What is Functional Programming? (15 minutes)
 

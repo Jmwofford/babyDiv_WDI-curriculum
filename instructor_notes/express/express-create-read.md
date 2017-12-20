@@ -278,7 +278,7 @@ Our key words here today are:
 |-------:   |--------   |---------------------------    |
 | GET       | Read      | show / index / new / edit     |
 | POST      | Create    | no views rendered             |
-| UPDATE    | Update    | no views rendered             |
+| PUT/PATCH    | Update    | no views rendered             |
 | DELETE    | Delete    | no views rendered             |
 
 <br>
