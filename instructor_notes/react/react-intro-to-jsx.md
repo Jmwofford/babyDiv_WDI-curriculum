@@ -141,14 +141,14 @@ In addition to making this a clean and easy way to refer to your static assets, 
 > Take note that this is specific for CLIENT side JavaScript.  You cannot use this syntax in Node just yet.
 
 #### We Do: Profile Page
-Now that we've seen an example of some valid JSX, let's create a few components to build out our Portfolio. The first thing we should do is focus on keeping our file directory clean.  Before we create any new files, lets create a `components` directory inside of `src`.  This will hold all of the components we will be building during the codealong.  Within the components directory, let's create a file called `Profile.jsx`.  Your directory should look something like this.
+Now that we've seen an example of some valid JSX, let's create a few components to build out our Portfolio. The first thing we should do is focus on keeping our file directory clean.  Before we create any new files, lets create a `components` directory inside of `src`.  This will hold all of the components we will be building during the codealong.  Within the components directory, let's create a file called `Profile.js`.  Your directory should look something like this.
 
 ```
 |...
 |- public/
 |- src/
   |- components/
-    |- Profile.jsx
+    |- Profile.js
   |- App.css
   |- App.js
   |...
@@ -156,7 +156,7 @@ Now that we've seen an example of some valid JSX, let's create a few components 
 |...
 ```
 
-Within your `Profile.jsx` file, let's create a basic React Component
+Within your `Profile.js` file, let's create a basic React Component
 
 ```js
 import React, { Component } from 'react';
@@ -185,7 +185,7 @@ Now that we have a component, let's import it into our App.js.
 ```js
 import React, { Component } from 'react';
 import './App.css';
-import profile from './components/Profile.jsx'
+import profile from './components/Profile.js'
 
 class App extends Component {
   render() {
@@ -238,7 +238,7 @@ Now that we have built out all the info we need for a splash page, let's add som
 ![](http://i.imgur.com/oQTKHBh.png)
 
 **WE DO** 
-* Create a component called `Specialties.jsx` and insert it into `App.js`.
+* Create a component called `Specialties.js` and insert it into `App.js`.
 
 * Use JSX to add a `h2` tag that says "I specialize in..."
 

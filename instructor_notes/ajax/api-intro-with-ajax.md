@@ -263,7 +263,7 @@ Work with the students around you to and discuss how many different React compon
 Let's start out by building the React component that will retrieve and render information about the gifs that are available on our API that is already deployed on Heroku.
 
 ```jsx
-// ./components/SavedGifts.jsx
+// ./components/SavedGifts.js
 import React, { Component } from 'react';
 
 class SavedGifs extends Component{
@@ -357,7 +357,7 @@ export default SavedGifs;
 Let's hop back into our browser and we can see that we successfully retrieved and rendered all of the gifs and the scores associated with them.
 
 #### You Do: (30 min)
-Create another component called `RandomGif.jsx` and build a component that will retrieve and display a random gif generated from the Giphy api.
+Create another component called `RandomGif.js` and build a component that will retrieve and display a random gif generated from the Giphy api.
   * Look at the wireframe above to determine where to put the component in the UI
   * The URL you will be calling is `http://api.giphy.com/v1/gifs/random`
     * Use the [GIPHY Documentation](https://developers.giphy.com/docs/#random-endpoint) to figure out what request parameters you are required to send.
@@ -371,7 +371,7 @@ The next thing we want to build for our app is a thumbs up and thumbs down butto
 
 First, let's create the events whenever a user if a user clicks thumbs up or down
 ```js
-// ./components/RandomGif.jsx
+// ./components/RandomGif.js
 ...
 
   componentWillMount() {
@@ -438,7 +438,7 @@ render(){
 **HOLD ON** Let's go back and look at the wireframes.  It looks like the thumbs up/down are also used in the saved gifs part of the app.  This is a great opportunity to refactor the thumbs up/down into their own Component.
 
 ```js
-// ./components/Thumbs.jsx
+// ./components/Thumbs.js
 const Thumbs = (props) => {
   const { disapprove, approve } = props;
 
@@ -451,7 +451,7 @@ const Thumbs = (props) => {
 }
 export default Thumbs;
 
-// ./components/RandomGif.jsx
+// ./components/RandomGif.js
 ...
 render() {
   return (
