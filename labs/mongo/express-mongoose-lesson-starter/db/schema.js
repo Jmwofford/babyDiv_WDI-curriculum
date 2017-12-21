@@ -1,35 +1,35 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 
 // Use native promises
-mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise
 
-var ItemSchema = new Schema({
+const ItemSchema = new Schema({
   name: String
-});
+})
 
-var UserSchema = new Schema({
+const UserSchema = new Schema({
   first_name: String,
   email: { type: String, required: true, unique: true },
   created_at: Date,
   updated_at: Date,
-  items: [ItemSchema]
-});
+  items: [ ItemSchema ]
+})
 
-UserSchema.pre('save', function(next){
-  now = new Date();
-  this.updated_at = now;
-  if ( !this.created_at ) {
-    this.created_at = now;
+UserSchema.pre('save', function (next) {
+  const now = new Date()
+  this.updated_at = now
+  if (!this.created_at) {
+    this.created_at = now
   }
-  next();
-});
+  next()
+})
 
 
-var UserModel = mongoose.model("User", UserSchema);
-var ItemModel = mongoose.model("Item", ItemSchema);
+const UserModel = mongoose.model('User', UserSchema)
+const ItemModel = mongoose.model('Item', ItemSchema)
 
 module.exports = {
   User: UserModel,
   Item: ItemModel
-};
+}

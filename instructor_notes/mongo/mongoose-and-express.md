@@ -6,7 +6,7 @@ creator:
     name: Gerry Mathe
     city: London
 adapted:
-    name: Marc Wright
+    name: Marc Wright/Jamie King
     city: ATL
 competencies: Server Applications
 ---
@@ -16,8 +16,8 @@ competencies: Server Applications
 ### Objectives
 *After this lesson, students will be able to:*
 
-- Update & destroy a model
 - Initialize and create a new instance of a model
+- Update & destroy a model
 - Perform basic find queries
 - Reference other documents in an instance of a model
 - Work with embedded and referenced documents with Mongoose
@@ -33,11 +33,11 @@ competencies: Server Applications
 
 ## Using MongoDB with Node - Intro (5 mins)
 
-This morning we created an app that used Mongoose methods and queries to add/retreive data from a database. This afternoon we are going to build an Express app using those same REST-ful methods and queries. Now, we will wrap that Mongoose code in the appropriate route. We will use Express to send and receive the JSON data. Tomorrow we will add Handlebars to render that data into views, and create a fully working app!
+This morning we created an app that used Mongoose methods and queries to add/retrieve data from a database. This afternoon we are going to build an Express app using those same REST-ful methods and queries. Now, we will wrap that Mongoose code in the appropriate route. We will use Express to send and receive the JSON data. Tomorrow we will add Handlebars to render that data into views, and create a fully working app!
 
 NodeJS and MongoDB work really well together. To handle HTTP requests and read from or send data to MongoDB, Mongoose is the most common Node.js ORM to manipulate data using MongoDB. CRUD functionality is something that is necessary in almost most every application, as we still have to create, read, update, and delete data.
 
-Since we will be able to use JSON across our application - with Mongo and Node - using JavaScript in our application is much easier. The MEAN stack - Mongo, Express, Angular, and Node - is becoming increasingly popular because of this.
+Since we will be able to use JSON across our application - with Mongo and Node - using JavaScript in our application is much easier. The MEAN/MERN stack - Mongo, Express, Angular/React, and Node - is becoming increasingly popular because of this.
 
 For today, we will build a simple Node app in a folder and a file app.js.
 
@@ -49,11 +49,11 @@ Mongoose is an object data modeling package - think of it as an ORM (Object Rela
 
 ## Setting up your app - Codealong (5 mins)
 
-I have included starter code in your **/labs/unit_02/mongo** folder called `express-mongoose-lesson-starter`
+I have included starter code in your **/labs/mongo** folder called `express-mongoose-lesson-starter`
 
 1. `cd` into the folder
 2. run `npm install`
-3. open the app in sublime: `subl .`
+3. open the app in VS Code: `code .`
 4. You need to have 4 terminal tabs open:
     - In one tab you will run `mongod`
     - In one tab you will run `nodemon server.js`
@@ -93,6 +93,18 @@ UserSchema.pre('save', function(next) {
   next();
 });
 ```
+
+```js
+// alternatively you can add created at and updated at in your schema
+// This is a new Mongoose feature
+
+const userSchema = new Schema({
+  // ...
+  // ...
+  timestamps: true
+})
+```
+
 <br />
 
 ### Adding Mongoose Validations
@@ -144,7 +156,7 @@ From your Terminal prompt tab, run `$ node db/seeds.js` to seed your database. T
 
 ## Postman
 
-It is a good practice to build your app one step at a time for testing and efficency. 
+It is a good practice to build your app one step at a time for testing and efficiency.
 
 - STEP 1 - This morning we created the Mongoose queries and confirmed that the code works. 
 - STEP 2 - This afternoon we are going to take those working pieces of code and wrap them in Express routes. 
@@ -171,13 +183,14 @@ For the most part, we are repeating what we did in our intro to mongoose app. Ho
 ```javascript
 // USERS INDEX ROUTE
 router.get('/', function(req, res){
-  User.find({})
-  .exec(function(err, users) {
-    if(err) { console.log(err); }
-    
+
+  User.find({}).then((users) => {
     console.log(users);
     res.send(users);
-  });
+  })
+  .catch((err) => {
+    console.log(err);
+  })
 });
 ```
 
@@ -201,12 +214,13 @@ Test it out in your browser. **NOTE - this app runs on localhost port `:4000` in
 ```javascript
 // USER SHOW ROUTE
 router.get('/:id', function(req, res){
-  User.findById(req.params.id)
-  .exec(function(err, user) {
-    if (err) console.log(err);
+  User.findById(req.params.id).then((user) => {
     console.log(user);
     res.send(user);
-  });
+  })
+  .catch((err) => {
+    console.log(err);
+  })
 });
 ```
 
@@ -236,12 +250,14 @@ router.post('/', function(req, res) {
     email: req.body.email,
     items: req.body.items
   });
-  user.save(function(err, user) {
-    if(err) console.log(err);
-    
+
+  user.save().then((savedUser) => {
     console.log(user);
     res.send(user);
-  });
+  })
+  .catch((err) => {
+    console.log(err);
+  })
 });
 ```
 
@@ -275,13 +291,13 @@ router.patch('/:id', function(req, res) {
   User.findByIdAndUpdate(req.params.id, {
     first_name: req.body.first_name,
     email: req.body.email
-  }, {new: true})
-  .exec(function(err, user) {
-    if (err) console.log(err);
-    
+  }, {new: true}).then((user) => {
     console.log(user);
     res.send(user);
-  });
+  })
+  .catch((err) => {
+    console.log(err);
+  })
 });
 ```
 
@@ -318,13 +334,13 @@ Mongoose gives you two easy helper methods to delete documents - `findByIdAndRem
 ```javascript
 // USER DESTROY
 router.delete('/:id', function(req, res) {
-  User.findByIdAndRemove(req.params.id)
-  .exec(function(err, user) {
-    if(err) console.log(err);
-    
+  User.findByIdAndRemove(req.params.id).then(() => {
     console.log('User deleted!');
     res.send("User deleted");
-  });
+  })
+  .catch((err) => {
+    console.log(err);
+  })
 });
 ```
 
@@ -354,15 +370,16 @@ We will test out sending form data using Postman.
 ```javascript
 // ADD A NEW ITEM
 router.post('/:id/items', function(req, res) {
-  User.findById(req.params.id)
-  .exec(function(err, user) {
+  User.findById(req.params.id).then((user) => {
     user.items.push(new Item({name: req.body.name}));
-    user.save(function(err) {
-      if (err) console.log(err);
-      
-      res.send(user);
-    });
-  });
+    return user.save()
+  })
+  .then((user) => {
+    res.send(user);
+  })
+  .catch((err) => {
+    console.log(err);
+  })
 });
 ```
 
@@ -396,12 +413,12 @@ router.delete('/:userId/items/:id', function(req, res) {
     $pull: {
       items: {_id: req.params.id}
     }
-  })
-  .exec(function(err, item) {
-    if (err) console.log(err);
-    
+  }).then((item) => {
     res.send(item + " Item deleted");
-  });
+  })
+  .catch((err) => {
+    console.log(err);
+  })
 });
 ```
 
@@ -450,7 +467,6 @@ Mongoose is just a bridge to use MongoDB inside of  a Node.js environment. There
 
 <br />
 
-
 <details>
 <summary>Embedded Documents Review</summary>
 
@@ -472,7 +488,6 @@ Try them out in the `node` terminal, if you have time.
 
 The nested schemas are equipped with all the same features as your models: defaults, validators, middleware, and even error handling, as they are tied to the save() error callback. Mongoose can work with embedded documents by default.
 
-
 Let's look at these two schemas below - we can embed `childSchema` into the property `children`:
 
 ```javascript
@@ -485,11 +500,11 @@ var parentSchema = new Schema({
 var Parent = mongoose.model('Parent', parentSchema);
 var parent = new Parent({ children: [{ name: 'Matt' }, { name: 'Sarah' }] })
 parent.children[0].name = 'Matthew';
-parent.save(function(err) {
-  if (err) console.log(err);
-  
+parent.save().then(() => {
   console.log('New Parent!');
-});
+}).catch((err) => {
+  console.log(err)
+})
 ```
 
 Or from the MongoDB official docs, we can look at this example with Patron and Address models:

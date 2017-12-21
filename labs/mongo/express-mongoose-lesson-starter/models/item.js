@@ -1,5 +1,5 @@
-var Schema = require("../db/schema");
-var mongoose = require('mongoose');
+const Schema = require('../db/schema')
+const mongoose = require('mongoose')
 
-var Item = Schema.Item;
-module.exports = Item;
+const Item = Schema.Item
+module.exports = Item

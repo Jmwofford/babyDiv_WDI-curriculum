@@ -1,8 +1,8 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express')
+const router = express.Router()
 
-var User = require("../models/user");
-var Item = require("../models/item");
+const User = require('../models/user')
+const Item = require('../models/item')
 
 // USERS INDEX ROUTE
 
@@ -18,4 +18,4 @@ var Item = require("../models/item");
 
 // REMOVE AN ITEM
 
-module.exports = router;
+module.exports = router
