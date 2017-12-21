@@ -1,6 +1,6 @@
 # Tamagotchi Time
 
-![image](https://old.computerra.ru/pubimages/78659.gif)![image](https://old.computerra.ru/pubimages/78659.gif)
+![image](https://media.giphy.com/media/Ly5ED6BwWtBTy/giphy.gif)
 
 In this assignment, you will be constructing interactive Tamagotchis from your very own Tamagotchi Class!
 
