@@ -178,7 +178,7 @@ Maybe something like this?
 
   Or how about this? 
 
-  ![](http://i.imgur.com/EGGwaXP.png)
+  ![](https://i.imgur.com/EGGwaXP.png)
   
   ![](https://i.imgur.com/KqDiYWQ.png)
 
