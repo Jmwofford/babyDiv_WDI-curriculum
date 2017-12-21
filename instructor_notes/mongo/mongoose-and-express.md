@@ -158,13 +158,13 @@ From your Terminal prompt tab, run `$ node db/seeds.js` to seed your database. T
 
 It is a good practice to build your app one step at a time for testing and efficiency.
 
-- STEP 1 - This morning we created the Mongoose queries and confirmed that the code works. 
-- STEP 2 - This afternoon we are going to take those working pieces of code and wrap them in Express routes. 
-- STEP 3 - Tomorrow we will worry about the views, once the routes are working, etc. 
+- STEP 1 - This morning we created the Mongoose queries and confirmed that the code works.
+- STEP 2 - This afternoon we are going to take those working pieces of code and wrap them in Express routes.
+- STEP 3 - Tomorrow we will worry about the views, once the routes are working, etc.
 
 For our current app, we have not created views and forms yet, so we need a way to test our non-`.get` routes. We are going to use a tool called Postman. 
 
-- You can download it from here: https://www.getpostman.com/. 
+- You can download it from here: https://www.getpostman.com/.
 - Click on the "Mac App" icon.
 - Open the app.
 
@@ -173,6 +173,7 @@ Postman is a simple app that allows us to make HTTP requests. We will also use i
 <br />
 
 ### &#x1F535; YOU DO - Download/Open Postman (2 minutes)
+`brew cask install postman`
 
 <br />
 
@@ -182,15 +183,16 @@ For the most part, we are repeating what we did in our intro to mongoose app. Ho
 
 ```javascript
 // USERS INDEX ROUTE
-router.get('/', function(req, res){
+router.get('/', (req, res) => {
 
-  User.find({}).then((users) => {
-    console.log(users);
-    res.send(users);
-  })
-  .catch((err) => {
-    console.log(err);
-  })
+  User.find({})
+    .then((users) => {
+      console.log(users);
+      res.send(users);
+    })
+    .catch((err) => {
+      console.log(err);
+    })
 });
 ```
 
@@ -213,14 +215,15 @@ Test it out in your browser. **NOTE - this app runs on localhost port `:4000` in
 
 ```javascript
 // USER SHOW ROUTE
-router.get('/:id', function(req, res){
-  User.findById(req.params.id).then((user) => {
-    console.log(user);
-    res.send(user);
-  })
-  .catch((err) => {
-    console.log(err);
-  })
+router.get('/:id', (req, res) => {
+  User.findById(req.params.id)
+    .then((user) => {
+      console.log(user);
+      res.send(user);
+    })
+    .catch((err) => {
+      console.log(err);
+    })
 });
 ```
 
@@ -251,13 +254,14 @@ router.post('/', function(req, res) {
     items: req.body.items
   });
 
-  user.save().then((savedUser) => {
-    console.log(user);
-    res.send(user);
-  })
-  .catch((err) => {
-    console.log(err);
-  })
+  user.save()
+    .then((savedUser) => {
+      console.log(user);
+      res.send(user);
+    })
+    .catch((err) => {
+      console.log(err);
+    })
 });
 ```
 
@@ -448,7 +452,7 @@ We will test out sending form data using Postman.
 
 
 ## Conclusion (5 mins)
-Mongoose is just a bridge to use MongoDB inside of  a Node.js environment. There are a lot of options when creating a schema with Mongoose, we have just covered a few of them.
+Mongoose is just a bridge to use MongoDB inside of a Node.js environment. There are a lot of options when creating a schema with Mongoose, we have just covered a few of them.
 
 <br />
 
@@ -583,7 +587,6 @@ Using code from the official docs, we can see how these are used:
 var Parent = mongoose.model('Parent');
 var parent = new Parent;
 
-// create a child- it was Liesl, but I changed it to Diesel
 parent.children.push({ name: 'Diesel' });
 var subdoc = parent.children[0];
 console.log(subdoc); // { _id: '501d86090d371bab2c0341c5', name: 'Diesel' }
