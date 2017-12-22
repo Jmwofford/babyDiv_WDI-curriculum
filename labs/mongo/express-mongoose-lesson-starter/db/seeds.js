@@ -1,20 +1,13 @@
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/express-mongoose-lesson-starter')
+mongoose.connect('mongodb://localhost/express-mongoose-lesson-starter', {
+  useMongoClient: true
+})
 
 const User = require('../models/user')
 const Item = require('../models/item')
 
 // Use native promises
 mongoose.Promise = global.Promise
-
-// First we clear the database of existing users and items.
-Item.remove({}, function (err) {
-  console.log(err)
-})
-
-User.remove({}, function (err) {
-  console.log(err)
-})
 
 // create new users
 const danny = new User({
@@ -35,21 +28,28 @@ const daniel = new User({
   items: [ { name: 'Buy more Coke Zero' } ]
 })
 
-// save the users
-danny.save(function (err) {
-  if (err) console.log(err)
+// First we clear the database of existing users and items.
+Item.remove()
+  .then(() => {
+    return User.remove()
+  }).then(() => {
+    return danny.save()
+  })
+  .then((user) => {
+    console.log('danny is saved')
+    return jamie.save()
+  })
+  .then((user) => {
+    console.log('jamie is saved')
+    return daniel.save()
+  })
+  .then((user) => {
+    console.log('daniel is saved')
+    console.log('all users are saved')
+    mongoose.connection.close()
+  })
+  .catch(err => {
+    console.log(err)
+  })
 
-  console.log('danny created!')
-})
-
-jamie.save(function (err) {
-  if (err) console.log(err)
-
-  console.log('jamie created!')
-})
-
-daniel.save(function (err) {
-  if (err) console.log(err)
-
-  console.log('daniel created!')
-})
+// // save the users

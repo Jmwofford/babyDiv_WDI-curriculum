@@ -11,19 +11,11 @@ const ItemSchema = new Schema({
 const UserSchema = new Schema({
   first_name: String,
   email: { type: String, required: true, unique: true },
-  created_at: Date,
-  updated_at: Date,
   items: [ ItemSchema ]
+}, {
+  timestamps: true
 })
 
-UserSchema.pre('save', function (next) {
-  const now = new Date()
-  this.updated_at = now
-  if (!this.created_at) {
-    this.created_at = now
-  }
-  next()
-})
 
 module.exports = {
   UserSchema,

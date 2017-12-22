@@ -10,6 +10,9 @@ app.use(bodyParser.urlencoded({ extended: true }))
 const usersController = require('./controllers/usersController.js')
 app.use('/users', usersController)
 
+const itemsController = require('./controllers/itemsController')
+app.use('/users/:userId/items', itemsController)
+
 // Mongoose stuff
 const mongoose = require('mongoose')
 mongoose.connect('mongodb://localhost/express-mongoose-lesson-starter')
