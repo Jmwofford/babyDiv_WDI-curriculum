@@ -25,11 +25,7 @@ UserSchema.pre('save', function (next) {
   next()
 })
 
-
-const UserModel = mongoose.model('User', UserSchema)
-const ItemModel = mongoose.model('Item', ItemSchema)
-
 module.exports = {
-  User: UserModel,
-  Item: ItemModel
+  UserSchema,
+  ItemSchema
 }
