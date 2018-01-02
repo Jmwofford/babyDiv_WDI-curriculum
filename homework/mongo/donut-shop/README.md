@@ -57,9 +57,10 @@ This is where mongoose comes in. Instead of making sure everything we are puttin
 
 Lets design a donut schema using mongoose and then use it to create and eventually query for those donuts.
 
-1. Inside the `models` directory in `donuts.js`, you will create your schema and model in this file. Follow the prompts to guide you.
+1. Inside the `db` directory in `schema`, you will create your schema in this file. Follow the prompts to guide you.
 
 To start your schema:
+
 ```javascript
 var donutSchema = new Schema({
 //write your schema fields here
@@ -81,7 +82,7 @@ Our donut collection will look like this:
 
 - Build a donut **schema** and **model** that matches the object above. Export your model.
 
-<details><summary>.. Stuck?</summary>
+<details><summary>... Stuck?</summary>
 
   - Your Donut schema should look like:
 
