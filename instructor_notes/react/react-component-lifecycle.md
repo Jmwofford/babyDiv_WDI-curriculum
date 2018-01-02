@@ -25,15 +25,15 @@ When building a React application, EVERYTHING is a component.  In React, we usua
 **NOTE** Remember that this only applies to `stateful` components, these methods are not available in `stateless` (aka `dumb`) components.
 
 <div style="width: 100vw; height: 40vh;">
-  <img style="float: left; width: 40vw; padding: 0px 15px;" src="http://imgur.com/BrWR7kt.jpg" />
-  <img style="float: right; width: 40vw; padding: 0 15px 30px;" src="http://imgur.com/b4aedU0.jpg" />
-  <img style="float: left; width: 40vw; padding: 15px;" src="http://imgur.com/wU8sCmr.jpg" />
-  <img style="float: right; width: 40vw; padding: 0 15px;" src="http://imgur.com/soRxdUY.jpg" />
+  <img style="float: left; width: 40vw; padding: 0px 15px;" src="https://imgur.com/BrWR7kt.jpg" />
+  <img style="float: right; width: 40vw; padding: 0 15px 30px;" src="https://imgur.com/b4aedU0.jpg" />
+  <img style="float: left; width: 40vw; padding: 15px;" src="https://imgur.com/wU8sCmr.jpg" />
+  <img style="float: right; width: 40vw; padding: 0 15px;" src="https://imgur.com/soRxdUY.jpg" />
 </div>
 
 <br/>
 
-_[Images from this fantastic blog post by A. Sharif](http://busypeoples.github.io/post/react-component-lifecycle/)_
+_[Images from this fantastic blog post by A. Sharif](https://busypeoples.github.io/post/react-component-lifecycle/)_
 
 #### Lifecycles
 
