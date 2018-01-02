@@ -33,8 +33,12 @@ var seedController = require('./controllers/seeds.js');
 app.use('/seed', seedController);
 
 //for root directory, show all donuts
-var donutsController = require('./controllers/donuts.js');
-app.use('/', donutsController);
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Un-comment this code when you
+// are ready to work on the donutsController
+// var donutsController = require('./controllers/donuts.js');
+// app.use('/', donutsController);
 
 //======================
 // LISTENERS

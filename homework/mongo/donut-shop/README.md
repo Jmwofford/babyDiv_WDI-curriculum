@@ -1,6 +1,6 @@
 # The Ultimate Donut Shop with Mongoose
 
-![image](http://31.media.tumblr.com/6d5759ab02bb764c82e4577e3ba4af24/tumblr_nphj7tR2ZK1u3ihpao1_400.gif)
+![image](https://31.media.tumblr.com/6d5759ab02bb764c82e4577e3ba4af24/tumblr_nphj7tR2ZK1u3ihpao1_400.gif)
 
 In this assignment, you will create a full CRUD MEN (Mongo, Express, Node) Donut Shop app! Our app will be linked to a Mongo Database, so you can add, edit, and delete donuts.
 
@@ -141,6 +141,8 @@ There is a seed file for you in `controllers/seeds.js`. To populate some data to
 ### Part 4 and 5: Set Up and Test your controllers
 
 In `controllers/donuts.js`, follow the prompts to build your routes. You will be using Mongoose to make queries to our database.
+
+> Be sure to un-comment the `donutsController` code in `server.js`!!!
 
 1. Set up your requirements. **DON'T FORGET** to module.exports the router at the bottom.
 2. Create a GET index route "/" that sends all donuts to index.hbs
