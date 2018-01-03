@@ -1,6 +1,6 @@
 # The Ultimate Donut Shop with Mongoose
 
-![image](http://31.media.tumblr.com/6d5759ab02bb764c82e4577e3ba4af24/tumblr_nphj7tR2ZK1u3ihpao1_400.gif)
+![image](https://31.media.tumblr.com/6d5759ab02bb764c82e4577e3ba4af24/tumblr_nphj7tR2ZK1u3ihpao1_400.gif)
 
 In this assignment, you will create a full CRUD MEN (Mongo, Express, Node) Donut Shop app! Our app will be linked to a Mongo Database, so you can add, edit, and delete donuts.
 
@@ -57,9 +57,10 @@ This is where mongoose comes in. Instead of making sure everything we are puttin
 
 Lets design a donut schema using mongoose and then use it to create and eventually query for those donuts.
 
-1. Inside the `models` directory in `donuts.js`, you will create your schema and model in this file. Follow the prompts to guide you.
+1. Inside the `db` directory in `schema`, you will create your schema in this file. Follow the prompts to guide you.
 
 To start your schema:
+
 ```javascript
 var donutSchema = new Schema({
 //write your schema fields here
@@ -81,7 +82,7 @@ Our donut collection will look like this:
 
 - Build a donut **schema** and **model** that matches the object above. Export your model.
 
-<details><summary>.. Stuck?</summary>
+<details><summary>... Stuck?</summary>
 
   - Your Donut schema should look like:
 
@@ -141,6 +142,8 @@ There is a seed file for you in `controllers/seeds.js`. To populate some data to
 ### Part 4 and 5: Set Up and Test your controllers
 
 In `controllers/donuts.js`, follow the prompts to build your routes. You will be using Mongoose to make queries to our database.
+
+> Be sure to un-comment the `donutsController` code in `server.js`!!!
 
 1. Set up your requirements. **DON'T FORGET** to module.exports the router at the bottom.
 2. Create a GET index route "/" that sends all donuts to index.hbs
