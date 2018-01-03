@@ -67,6 +67,6 @@
 
 19. `npm install --save nodemon`
 
-20. In the `scripts` object in your `package.json`, add `"start:dev": "nodemon ./bin/www"` below the start script.
+20. In the `scripts` object in your `package.json`, add `"dev": "nodemon ./bin/www"` below the start script.
 
-21. Now, when we want to run Nodemon as our dev server, we just have to type `npm run start:dev`.
+21. Now, when we want to run Nodemon as our dev server, we just have to type `npm run dev`.
