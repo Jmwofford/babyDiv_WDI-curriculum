@@ -388,7 +388,7 @@ That's a lot for one file! Let's instead let the `<App />` component simply disp
 
   * `src/components/MovieList.js`:
 
-		```javascript
+	```javascript
 		import React, {Component} from 'react';
 		import Movie from './Movie';
 		
