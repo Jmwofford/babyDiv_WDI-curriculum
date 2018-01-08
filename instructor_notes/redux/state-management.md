@@ -50,6 +50,19 @@ Read this Medium post written by a developer who build a React app for the Austr
 - TODO: Write Questions about the article
 - According to the articles, what are the benefits of a State Management Library like Redux?
 
+## Pure Function Helpers
+
+Redux requires every state change to build a brand new state object. We achieve this by utilizing the principles of functional programming that we talked about several weeks ago.  There are a few features in JavaScript that will make it easier for us to create a new state every time our actions are triggered.
+
+- map, filter, find, reduce (NOT forEach)
+- Array destructuring `[...otherArray]`
+  - You can add to a destructured array easily.
+    - push `[...otherArray, 2, 3, 4, 5]`
+    - unshift `[2, 3, 4, 5, ...otherArray]`
+- Object destructuring `{...otherObject}`
+  - You can add additional keys or overwrite previous keys by adding onto the destructured object
+  - `{...otherObject, newKey1: 'newValue1', newKey2: 'newKey2' }` 
+
 ## The Flux Pattern
 
 The difficulty introduced when scaling up React Applications is not a unique one.  This problem has been observed in Angular 1, Backbone, Ember and lots of other front-end frameworks.  Applications with hundreds of components all passing state around introduce all sorts of performance and readability problems.
@@ -241,7 +254,8 @@ const mapStateToProps = (stateFromReduxReducer) => {
 #### mapDispatchToProps
 `mapDispatchToProps` has a similar job to `mapStateToProps` except we apply action creators to props instead of parts of state.  There are two ways to write `mapDispatchToProps`
 
-** function **
+**function**
+
 ```js
 const mapDispatchToProps = (dispatch) => {
   return {
