@@ -254,7 +254,7 @@ If everything installed correctly, you should see a `Hello World!` page.
 #### Designing our Component Structure
 Before we start writing components, let's think about what our app is doing and how we should properly design it.  Here is a basic wireframe of our app.
 
-![](http://imgur.com/GxpiM6o.png)
+![](https://imgur.com/GxpiM6o.png)
 
 #### You Do: (5 min)
 Work with the students around you to and discuss how many different React components we need for this application.  What would you name each of these components?
