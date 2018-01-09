@@ -63,42 +63,41 @@ Today we are going to build a basic to-do application, but focus in on the boile
 
 For the sake of time, we are going to start out with some of our code already completed.  [Redux Todo List](https://git.generalassemb.ly/jamieking/redux-todo-list) is an app with a few components already set up for you.  Clone this repo and start to review the code we have in here currently. Is there anything that doesn't look familiar to you?
 
-Additionally, go ahead and download the [Redux Dev Tools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
+Additionally, go ahead and download the [Redux Dev Tools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en).  We are going to be using this tool often to track the state changes in our app.
 
+### You Do
 
-The Relationship Between React and Redux 2:30
-	10 min
+This current application has some state in the `Todos.js` and some state in `TodoForm.js`, but they are currently not functioning because they have to share state.
 
-Codealong: Todo App 
-	- I do (prior to class): Set up of basic react app 
+Think about how would you solve this problem using only React? Feel free to checkout into another branch and try to refactor the code to add todos from the input field.
+
+### Do we need Redux here?
+
+Again, this is always an important question to ask when you are looking to add more libraries and tools to an application.  In the case of this application, if we were ONLY building a simple todo app like we're doing today, I would personally choose not to use Redux.  However, if we continued to work on the application and expected it to become more complex in both features and scope, then Redux would be a valuable too.  In any case, this exercise will allow us to become more familiar with how to set up Redux in a React application and how to implement new features.
+
+### Let's Get Started
+
 	- We do: Add Redux boiler plate 2:40
 		- 30-40 mins
 		- Make sure to introduce each concept individually
+
+
 	- We do: Add functionality 3:20
 		- 60 mins
 		- ADD_TODO
 		- TOGGLE_TODO
 		- Visibility Features
+
+
 	- You do: Add features 4:20
 		- Remainder of Class
 		- Add an author to each todo app
 		- Add edit functionality
 		- Add ability to delete a todo (different than completed
 
-
-## Codealong? Maybe only in afternoon
-
-## Talk about When to use Redux article
-
-## Focus more on the setup of Redux with React rather than the conceptual. This can serve as a refresher of concepts.
-
-## Install Redux Dev Tools and show off time travel 
-
-## Examples of pure functions vs impure functions
-
 ## Further Reading:
 
-<!-- * [Introducing JSX](https://facebook.github.io/react/docs/introducing-jsx.html)
-* [Lists and Keys](https://facebook.github.io/react/docs/lists-and-keys.html)
-* [JSX in Depth](https://facebook.github.io/react/docs/jsx-in-depth.html)
-* [Different Ways to Add If/Else in JSX](http://devnacho.com/2016/02/15/different-ways-to-add-if-else-statements-in-JSX/) -->
+* [Redux: Usage with React](https://redux.js.org/docs/basics/UsageWithReact.html)
+* [Leveling Up With React: Redux](https://css-tricks.com/learning-react-redux/)
+* [Redux and React for Everyone](https://www.youtube.com/watch?v=YSBpKRZViBc)
+* [Getting Started with CRA, redux, router, etc](https://medium.com/@notrab/getting-started-with-create-react-app-redux-react-router-redux-thunk-d6a19259f71f)
