@@ -23,7 +23,3 @@
 9. List five React Component Lifecycle Methods:
 
 10. Where would I go to check out React's built-in testing tools?
-
-### Turning in:
-
-* Post a link to this file on Github to Schoology.
