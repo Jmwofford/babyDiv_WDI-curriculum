@@ -11,7 +11,9 @@ competencies: Front-End Architecture
 # State Management and Intro to Redux
 
 ### Objectives
+
 *After this lesson, students will be able to:*
+
 - Define state in relationship to building Front End Applications
 - Describe the benefits of using a global state object vs local state
 - Explain the 3 Principles of Redux
@@ -19,6 +21,7 @@ competencies: Front-End Architecture
 - Define Redux specific terms (i.e. Reducer, Actions, Store)
 
 ### Preparation
+
 *Before this lesson, students should already be able to:*
 
 - Create a simple app in React using `create-react-app`
@@ -34,10 +37,11 @@ React allows us to built lots and lots of separate components really really fast
 ### You Do (Turn and Talk) - 5 min
 
 With a partner, write down your definition of what state is in React.
-  - What is state?
-  - Where does state live?
-  - How does state get changed?
-  - How do you pass state from place to place?
+
+- What is state?
+- Where does state live?
+- How does state get changed?
+- How do you pass state from place to place?
 
 Even though we can easily manage and change state just using React alone, we can begin to see some of the weaknesses of using React alone to manage that state of your application.
 
@@ -66,8 +70,10 @@ Through using Redux, we will be able to take all of the state out of our individ
 ### You Do - 10 min
 
 Read [this Medium post](https://medium.com/dailyjs/when-do-i-know-im-ready-for-redux-f34da253c85f) written by a developer who build a React app for the Australian Broadcast Corporation.  It's a great real world example of how React becomes more and more difficult to handle as projects become more difficult.
-  - TODO: Write Questions about the article
-  - According to the articles, what benefits did his team gain by using a State Management Library like Redux?
+
+- After working on the app for a month, what are some of the pain points the team found by just using React by itself?
+- In your own words, describe how Redux handles data differently than React on its own.
+- According to the articles, what benefits did his team gain by using a State Management Library like Redux?
 
 ### Understanding Redux
 
@@ -159,13 +165,111 @@ Reducers are just pure functions that take the previous state and an action, and
 
 ### Reducer Deep Dive
 
+> The Redux reducer API is (state, action) => state, but how you create those reducers is up to you.
+
 Learning how to properly manipulate the reducer is by far the most difficult part of learning Redux. Let's take a little bit of a deeper look at it and see if we can demystify the hard parts.
 
-TODO: ADD EXERCISE FOR PURE FUNCTION PRACTICE
+It's important to remember that the reducers job is not to transform your state, but instead to **completely** replace the old state with a brand new state object.  This is achieved through combining two concepts built into JavaScript: switch statements and pure functions.
 
-## Further Reading:
+#### Switch Statements
 
-* [Redux Docs](https://redux.js.org/)
-* [When do I know I'm ready for Redux](https://medium.com/dailyjs/when-do-i-know-im-ready-for-redux-f34da253c85f)
-* [Dissecting Twitter's Redux Store](https://medium.com/statuscode/dissecting-twitters-redux-store-d7280b62c6b1)
-* [Redux TLTR ](https://medium.com/@nicotsou/tltr-redux-e4fc30f87e4a)
+It's possible that you have seen switch statements previously.  Switch statements are an additional way to handle conditionals in JavaScript. They are useful for scenarios where the alternative is a lot of `if-else` statements.
+
+```js
+switch(condition){
+  case 'scenario 1':
+    return 'Scenario one Selected'
+  case 'scenario 2':
+    return 'Scenario two selected'
+  default:
+    return 'Default Value Selected'
+}
+```
+
+```js
+if (condition === 'scenario 1'){
+    return 'Scenario one Selected'
+} else if (condition === 'scenario 2'){
+    return 'Scenario two selected'
+} else {
+  return 'Default Value Selected'
+}
+```
+
+#### Pure Functions
+
+**Given the same arguments, it should calculate the next state and return it. No surprises. No side effects. No API calls. No mutations. Just a calculation.**
+
+Redux relies on pure functions in order to trigger the update life cycle for a React component.  If you remember back to our conversation on functional programming, you'll remember that a pure function is simply a function given the same inputs it will always output the same value.  Additionally, pure functions will always output a brand new value.  Prior to ES6/ES7, it was very difficult to build pure functions, but this style of programming has exploded in popularity in recent years.
+
+Let's take a look at some different ways we can output a brand new value.
+
+- `[...previousArray]`  This is an example of destructuring an array
+- `{...previousObject}` This is a destructured object
+- `map, filter, reduce` are all examples of built in methods that clone an array.
+
+### You Do:
+
+Use pure functions to solve the following problems:
+TODO
+
+1. Use a pure function to add a todo to this array of todo objects
+
+```js
+const todos = [
+  {
+    id: 1,
+    task: 'Learn React',
+    completed: true
+  },
+  {
+    id: 2,
+    task: 'Learn Redux',
+    completed: false
+  },
+  {
+    id: 3,
+    task: 'Watch Black Mirror',
+    completed: true
+  }
+]
+
+const newTodo = {
+  id: 4,
+  task: 'Buy a Tesla',
+  completed: false
+}
+
+function addTodo(todos, newTodo){
+  // Your code here
+}
+
+addTodo(todos, newTodo)
+```
+
+2. Create a pure function called `editUserObject` that will take 2 objects, one that represents a user and another that represents changes to that user object.  Make sure that the object you return is a brand new object.
+
+```js
+const user = {
+  name: 'Steve Jobs',
+  company: 'Apple',
+  email: 'steve@mac.me'
+}
+
+const userChanges = {
+  email: 'steve@geocities.com'
+}
+
+function editUserObject(currentUser, edits){
+  // Your code here
+}
+
+console.log(editUserObject(user, userChanges))
+```
+
+## Further Reading
+
+- [Redux Docs](https://redux.js.org/)
+- [When do I know I'm ready for Redux](https://medium.com/dailyjs/when-do-i-know-im-ready-for-redux-f34da253c85f)
+- [Dissecting Twitter's Redux Store](https://medium.com/statuscode/dissecting-twitters-redux-store-d7280b62c6b1)
+- [Redux TLTR](https://medium.com/@nicotsou/tltr-redux-e4fc30f87e4a)
