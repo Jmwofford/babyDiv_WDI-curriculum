@@ -219,9 +219,11 @@ const store = createStore(
 ```
 
 #### Provider
+
 `Provider` is a component created by the `react-redux` package. It is simply a wrapper that allows you to connect your Redux logic to your React layouts.
 
 #### combineReducers
+
 `combineReducers` is another package from `redux`.  It allows us to write multiple separate reducers and then combine it into one giant state object when the page is loaded.
 
 ```js
@@ -234,6 +236,7 @@ const reducer = combineReducers({
 ```
 
 #### connect
+
 `connect` is a **higher-order component** that comes from `react-redux`. When we connect a component to Redux, we use the `connect` method to define what parts of state and what actions the component should worry about.  `connect` takes 2 arguments which are commonly referred to as `mapStateToProps` and `mapDispatchToProps`
 
 ```js
@@ -241,6 +244,7 @@ const reducer = combineReducers({
 ```
 
 #### mapStateToProps
+
 When connecting a React component to a Redux store, the first argument in the `connect` function is `mapStateToProps`.  This function will allow you as a developer to define what parts of state this component cares about.  This is really beneficial because it means that the component will only update when certain parts of state are updated. The return value gets applied to the `props` of the component that has been connected here.
 
 ```js
@@ -252,6 +256,7 @@ const mapStateToProps = (stateFromReduxReducer) => {
 ```
 
 #### mapDispatchToProps
+
 `mapDispatchToProps` has a similar job to `mapStateToProps` except we apply action creators to props instead of parts of state.  There are two ways to write `mapDispatchToProps`
 
 **function**

@@ -61,7 +61,7 @@ Redux is a library that expands on the ideas of the Flux pattern and combines it
 
 Through using Redux, we will be able to take all of the state out of our individual components, and instead house them inside of a **store**.
 
-![](../images/with_and_without_redux.svg)
+![](../images/with_and_without_redux.png)
 
 ### You Do - 10 min
 
