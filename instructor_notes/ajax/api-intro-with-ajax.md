@@ -225,6 +225,30 @@ A promise method for when the AJAX call fails.  These failures can occur for a v
 });
 ```
 
+### `async / await`
+
+Promises are great! They save us from ["callback hell"](http://blog.mclain.ca/assets/images/callbackhell.png) and provide some very nice error-handling. The downside to Promises is that they require a fair amount of boilerplate code. Each synchronous step requires a brand new `.then()` or `.catch()` block, and each of those blocks requires a new `anonymous function` or `arrow function`. 
+
+With React's `Webpack` set-up, we have brand new ES7+ features available to us. Let's take a look at how `async / await`, one of the best new Javascript language features, will give us this same functionality with even less boilerplate! 
+
+Using `async / await`, we can re-write the `axios` calls above like this:
+
+```js
+const getSomeData = async () => {
+	const data = await axios.get(url)
+	document.window.append(data)
+}
+```
+
+If we break this down, there are two steps we'll need to follow:
+
+1. Any synchronous code must be run inside of a function with the `async` prefix. This is as simple as just typing the word `async` before our function definition.
+2. Any time we want to stop and wait for a block of code to complete, we prefix the command with `await`. In the block of code above, we are telling our code to `await` the return of our `axios` call, and only then will we append the data to the DOM. 
+
+> Note: We can await as many blocks of code as we want, as long as they are all inside of the `async` function.
+
+While **Promises** are still totally valid, let's see if we can start refactoring our React code to use this great, clean syntax!
+
 ### BREAK
 
 ## Making API Calls in a React Application.
