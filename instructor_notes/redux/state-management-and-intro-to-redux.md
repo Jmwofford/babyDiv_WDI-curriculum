@@ -211,9 +211,8 @@ Let's take a look at some different ways we can output a brand new value.
 ### You Do:
 
 Use pure functions to solve the following problems:
-TODO
 
-1. Use a pure function to add a todo to this array of todo objects
+1. Use a pure function to add a `todo` to this existing array of todo objects:
 
 ```js
 const todos = [
@@ -266,6 +265,19 @@ function editUserObject(currentUser, edits){
 
 console.log(editUserObject(user, userChanges))
 ```
+
+3. Return an array of objects that removes all fruits that start with a vowel.
+
+```js
+const fruitsAndVeggies = ['Apple', 'Squash', 'Orange', 'Pear', 'Lime']
+
+function removeFruit(originalArray){
+  // Your code here
+}
+
+console.log(removeFruit(fruitsAndVeggies))
+```
+
 
 ## Further Reading
 
