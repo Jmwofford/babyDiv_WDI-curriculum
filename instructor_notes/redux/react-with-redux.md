@@ -35,9 +35,9 @@ So far, we have talked about Redux as an abstract pattern that allows us to extr
 Individually, answer the following questions.  Feel free to look at the [previous lesson](./state-management-and-intro-to-redux.md) to answer these questions.
 
 1. What problem does Redux solve?
-2. What are the 3 principles of Redux.  Give a short explanation for each.
-3. What is a **pure** function.
-4. Define **store**, **action**, and **reducer**
+1. What are the 3 principles of Redux.  Give a short explanation for each.
+1. What is a **pure** function.
+1. Define **store**, **action**, and **reducer**
 
 ## Combining React and Redux
 
@@ -76,6 +76,124 @@ Think about how would you solve this problem using only React? Feel free to chec
 Again, this is always an important question to ask when you are looking to add more libraries and tools to an application.  In the case of this application, if we were ONLY building a simple todo app like we're doing today, I would personally choose not to use Redux.  However, if we continued to work on the application and expected it to become more complex in both features and scope, then Redux would be a valuable too.  In any case, this exercise will allow us to become more familiar with how to set up Redux in a React application and how to implement new features.
 
 ### Let's Get Started
+
+With the current state of our app, it is impossible for the `Todos` and `TodoForm` without hoisting the state of each component up to the `App` level or restructuring the structure of the React component tree.  Instead, we can connect these components to an outside state management library like Redux which will handle updating state for us.
+
+
+#### Codealong: Adding the Redux boilerplate
+
+1. **Install Dependencies** We'll start by installing the two libraries necessary to introduce Redux into our app.
+
+```bash
+npm i redux react-redux
+```
+
+2. **Add New Files and Directories**: In order to handle the addition of *stores*, *reducers*, and *action creators*, we need to create a few new files and directories. Add the following folders and directories to the project.
+  - in `src`, add 2 directories called `actions` and `reducers`
+  - Within `reducers`, add a file called `index.js`
+  - Within `actions`, add a file called `todo.actions.js`
+  - In the `src` add a file called `configureStore.js`
+
+3. **Add the Provider Component**:  Now that we have our files and directories sorted, let's start integrating `redux` and `react-redux` into our application.  The starting point for this integration is the `Provider` component that is built into `react-redux`.  This component gets wrapped around your entire application and takes a single prop called `store`.  This does most of the work linking React and Redux together. We'll create this store in just a moment. Add the `Provider` in the `index.js` file. Let's also import our `configureStore` file which will handle the set up of our Redux store. (We'll do this in the next step)
+
+```js
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './components/App'
+import { Provider } from 'react-redux'
+import registerServiceWorker from './registerServiceWorker'
+
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+  , document.getElementById('root'))
+
+registerServiceWorker()
+```
+
+4. **Set Up The Redux Store**: The function we created earlier called `configureStore` is going to hold the logic that connects our store to our reducers and any additional middleware (more on that tomorrow)
+
+For now, the only middleware we want to add is the Redux Devtools Extension.  If you take a look at the docs, it will show you how to quickly and easily and the dev tools to a Redux store.
+
+Additionally, we will import the reducers we will make soon.  Notice here that our import path is only `./reducers` instead of `./reducers/index`.  This is just a small shortcut that you can take with JavaScript.  If no file name is given, JavaScript will just use the file within the directory called `index`
+
+```js
+
+import { createStore } from 'redux'
+import reducer from './reducers'
+
+function configureStore () {
+  const store = createStore(
+    reducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  )
+  return store
+}
+
+export default configureStore
+
+```
+
+5. **Building The Index Reducer**: Considering that our application may scale up to be really really large, it's easy to imagine that we will eventually have an **enormous** state object and a reducer with dozens or even hundreds of cases for updating our state.  This does not sound very pleasant, so Redux provides a great method called `combineReducers` that will allow us to write a lot of smaller, more specific reducers that get combined for you when the page loads.  Our `./reducers/index.js` file will hold that method and connect all the various reducers we will build over the lifespan or our application.  For now, we can just add create a file called `todosReducer.js` and bring it into our index.
+
+```js
+import { combineReducers } from 'redux'
+import todos from './todosReducer'
+
+// Combine all our reducers together
+const rootReducer = combineReducers({
+  todos
+})
+
+export default rootReducer
+```
+
+6. **Creating The Todo Reducer**: This is the file that will actually contain the reducers that we saw earlier in class.  Here we will set our default argument to the list of todos in the Todos component, and only provide the default action for our switch statement for now.
+
+```js
+const defaultState = [
+  {
+    id: 0,
+    task: 'Test this Todo Page',
+    completed: false
+  },
+  {
+    id: 1,
+    task: 'Learn Redux',
+    completed: false
+  },
+  {
+    id: 2,
+    task: 'Learn React',
+    completed: true
+  }
+]
+
+function todos (state = defaultState, action) {
+  switch (action.type) {
+    default:
+      return state
+  }
+}
+
+export default todos
+```
+
+**CHECKPOINT** We have now completed the boiler plate for our Redux app. It was a lot of set up, but now we can leverage the full power of Redux!!
+
+From here we can open up the Redux Dev tools and see our state object.  Our next step is to start building our actions to update the store and connecting that to Redux.
+
+7. **Connect Redux Todos to React App**
+8. **Create an Add Todo Action**:
+  // Test in the dev tools
+9. **Add A Case for the Action in the TodoReducer**
+10. **Connect Action to TodoForm**
+
+//Additional Functionality
+//You do Visibility Features?
+// Homework edit and delete functionality?
 
 	- We do: Add Redux boiler plate 2:40
 		- 30-40 mins
