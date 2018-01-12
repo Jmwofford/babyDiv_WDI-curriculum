@@ -185,33 +185,110 @@ export default todos
 
 From here we can open up the Redux Dev tools and see our state object.  Our next step is to start building our actions to update the store and connecting that to Redux.
 
-7. **Connect Redux Todos to React App**
-8. **Create an Add Todo Action**:
-  // Test in the dev tools
-9. **Add A Case for the Action in the TodoReducer**
-10. **Connect Action to TodoForm**
+7. **Connect Redux Todos to React App**: Let's use our Redux store to replace the local state within `Todos` with the global state that we've placed within our todo reducer. In order to do this, we will need to bring in another method from the `react-redux` library called `connect`.  `connect` is a method that you wrap around your entire component as well as two additional functions that dictate what parts of your Redux state and actions you want to add to the component.  These functions are commonly known as `mapStateToProps` and `mapDispatchToProps`.  For now, we will just connect our Redux state to the component.
 
-//Additional Functionality
-//You do Visibility Features?
-// Homework edit and delete functionality?
+```js
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
-	- We do: Add Redux boiler plate 2:40
-		- 30-40 mins
-		- Make sure to introduce each concept individually
+class Todos extends Component {
+  render () {
+    return (
+      <div>
+        <ul>
+          {this.props.todos.map(todo => (
+            <li key={todo.id}>{todo.task}: {todo.completed.toString()}</li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+}
 
+const mapStateToProps = (state) => {
+  return {
+    todos: state.todos
+  }
+}
 
-	- We do: Add functionality 3:20
-		- 60 mins
-		- ADD_TODO
-		- TOGGLE_TODO
-		- Visibility Features
+export default connect(mapStateToProps)(Todos)
+```
 
+8. **Create an Add Todo Action**: So far we are only have a static global state, which is impossible to update.  In order to update it, we will need to do a few things.  Our first step for adding updates is to build an action creator that will dispatch a new todo. Remember that actions are require a `type` in order for reducers to pick up any pending changes.
 
-	- You do: Add features 4:20
-		- Remainder of Class
-		- Add an author to each todo app
-		- Add edit functionality
-		- Add ability to delete a todo (different than completed
+```js
+// ./actions/todoActions
+export function addTodo (task) {
+  return {
+    type: 'ADD_TODO',
+    todo: {
+      id: Math.floor(Math.random() * 5000), //replace with UUID,
+      task: task,
+      completed: false
+    }
+  }
+}
+
+```
+
+9. **Add A Case for the Action in the TodoReducer**: The next step is to add a case for 'ADD_TODO' in the todosReducer.  Within the case we need to make sure we return a new state that includes the newest todo coming from our action.
+
+```js
+    case 'ADD_TODO':
+      return [ ...state, action.todo ]
+```
+
+10. **Connect Action to TodoForm**: Finally, let's add our new action to the `TodoForm` component.  Here, we will be using the `connect` method to apply `mapDispatchToProps`.
+
+```js
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { addTodo } from '../actions/todoActions'
+
+class TodoForm extends Component {
+  state = {
+    newTodo: ''
+  }
+
+  handleChange = (event) => {
+    console.log(event.target.value)
+    this.setState({ newTodo: event.target.value })
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault()
+    this.props.addTodo(this.state.newTodo)
+    this.setState({ newTodo: '' })
+  }
+
+  render () {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <input
+          onChange={this.handleChange}
+          value={this.state.newTodo}
+        />
+        <button>Add Todo</button>
+      </form>
+    )
+  }
+
+}
+
+export default connect(null, { addTodo })(TodoForm)
+
+```
+
+**HOORAY** We did it! I know it was a lot of steps, but as the application becomes more and more complex, this pattern will allow you to keep your code well organized, easily testable, and independent.
+
+**Time Permitting**:
+- Add a Visibility Feature
+
+### You Do:
+  Now work to try and add a few additional features to our todo app.
+  1. Add the functionality to click on a Todo and toggle complete/incomplete
+  2. Add the ability to edit an existing Todo
+  3. Add an ability to delete a todo rather than just toggling complete/incomplete
 
 ## Further Reading:
 
