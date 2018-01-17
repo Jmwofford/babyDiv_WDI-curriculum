@@ -14,7 +14,7 @@ competencies: Front-End Architecture
 
 *After this lesson, students will be able to:*
 
-- Define state in relationship to building Front End Applications
+- Understand state in relationship to building Front End Applications
 - Describe the benefits of using a global state object vs local state
 - Explain the 3 Principles of Redux
 - Explain the roles of actions and the reducer
@@ -30,28 +30,37 @@ competencies: Front-End Architecture
 
 ### Going Fast Forever - 5 min
 
-Several weeks ago, we talked about how our goal in building software is to **go fast forever**. Meaning that as professionals, we want to plan and structure our application workflow to allow us to make quick changes and build tons of new and interesting features.
-React so far has allowed us to build really interactive sites that are easily broken up into small pieces, which allows us to build more efficiently than using a library like jQuery.
-React allows us to built lots and lots of separate components really really fast.  That's why it has so rapidly become the most popular choice to render views.  The downside of this is that React is only concerned with being a VIEW layer for your application.  This means that, even though React is able to manage the data that is stored on your application, it's doesn't care about that as much as it does the view.
+Several weeks ago, we talked about how our goal when designing software is to **go fast forever**. This means that as professionals, we want to plan and structure our application workflow to allow us to make quick changes and build tons of new and interesting features for months and years without needing to slow down.
+
+React so far has allowed us to build really interactive sites that are easily broken up into small pieces, which allows us to build more efficiently than using a library like jQuery where code can become messy quickly.
+
+The ability to break pieces of our application into small components helps us go fast because we can easily find and change small pieces of our app.  That's why it has so rapidly become the most popular choice to render views.  The downside of this is that React is only concerned with being a **VIEW** layer for your application.  This means that, even though we can manage state and data through React, it's doesn't care about that as much as it does showing and updating the DOM quickly.
 
 ### You Do (Turn and Talk) - 5 min
 
-With a partner, write down your definition of what state is in React.
+With a partner, discuss and write down answers to the following questions.
 
 - What is state?
-- Where does state live?
+- Where does state live in a React application?
 - How does state get changed?
 - How do you pass state from place to place?
 
-Even though we can easily manage and change state just using React alone, we can begin to see some of the weaknesses of using React alone to manage that state of your application.
+
+### State in React
+
+Even though React has built in tools to manage and update the state of an application, it is not nearly as strong as the rendering capabilities.  This is by design within Facebook, remember React is a `library` focused on solving a few problems, not a `framework` which is more expansive and is more opinionated.
 
 State in React is only handled within individual components. Whenever we have values that may change we must update our state with the `this.setState()` method.
 
 This state private to an individual React component. This is commonly called `Local State`.  The state is defined, called, and transformed only from within the component that owns it.
 
-How do we pass information in a components state to other components?
+**CFU**: How do we pass information in a components state to other components?
 
 We can send information down the React component tree through props.  Props allows us to pass values and methods that can reference parts of state and even call methods within the higher level component.  This has worked out great so far, but as your app grows larger it may begin to grow more and more difficult to make changes to your state.  This is why we've lifted our state up to it's very top level in most React apps that we've created. Eventually this becomes an extremely time consuming and risky activity.
+
+One common use case that requires global state like this is having an application with many different views (like when using React Router).
+
+**CFU**: What sort of risks do we gain as we build a large React only application?
 
 ### A Little Bit of History
 
@@ -75,11 +84,11 @@ Read [this Medium post](https://medium.com/dailyjs/when-do-i-know-im-ready-for-r
 - In your own words, describe how Redux handles data differently than React on its own.
 - According to the articles, what benefits did his team gain by using a State Management Library like Redux?
 
-### Understanding Redux
+## Understanding Redux
 
-The state problems introduced when scaling up React Applications is not unique to this single library.  This problem occurs in Angular 1 & 2, Backbone, Ember and lots of other front-end frameworks.  As data needs to be moved around more often, it is sometimes necessary for that data to all live in another place.
+The state problems introduced when scaling up React Applications is not unique to this single library.  This problem occurs in Angular 1 & 2, Backbone, Ember and lots of other front-end frameworks.  As data needs to be moved around more often, it is sometimes necessary for that data to all live in another place.  One of the great things about Redux is that is is library and framework agnostic, meaning that it can be used in all of these other libraries as well!
 
-When people first get started with Redux, the biggest difficulties with its learning curve is understanding the terminology and philosophy behind the library.
+When people first get started with Redux, the biggest difficulties with its learning curve is understanding the terminology and philosophy behind the library.  This difficulty is compounded when you try to learn Redux terminology at the same time as learning the other tools to implement Redux.  For now, we are focusing on the terms related to the Redux library and design pattern.
 
 ### Terminology
 
@@ -104,7 +113,7 @@ The action is the simplest of new terms. Actions are simply a JavaScript object 
 }
 ```
 
-The only requirement of these actions is that it must be an object with at `type` that is a string.  Any additional key/value pairs are completely optional.
+The only requirement of these actions is that it must be an object with a `type` that is a string.  Any additional key/value pairs are completely optional.
 
 These actions feed new data into our store, and are typically created inside of an action creator.
 
@@ -165,11 +174,11 @@ Reducers are just pure functions that take the previous state and an action, and
 
 ### Reducer Deep Dive
 
-> The Redux reducer API is (state, action) => state, but how you create those reducers is up to you.
+> The Redux reducer API is `(state, action) => newState`, but how you create those reducers is up to you. -Dan Abramov
 
-Learning how to properly manipulate the reducer is by far the most difficult part of learning Redux. Let's take a little bit of a deeper look at it and see if we can demystify the hard parts.
+Learning how to properly manipulate the reducer is by far the most difficult part of programming with Redux. Let's take a little bit of a deeper look at it and see if we can demystify the hard parts.
 
-It's important to remember that the reducers job is not to transform your state, but instead to **completely** replace the old state with a brand new state object.  This is achieved through combining two concepts built into JavaScript: switch statements and pure functions.
+It's important to remember that the reducer's job is not to transform your state, but instead to **completely** replace the old state with a brand new state object.  This is achieved through combining two concepts built into JavaScript: **switch statements** and **pure functions**.
 
 #### Switch Statements
 
@@ -278,6 +287,9 @@ function removeFruit(originalArray){
 console.log(removeFruit(fruitsAndVeggies))
 ```
 
+### Lab/Homework: [Building A Super Simple Shopping Cart With React/Redux](https://git.generalassemb.ly/ga-wdi-exercises/react-redux-shopping-cart)
+
+For the remainder of this class and for homework this evening, try to work through this codealong that sets up a simple React and Redux application.  In here, you will be introduced to the `react` library and the `react-redux` library.  Pay attention to the components and methods that you import here and their relationship with the Redux pattern.  Don't copy paste the code here into your own React app... instead type out everything presented in the example and reflect on what is happening at each level.
 
 ## Further Reading
 

@@ -279,16 +279,107 @@ export default connect(null, { addTodo })(TodoForm)
 
 ```
 
+**HOLD UP** Why are we using state here?! We are choosing to use local state for this form because it is NEVER going to be referred to outside of this component.  Because of this, it is safe for us to write this in your local state, which is much quicker to accomplish.  This is a really important lesson to learn in Redux.  Keep your user stories in mind when considering using local state.  Redux is not an all or nothing decision.
+
 **HOORAY** We did it! I know it was a lot of steps, but as the application becomes more and more complex, this pattern will allow you to keep your code well organized, easily testable, and independent.
 
-**Time Permitting**:
-- Add a Visibility Feature
+Now we can easily add more functionality to our application through utilizing actions and the reducer.  Let's try to add the ability to click a todo to mark it complete or incomplete.  Even though this simple interaction now requires editing 3 files, we gain the benefit of easily testable code and prevent our individual components from becoming really complicated.  Let's start by building the action we want to dispatch.
 
-### You Do:
-  Now work to try and add a few additional features to our todo app.
-  1. Add the functionality to click on a Todo and toggle complete/incomplete
-  2. Add the ability to edit an existing Todo
-  3. Add an ability to delete a todo rather than just toggling complete/incomplete
+```js
+export function toggleTodo (id) {
+  return {
+    type: 'TOGGLE_TODO',
+    id
+  }
+}
+```
+
+Next up, let's attach the action to the onClick for a ToDo
+
+```js
+  <li
+    key={todo.id}
+    onClick={() => props.toggleTodo(todo.id)} //Why do we wrap this in an arrow function?
+  >
+    {todo.task}: {todo.completed.toString()}
+  </li>
+```
+
+Finally, we add a case to our reducer to handle the action being dispatched. In this scenario, we need to clone our state object, then map through the array and change the todo that has the same id as what is given via the action.
+
+```js
+...
+  case 'TOGGLE_TODO':
+    const newState = state.map(todo => {
+      if (todo.id === action.id) {
+        todo.completed = !todo.completed
+      }
+      return todo
+    })
+    return newState
+...
+```
+
+Voila! That wasn't too bad, right? This process becomes especially easy as you learn more keyboard shortcuts to hop between files.
+
+## Lab - Build Features/Teachback
+
+Now it's time to build out some Redux features on your own! Split into your standup groups and mob program to build out several new features for our todo app.  If you get finished before the time is up, let your instructor know and he/she will give you more features.  At the end of 45 minutes, you will share with the class how you built your feature.
+
+**Features**
+- Edit a Todo Item by clicking a button and then filling out a form.
+- Delete a Todo Item by clicking a delete button
+- Add an input field that filters Todos that don't match the string in the input.
+- Add 3 buttons `Show All`, `Show Completed`, and `Show Current` and add onClick attributes to each which will narrow the todos shown in the DOM.
+
+## Time Pending
+  
+### Middleware in Redux
+
+Just like Express, Redux has the ability to leverage middleware to enhance the developer experience and clean up your code.  The most common piece of middleware is one we've already seen, the Redux Dev Tools.  There are plenty of other pieces of middleware out there, like `redux-logger` and `thunk`.  You can easily integrate this middleware through the `configureStore` file.  Beware not to go overboard here, else you risk some performance hits.
+
+#### Redux Thunk
+
+You may have seen the term above and made a double take.  What is a `thunk`?!  This really poorly named library simply allows you to make async calls in an action creator, which is impossible to do by default.  A thunk simply returns a new function that dispatches multiple other actions.
+
+```js
+function fetchProductsPending () {
+  return {
+    type: 'FETCH_PRODUCTS_PENDING'
+  }
+}
+
+function fetchProductsSuccess (products) {
+  return {
+    type: 'FETCH_PRODUCTS_SUCCESS',
+    products
+  }
+}
+
+function fetchProductsFailure(err) {
+  return {
+    type: 'FETCH_PRODUCTS_FAILURE',
+    err
+  }
+}
+
+//This is a redux-thunk. Notice it dispatches multiple other actions depending on whether or not the promise resolves or is rejected.
+export function fetchProducts () {
+  return async dispatch => {
+    dispatch(fetchProductsPending())
+    try {
+      const { data } = await axios.get('./api/products')
+      return dispatch(fetchProductsSuccess(data))
+    } catch (err){
+      dispatch(fetchProductsFailure(err))
+    }
+  }
+}
+```
+
+#### Boilerplate
+
+Getting Redux set up by hand is a time consuming task and is close to the same every single time.  For that reason, there are several boilerplates available online.  [Here](https://git.generalassemb.ly/jamieking/redux-boilerplate) is one from GA Atlanta that gets you started with the basics without adding a bunch of features that you don't need right off the bat.
 
 ## Further Reading:
 
