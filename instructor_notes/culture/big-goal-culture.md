@@ -72,6 +72,49 @@ https://vimeo.com/85040589
 1. Be Thoughtful
 1. Be Creative
   - this is not paint by numbers
+  
+## Feedback
+
+The WDI classroom culture is firmly rooted in a cycle of `constant`, `constructive`, and `actionable` feedback. These feedback loops go both ways, from General Assembly to our students and from students back to General Assembly.
+
+#### Constant
+
+`Constant` feedback is given as often as possible. We believe in detecting problems as early as possible, and working through them before they grow into larger issues.
+
+Some ways that we implement these constant feedback loops at GA include:
+
+- An open classroom environment: We expect the classroom environment to involve constant discussion and questioning. 
+- Daily stand-up meetings: The primary purpose of these daily meetings is to check in and look for patterns in our learning trajectory. 
+- Weekly exit tickets: These are a weekly opportunity for the students to give us longer-form feedback.
+- NPS Surveys: These are even longer-form surveys that will be given a few times throughout the course.
+
+#### Constructive
+
+We expect that any feedback given is `constructive`. We don't believe that `constructive` feedback always has to be "positive". Whether something is going well or course-correction is needed, `constructive` feedback is specific and detailed and indicates this clearly. It is not an emotional response, but a genuine observation of behaviors that should be re-inforced or changed. Let's look at some examples and non-examples of "constructive" feedback:
+
+  **Example:** Instructor: "There is some duplication in your CSS. Consolidating the duplicated classes would make the code a lot cleaner."  
+  **Non-example:** Instructor: "Your CSS is a mess."  
+
+  **Example:** Instructor: "Your User Stories are extremely detailed. Keep it up!"  
+  **Non-example:** Instructor: "Looks good."  
+
+  **Example:** Student: "This lecture didn't work particularly well for me because I needed more visual examples."  
+  **Non-example:** Student: "I hated today's lecture."  
+  
+  **Example:** Student: "Pair-programming really helped me make sense of this lab."    
+  **Non-example:** Student: "Everything went fine."  
+  
+#### Actionable
+
+We also expect that our `constructive` feedback is `actionable`. `Actionable` feedback is both `possible` to implement and also `timely`. `Possible` means that it is something we can reasonably accomplish, and `timely` means that we can finish it within a reasonable amount of time. Our goal should be to set up `constructive` goals that we can actually accomplish within a day. When we do this, we will ensure that we are accomplishing a set of meaningful goals every day. 
+
+A good test for whether or not a goal is `actionable` is to check that it includes both a small, specific action and a soon-to-come end time. Let's look at some examples and non-examples:
+
+  **Example:** Instructor: "We're going to master for-loops today."  
+  **Non-example:** Instructor: "We're going to be really good at JavaScript."   
+
+  **Example:** Student: "I want to master flexbox this afternoon."  
+  **Non-example:** Student: "I want to feel better about CSS."  
 
 ## Plagiarism
 ### Statement
