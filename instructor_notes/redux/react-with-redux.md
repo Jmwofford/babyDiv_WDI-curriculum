@@ -1,7 +1,7 @@
 ---
 title: React With Redux
 type: lesson
-duration: "2:00"
+duration: "6:00"
 creator:
     name: Jamie King
     city: ATL
