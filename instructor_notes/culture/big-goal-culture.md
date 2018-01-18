@@ -10,7 +10,6 @@
   - Each instructor takes a different topic for each unit
 2. Outcomes
   - Outcomes sessions
-  - Prioritize!
 3. TAs
   - Classroom / LAB help
   - Morning exercises
