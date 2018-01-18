@@ -275,7 +275,7 @@ function editUserObject(currentUser, edits){
 console.log(editUserObject(user, userChanges))
 ```
 
-3. Return an array of objects that removes all fruits that start with a vowel.
+3. Return an array of objects that removes all fruits.
 
 ```js
 const fruitsAndVeggies = ['Apple', 'Squash', 'Orange', 'Pear', 'Lime']
