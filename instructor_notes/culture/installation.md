@@ -15,7 +15,7 @@ competencies: Course Prep
 - install `homebrew` and `brew cask`
 - install `Node` w/ brew
 - install `Spectacle` w/ brew cask
-- uninstall and install `Visual Studio Code` w/ brew cask
+- install `Visual Studio Code` w/ brew cask
 - Verify git is installed
 
 
@@ -99,21 +99,54 @@ Let's test it out.
 
 ### Set up Spectacle, iTerm, and Flycut
 
-We're going to install one more application using brew cask. It's an App called Spectacle—[documentation](https://github.com/eczarny/spectacle)—which is going to make organizing your screen much simpler!
+We're going to install a few more applications using brew cask. 
 
-1. install spectacle using `brew cask`
+#### Spectacle
+
+The first is an App called [Spectacle](https://github.com/eczarny/spectacle) which is going to make organizing your screen much simpler!
+
+1. using `brew cask`:
   ```bash
   $ brew cask install spectacle
-  $ brew cask install flycut
-  $ brew cask install iterm2
   ```
+  
+2. Open Spectacle from Spotlight (`cmd + space`)
 
-2. Open up your System Preferences
+3. Update system preferences for Spectacle:
 
   Click the padlock in the bottom left corner so you can make changes and then check the box next to Spectacle to allow the app to control your computer.
 
   Spectacle gives you the ability to move your windows around quickly so you're not wasting time dragging your mouse around
   ![](.md_resources/specs.gif)
+  
+#### Flycut
+
+The second is a clipboard manager called [Flycut](https://github.com/TermiT/Flycut). This will allow us to copy multiple things in a row and then paste all of them later, instead of the standard one at a time.
+
+1. using `brew cask`:
+
+  ```bash
+  $ brew cask install flycut
+  ```
+  
+2. Open Flycut from Spotlight
+
+3. Select "Launch Flycut on Login" from the Flycut preferences. (It's the red icon near your clock.)
+
+#### iTerm
+
+Finally, we'll install a new, upgraded Terminal application called `iTerm`.
+1. using `brew cask`:
+
+  ```bash
+  $ brew cask install iterm2
+  ```
+  
+2. Open iTerm from Spotlight
+
+3. Open the iTerm preferences with `cmd + ,`
+
+4. Go to the `Profiles` tab and under the `Working Directory` section, select "Reuse previous session's directory." This will enable us to open multiple terminal panes easily within the same root folder. This will become more and more useful for us over the life of the class.
 
 ### Extra: Command Line Helpers w/ Bash-It
 
