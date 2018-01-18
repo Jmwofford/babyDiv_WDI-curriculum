@@ -15,6 +15,8 @@ competencies: Course Prep
 - install `homebrew` and `brew cask`
 - install `Node` w/ brew
 - install `Spectacle` w/ brew cask
+- install `Flycut` w/ brew cask
+- install `iTerm` w/ brew cask
 - install `Visual Studio Code` w/ brew cask
 - Verify git is installed
 
