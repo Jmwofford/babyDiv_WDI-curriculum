@@ -28,7 +28,7 @@ competencies: Front-End Architecture
 - Understand how data is passed between components in React
 - Be familiar with higher-order functions and object/array destructuring
 
-### Going Fast Forever - 5 min
+### Going Fast Forever
 
 Several weeks ago, we talked about how our goal when designing software is to **go fast forever**. This means that as professionals, we want to plan and structure our application workflow to allow us to make quick changes and build tons of new and interesting features for months and years without needing to slow down.
 
