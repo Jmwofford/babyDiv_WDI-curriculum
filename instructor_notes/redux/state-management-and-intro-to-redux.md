@@ -122,7 +122,7 @@ These actions feed new data into our store, and are typically created inside of 
 Action Creators are just functions that return an Action.
 
 ```js
-const addTodo (todo) => {
+const addTodo = (todo) => {
   return {
     type: 'ADD_TODO',
     todo: todo
@@ -140,7 +140,7 @@ The reducer will always take the **previous state** and the **action** that was 
 
 ```js
 const exampleReducer = (state, action) => {
-  switch(action){
+  switch(action.type){
     case: 'EXAMPLE_ACTION'
       //Do some stuff and return a new state
       return newState
@@ -213,8 +213,8 @@ Redux relies on pure functions in order to trigger the update life cycle for a R
 
 Let's take a look at some different ways we can output a brand new value.
 
-- `[...previousArray]`  This is an example of destructuring an array
-- `{...previousObject}` This is a destructured object
+- `[...previousArray]`  This is an example of spreading an array
+- `{...previousObject}` This is a spread object
 - `map, filter, reduce` are all examples of built in methods that clone an array.
 
 ### You Do:
