@@ -331,6 +331,7 @@ Now it's time to build out some Redux features on your own! Split into your stan
 - Delete a Todo Item by clicking a delete button
 - Add an input field that filters Todos that don't match the string in the input.
 - Add 3 buttons `Show All`, `Show Completed`, and `Show Current` and add onClick attributes to each which will narrow the todos shown in the DOM.
+- Add a button called `Clear Completed` that will deleted all completed todos
 
 ## Time Pending
   
