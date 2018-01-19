@@ -5,7 +5,7 @@
 For your 3rd project, you will be building an application using the 
 MERN stack. ​ Use your imagination! You get to create whatever you want for this app. 
 Everyone will get a chance to be creative, and work through some really tough 
-programming challenges, but you'll have a team to help you carry the load.
+programming challenges.
 
 You'll need to run your user stories, wireframes, and database design by your 
 instructors to get their feedback and approval before you begin coding! Remember 
