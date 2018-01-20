@@ -284,7 +284,7 @@ Rails uses an __MVC__ architecture
 
 (Ref: [Hartl MVC](https://www.railstutorial.org/book/toy_app#fig-mvc_detailed))
 
-![rMVC Diagram](http://i.stack.imgur.com/Sf2OQ.png)
+![rMVC Diagram](https://i.stack.imgur.com/Sf2OQ.png)
 
 > Alternate Diagram:
 
