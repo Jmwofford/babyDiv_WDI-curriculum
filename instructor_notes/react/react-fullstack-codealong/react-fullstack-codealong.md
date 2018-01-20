@@ -20,11 +20,14 @@ competencies: Full-Stack Applications
 We've learned a lot about the modern tooling and practicing around the React ecosystem over the past couple of days.  A lot of modern JavaScript is focused on knowing the right tools for the job.  Today we will be pulling in everything we've learned about Node and React to build a full stack application using the MERN stack.
 
 ## MERN Stack
-When you see MERN stack, this is typically just a shorthand way of saying that the application is a full-stack JavaScript app.  The tools that we use for MERN apps are: Mongo (Mongoose), Express, React, and Node.  While there are some boilerplate tools to build out a full MERN stack app, we are going to build our own using `create-react-app` and the Express and Mongo patterns we've used in the past. 
+When you see MERN stack, this is typically just a shorthand way of saying that the application is a full-stack JavaScript app.  The tools that we use for MERN apps are: Mongo (Mongoose), Express, React, and Node.  While there are some boilerplate tools to build out a full MERN stack app, we are going to build our own using `create-react-app` and the Express and Mongo patterns we've used in the past.  This allows us to fully understand our application and prevents introducing a bunch of code that we haven't written and understand.
+
 ## Idea Board
 Today we are going to be taking advantage of the data persistance of an API and the single page polish that React brings!  Our app is an idea tracker where a user can write out different ideas and save them to a database.  Kinda like leaving post-it notes in the browser!
 
-Here's a GIF representation of the how this may look:
+This app will have 2 models- Users and Ideas (which will live inside of users)
+
+Here's a GIF representation of the how this may look, though we will also add the ability for a user to 'log in'
 ![idea board](https://slack-imgs.com/?c=1&url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1600%2F1*SMKZC-Ej73wFOmqNT-JQ7Q.gif)
 
 ### You Do
@@ -33,15 +36,13 @@ Work with the students around you for the next 10 minutes.  Write out some user 
 Additionally, think about the API routes that we will need. What components do you think we will need? What routes do we need to make available to the React app?
 
 ## Getting Started
-
-Today we will start our project in Github instead of locally.
+Today we will start our project in github instead of locally... just to show an alternative way of getting your project up and running.
 
 Go ahead and create a repo on github called `idea-board`. Make sure to include the `.gitignore` for Node apps and a `README`.
 
 After creating the repo, go ahead and clone it locally into your class-exercises folder.
 
 ## Express Set Up
-
 We're going to be building a lean Express app that will focus mainly on retrieving and serving API information. To start, we are only going to install `express`, `dotenv`, `body-parser`, and `mongoose`
 
 ```
@@ -51,66 +52,50 @@ touch server.js
 ```
 
 ## Creating server.js
-
 In our `server.js` file, we are going to create the most basic server possible.  As our needs grow, we will refactor and build onto the file.
 
 ```js
-require("dotenv").config()
+require("dotenv").config();
+const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const app = express();
+mongoose.Promise = global.Promise;
+mongoose.connect(process.env.MONGODB_URI); //mongodb://localhost/idea-board
 
-const express = require('express')
-const bodyParser = require('body-parser')
-const mongoose = require('mongoose')
-
-const app = express()
-
-mongoose.Promise = global.Promise
-mongoose.connect(process.env.MONGODB_URI, {
-	useMongoClient: true
-})
-
-const connection = mongoose.connection
+const connection = mongoose.connection;
 connection.on('connected', () => {
-  console.log('Mongoose Connected Successfully')
-})
+  console.log('Mongoose Connected Successfully');    
+}); 
 
 // If the connection throws an error
 connection.on('error', (err) => {
-  console.log('Mongoose default connection error: ' + err)	
-}) 
+  console.log('Mongoose default connection error: ' + err);
+}); 
 
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 app.get('/', (req,res) => {
   res.send('Hello world!')
 })
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log("Magic happening on port " + PORT)
+  console.log("Magic happening on port " + PORT);
 })
 ```
 
-And in `.env` we'll add our MongoDB url:
-
-```
-MONGODB_URI=mongodb://localhost/idea-board
-```
-
-...and finally, let's add the `.env` file and `/node_modules` folder to our `.gitignore`.
-
-Let's start our app and test that it is working!
+Let's start our app and test that it is working.
 
 > COMMIT!
 
 ## Integrating create-react-app
 Before we start working building out our models and controllers, let's first connect our Express app to React. Use `create-react-app` to get our UI up and running.
-
 ```bash
-# Inside of /idea-board
+# Inside of Idea-Board
 create-react-app client
 ```
 
 Your folder structure should now look something like this.
-
 ```
 |- client
   |- node_modules
@@ -127,9 +112,7 @@ Your folder structure should now look something like this.
 This will create a new React application for us to begin building our game.  Let's try to start our application.
 
 **OH NO**
-
 You may have gotten an error that looks something like this:
-
 ```bash
 ? Something is already running on port 3000. Probably:
   node server.js
@@ -137,7 +120,7 @@ You may have gotten an error that looks something like this:
 Would you like to run the app on another port instead? (Y/n)
 ```
 
-Webpack uses the `port 3000` when ever we start our application.  This conflicts with our Express server that is also attached to `port 3000`.  In order to fix this, we will change our Express app to listen on `3001`.
+Webpack uses the port 3000 when ever we start our application.  This conflicts with our Express server that is also attached to port 3000.  In order to fix this, we will change our Express app to listen on 3001.
 
 Now we can run both servers at the same time. We can do that by starting our server in one window and our React app in another.  However, there is a tool we can use to run both of these servers within the same window.
 
@@ -147,10 +130,10 @@ In order to run both our server and app at the same time, we are going to use an
 
 ```bash
 # Inside idea-board directory
-npm install concurrently
+npm install concurrently --save
 ```
 ```json
-// Inside package.json
+//Inside package.json
 ...
 "scripts": {
   "start": "node server.js",
@@ -177,7 +160,7 @@ After we build the app, we need to let Express know that it needs to be aware of
 ```js
 // inside of server.js
 ...
-  app.use(express.static(__dirname + '/client/build/'))
+  app.use(express.static(__dirname + '/client/build/'));
 ...
   app.get('/', (req,res) => {
     res.sendFile(__dirname + '/client/build/index.html')
@@ -193,7 +176,7 @@ Let's update the `package.json` to help Heroku understand more about our app.  W
 ...
   //Set the Heroku version of Node to the most recent available.
   "engines": {
-    "node": "8.9.4"
+    "node": "8.6.0"
   },
 ...
 //Postinstall will install the client packages and build the minified UI in Heroku.
@@ -207,7 +190,7 @@ Let's update the `package.json` to help Heroku understand more about our app.  W
 ...
 ```
 
-Now we can proceed with our Heroku deployment like normal:
+Now we can proceed our Heroku deployment like normal.
 
 ```bash
 heroku create inclass-idea-board
@@ -220,43 +203,47 @@ git push heroku master
 ## Setting up a Database
 Now that we've verified that we can run both apps at the same time and gotten the basic app up on Heroku, let's start building out the Schemas for our database.
 
-Today's example app is going to have 1 model: `Idea`
+Today's example app is going to have 2 Models. User and Idea
 
 ### You Do
-Create a new directory called `db` and create a `schema.js` within there. Then, create a Mongoose model for our `Idea` entity.
+Create a new directory called `db` and create a `schema.js` within there. Create a Mongoose model for each model.
 
-* Idea has title, description, and created and updated-at timestamps.
-	* Make sure the default value for title and content is something similar to "New Title" and "New Content"
+* User has name, password(string), and ideas.
+* Idea has title, description, and created(Date)
+  * Make sure the default value for title and description is something similar to "New Title" and "New Description"
 
-**Take a look at [Sample Project Two](https://github.com/dphurley/sample_project_two) if you need a refresher on how to do this**
+**Take a look at [Sample Project Two](https://github.com/dphurley/sample_project_two) if you need a refresh on how to do this**
 
 > COMMIT
 
 ## Seed Data
-Now that we have our model, let's go ahead and supply some seed data. Let's populate a seeds file with a few ideas.
+Now that we have out 2 models, let's go ahead and supply some seed data.  Let's populate a seeds file with one User with a few ideas.
 
 ```js
 require('dotenv').config()
-
 const mongoose = require('mongoose')
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true})
+mongoose.Promise = global.Promise
 
-const Idea = require('./models/Idea')
+const { User, Idea } = require('./schema')
 
 const mars = new Idea({
   title: 'Fly to Mars',
   description: "Earth isn't Red enough. Let's move to a new planet"
 })
-
 const tesla = new Idea({
   title: 'Build a Car',
   description: "Gas is too expensive. I'm gonna build a car that doesn't need gas"
 })
+const elon = new User({
+  userName: 'elon_musk',
+  password: 'spaceiscool',
+  ideas: [mars, tesla]
+})
 
-Idea.remove({})
-  .then(() => mars.save())
-  .then(() => tesla.save())
-  .then(() => console.log('Successful Save!!!'))
+User.remove({})
+  .then(() => elon.save())
+  .then(() => console.log('Successful Save'))
   .then(() => mongoose.connection.close())
 ```
 
@@ -269,60 +256,70 @@ Now that we have data within our database, let's use Express to retrieve that in
 
 ```js
 // ./server.js
-const ideasController = require('./controllers/ideasController')
-app.use('/api/ideas', ideasController)
-```
-
-```js
-// ./controllers/ideasController
+  app.use('/api/users', UsersController)
+  `
+// ./controllers/users
 const express = require('express')
-const Idea = require('../db/models/Idea')
+const { User } = require('../db/schema')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-  Idea.find({}).then(ideas => {
-    res.json(ideas)
+  User.find().then(users => {
+    res.json(users)
   })
   .catch((err) => console.log(err))
 })
 
 ...
 
-module.exports = router
+module.exports = router;
 ```
 
-Now if we check our route at `localhost:3001/api/ideas` we should see that we get a JSON object back.  We are able to get this JSON object by using `res.json` instead of `res.render` or `res.send`.
+Now if we check our route at `localhost:3001/api/users` we should see that we get a JSON object back.  We are able to get this JSON object by using `res.json` instead of `.render` or `.send`.
 
-We can now retrieve the user that we created in our seeds.  This gives us enough to get started on building the UI for our `idea-board`.
-We will need to build more routes later in the app, but this will work for the moment. _(YAGNI!)_
+We can now retrieve the user that we created in our seeds.  This gives us enough to get started on building the UI for out idea-board.
+We will need to build more routes later in the app, but this will work for the moment. (YAGNI!)
 
 > COMMIT
-> 
 > DEPLOY
 
 ### Scaffolding out our Idea Page UI.
-
-For the UI of our game, let's install our additional dependencies:
+For the UI of our game, lets get started by building out a client side router using `react-router`. We'll also install our other dependencies
 
 ```bash
 # inside of client directory
-npm i axios styled-components
+npm i react-router-dom axios styled-components
 ```
-Our app will have a main `IdeaPage` component.
+To start, our app will have 3 separate views:
+  - `HomePage`
+  - `LogInPage`
+  - `IdeaPage`
 
-Within our `components` folder, we will go ahead and create a basic version of this component in `/components/IdeaPage.js`.  Once this is created, we can add the component to the `App.js` component.
+Within our `components` folder, we will go ahead and create a basic component for each route.  Once these are created, we can add React Router to the `App.js` component.
 
 ```jsx
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import styled from 'styled-components'
+import HomePage from './components/HomePage'
+import LogInPage from './components/LogInPage'
 import IdeaPage from './components/IdeaPage'
 
 class App extends Component {
   render () {
     return (
-		<div>
-			<IdeaPage/>
-		</div>
+      <Router>
+        <div>
+          <div>
+            <Link to='/login'>Login</Link>
+          </div>
+          <Switch>
+            <Route exact path="/" component={HomePage}/>
+            <Route path="/login" component={LogInPage}/>
+            <Route path="/user/:userId" component={IdeaPage}/>
+          </Switch>
+        </div>
+      </Router>
     )
   }
 }
@@ -330,10 +327,59 @@ class App extends Component {
 export default App
 ```
 
+### Route Params in React Router
+
+We can add route params to our client side routes, much like what we've seen when working in Express.  The value defined will be passed in props.  For example, the above Route param will be available as `props.match.params.userId`.
+
+> COMMIT
+
+## Creating the Home and LogIn Route
+
+The first thing we'll focus on in the UI is the page users will see when they first load the page. On this page, we want to encourage a user to visit the LogIn page or Ideas page. We will start to make API calls once we build out the LogIn page.
+
+## You Do 
+Create the home page element with a greeting and a `Link` to the LogIn component.  Make sure to also add a `Link` back to home on LogIn
+
+## LogIn
+
+In order to make API calls, we'll use Axios.
+
+```jsx
+import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom'
+import axios from 'axios'
+
+class LogIn extends Component {
+  state = {
+    users: []
+  }
+
+  getAllUsers = () => {
+    axios.get('localhost:3001/api/users').then(res => {
+      this.setState({users: res.data})
+    })
+  }
+  
+  render () {
+    return (
+      <div>
+        <h1>Log-In</h1>
+        <h3>Please Select an Existing User</h3>
+        {this.state.users.map(user => {
+          return (<Link to={`/user/${user._id}`}>{user.userName}</Link>)
+        })}
+      </div>
+    )
+  }
+}
+
+export default LogIn
+```
+
 Unfortunately, when we load our UI we get an error!
 
-```bash
-XMLHttpRequest cannot load localhost:3001/api/ideas. Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, https.
+```text
+XMLHttpRequest cannot load localhost:3001/api/game. Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, https.
 ```
 
 This is an example of what's commonly referred to as a CORS error (Cross-Origin Resource Sharing)
@@ -353,50 +399,102 @@ There are several ways that we can handle CORS requests, but for our app we are 
 
 > COMMIT
 
+## Adding Sign-Up
+Now that we can communicate between the server and client, let's expand our UserController and give it the ability to `post` a new User.
+
+```js
+  router.post('/', (req, res) => {
+    const newUser = new User(req.body.user)
+    newUser.save().then((user) => {
+      res.json(user)
+    }).catch(console.log)
+  })
+```
+
+Now we are able to add a Sign-Up form to the LogIn page.
+
+```js
+  createUser = () => {
+    axios.post('/api/users', {
+      user: this.state.user
+    }).then((res) => {
+      this.setState({redirectToHome: true, createdUser: res.data})
+    })
+  }
+
+  handleChange = (e) => {
+    const user = {...this.state.user}
+    user[e.target.name] = e.target.value
+    this.setState({user})
+  }
+
+  handleSignUp = (e) => {
+    e.preventDefault()
+    this.createUser()
+  }
+...
+  <h1>Sign-Up</h1>
+  <form onSubmit={this.handleSignUp}>
+    <div>
+      <label htmlFor="userName">User Name</label>
+      <input onChange={this.handleChange} name="userName" type="text" value={this.state.userName}/>
+    </div>
+    <div>
+      <label htmlFor="password">Password</label>
+      <input onChange={this.handleChange} name="password" type="text" value={this.state.password}/>
+    </div>
+  <button>Sign Up</button>
+</form>
+```
+
+Finally we need to create a conditional that will handle a redirect after a user is successfully saved.
+
+> COMMIT
 
 ## Building A Static Idea Board
 
-Now that we are able to navigate to the `IdeaPage` component, we can focus on building out some static views.  Let's mock some data in the initial state and write some starter JSX.
+Now that we are able to navigate to the `IdeaView` page, we can now focus on building out some static views.  Let's mock some data in the initial state and write some starter JSX.
 
 ```jsx
 import React, { Component } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
 
-class IdeaPage extends Component {
+class IdeaView extends Component {
   state = {
-    ideas: [
-	    {
-	      id: 1,
-	      title: 'hello',
-	      description: 'world'
-	    }, {
-	      id: 2,
-	      title: 'hola',
-	      description: 'mundo'
-	    }, {
-	      id: 3,
-	      title: 'goodnight',
-	      description: 'moon'
-	    }, {
-	      id: 4,
-	      title: 'greetings',
-	      description: 'earthlings'
-	    }
-    ]
+    user: {
+      userName: 'Bob'
+    },
+    ideas: [{
+      id: 1,
+      title: 'hello',
+      description: 'world'
+    }, {
+      id: 2,
+      title: 'hola',
+      description: 'mundo'
+    }, {
+      id: 3,
+      title: 'goodnight',
+      description: 'moon'
+    }, {
+      id: 4,
+      title: 'greetings',
+      description: 'earthlings'
+    }]
   }
 
   render () {
     return (
       <div>
         <div>
-          <h1>Idea Board</h1>
+          <h1>{this.state.user.userName}'s Idea Board</h1>
           <button>New Idea</button>
         </div>
         <div>
-          {this.state.ideas.map((idea) 1 => {
+          {ideas.map(idea => {
             return (
-              <div key={idea.title}>
+              <div>
                 <input type="text" name="title"/>
                 <textarea name="description"/>
                 <button>Delete Idea</button>
@@ -409,83 +507,91 @@ class IdeaPage extends Component {
   }
 }
 
-export default IdeaPage
+export default IdeaView
 ```
 
 ## You Do
 
-Now that we have the static starter code, let's clean things up and add some styling. Next, use `styled-components` to add some styling to the page.  As a reminder, we ideally want our app to look something like this.
+Now that we have the static starter code, let's clean things up and add some styling. Take the code above and refactor it into smaller components.  Next, use `styled-components` to add some styling to the page.  As a reminder, we ideally want our app to look something like this.
 
 ![idea board](https://slack-imgs.com/?c=1&url=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1600%2F1*SMKZC-Ej73wFOmqNT-JQ7Q.gif)
 
 > COMMIT
 
-## Displaying Ideas from the Database
+## Bringing in User Info
 
-Let's refactor this static page into something a little more dynamic.
+We now have complete static code that is styled and living in small components with props being passed down from the `IdeaView`.  Now we need to connect the info from our API to the state.
 
-Instead of displaying the static `ideas` from our `state`, we'll grab the current Ideas from the database and display those instead.
-
-```javascript
-// ideasController.js
-
-router.get('/', async (req, res) => {
-  try {
-    const ideas = await Idea.find({})
-    res.json(ideas)
-  } catch (error) {
-    console.log(error)
-  }
-})
-
-```
-
-```javascript
-// IdeaPage.js
-
-...
-async componentWillMount() {
-	const response = await axios.get('/api/ideas')
-	this.setState({ideas: response.data})
-}
-...
-```
-
-## Adding a New Idea
-
-Next up, let's add a click event to the `New Idea` button:
+Since we are using React Router to create a route that matches `/user/:userId` we can take advantage of props that are being passed from the library in the form of `props.match.params.userId`.  Let's tell React to call our API if the props are passed down correctly.
 
 ```js
-// ideasController.js
+  router.get('/:id', (req, res) => {
+    User.findById(req.params.id).then((user) => {
+      user.ideas = user.ideas.reverse()
+      res.json(user)
+    }).catch(console.log)
+  })
+```
 
-router.post('/', async (req, res) => {
-  try {
-    const newIdea = await Idea.create({})
-    res.json(newIdea)
-  } catch (error) {
-    console.log(error)
+**Why did we call `.reverse`? This means that our response from the api will show our newest ideas first**
+
+```js
+...
+  componentWillMount () {
+    if (this.props.match.params) {
+      const { userId } = this.props.match.params
+      axios.get(`/api/users/${userId}`).then(res => {
+        const user = {
+          _id: res.data._id,
+          userName: res.data.userName
+        }
+        const ideas = res.data.ideas
+        this.setState({user, ideas})
+      })
+    }
   }
+...
+```
+
+As long as our props are being passed down properly, we should now see info coming in from our API.
+
+> COMMIT
+> DEPLOY
+
+**Do you not see any data?  Try running `heroku run node db/seeds.js`**
+
+## Adding Click Event to Create New Post
+Next up, let's add a click event to the `New Post` button.
+
+```js
+//IdeaController
+router.post('/', (req, res) => {
+  User.findById(req.params.userId).then((user) => {
+    const newIdea = new Idea({})
+    user.ideas.push(newIdea)
+    user.save().then((user) => {
+      res.json(newIdea)
+    })
+  })
 })
 ```
 
 ```js
-createIdea = async () => {
-	const response = await axios.post(`/api/ideas`)
-	const newIdea = response.data
-	
-	const newIdeas = [...this.state.ideas]
-	newIdeas.unshift(newIdea) //This will add the new Idea to the beginning of the array
-	this.setState({ideas: newIdeas})
-}
-...
-<button onClick={this.createIdea}>New Idea</button>
+  createIdea = () => {
+    axios.post(`/api/users/${this.state.user.id}/ideas`).then(res => {
+      const newIdeas = [...this.state.ideas]
+      newIdeas.unshift(res.data) //This will add the new Idea to the beginning of the array
+      this.setState({ideas: newIdeas})
+    })
+  }
+  ...
+  <button onClick={this.createIdea}>New Idea</button>
 ```
 
 ## You Do
-We will write similar code to delete an idea.  Work with the student's around you to write an Express route and create a custom method.
+We will write similar code to delete an idea.  Work with the student's around you to write an Express route, create a custom method, and pass it down through props.
 
 Hint: You will need one argument
-
 ```js
   deleteIdea = (idea) => {//Your code here}
 ```
@@ -502,18 +608,19 @@ Let's focus on creating a handleChange event to update our local state.
   //We need to pass in multiple arguments here.  The first is the object of the specific idea that is being changed.
   //And the event object is the special event listener object that has information about the value and name 
   handleChange = (idea, event) => {
-    const updatedIdeas = [...this.state.ideas] //Here we use the spread operator to clone the array
+    const newIdeas = [...this.state.ideas] //Here we use the spread operator to clone the array
 
-	const ideaToUpdate = updatedIdeas.find((newIdea) => {
-		return newIdea._id === idea._id
-	})
-	
-    //Here we are using bracket syntax instead of dot-notation to transform a specific property
-    //More info on bracket syntax here
-    //https://medium.com/@prufrock123/js-dot-notation-vs-bracket-notation-797c4e34f01d
-	ideaToUpdate[event.target.name] = event.target.value
-	
-    this.setState({ideas: updatedIdeas})
+    //Map through this cloned state and transform the specific idea that has been updated.
+    const ideas = newIdeas.map((savedIdea) => {
+      if (savedIdea._id === idea._id) {
+        //Here we are using bracket syntax instead of dot-notation to transform a specific property
+        //More info on bracket syntax here
+        //https://medium.com/@prufrock123/js-dot-notation-vs-bracket-notation-797c4e34f01d
+        savedIdea[event.target.name] = event.target.value
+      }
+      return savedIdea
+    })
+    this.setState({ideas: ideas})
   }
 ...
 ```
@@ -528,25 +635,33 @@ Let's focus on creating a handleChange event to update our local state.
 The final step in our app is to create the ability to update an idea.
 
 First, we'll add a route to the IdeasController
-
 ```js
-// /api/ideas/:id
-router.patch('/:ideaId', async (request, response) => {
-  await Idea.findByIdAndUpdate(request.params.ideaId, request.body)
-  response.json(updatedIdea)
+// /api/user/:userId/ideas/:id
+router.patch('/:id', (req, res) => {
+  User.findById(req.params.userId).then((user) => {
+    const update = req.body.idea
+    const idea = user.ideas.id(req.params.id)
+    if (update.title) {
+      idea.title = update.title
+    }
+    if (update.description) {
+      idea.description = update.description
+    }
+    user.save().then((user) => {
+      user.ideas = user.ideas.reverse()
+      res.json(user)
+    })
+  })
 })
 ```
 
-Next, we will add a method that will trigger the patch:
-
+Next, we will add a method that will trigger the patch and update the local state. This will look pretty similar to our last method.
 ```js
-updateIdea = async (idea) => {
-	try {
-	  await axios.patch(`/api/ideas/${idea._id}`, {idea})
-	} catch(error) {
-	  console.log(error)
-	}
-}
+  updateIdea = (idea, e) => {
+    axios.patch(`/api/users/${this.state.user.id}/ideas/${idea._id}`, {idea}).then(res => {
+      this.setState({ideas: res.data.ideas})
+    })
+  }
 ```
 
 Finally, let's tie this event to an individual idea.  We COULD attach that to a button and have a boring old onClick event, but let's try something new.
@@ -554,7 +669,7 @@ Finally, let's tie this event to an individual idea.  We COULD attach that to a 
 ## You Do
 Check out the [Synthetic Event docs](https://reactjs.org/docs/events.html) and find the event that allows us to trigger the update whenever a user leaves an input.
 
-> COMMITrequest.params.id
+> COMMIT
 > DEPLOY
 
 We did it! We now have an app that updates our ideas in real time.  And through using React, we built it in a scalable and easy to read way.
