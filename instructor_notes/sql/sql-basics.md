@@ -103,7 +103,7 @@ While this is a bit technical, it's worth clarifying some terminology...
   
 ## Install Postgres
 
-[Install Postgres Doc](getting_postgres.md) 
+[Install Postgres Doc](../postgres/getting-postgres.md) 
 
 ## Exploring Postgres (15 minutes / 1:05)
 
