@@ -174,4 +174,6 @@ Instances of plagiarism will be evaluated on a case by case basis, but will most
 
 ## Briefly Tell Us About You
 - What's your name?
+- What were you doing previous to WDI?
 - What do you hope to do with your WDI skills?
+- Who is your hero and why? (a parent, a celebrity, an influential person in one’s life)
