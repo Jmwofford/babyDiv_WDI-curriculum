@@ -487,7 +487,7 @@ Refresh your GitHub repo webpage, and the files should be there.
 <br />
 
 ---
-### Lab: L-O-V-E Lab
+### Lab: [L-O-V-E Lab](https://git.generalassemb.ly/atl-wdi/wdi-curriculum/blob/master/labs/git/L-O-V-E.md)
 
 ---
 
@@ -497,7 +497,7 @@ Refresh your GitHub repo webpage, and the files should be there.
 
 The `fork` & `pull` model lets anyone fork an existing repository and push changes to their personal fork without requiring access granted from the source repository.
 
-Most commonly, forks are used to either propose changes to someone else's project or to use someone else's project as a starting point for your own idea. This is how most open source projects operate.
+Most commonly, forks are used to either propose changes to someone elses project or to use someone elses project as a starting point for your own idea. This is how most open source projects operate.
 
 ## Now that everyone has their first repository on GitHub, let's fork and clone our first repository! 
 
