@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 import IdeasList from './IdeasList'
+import ButtomPrimary from './styled_components/ButtonPrimary'
 
 class IdeaPage extends Component {
 
@@ -77,7 +78,7 @@ class IdeaPage extends Component {
 
         <div>
           <h1>Idea Board</h1>
-          <button onClick={this.createIdea}>New Idea</button>
+          <ButtomPrimary onClick={this.createIdea}>New Idea</ButtomPrimary>
         </div>
 
         <IdeasList ideas={this.state.ideas}
