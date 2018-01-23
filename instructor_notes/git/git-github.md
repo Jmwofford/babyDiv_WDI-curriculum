@@ -342,10 +342,10 @@ $ git commit -m "Initial commit"
 
 ### Make changes to the file
 
-Now let's open mars.txt in Sublime:
+Now let's open mars.txt in VS Code:
 
 ```bash
-$ subl mars.txt
+$ code mars.txt
 ```
 
 Inside the file, write:
@@ -391,7 +391,7 @@ $ git commit -m "Start notes on mars as a base"
 - press the spacebar to **page** up and down
 - `git log` will show you the commits that you have made so far, in reverse chronological order.
 
-> NOTE: if you get the message `git config --global --edit`, open it in Sublime with `sublime git config --global --edit`
+> NOTE: if you get the message `git config --global --edit`, open it in VSCode with `code git config --global --edit`
 
 ### Git Lifecycle
 
@@ -487,6 +487,9 @@ Refresh your GitHub repo webpage, and the files should be there.
 <br />
 
 ---
+### Lab: L-O-V-E Lab
+
+---
 
 # Forking and Cloning your first repository (20m)
 
@@ -571,6 +574,8 @@ Run `git remote -v` again! What's changed?
 
 <br />
 
+### Lab: Recommendations Lab
+[Link Here](https://git.generalassemb.ly/atl-wdi/atlanta-recommendations)
 ## Git Branch
 
 You can create branches of your master branch to work on or experiment with new features. When ready, you can merge the branch into the master branch. Why might branches be beneficial?
