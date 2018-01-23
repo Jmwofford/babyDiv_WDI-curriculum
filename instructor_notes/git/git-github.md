@@ -342,10 +342,10 @@ $ git commit -m "Initial commit"
 
 ### Make changes to the file
 
-Now let's open mars.txt in Sublime:
+Now let's open mars.txt in VS Code:
 
 ```bash
-$ subl mars.txt
+$ code mars.txt
 ```
 
 Inside the file, write:
@@ -391,7 +391,7 @@ $ git commit -m "Start notes on mars as a base"
 - press the spacebar to **page** up and down
 - `git log` will show you the commits that you have made so far, in reverse chronological order.
 
-> NOTE: if you get the message `git config --global --edit`, open it in Sublime with `sublime git config --global --edit`
+> NOTE: if you get the message `git config --global --edit`, open it in VSCode with `code git config --global --edit`
 
 ### Git Lifecycle
 
@@ -430,7 +430,7 @@ Let's do this together:
 
     The remote URL is found under the green button on the right named "Clone or download"
 
-    ![](https://i.imgur.com/FjdRT66.png)
+    ![](../images/clone-or-download.png)
 
 6. Click on the **clipboard** to copy the URL and run this command in your Terminal. Make sure that you `cd` into the directory where you want to place this clone. Run `git remote add origin` + your github name.
 
@@ -487,6 +487,9 @@ Refresh your GitHub repo webpage, and the files should be there.
 <br />
 
 ---
+### Lab: L-O-V-E Lab
+
+---
 
 # Forking and Cloning your first repository (20m)
 
@@ -512,7 +515,7 @@ $ rm -Rf planets
 2. Go to your GitHub repo for `planets`
 3. Click the green "Clone or Download" button and copy the URL. Make sure that you use **Clone with SSH** 
 
-![clone](https://i.imgur.com/FjdRT66.png)
+![clone](../images/clone-or-download.png)
     
 4. From the terminal prompt, clone the repo with the following command (you can clone the repo to your Desktop), `git clone` + your repo name:
 
@@ -524,12 +527,12 @@ git clone <YOUR_PLANET_REPO_URL>
  
 1. Go to the link below, this is going to be our class repo where you will receive your morning exercises, classwork, and homework. 
 
-https://git.generalassemb.ly/atl-wdi/wdi-curriculum-10
+https://git.generalassemb.ly/atl-wdi/wdi-curriculum
 
 2. Click Fork (on the upper right), and select your name to create your own fork of the repo.  (If you only have access to one github name, it will create the fork in your own repo automatically.)
 3. Click on the Green Clone of download Button on the right hand side, you will see:
 
-![clone](https://i.imgur.com/FjdRT66.png)
+![clone](../images/clone-or-download.png)
 
 4. Ensure that you have SSH checked (It will either say Clone with SSH or Clone with HTTPS) and copy this url.
 
@@ -538,13 +541,13 @@ https://git.generalassemb.ly/atl-wdi/wdi-curriculum-10
 To retrieve the contents of your repo, all you need to do is run `git clone` + the name of your repo:
 
 ```bash
-$ git clone <git@github.com:<your-github-name>/atl-wdi-10.git>
+$ git clone <git@github.com:<your-github-name>/wdi-curriculum.git>
 ```
 
 Git should reply:
 
 ```bash
-Cloning into 'atl-wdi-10'...
+Cloning into 'wdi-curriculum'...
 remote: Counting objects: 3, done.
 remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
 Receiving objects: 100% (3/3), done.
@@ -562,7 +565,7 @@ When you clone a repository, unless you have been added as a contributor, you wi
 ### Set your upstream remote to get updates using Git
 
 ```bash
-$ git remote add upstream git@github.com:ATL-WDI-Curriculum/atl-wdi-10.git
+$ git remote add upstream git@github.com:atl-wdi/wdi-curriculum.git
 ```
 
 Run `git remote -v` again! What's changed?
@@ -571,6 +574,8 @@ Run `git remote -v` again! What's changed?
 
 <br />
 
+### Lab: Recommendations Lab
+[Link Here](https://git.generalassemb.ly/atl-wdi/atlanta-recommendations)
 ## Git Branch
 
 You can create branches of your master branch to work on or experiment with new features. When ready, you can merge the branch into the master branch. Why might branches be beneficial?

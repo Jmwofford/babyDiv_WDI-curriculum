@@ -90,7 +90,7 @@ Tools built for the command line usually follow something called the ['unix phil
 ### Coolness Factor
 After you master the command line you can impress your friends and star in a spy movie!!!
 
-![Command Line Coolness](images/fast-developer.gif)
+![Command Line Coolness](../images/fast_developer.gif)
 
 --------------------------------------------------------------------------------
 
