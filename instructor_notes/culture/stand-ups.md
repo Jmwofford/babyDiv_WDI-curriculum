@@ -4,11 +4,11 @@ Every morning for the rest of our time together, we will have a stand-up meeting
 
 1. These meetings will give us a daily opportunity to close feedback loops and check in on our learning progress and expectations.
 2. These meetings will allow us to set up meaningful, actionable goals for ourselves every day.
-3. These meetings will allow us to share knowledge every day throughout the class. 
+3. These meetings will allow us to share knowledge every day throughout the class.
 
 ## Why is it called a "stand-up?"
 
-The simple answer is that you stand during the meeting. 
+The simple answer is that you stand during the meeting.
 
 The more important answer is that the meeting should be so short that you won't need to sit down. The goal of a stand-up is to quickly check in as a team, without over-analyzing anything in particular.
 

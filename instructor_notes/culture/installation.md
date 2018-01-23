@@ -70,20 +70,21 @@ We're going install Node using brew. We're going to learn a lot about Node over 
   ```
 
 ## Installing Brew Cask
+
 #### What is brew cask?
 
 Where Homebrew lets us install packages and tools for the Terminal and other low level processes, brew cask let's us install Apps. Things like Chrome, Atom or Sublime Text, Spectacle, Slack and so on!
 
 
-#### to install brew cask
+#### To install brew cask
 
 According the [documentation](https://caskroom.github.io/) we need to run the following command in our terminal and then restart.
 
 1. Run this command in the Terminal
 
-  ```bash
+```bash
   $ brew tap caskroom/cask
-  ```
+```
 
 2. Restart your terminal.
 
