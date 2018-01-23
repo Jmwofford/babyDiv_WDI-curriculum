@@ -12,4 +12,4 @@ Work through Chapters 1-5 (don't worry, there are a lot of blank pages) http://w
 
 (it's lengthy, but you should be familiar with it)
 
-https://www.w3.org/TR/2007/WD-WCAG20-20070517/
+https://www.w3.org/TR/WCAG20/
