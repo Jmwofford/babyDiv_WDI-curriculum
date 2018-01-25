@@ -7,7 +7,7 @@
 - Use media queries to adjust styles for different viewport sizes.
 - Identify and use relative units like `em`, `rem`, `vh`, `vw`, etc..
 - List the different media query values and their conditions.
-- Use the iOS simulator, Safari console, and Chrome Dev tools to debug responsive CSS.
+- Use the Chrome Dev tools to debug responsive CSS.
 
 ## Opening (5 min)
 
