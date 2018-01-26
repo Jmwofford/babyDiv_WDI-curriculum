@@ -2,7 +2,7 @@
 
 - or [Foundation](http://foundation.zurb.com)-ify
 - or [Materialize](http://materializecss.com)-ify
-- or [Picnic](http://picniccss.com)-ify
+- or [Bulma](https://bulma.io/)-ify
 - or [Pure](http://purecss.io/)-ify
 - or ????????-ify
 
