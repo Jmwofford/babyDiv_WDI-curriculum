@@ -209,7 +209,7 @@ Try these statements in your console:
 
 <br />
 
-![Imgur](http://i.imgur.com/ylb6WX9.gif)
+![Imgur](https://i.imgur.com/ylb6WX9.gif)
 (That is a super fancy way of saying 'you do')
 
 **EXERCISE**: Take 5 minutes to play with your arithmetic operands in the Node REPL (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators#Arithmetic_operators). Try the operators we just covered, but don't limit yourself to just single digits. See if you can break it or get unexpected behavior.
@@ -269,7 +269,7 @@ Math.floor(3.9999)
 
 <br />
 
-![Imgur](http://i.imgur.com/ylb6WX9.gif)
+![Imgur](https://i.imgur.com/ylb6WX9.gif)
 
 **EXERCISE**: Take 3 minutes to look at the [Math documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) and pick a function to quickly explain to the class. We will then popcorn around the room. Each person will get 30 seconds to explain what their function is/does. Don't worry if you chose the same one as someone else. Repetition leads to retention!
 
@@ -390,7 +390,7 @@ var name = prompt("Please tell me your name."); // Maren
 
 <br />
 
-![Imgur](http://i.imgur.com/ylb6WX9.gif)
+![Imgur](https://i.imgur.com/ylb6WX9.gif)
 
 **EXERCISE**: Take 2 minutes to concatenate strings using both the concatentation/`+` method and using template strings.
 
@@ -443,7 +443,7 @@ You can also use the [unary](https://developer.mozilla.org/en-US/docs/Web/JavaSc
 ```
 <br />
 
-![Imgur](http://i.imgur.com/ylb6WX9.gif)
+![Imgur](https://i.imgur.com/ylb6WX9.gif)
 
 **EXERCISE**: Let's take three minutes to use `parseInt()` and `parseFloat()` in our node REPL.
 
@@ -468,7 +468,7 @@ parseInt('1990colin');
 => 1990
 ```
 
-You can only test for `NaN` using the built-in [`isNaN()`](ttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN) function:
+You can only test for `NaN` using the built-in [`isNaN()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN) function:
 
 ```javascript
 isNaN(NaN);
@@ -665,8 +665,8 @@ Feel free to read more from [Mozilla](https://developer.mozilla.org/en-US/docs/W
 ---
 
 ## Independent Practice
-- Coffee Grinder - http://goal-keeper-snake-48368.bitballoon.com/
-- http://eloquentjavascript.net/
+- Coffee Grinder - https://goal-keeper-snake-48368.bitballoon.com/
+- https://eloquentjavascript.net/
 
 ---
 
