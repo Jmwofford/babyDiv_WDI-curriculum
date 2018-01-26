@@ -127,7 +127,7 @@ For this lesson, we're going to use the **Node REPL** in the terminal.
 2. `mkdir intro-to-javascript`
 3. `cd intro-to-javascript`
 4. `touch test.js`
-5. `subl .` (Make sure to click on the file on your left hand tab before adding step 6).
+5. `code .` (Make sure to click on the file on your left hand tab before adding step 6).
 6. Add the line `console.log('Hello, friends!');`
 7. Save that file.
 8. Run `node test.js` in the Terminal. (You need to be in the intro-to-javascript folder in your terminal).
