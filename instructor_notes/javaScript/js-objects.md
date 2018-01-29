@@ -131,7 +131,7 @@ This syntax can also be used to read the properties of an object, as well as cre
 
 ```javascript
 console.log(classroom["name"]);
-=> "WDI 10 Rocks!";
+=> "WDI Rocks!";
 
 classroom.size = 10;
 
