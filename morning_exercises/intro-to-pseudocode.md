@@ -1,6 +1,7 @@
 # Pseudocode
 
 ## Learning Objectives
+
 - Describe the role of pseudocode in development
 - List the steps for problem solving
 - Create pseudocode to describe a basic problem
@@ -51,7 +52,7 @@ Cut slices in half down the middle;
 Throw knife in the trash;
 Pick up one half of sandwich;
 Enjoy;
-END.  
+END.
 ```
 
 > A. This example's sequence is very thorough! However, we are still assuming certain conditions that our utensils or ingredients already exist. What if we are out of plates? Will we grab a napkin instead to place our sandwich on? What if we are out of jelly? Will you throw the sandwich away or eat it with just peanut butter?
@@ -85,6 +86,7 @@ Pseudocode isn't just about writing down the steps that you already know. It's a
 #### Start Small, Stay Small
 
 Write code using those concrete steps
+
 - Verify that each step achieves what we want before continuing on
 - If we do too much at once and things break, which they always do, we won't know what is causing the problem
 - Humans thrive on easy wins and forward progress. Use this to your advantage.
