@@ -157,13 +157,13 @@ Can anyone explain why we used three equal signs in the example above?  What is 
 **WARNING**: It is highly recommended that you **do not** assign variables in the conditional expression, because the assignment of a value to a variable, like this:
 
 ```javascript
-if (student = "Jamie") {
-    console.log("Jamie");
+if (student = "Denise") {
+    console.log("Denise");
 }
 else {
-    console.log("This student is not Jamie.");
+    console.log("This student is not Denise.");
 }
-//=> "Jamie"
+//=> "Denise"
 ```
 
 will **always** be true.  

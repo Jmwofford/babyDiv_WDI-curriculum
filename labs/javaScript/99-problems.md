@@ -1,5 +1,3 @@
-# WDI-9
-
 <hr>
 Title: 99 Problems<br>
 Type: Lesson<br>

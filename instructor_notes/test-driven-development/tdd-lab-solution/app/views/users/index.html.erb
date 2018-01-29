@@ -1,0 +1,18 @@
+<div id="users-display">
+  Here are the Users
+
+  <% @users.each do |user| %>
+      <div id="user">
+        <div id="first-name">
+          First Name: <%= user.first_name %>
+        </div>
+        <div id="last-name">
+          Last Name: <%= user.last_name %>
+        </div>
+        <div id="age">
+          Age: <%= user.age %>
+        </div>
+      </div>
+
+  <% end %>
+</div>
