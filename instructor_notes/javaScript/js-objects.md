@@ -75,29 +75,29 @@ You can think of a property on a JavaScript object as a type of variable that co
 
 ```javascript
 var person = {
-  name: "Danny"
+  name: "Spencer"
 }
 
 person.name;
-=> "Danny"
+=> "Spencer"
 ```
 
 You can define or change a property by assigning it a value using the assignment operator `=` as you would a normal variable.
 
 ```javascript
 var person = {
-  name: "Danny"
+  name: "Spencer"
 }
 => undefined
 
 person.name;
-=> "Danny"
+=> "Spencer"
 
-person.name = "Maren";
-=> "Maren"
+person.name = "Mary";
+=> "Mary"
 
 person.name;
-=> "Maren"
+=> "Mary"
 ```
 
 ## We Do: Create an object with properties
@@ -108,14 +108,14 @@ We are going to create an object called `classroom` that contains the properties
 var classroom = {};
 => undefined
 
-classroom.name = "WDI ATL 10";
-=> "WDI ATL 10"
+classroom.name = "WDI ATL";
+=> "WDI ATL"
 
 classroom.campus = "Atlanta!";
 => "Atlanta!"
 
 classroom;
-=> Object {name: "WDI ATL 10", campus: "Atlanta!"}
+=> Object {name: "WDI ATL", campus: "Atlanta!"}
 ```
 
 ### Bracket Notation
@@ -123,7 +123,7 @@ classroom;
 The other way to set properties on a JavaScript object, call the object, followed by square brackets- inside of the square brackets is the key/properties, and you assign it the value.
 
 ```javascript
-classroom["name"] = "WDI 10 Rocks!";
+classroom["name"] = "WDI Rocks!";
 classroom["campus"] = "Ponce City Market!";
 ```
 
@@ -152,7 +152,7 @@ The following code shows how to remove a property:
 
 ```javascript
 classroom;
-=> {name: "WDI 10 Rocks!", campus: "Ponce City Market!", size: 10};
+=> {name: "WDI Rocks!", campus: "Ponce City Market!", size: 20};
 delete classroom.size;
 
 classroom;
@@ -169,11 +169,11 @@ We will be discussing functions in more detail tomorrow.
 
 ```javascript
 var classroom = {
-  name: "WDI 10 Rocks!", // key: value,
+  name: "WDI Rocks!", // key: value,
   campus: "Ponce City Market!", // key: value,
-  size: 10,
-  start: "04/24/2017",
-  instructors: ['Danny', 'Maren'],
+  size: 20,
+  start: "08/24/2016",
+  instructors: ['Katelyn', 'Jules'],
   sayHello: function() {
     console.log("Hello, all of you crazy cats!");
   }
@@ -210,10 +210,14 @@ In JavaScript, the `this` is a keyword that refers to the current object. When u
 
 ```javascript
 var classroom = {
-  name: "WDI 10 Rocks!", // key: value,
+  name: "WDI Rocks!", // key: value,
   campus: "Ponce City Market!", // key: value,
-  start: "04/24/2017",
-  instructors: ['Danny', 'Maren'],
+  size: 20,
+  start: "08/24/2016",
+  instructors: ['Katelyn', 'Jules'],
+  sayHello: function() {
+    console.log("Hello, all of you crazy cats!");
+  }
   sayHello: function() {
     console.log("Hello, all of you crazy cats!");
   },
