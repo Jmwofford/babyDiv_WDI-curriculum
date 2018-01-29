@@ -145,7 +145,7 @@ person.speak();
 
 <br>
 
-![Imgur](http://i.imgur.com/ylb6WX9.gif)
+![Imgur](https://i.imgur.com/ylb6WX9.gif)
 
 &#x1F535; **Activity (4 min)**
 
@@ -257,7 +257,7 @@ multiply(4, 4);
 
 <br>
 
-![Imgur](http://i.imgur.com/ylb6WX9.gif)
+![Imgur](https://i.imgur.com/ylb6WX9.gif)
 
 &#x1F535; **Activity (15 min)**
 
@@ -333,7 +333,7 @@ function speak (words) {
 
 By default, JavaScript functions will return an `undefined` value. To test this, use Node to define and run a function __without__ a return value. A `return` value "overwrites" this default value.
 
-![Imgur](http://i.imgur.com/ylb6WX9.gif)
+![Imgur](https://i.imgur.com/ylb6WX9.gif)
 
 &#x1F535; **Activity (20 min)**
 
