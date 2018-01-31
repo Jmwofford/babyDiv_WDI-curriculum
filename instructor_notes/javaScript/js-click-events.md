@@ -228,7 +228,7 @@ Look at the starter code <a href="https://git.generalassemb.ly/atl-wdi/wdi-curri
 
 <br />
 
-![Labtime](http://i.imgur.com/WzTTdIe.jpg)
+![Labtime](https://i.imgur.com/WzTTdIe.jpg)
 
 ## Independent Practice
 
