@@ -79,7 +79,7 @@ The goal of this exercise is to try to get you comfortable editing and manipulat
 
 ### YOU DO (2 min)
 
-- Change the text of the first `h1` on the page to "WDI ATL 10 gets down with Chrome Dev Tools!".
+- Change the text of the first `h1` on the page to "WDI ATL gets down with Chrome Dev Tools!".
 - If you finish with this task, experiment with what else you can manipulate on the page.
 
 <br />
