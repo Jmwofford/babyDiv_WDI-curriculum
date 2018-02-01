@@ -30,7 +30,7 @@ Let's go ahead and play around with some of these tools.
 
 <br />
 
-![We Do](http://i.imgur.com/6Kce0ca.png)
+![We Do](https://i.imgur.com/6Kce0ca.png)
 
 ### Modifying CSS On-the-Fly
 
@@ -64,7 +64,7 @@ Pretty sweet, eh?
 
 <br />
 
-![You Do](http://i.imgur.com/ylb6WX9.gif)
+![You Do](https://i.imgur.com/ylb6WX9.gif)
 
 ### YOU DO - Alter the GA logo (5m)
 - Go to the [General Assemb.ly site](https://generalassemb.ly/).  Inspect the General Assemb.ly logo in the top left corner and change the image to an image of your choosing (from somewhere on the internet)
@@ -75,11 +75,11 @@ The goal of this exercise is to try to get you comfortable editing and manipulat
 
 <br />
 
-![You Do](http://i.imgur.com/ylb6WX9.gif)
+![You Do](https://i.imgur.com/ylb6WX9.gif)
 
 ### YOU DO (2 min)
 
-- Change the text of the first `h1` on the page to "WDI ATL 10 gets down with Chrome Dev Tools!".
+- Change the text of the first `h1` on the page to "WDI ATL gets down with Chrome Dev Tools!".
 - If you finish with this task, experiment with what else you can manipulate on the page.
 
 <br />
@@ -92,7 +92,7 @@ The DOM makes the HTML available for us to manipulate, and this object is struct
 
 Like this:
 
-![](http://www.tuxradar.com/files/LXF118.tut_grease.diagram.png)
+![](https://www.tuxradar.com/files/LXF118.tut_grease.diagram.png)
 
 Or this:
 
@@ -123,7 +123,7 @@ Let's create a web page and begin to inspect its structure.
 
 <br />
 
-![](http://i.imgur.com/ylb6WX9.gif)
+![](https://i.imgur.com/ylb6WX9.gif)
 
 - Open your terminal
 - `cd` into your `ga` folder
@@ -169,7 +169,7 @@ In the HTML DOM (Document Object Model), everything is a node:
 
 <br />
 
-![YOU DO](http://i.imgur.com/ylb6WX9.gif)
+![YOU DO](https://i.imgur.com/ylb6WX9.gif)
 
 ### Doc Dive (15m)
 Each group researches the methods they were assigned on MDN. 
@@ -356,7 +356,7 @@ With this knowledge of how to manipulate the DOM, you now know the secret weapon
 <!-- If you have time, you can add the lab back in, but usually the class exercise/presentations take a few minutes -->
 ---
 
-![Labtime](http://i.imgur.com/WzTTdIe.jpg)
+![Labtime](https://i.imgur.com/WzTTdIe.jpg)
 
 ## Independent Practice
 

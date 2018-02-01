@@ -40,7 +40,7 @@ This number can even reach into the hundreds on very large projects.
 This many layers of communication coupled with the complexity of writing software **ALWAYS**
 guarantees one thing: **`chaos`**.
 
-![chaos_gif](http://i.giphy.com/mciMfMijRXIfm.gif)
+![chaos_gif](https://i.giphy.com/mciMfMijRXIfm.gif)
 
 Understanding the SDLC and its resultant Software Development Methodologies allows us to manage this inevitable chaos.
 Even more importantly, it allows us to remove **`fear`** from the development process and **`go fast, forever`**.
@@ -116,7 +116,7 @@ Then it takes a _work of congress_ to change courses midstream.
 
 Things may go very smoothly at first, but 18 months later it can be very difficult to course-correct.
 
-![](http://i.giphy.com/ptJO0jn2idlRu.gif)
+![](https://i.giphy.com/ptJO0jn2idlRu.gif)
 
 
 The reason that these assumptions don't hold for most Software Development projects is because the
@@ -207,7 +207,7 @@ The only correct answer is _"I don't know."_ You can make an _**educated guess**
 best you can do. Estimation is not an `exact science`. Mathematically speaking, it is a
 `distribution`.
 
-![](http://i63.tinypic.com/jfkyz4.jpg)
+![](https://i63.tinypic.com/jfkyz4.jpg)
 
 There are many processes that exist in the software development world for dealing with
 this uncertainty, but the most common in the Agile world is `velocity`.
