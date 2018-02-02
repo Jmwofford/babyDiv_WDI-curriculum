@@ -20,7 +20,7 @@ competencies: Relational Databases
 
 ### Preparation
 
-## Intro (5 mins)
+## Intro (10 mins / 0:10)
 We've learned the four fundamental SQL operations: SELECT, INSERT, UPDATE, DELETE.
 
 Sometimes we want to select specific fields from different tables, and JOIN (hint hint) this information together in one table response from our database.  This allows us to combine 2+ tables to pull the exact information we want out of our SQL database.  
@@ -67,7 +67,7 @@ RESULT
 
 
 
-## Relationships and Joins
+## Relationships and Joins (10 mins / 0:20)
 Postgres and other SQL databases are __relational__.  They are designed for storing and viewing data that is interrelated.  To do this, one table has a __foreign key__ to another table.  If rows are related, one column in each row will have the same value.  Usually, a column in one row will contain the primary key of another row.
 
 How was this different in MONGO?
@@ -99,7 +99,7 @@ order_date date
 );
 ```
 
-## INNER JOIN
+## INNER JOIN (20 mins / 0:40)
 
 To SELECT information on two or more tables at once, we can use a JOIN clause.
 This will produce rows that contain information from both tables. When JOINing
@@ -189,6 +189,7 @@ An inner join only returns those records that have “matches” in both tables.
 
 Inner join produces only the set of records that match in both Table A and Table B.
 
+## We Do (20 minutes / 1:00)
 
 EXERCISE:
 
@@ -296,11 +297,10 @@ RIGHT JOIN orders ON customers.id = orders.customer_id;
 Returns all records in the "right" table (orders) whether they have a match in the "left" (customers) table or not.
 
 
-## GROUP BY
+## GROUP BY and ORDER BY (10 minutes / 1:10)
 Suppose we want to know the total amount purchased on each order_date provided in the orders table.  We would use `GROUP BY` to sum the amounts for each date.
 
-## ORDER BY
-This operation will allow us to order the results based on a specific field we are SELECTing.
+The 'ORDER BY' operation will allow us to order the results based on a specific field we are SELECTing.
 
 ```
 SELECT order_date, SUM(amount) 
@@ -327,7 +327,7 @@ you're really curious, check out this article:
 
 [A visual explanation of SQL Joins](http://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
 
-## You Do: Books and Authors
+## You Do: Books and Authors (30 mins)
 
 See advanced_queries.sql in the `library_sql` lab.
 
