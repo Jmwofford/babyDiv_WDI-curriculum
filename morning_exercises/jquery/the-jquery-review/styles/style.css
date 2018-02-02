@@ -1,0 +1,53 @@
+@font-face {
+  font-family: Canterbury;
+  src: url("./fonts/Canterbury.ttf");
+}
+
+h1 {
+  font-family: Canterbury;
+  font-size: 72px;
+}
+
+header span {
+  text-decoration: underline;
+  font-size: 18px;
+  font-style: italic;
+  padding: 5px;
+}
+
+main {
+  margin: auto;
+  width: 70%;
+  border: 2px solid black;
+  border-radius: 25px;
+}
+
+article {
+  margin: 10px;
+  border: 1px grey solid;
+  min-height: 444px;
+  padding: 20px;
+}
+
+header {
+  border-bottom: 1px black dashed;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+figure {
+  height: 333px;
+  width: 333px;
+  margin: 10px;
+  padding: 0px;
+  border: 1px grey dotted;
+  float: left;
+}
+
+h1 {
+  text-align: center;
+  font-style: italic;
+}
