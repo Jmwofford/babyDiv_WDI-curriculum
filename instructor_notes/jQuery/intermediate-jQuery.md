@@ -127,7 +127,7 @@ $(function(){
 });
 ```
 
-We're all set to get started. In Sublime, right-click anywhere on `index.html` in the editor and select `Open in Browser`.
+We're all set to get started. In VS Code, right-click anywhere on `index.html` in the editor and select `Open in Browser`.
 
 Your page should load and the alert appear.
 

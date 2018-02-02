@@ -15,7 +15,7 @@
 - Seed a PostgreSQL database with a saved SQL file
 - Execute basic SQL commands to execute CRUD actions in a database
 
-## Framing
+## Framing (10 / 0:10)
 
 ![SQL](../images/sql-v-nosql.png)
 
@@ -42,7 +42,7 @@ Note the differences between a SQL (e.g.- Postgres) and a No-SQL database (e.g.-
 > ACID (Atomicity, Consistency, Isolation, Durability) is a set of properties that ensure data is reliably stored.
 
 
-## What's a Relational Database? (10 minutes / 0:50)
+## What's a Relational Database? (15 minutes / 0:25)
 
 <!-- AM: Whiteboard a table(s) during this section. -->
 
@@ -105,7 +105,7 @@ While this is a bit technical, it's worth clarifying some terminology...
 
 [Install Postgres Doc](../postgres/getting-postgres.md) 
 
-## Exploring Postgres (15 minutes / 1:05)
+## Exploring Postgres (15 minutes / 0:40)
 
 Start by spotlight searching (`command-space`) for Postgres and launching `Postgres.app`. Once you see the elephant in your Mac menu bar, you'll know Postgres is running.
 
@@ -204,9 +204,7 @@ In short...
 - Always use single quotes when typing out string values.
 - [Ye olde style guide.](http://leshazlewood.com/software-engineering/sql-style-guide/)
 
-## BREAK (10 minutes / 1:15)
-
-## Schema (10 minutes / 1:25)
+## Schema (10 minutes / 0:50)
 
 Every application's database will have one or more tables. You will recall, each table stores information about a particular model (e.g., `authors`, `books`).
 
@@ -251,7 +249,7 @@ Next we're going to build a schema for a database in a sample application. It ca
 
 Instead of typing this into psql, we're going to do so by saving the schema to a `.sql` file and run it, just like we have with `.js` and `.rb` files.
 
-## You Do: Building Our DB (15 minutes / 1:40)
+## You Do: Building Our DB (15 minutes / 1:05)
 
 > 10 minutes exercise. 5 minutes review.
 
@@ -395,7 +393,7 @@ UPDATE authors SET name = 'Adam B.', birth_year = 1986 WHERE name = 'Adam Bray';
 DELETE FROM authors WHERE name = 'Adam B.';
 ```
 
-## Exercise! (20 minutes / 2:00)
+## Exercise! (20 minutes / 1:25)
 
 Complete the queries in `basic_queries.sql` in the library_sql repo.
 
