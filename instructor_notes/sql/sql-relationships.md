@@ -22,7 +22,7 @@ You can imagine that we'd like to use this information in a number of ways, such
 - Getting all books written by a given author.
 - Searching for books based on attributes of the author (e.g., all books written by an American author).
 
-## One-to-Many (10 minutes / 2:20)
+## One-to-Many (10 minutes / 0:10)
 
 How might we represent this information in our database? For this example,
 let's assume that each book has only one author (even though that's not always
@@ -111,7 +111,7 @@ Describe the following relationships. Which table would contain the foreign key?
 - Recipe, Ingredient
 - Make, Model (car)
 
-## Joins
+## Joins (10 minutes / 0:20)
 To SELECT information on two or more tables at ones, we can use a JOIN clause.
 This will produce rows that contain information from both tables. When JOINing
 two or more tables, we have to tell the database how to 'match up' the rows.
@@ -141,7 +141,7 @@ SELECT * FROM books JOIN authors ON books.author_id = authors.id;
 SELECT * FROM books AS b JOIN authors AS a ON b.author_id = a.id;
 ```
 
-## Many-to-Many Relationships
+## Many-to-Many Relationships (10 minutes / 0:30)
 
 We're not going to go in-depth with many-to-many relationships today, but lets go over a simple example...
 
@@ -212,7 +212,7 @@ you're really curious, check out this article:
 
 [A visual explanation of SQL Joins](http://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
 
-## You Do: Books and Authors
+## You Do: Books and Authors (10 minutes / 0:40)
 
 See advanced_queries.sql in the [library_sql](https://github.com/ga-dc/library_sql)
 exercise.
