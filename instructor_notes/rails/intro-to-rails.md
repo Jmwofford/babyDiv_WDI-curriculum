@@ -290,9 +290,10 @@ Rails uses an __MVC__ architecture
 
 ![MVC Diagram](https://softcover.s3.amazonaws.com/636/ruby_on_rails_tutorial_3rd_edition/images/figures/mvc_detailed.png)
 
-
+<!--
 ## Railstaurant Metaphore
 The **client** is a customer eating in the restaurant, the **server** is the waiter, the **router** is waiter who hands off orders, the **controller** is the kitchen, the **database** is the giant walk-in refrigerator with ingredients, the **model** is the person fetching ingredients from the refrigerator, the **view** is the chef who makes the meal look pretty and relays it back to the customer.
+-->
 
 Depending on how it's structured, a web application typically has three jobs:
 
@@ -320,7 +321,7 @@ however, they also have embedded Ruby code that can auto-generate HTML.
 By default, each Controller method will attempt to load and "render"
 a similarly-named View as soon as it finishes.
 
-### Code-Along : Building Views and Controllers (20 mins, 1:00)
+### Code-Along : Building Views and Controllers (15 mins, 0:55)
 
 <!-- Estimate: 30 mins -->
 
@@ -543,7 +544,7 @@ You should get an error message. Read it -- what does the first line say?
     The last part of MVC is the Model, but we'll come back to that after
     practising routing.
 
-#### Pair Work : Jokes App (15 mins, 1:15)
+#### Pair Work : Jokes App (15 mins, 1:10)
 
 <!-- Estimate: 30 mins -->
 
@@ -574,7 +575,7 @@ Real Rails applications use some sort of database to manage their data.
 The primary tools Rails uses to manage the database are **Models** and
 **Migrations**. We'll look at Migrations first.
 
-#### Pair Work : Read the Rails Guide (Again) (10 mins, 1:25)
+#### Pair Work : Read the Rails Guide (Again) (5 mins, 1:15)
 
 <!-- Estimate: 10 mins -->
 
@@ -582,7 +583,7 @@ Take 10 minutes to [read about migrations](http://guides.rubyonrails.org/active_
 in the Rails guides.
 DO NOT TRY TO MIGRATE YET. We need to set up our migrations first.
 
-#### Code Along : Add a Data Layer to Recipe App (15 mins, 1:40)
+#### Code Along : Add a Data Layer to Recipe App (10 mins, 1:25)
 
 <!-- Estimate: 30 mins -->
 
@@ -666,7 +667,7 @@ DO NOT TRY TO MIGRATE YET. We need to set up our migrations first.
     -   `.where(query)` allows you to pass in a search query, and returns a
         a collection of matching records.
 
-#### Independent Work : Explore Rails Models (5 mins, 1:45)
+#### Independent Work : Explore Rails Models (5 mins, 1:30)
 
 <!-- Estimate : 10 mins -->
 
@@ -677,7 +678,7 @@ Read through [this section in the docs](http://guides.rubyonrails.org/active_rec
 and try out some of these commands/patterns with our Recipe model.
 (The docs use User, just replace that with Recipe)
 
-#### Pair Work : Add a Data Layer to Jokes App (10 mins, 1:55)
+#### Pair Work : Add a Data Layer to Jokes App (10 mins, 1:40)
 
 <!-- Estimate : 30 mins -->
 
@@ -703,7 +704,7 @@ which means that you can write Ruby scripts that use models to perform CRUD.
 This also means that we can access the models from *controller methods*, and tie
 incoming requests to CRUD actions on the database.
 
-#### Code Along : Show All Recipes (10 mins, 2:05)
+#### Code Along : Show All Recipes (10 mins, 1:50)
 
 <!-- Estimate : 10 mins -->
 
@@ -739,7 +740,7 @@ the collection of recipes and show some snippet of HTML for each one.
 
 And voila! Our recipes are visible on the page.
 
-#### Pair Work : Show All Jokes (10 mins, 2:15)
+#### Pair Work : Show All Jokes (10 mins, 2:00)
 
 <!-- 20 mins -->
 
@@ -753,7 +754,7 @@ Now that we've taken data from the database and shown it on a view, let's go
 the opposite way, and use HTML forms to take data from the view back to the
 model and the database.
 
-#### Independent Work : Form Helpers (10 mins, 2:25)
+#### Independent Work : Form Helpers (10 mins, 2:10)
 
 <!-- Estimate: 10 mins -->
 
@@ -764,7 +765,7 @@ and try to answer the following questions:
 2.  How do you create a text field within a form?
 3.  How do you create a 'submit' button for a form?
 
-#### Code Along : Form for Creating Recipes (15 mins, 2:40)
+#### Code Along : Form for Creating Recipes (15 mins, 2:25)
 
 <!-- Estimate: 30 mins -->
 
@@ -890,7 +891,7 @@ alter the database.
 
     When we complete the form, we can see our new recipe show up on the list!
 
-#### Pair Work : Form for Creating Jokes (15 mins, 2:55)
+#### Pair Work : Form for Creating Jokes (10 mins, 2:35)
 
 <!-- Estimate : 30 mins -->
 
