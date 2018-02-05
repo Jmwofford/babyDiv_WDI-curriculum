@@ -14,7 +14,7 @@ By the end of today you should be able to...
 
 <br>
 
-## Definitions
+## Definitions (15 minutes, 0:15)
 
 ### Active Record
 
@@ -84,7 +84,7 @@ We describe the DB changes using Ruby, and it doesn't matter which DB engine we 
 
 <br>
 
-## Let's get started!
+## Let's get started! (5 mins, 0:20)
 
 Please type all this by hand so you're not blindly copying & pasting and you remember it better.
 
@@ -104,7 +104,7 @@ Please type all this by hand so you're not blindly copying & pasting and you rem
 
 <br>
 
-## Generate a Model & a Migration
+## Generate a Model & a Migration (5 mins, 0:25)
 
 **WE DO:**
 
@@ -127,7 +127,7 @@ rails g model User first_name:string last_name
 
 <br>
 
-## Familiarize yourself with the Rails Console
+## Familiarize yourself with the Rails Console (10 mins, 0:35)
 
 **WE DO:**
 
@@ -168,7 +168,7 @@ Exit the console.
 
 <br>
 
-## Modify the existing DB with another Migration
+## Modify the existing DB with another Migration (10 mins, 0:45)
 
 
 - Rails gives us some help to generate migration files - we can list the fields and their types in the generate command, and if we name the migration appropriately, Rails even guesses the name of the table.
@@ -221,7 +221,7 @@ The schema is the snapshot of your current database tables and fields.
 <br>
 
 
-# CRUD the users in the Console
+# CRUD the users in the Console (10 mins, 0:55)
 
 #### Create
 ```ruby
@@ -278,7 +278,7 @@ User.first                          #=> finds first user
 User.last                           #=> finds last user
 ```
 
-**YOU DO:**
+**YOU DO:** (5 mins, 1:00)
 
 Add 2 new users to your database via new/save and 2 via create.
 
@@ -286,7 +286,7 @@ Add 2 new users to your database via new/save and 2 via create.
 
 
 
-## Let's add another column to our Users table via Migration
+## Let's add another column to our Users table via Migration (10 mins, 1:10)
 
 As we saw earlier, Rails gives us some help to generate migration files - we can list the fields and their types in the generate command, and if we name the migration appropriately, Rails even guesses the name of the table:
 
@@ -335,7 +335,7 @@ We can undo the previous migration with:
 <br>
 
 
-## Removing columns from tables
+## Removing columns from tables (5 mins, 1:15)
 
 We can use the same naming convention as create to automatically generate the migration file:
 
@@ -345,7 +345,7 @@ rails g migration RemoveAgeFromUsers age:integer
 
 <br>
 
-## Rename a column
+## Rename a column (10 mins, 1:25)
 
 Create the migratioin file:
 
@@ -367,7 +367,7 @@ Run `rails db:migrate`
 
 <br>
 
-## Validations
+## Validations (15 mins, 1:40)
 
 
 Active Record allows you to validate the state of a model before it gets written
