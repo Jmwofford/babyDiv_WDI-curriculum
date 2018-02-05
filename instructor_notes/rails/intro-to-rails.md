@@ -28,7 +28,7 @@
 -   Explain MVC
 -   Describe SQL
 
-## "What is Rails?"
+## "What is Rails?" (5 mins, 0:05)
 
 <!-- Estimate : 10 mins -->
 
@@ -57,7 +57,7 @@ you're certainly not limited to library of rails commands and configurations.
 Developers are free to configure their applications however they wish,
 though adopting conventions is certainly recommended.
 
-### Code-Along : Creating a Rails App
+### Code-Along : Creating a Rails App (15 mins, 0:20)
 
 <!-- Estimate: 30 mins -->
 
@@ -245,7 +245,7 @@ things and where those files 'live' inside the application.
 Learning conventions takes time, but they save time in the long run by helping
 you avoid having to make those decisions from scratch each time.
 
-### Pair Work : Read the Rails Guide
+### Pair Work : Read the Rails Guide (5 mins read, 5 mins discuss, 0:30)
 
 <!-- Estimate: 5 mins -->
 
@@ -265,7 +265,7 @@ We'll regroup afterwards to discuss your answers to these questions.
 
 <!-- Estimate : 5 mins for discussion -->
 
-## Building a Rails Application
+## Building a Rails Application (10 mins, 0:40)
 
 ### The (R)MVC Pattern in Rails and Express
 
@@ -320,7 +320,7 @@ however, they also have embedded Ruby code that can auto-generate HTML.
 By default, each Controller method will attempt to load and "render"
 a similarly-named View as soon as it finishes.
 
-#### Code-Along : Building Views and Controllers
+### Code-Along : Building Views and Controllers (25 mins, 1:15)
 
 <!-- Estimate: 30 mins -->
 
@@ -543,7 +543,7 @@ You should get an error message. Read it -- what does the first line say?
     The last part of MVC is the Model, but we'll come back to that after
     practising routing.
 
-#### Pair Work : Jokes App
+#### Pair Work : Jokes App (15 mins, 1:30)
 
 <!-- Estimate: 30 mins -->
 
@@ -574,7 +574,7 @@ Real Rails applications use some sort of database to manage their data.
 The primary tools Rails uses to manage the database are **Models** and
 **Migrations**. We'll look at Migrations first.
 
-#### Pair Work : Read the Rails Guide (Again)
+#### Pair Work : Read the Rails Guide (Again) (10 mins, 1:40)
 
 <!-- Estimate: 10 mins -->
 
@@ -582,7 +582,7 @@ Take 10 minutes to [read about migrations](http://guides.rubyonrails.org/active_
 in the Rails guides.
 DO NOT TRY TO MIGRATE YET. We need to set up our migrations first.
 
-#### Code Along : Add a Data Layer to Recipe App
+#### Code Along : Add a Data Layer to Recipe App (20 mins, 2:00)
 
 <!-- Estimate: 30 mins -->
 
@@ -666,7 +666,7 @@ DO NOT TRY TO MIGRATE YET. We need to set up our migrations first.
     -   `.where(query)` allows you to pass in a search query, and returns a
         a collection of matching records.
 
-#### Independent Work : Explore Rails Models
+#### Independent Work : Explore Rails Models (10 mins, 2:10)
 
 <!-- Estimate : 10 mins -->
 
@@ -677,7 +677,7 @@ Read through [this section in the docs](http://guides.rubyonrails.org/active_rec
 and try out some of these commands/patterns with our Recipe model.
 (The docs use User, just replace that with Recipe)
 
-#### Pair Work : Add a Data Layer to Jokes App
+#### Pair Work : Add a Data Layer to Jokes App (20 mins, 2:30)
 
 <!-- Estimate : 30 mins -->
 
@@ -703,7 +703,7 @@ which means that you can write Ruby scripts that use models to perform CRUD.
 This also means that we can access the models from *controller methods*, and tie
 incoming requests to CRUD actions on the database.
 
-#### Code Along : Show All Recipes
+#### Code Along : Show All Recipes (10 mins, 2:40)
 
 <!-- Estimate : 10 mins -->
 
@@ -739,7 +739,7 @@ the collection of recipes and show some snippet of HTML for each one.
 
 And voila! Our recipes are visible on the page.
 
-#### Pair Work : Show All Jokes
+#### Pair Work : Show All Jokes (20 mins, 3:00)
 
 <!-- 20 mins -->
 
@@ -753,7 +753,7 @@ Now that we've taken data from the database and shown it on a view, let's go
 the opposite way, and use HTML forms to take data from the view back to the
 model and the database.
 
-#### Independent Work : Form Helpers
+#### Independent Work : Form Helpers (10 mins, 3:10)
 
 <!-- Estimate: 10 mins -->
 
@@ -764,7 +764,7 @@ and try to answer the following questions:
 2.  How do you create a text field within a form?
 3.  How do you create a 'submit' button for a form?
 
-#### Code Along : Form for Creating Recipes
+#### Code Along : Form for Creating Recipes (20 mins, 3:30)
 
 <!-- Estimate: 30 mins -->
 
@@ -890,7 +890,7 @@ alter the database.
 
     When we complete the form, we can see our new recipe show up on the list!
 
-#### Pair Work : Form for Creating Jokes
+#### Pair Work : Form for Creating Jokes (20 mins, 3:50)
 
 <!-- Estimate : 30 mins -->
 
