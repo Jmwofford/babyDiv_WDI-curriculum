@@ -332,5 +332,5 @@ In this lesson we:
 
 Realistically, a Song could have many Artists. Let's re-build our relationships using Active Record to describe this relationship. 
 
-To accomplish this we'll need to use `join tables` and ActiveRecord's `has_many_through` attribute.
+To accomplish this we'll need to use `join tables` and ActiveRecord's `has_many_through` attribute. [Rails Guide](http://guides.rubyonrails.org/association_basics.html#the-has-many-through-association)
 
