@@ -159,7 +159,7 @@ rihanna.songs
 
 <br>
 
-![wedo](http://i.imgur.com/6Kce0ca.png)
+![wedo](https://i.imgur.com/6Kce0ca.png)
 
 CRUD: Let's try it on our Song model
 ------------------------------
@@ -186,7 +186,7 @@ rihanna.songs
 
 <br>
 
-![youdo](http://i.imgur.com/ylb6WX9.gif)
+![youdo](https://i.imgur.com/ylb6WX9.gif)
 
 Create your a Song for an Artist of your choice using `.new` and `.save`.
 <br>
@@ -207,7 +207,7 @@ only_girl = Song.create(artist_id: rihanna.id, title: "Only Girl")
 
 <br>
 
-![youdo](http://i.imgur.com/ylb6WX9.gif)
+![youdo](https://i.imgur.com/ylb6WX9.gif)
 
 Add a Song to your Artist using `.create`
 
@@ -242,7 +242,7 @@ When we want to access the songs for a given artist we use lowercase and plural,
 
 <br>
 
-![youdo](http://i.imgur.com/ylb6WX9.gif)
+![youdo](https://i.imgur.com/ylb6WX9.gif)
 
 - Find the Artist that sings "Shake It Off"
 
@@ -261,7 +261,7 @@ diamonds.update(genre: "Gospel")
 ```
 <br>
 
-![youdo](http://i.imgur.com/ylb6WX9.gif)
+![youdo](https://i.imgur.com/ylb6WX9.gif)
 
 - Choose a Artist and update the attributes of a Song
 <br>
@@ -295,14 +295,14 @@ Let's see it in action. When we delete Rihanna all of her songs are deleted also
 Check out your `rails c` and note that Active Record is deleting both the Artist and her Songs.
 <br>
 
-![youdo](http://i.imgur.com/ylb6WX9.gif)
+![youdo](https://i.imgur.com/ylb6WX9.gif)
 
 - `delete` an Artist
 
 
 <br>
 
-![youdo](http://i.imgur.com/ylb6WX9.gif)
+![youdo](https://i.imgur.com/ylb6WX9.gif)
 ## Independent Practice (15 mins)
 
 Using Active Record Associations:
@@ -314,7 +314,7 @@ Using Active Record Associations:
 
 <br>
 
-![Imgur](http://i.imgur.com/wPefQjh.png)
+![Imgur](https://i.imgur.com/wPefQjh.png)
 ## Conclusion (5 mins)
 
 In this lesson we:
@@ -326,7 +326,7 @@ In this lesson we:
 
 <br>
 
-![Imgur](http://i.imgur.com/WzTTdIe.jpg)
+![Imgur](https://i.imgur.com/WzTTdIe.jpg)
 
 # BONUS - Many to Many relationships!
 
