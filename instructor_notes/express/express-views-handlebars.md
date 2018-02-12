@@ -73,17 +73,15 @@ For this lesson, we are going to build on the `hello-express` app from yesterday
 1. To install handlebars into our node application enter the following in the terminal:
 
 ```bash
- npm install --save hbs
+ npm install hbs
 ```
 
-> What does `--save` do for us again?
-
-2. We need to require the hbs module in the `server.js` file. (around line #3, below `var express` and `var app`):
+2. We need to require the hbs module in the `server.js` file. (around line #3, below `const express` and `const app`):
 
 ```javascript
-var express = require('express'); // Loading express on our server
-var app = express(); // install express on our server
-var hbs = require('hbs'); // loads handlebars
+const express = require('express'); // Loading express on our server
+const app = express(); // install express on our server
+const hbs = require('hbs'); // loads handlebars
 ```
 
 > What does `require()` do?
@@ -196,8 +194,8 @@ touch views/favorite-foods.hbs
 2. Let's create a new route for favorite foods and add your array of favorites.
 
 ```javascript
-app.get('/favorite-foods', function(req, res) {
-    var favoriteFoods = ["Jeni's Almond Butter ice cream", 'Tacos from Superica', 'A Breakfast Sandwich from Gjelina to go in Venice', 'Croissants from Bottega Louie in Downtown Los Angeles', 'Pizza from Little Star in San Francisco'];
+app.get('/favorite-foods', (req, res) => {
+    const favoriteFoods = ["Jeni's Almond Butter ice cream", 'Tacos from Superica', 'A Breakfast Sandwich from Gjelina to go in Venice', 'Croissants from Bottega Louie in Downtown Los Angeles', 'Pizza from Little Star in San Francisco'];
 
     res.render('favorite-foods', {
         data: ____
@@ -208,8 +206,8 @@ app.get('/favorite-foods', function(req, res) {
 What would the value of data need to be in order to render the array in our `greeting.hbs`?
 
 ```javascript
-app.get('/favorite-foods', function(req, res) {
-    var favoriteFoods = ["Jeni's Almond Butter ice cream", 'Tacos from Superica', 'A Breakfast Sandwich from Gjelina to go in Venice', 'Croissants from Bottega Louie in Downtown Los Angeles', 'Pizza from Little Star in San Francisco'];
+app.get('/favorite-foods', (req, res) => {
+    const favoriteFoods = ["Jeni's Almond Butter ice cream", 'Tacos from Superica', 'A Breakfast Sandwich from Gjelina to go in Venice', 'Croissants from Bottega Louie in Downtown Los Angeles', 'Pizza from Little Star in San Francisco'];
 
     res.render('favorite-foods', {
         data: favoriteFoods
@@ -236,7 +234,7 @@ Walk through the steps above in the "One step further..." section to add on to y
 
 ## Handlebars Loops 
 
-But what if we wanted to to display this `favoriteFoods`Array data in a `<ul>` with `<li>` tags? How have we accomplished this in the past... Vanilla JS or jQuery?
+But what if we wanted to to display this `favoriteFoods` array data in a `<ul>` with `<li>` tags? How have we accomplished this in the past... Vanilla JS or jQuery?
 
 <br />
 
@@ -322,8 +320,8 @@ $ cd ~/Desktop/ga/class-exercises
 $ mkdir shows_app
 $ cd shows_app
 $ npm init
-$ npm install --save express
-$ npm install --save hbs
+$ npm install express
+$ npm install hbs
 $ touch server.js
 ```
 

@@ -57,11 +57,11 @@ The app will also be able to store new pirate entries. Clicking on "New Pirate" 
 
 ### DIRECTIONS
 
-- Complete an Express app called `pirates-wiki` (our current working directory)
+- Complete the Express app called `pirates-wiki` in this directory (You can ignore the images folder)
 
 - Your app's [MVC](https://www.tutorialspoint.com/mvc_framework/mvc_framework_introduction.htm) ("Models Views Controllers") folder structure has been created for you:
   - `models`: our Pirate data model lives here (do not modify)
-  - `views`: your Handlebars views live here
+  - `views`: your Handlebars views live here. **You will need to create a views directory when completing this homework**
   - `controllers`:  you will code your routes in `controllers/pirates.js`
 
   <details><summary>Folder Structure Breakdown of our App</summary>

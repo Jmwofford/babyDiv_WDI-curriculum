@@ -26,7 +26,7 @@ _After this lesson, students will be able to:_
 - Access and use `rails console`
 - Perform CRUD actions on one model
 
-## Framing: Review One-to-Many Relationships (5 min)
+## Framing: Review One-to-Many Relationships (5 mins, 0:10)
 
 We are going to build another music app today to explore one-to-many relationships in ActiveRecord. We've explored one-to-many relationships previously with Mongoose, and we'll be able to explore many similarities and differences between how Mongoose and ActiveRecord handle this behavior as ODM / ORMs.
 
@@ -39,6 +39,7 @@ We are going to build another music app today to explore one-to-many relationshi
 In our app, an `Artist` will have many instances of  `Song`.
 We need a way to represent this type of many to many relationship!
 
+
 ## Primary and Foreign keys
 
 Here is an example of a one-to-many relationship from the Rails Docs. 
@@ -50,10 +51,9 @@ Note that both Artists and Songs each have their own `id` field. These are prima
 
 Now, how can we relate the Songs that belong to a given Artist? We add an `artist_id` field, or foreign key, to the `songs` table. The `artist_id` will be the `id` of the Artist who wrote the Song.
 
-
 <br>
 
-### Generating the Models / Migrations (5 min)
+### Generating the Models / Migrations (5 mins, 0:10)
 
 First we'll need to generate our Artist model. 
 
@@ -86,7 +86,7 @@ columns on the command line, Rails will automatically generate the correct migra
 
 <br>
 
-### Adding the Active Record Relationships (5 min)
+### Adding the Active Record Relationships (5 mins, 0:15))
 
 We need to update our models to indicate the associations between them. For our app, the models should look like so:
 
@@ -118,7 +118,7 @@ end
 
 <br>
 
-## Seed some Songs
+## Seed some Songs (10 mins, 0:25)
 
 Cool, like before, let me give you some song data to seed your database with songs:
 
@@ -141,7 +141,7 @@ Song.create(artist_id: 1, title: 'Umbrella', genre: 'Pop')
 Song.create(artist_id: 2, title: 'Summer Wine', genre: 'Pop')
 Song.create(artist_id: 3, title: 'I.O.U.', genre: 'Punk')
 Song.create(artist_id: 4, title: 'Out of the Woods', genre: 'Pop')
-Song.create(artist_id: 5, title: 'Dead Man's Party', genre: 'Oingo Boingo')
+Song.create(artist_id: 5, title: 'Dead Man\'s Party', genre: 'Oingo Boingo')
 ```
     
 3. `rails db:seed`
@@ -159,9 +159,9 @@ rihanna.songs
 
 <br>
 
-![wedo](http://i.imgur.com/6Kce0ca.png)
+![wedo](https://i.imgur.com/6Kce0ca.png)
 
-CRUD: Let's try it on our Song model
+CRUD: Let's try it on our Song model (10 mins, 0:40)
 ------------------------------
 
 ## Create
@@ -186,7 +186,7 @@ rihanna.songs
 
 <br>
 
-![youdo](http://i.imgur.com/ylb6WX9.gif)
+![youdo](https://i.imgur.com/ylb6WX9.gif)
 
 Create your a Song for an Artist of your choice using `.new` and `.save`.
 <br>
@@ -207,13 +207,13 @@ only_girl = Song.create(artist_id: rihanna.id, title: "Only Girl")
 
 <br>
 
-![youdo](http://i.imgur.com/ylb6WX9.gif)
+![youdo](https://i.imgur.com/ylb6WX9.gif)
 
 Add a Song to your Artist using `.create`
 
 <br>
 
-## Read
+## Read (5 mins, 0:45))
 
 ```ruby
 # return a collection with all songs for an Artist
@@ -242,9 +242,9 @@ When we want to access the songs for a given artist we use lowercase and plural,
 
 <br>
 
-![youdo](http://i.imgur.com/ylb6WX9.gif)
+![youdo](https://i.imgur.com/ylb6WX9.gif)
 
-- Find the Artist that sings "Shake It Off"
+- Find the Artist that sings "Out of the Woods"
 
 
 You can learn more about querying an Active Record model in the [Active Record
@@ -252,7 +252,7 @@ Query Interface](http://guides.rubyonrails.org/active_record_querying.html) guid
 
 <br>
 
-## Update
+## Update (5 mins, 0:50))
 
 ```ruby
 rihanna = Artist.first
@@ -261,13 +261,13 @@ diamonds.update(genre: "Gospel")
 ```
 <br>
 
-![youdo](http://i.imgur.com/ylb6WX9.gif)
+![youdo](https://i.imgur.com/ylb6WX9.gif)
 
 - Choose a Artist and update the attributes of a Song
 <br>
 
 
-## Delete
+## Delete (5 mins, 0:55)
 
 Likewise, once retrieved, an Active Record object can be destroyed which removes it from the database. 
 
@@ -295,15 +295,15 @@ Let's see it in action. When we delete Rihanna all of her songs are deleted also
 Check out your `rails c` and note that Active Record is deleting both the Artist and her Songs.
 <br>
 
-![youdo](http://i.imgur.com/ylb6WX9.gif)
+![youdo](https://i.imgur.com/ylb6WX9.gif)
 
 - `delete` an Artist
 
 
 <br>
 
-![youdo](http://i.imgur.com/ylb6WX9.gif)
-## Independent Practice (15 mins)
+![youdo](https://i.imgur.com/ylb6WX9.gif)
+## Independent Practice (15 mins, 1:10)
 
 Using Active Record Associations:
 
@@ -314,7 +314,7 @@ Using Active Record Associations:
 
 <br>
 
-![Imgur](http://i.imgur.com/wPefQjh.png)
+![Imgur](https://i.imgur.com/wPefQjh.png)
 ## Conclusion (5 mins)
 
 In this lesson we:
@@ -326,11 +326,11 @@ In this lesson we:
 
 <br>
 
-![Imgur](http://i.imgur.com/WzTTdIe.jpg)
+![Imgur](https://i.imgur.com/WzTTdIe.jpg)
 
 # BONUS - Many to Many relationships!
 
 Realistically, a Song could have many Artists. Let's re-build our relationships using Active Record to describe this relationship. 
 
-To accomplish this we'll need to use `join tables` and ActiveRecord's `has_many_through` attribute.
+To accomplish this we'll need to use `join tables` and ActiveRecord's `has_many_through` attribute. [Rails Guide](http://guides.rubyonrails.org/association_basics.html#the-has-many-through-association)
 

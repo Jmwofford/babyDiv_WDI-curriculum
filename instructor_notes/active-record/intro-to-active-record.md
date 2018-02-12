@@ -4,7 +4,7 @@
 
 ***
 
-### **Framing: What is an ORM and why do we need it?**
+### **Framing: What is an ORM and why do we need it?** (15 mins, 0:15)
 You know how to manipulate a database with SQL, and you know how to manipulate objects in Ruby.
 
 But Ruby objects don't persist. How do we store data from a Ruby object to an SQL table? How do we pull SQL data into a Ruby object?
@@ -172,7 +172,7 @@ Animal.where(name: 'Garfield').destroy;
 
 <br>
 
-## What is ActiveRecord?
+## What is ActiveRecord? (15 mins, 0:30)
 _ActiveRecord is to SQL as Mongoose is to Mongo_
 
 It allows you to work with Ruby objects in Ruby code, while persisting the data in an SQL database.
@@ -298,10 +298,7 @@ $ rake db:migrate
 
 
 
-
-
-
-## Doing stuff with ActiveRecord
+## Doing stuff with ActiveRecord (5 mins, 0:35)
 Install Rails.
 ```
 gem install rails
@@ -328,7 +325,7 @@ Sometimes you'll need to use raw SQL along with ActiveRecord to get what you wan
 Author.joins("JOIN books ON books.author_id = author.id")
 ```
 
-## Exercise
+## Exercise (25 mins, 0:60)
 [Libary SQL](https://git.generalassemb.ly/atl-wdi/wdi-curriculum/tree/master/labs/sql/library_sql) but with ActiveRecord.
 
 Complete both Basic and Advanced queries using Active Record.

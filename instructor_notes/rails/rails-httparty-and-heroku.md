@@ -242,7 +242,7 @@ patch '/starwars/:id', to: "starwars#update", as: 'update_starwar'
 
 Next up we will add the button tag to the fight index.html.erb
 ```html
-<%= button_tag @star_war.name, update_starwar_path(@star_war)%>
+<%= button_to @star_war.name, update_starwar_path(@star_war), :method => :patch %>
 ```
 
 And finally, we need to add a method within our StarWars controller

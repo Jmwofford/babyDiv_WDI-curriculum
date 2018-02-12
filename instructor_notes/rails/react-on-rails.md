@@ -1,11 +1,10 @@
-# React On Rails (w/ Auth)
+# React On Rails
 
 ## Learning objectives
 
 - Give an example of when and why one might choose to put an React app on Rails.
 - Utilize node scripts to build and move a React UI.
 - Generate an API-only Rails application.
-- Generate and retrieve auth tokens using Devise and LocalStorage.
 
 ## Framing
 
