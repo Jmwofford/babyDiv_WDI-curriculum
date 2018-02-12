@@ -113,7 +113,7 @@ There are multiple types of relationships available:
 
 Here is an example of an ERD for a hockey focused-app with plenty of models and different data types.
 
-![ERD Example](../images/ERD-Example.svg)
+![ERD Example](../images/ERD-Example.png)
 
 
 
