@@ -59,7 +59,7 @@ So in your `/labs/express` folder, you should see a starter application named `s
 
 1. `cd` into `starter-code-hbs` and run the command `npm install` which will read the `package.json` file and install all of the dependencies specified in a `node_modules` folder.
 
-2. Then, run `nodemon server.js` to start our server.
+2. Then, add a "dev" script to your `package.json` that has the value `nodemon server.js`. Run `npm run dev` to start our server.
 
     ![](https://i.imgur.com/SNHzqDp.png)
 
