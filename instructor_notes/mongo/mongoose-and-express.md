@@ -99,8 +99,9 @@ UserSchema.pre('save', function(next) {
 // This is a new Mongoose feature
 
 const userSchema = new Schema({
+  // ... schema info
   // ...
-  // ...
+  }, {
   timestamps: true
 })
 ```
