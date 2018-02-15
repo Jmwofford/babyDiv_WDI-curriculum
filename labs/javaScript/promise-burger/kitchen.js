@@ -88,7 +88,7 @@ const menu = [
     price: 10.25,
     description: `Topped with sautéed onions and mushrooms,
     Swiss and cheddar cheese, and our super-secret
-    Vortex steak sauce. Sheer sirloin perfection.`
+    Promise Burger steak sauce. Sheer sirloin perfection.`
   },
   {
     name: "FOUR HORSEMEN",
@@ -118,7 +118,7 @@ const order = name =>
       if (item) {
         resolve(item);
       } else {
-        reject("I'm sorry, we have any " + name);
+        reject("I'm sorry, we don't have any " + name);
       }
     }, 500);
   });
