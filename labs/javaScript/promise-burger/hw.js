@@ -4,16 +4,17 @@ const kitchen = require('./kitchen');
 // Look at the Menu
 /* *************************************************************** */
 // 1. Kitchen has a method called `.readMenu`.  
-// Call this method and console.log the data that comes back when the Promise is resolved.
+// Call this method and console.log the cheapest burger on the menu once the promise has been resolved.
+
 
 //CODE FOR QUESTION 1 HERE
 
 
 // Order Some Food
 /* *************************************************************** */
-// 2. For this task, you will use the method `.order` to order a a burger from the menu.  
-//  The order method has one argument, the name of the burger you would like to order.  
-//  Console.log the data that comes back about this burger.
+// 2. For this task, you will use the method .order to order the cheapest burger on the menu. 
+// The order method has one argument, the name of the burger you would like to order. 
+// Once the promise has been resolved, console.log "Man that burger sure was tasty!".
 
 // CODE FOR QUESTION 2 HERE
 
