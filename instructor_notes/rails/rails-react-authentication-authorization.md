@@ -869,6 +869,12 @@ deletePost = async (postId) => {
     }
 }
 ...
+const PostsComponent = () => (
+    <PostsList
+        posts={this.state.posts}
+        deletePost={this.deletePost} />
+    )
+...
 
 ```
 
