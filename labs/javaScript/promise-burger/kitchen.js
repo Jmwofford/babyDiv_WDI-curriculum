@@ -51,7 +51,7 @@ const menu = [
   },
   {
     name: "RAGIN' CAJUN",
-    price: 9.5,
+    price: 6.5,
     description: `Topped with our zesty Cajun sauce and pepper
     jack cheese. Eat this burger and you’ll feel like you’re in N’awlins.`
   },

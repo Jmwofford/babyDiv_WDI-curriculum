@@ -6,7 +6,7 @@ Time to use your freshly honed Promise skills to to order some food from Promise
 
 ## Look at the Menu
 
-1. Kitchen has a method called `.readMenu`.  Call this method and console.log the cheapest burger on the menu once the promise has been resolved.  
+1. Kitchen has a method called `.readMenu`.  Call this method and console.log the data that returns.  
 
 ## Order Some Food
 
