@@ -160,7 +160,7 @@ kitty.save(function (err) {
 
 4. Create the following files: `$ touch server.js db/schema.js db/seeds.js`
 
-5. Open the app in sublime: `$ subl .`
+5. Open the app in VSCode: `$ code .`
     - make sure that your entry point is `server.js`, and not `index.js`.
 
 Your folder structure should look like this:
@@ -201,9 +201,6 @@ The name above `students` will be the name of the app's Mongo database. A cool f
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/students');
-
-// Use ES6 native promises. We are specifying a Promise library to avoid a depreciation warning in the console.
-mongoose.Promise = global.Promise;
 
 // Now that we are connected, let's save that connection to the database in a variable. We are just doing this to keep our code DRY.
 var db = mongoose.connection;
