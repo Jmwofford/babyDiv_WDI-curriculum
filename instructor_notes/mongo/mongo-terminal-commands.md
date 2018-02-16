@@ -141,7 +141,7 @@ db.teachers.find({gender:'m'}).pretty()
 
 &#x1F535; **CFU**
 
-- If we have a view and we want to show a list of only women teachers, how would we use ‘.find()’ to grab those records from the database?
+- If we have a view and we want to show a list of only female teachers, how would we use ‘.find()’ to grab those records from the database?
 
 
 ## Remove a set of documents from a collection
