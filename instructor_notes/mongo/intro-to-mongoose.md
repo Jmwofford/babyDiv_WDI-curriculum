@@ -182,7 +182,7 @@ For today's in-class Mongoose demonstrations, we will be creating an app that us
 Let's begin by installing Mongoose into our project folder...
 
 ```bash
-$ npm install --save mongoose
+$ npm install mongoose
 ```
 
 In order to have access to `mongoose` in our application, we need to explicitly require Mongoose and open a connection to the database that we specify.
