@@ -4,9 +4,6 @@ mongoose.connect('mongodb://localhost/express-mongoose-lesson-starter')
 const User = require('../models/user')
 const Item = require('../models/item')
 
-// Use native promises
-mongoose.Promise = global.Promise
-
 // First we clear the database of existing users and items.
 Item.remove({}, function (err) {
   console.log(err)
