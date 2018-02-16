@@ -4,15 +4,6 @@ mongoose.connect('mongodb://localhost/express-mongoose-lesson-starter')
 const User = require('../models/user')
 const Item = require('../models/item')
 
-// First we clear the database of existing users and items.
-Item.remove({}, function (err) {
-  console.log(err)
-})
-
-User.remove({}, function (err) {
-  console.log(err)
-})
-
 // create new users
 const danny = new User({
   first_name: 'Danny',
@@ -32,21 +23,22 @@ const daniel = new User({
   items: [ { name: 'Buy more Coke Zero' } ]
 })
 
-// save the users
-danny.save(function (err) {
-  if (err) console.log(err)
-
-  console.log('danny created!')
-})
-
-jamie.save(function (err) {
-  if (err) console.log(err)
-
-  console.log('jamie created!')
-})
-
-daniel.save(function (err) {
-  if (err) console.log(err)
-
-  console.log('daniel created!')
-})
+User.remove()
+  .then(() => {
+    return danny.save()
+  })
+  .then(() => {
+    return jamie.save()
+  })
+  .then(() => {
+    return daniel.save()
+  })
+  .then(() => {
+    console.log('everyone is saved')
+  })
+  .catch((err) => {
+    console.log(err)
+  })
+  .then(() => {
+    mongoose.connection.close()
+  })
