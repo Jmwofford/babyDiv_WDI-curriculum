@@ -19,9 +19,10 @@ Identify what you need to build and accomplish to meet project expectations and 
 Your app must:
 
 * **Have at _least_ 3 models** (more if they make sense) – one representing someone using your application (a user), and two others that represent the main functional idea for your app
+   * Remember that many-to-many relationships are difficult in MongoDB and focus on relationships being one-to-many for your MVP.
 <!-- * **Include sign up/log in functionality**, with encrypted passwords & an authorization flow. The boilerplate is here: https://git.generalassemb.ly/atl-wdi/wdi-curriculum-9/tree/master/projects/unit_02/project2_boilerplate -->
 * **Have complete RESTful routes** for at least one of your resources with GET, POST, PUT, and DELETE
-* **Write Mongo queries using the Mongoose module** and interact with your document database. Promises will likely make your life easier as you start to build complex queries!
+* **Write Mongo queries using the Mongoose module** and interact with your document database. Promises will make your life easier as you start to build complex queries!
 * **Include wireframes** that you designed during the planning process
 * **Include User Stories**
 * **Include ERDs**
@@ -168,30 +169,20 @@ This meeting should take no longer than 15 minutes.
 
 If you have ideas on how you can help a fellow-student with work that they are stuck on, please follow-up with information AFTER the stand up.
 
-## Meetings with instructors
-
-_Your instructor will contact you around the mid-point of your project to set up a meeting time for your group._
-
-
 ## Where to go for help during project week
 1. Seek out help online
 2. Seek out help with your classmates
-3. Submit a Github issue **on the WDI-ATL** class Github account to receive help from an instructor
+3. Seek out the help of instructors and TAs
 
-## Formatting your GitHub Issue for wdi-atl to ask for help
-
-*PUSH OFTEN! Your code on GitHub should be up to date. Submiting an issue and linking us to old, out-of-date code will hinder the process.*
-
+## How to ask for help
 1. **WHAT YOU ARE TRYING TO SOLVE:**
-  - Write a detailed explanation of the feature or user story you're working on.
+  - Be able to give a thorough explanation of the feature or user story you're working on.
 
 2. **DETAILED DESCRIPTION OF THE BUG/ERROR:**
-  - A detailed description of the problem, the bug, and/or the error. This means: the full steps to reproduce, a link to the file on github, and the line number of where the relavent code is.
-The error(s) returned, copy and pasted/typed out/screenshot, not paraphrased.
-  - If there is other code in a different file that is also essential to the functioning of the code that currently works point us to that and explain the relationship.
+  - A detailed description of the problem, the bug, and/or the error. This means: the full steps to reproduce and references to the line number of where the relavent code is.
 
 3. **WHAT I'VE TRIED**
-  - List everything you've done to solve the bug on your own in detail. list all resources you've looked up and tried to implement and provide links. Providing code if you have it surrounded by the md syntax to display nicely is very helpful.
+  - List everything you've done to solve the bug on your own in detail. List all resources you've looked up and tried to implement and provide links. 
 
 4. **QUESTION**
   - After going through all this what is your questions specifically, more specifically than how can I make this work?
