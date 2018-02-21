@@ -8,7 +8,7 @@ This second project is your first foray into **building a full-stack server appl
 
 **You will be working individually for this project**, and you will be designing the app yourself. We hope you will exercise creativity on this project, sketch some wireframes before you start, and write user stories to define what your users will want to do with the app.
 
-You will need to run your user stories, wireframes, and database design by your instructors to get their feedback and approval before you begin coding! Remember to keep things small and focus on mastering the fundamentals – scope creep/feature creep is the biggest pitfall for any project!
+You will need to run your user stories, wireframes, database design, and an app deployed on Heroku by your instructors to get their feedback and approval before you begin coding! Remember to keep things small and focus on mastering the fundamentals – **scope creep**/**feature creep** is the biggest pitfall for any project!
 
 Identify what you need to build and accomplish to meet project expectations and identify everything else as stretch goals. If you meet your MVP (Minimum Viable Product) ahead of schedule, you can decide which reach goals to focus on for the remainder of your time.
 
@@ -20,9 +20,12 @@ Your app must:
 
 * **Have at _least_ 3 models** (more if they make sense) – one representing someone using your application (a user), and two others that represent the main functional idea for your app
    * Remember that many-to-many relationships are difficult in MongoDB and focus on relationships being one-to-many for your MVP.
+
 <!-- * **Include sign up/log in functionality**, with encrypted passwords & an authorization flow. The boilerplate is here: https://git.generalassemb.ly/atl-wdi/wdi-curriculum-9/tree/master/projects/unit_02/project2_boilerplate -->
+
 * **Have complete RESTful routes** for at least one of your resources with GET, POST, PUT, and DELETE
 * **Write Mongo queries using the Mongoose module** and interact with your document database. Promises will make your life easier as you start to build complex queries!
+
 * **Include wireframes** that you designed during the planning process
 * **Include User Stories**
 * **Include ERDs**
@@ -36,7 +39,7 @@ Your app must:
 * A **working full-stack application, built by you**, hosted on Heroku
 * A **link to your hosted working app** in the URL section of your Github repo
 * A **git repository hosted on Github**, with a link to your hosted project,  and frequent commits dating back to the **very beginning** of the project. Commit early, commit often.  Make your commit messages descriptive.
-    * Your git repo should have **at least** 30 commits
+  * Your git repo should have **at least** 30 commits
 * **A ``readme.md`` file** with explanations of the technologies used, the approach was taken, unsolved problems, and notes to yourself so you can come back to your project later in the course and be able to pick up your train of thought, etc.
 * **Wireframes of your app**, hosted somewhere & linked in your readme
 * A link in your ``readme.md`` to the **PUBLICLY-accessible** **user stories you created/your trello board- with given, when, then statements for each story.**
@@ -80,11 +83,13 @@ writes the code. Switch drivers every 10 minutes. -->
 ### Potential Project Ideas
 
 ##### Cheerups
+
 The world is a depressing place.
 
 Your task is to create an app that will allow people to create and share "cheerups" - happy little quips to brighten other peoples' days. Cheerups will be small - limited to 139 characters. Members will be able to promote Cheerups that they like and maybe even boost the reputation of the Cheerupper.
 
 ##### Bookmarklet
+
 You will create an application where users can bookmark links they want to keep.
 
 But what if users could trade bookmarks for other bookmarks? Or sell bookmarks for points? Or send bookmarks to your friends. Or something even crazier.
@@ -97,25 +102,22 @@ Maybe users could loan books/clothes/pantry items to friends and keep track of i
 
 ---
 
-### Project 2 Samples
+### Project 2 Project & Readme Samples
 
-- https://bokburgerlist.herokuapp.com/
-- https://customclosets.herokuapp.com/
-- https://goal-digger.herokuapp.com/
-- https://dog-ventures.herokuapp.com/login
-- https://afternoon-mountain-84892.herokuapp.com/users
-
----
-
-### Project 2 Readme Samples
-
-- https://github.com/zarela/goal-tracker
-- https://github.com/sanazjamloo/project2
+- https://github.com/chris-mears/WDI_Project_2
+- https://github.com/jroyals2/Project-2-Brew-Tap
+- https://github.com/tombeau19/backcountry_ski_app
+- https://github.com/jwats287/portfolio-creator
 
 Github `readme.md` files are written in a language called Markdown which is compiled into HTML. You'll be using this a lot so it's good to learn some simple syntax rules now.
 
 - https://guides.github.com/features/mastering-markdown/
 - http://www.markdowntutorial.com/
+
+---
+### Project 2 Trello Board Example
+
+[Sample Project 2 User Stories](https://trello.com/b/xO8XsoU7/gift-return-sample-app)
 
 ---
 
@@ -156,10 +158,12 @@ Github `readme.md` files are written in a language called Markdown which is comp
 # Project Week
 
 ## Attendance
+
 You are required to be present by 10:00 am EDT each day during the project.
 
-## Standups
-We will have student-run stand-ups each morning at 10:15 am EDT where you will answer the following questions:
+## Stand-ups
+
+We encourage you to continue having student-run stand-ups each morning.  During your standup, emphasize on answering the following questions:
 
 - What did I work on yesterday
 - What am i trying to get done today
@@ -170,11 +174,13 @@ This meeting should take no longer than 15 minutes.
 If you have ideas on how you can help a fellow-student with work that they are stuck on, please follow-up with information AFTER the stand up.
 
 ## Where to go for help during project week
+
 1. Seek out help online
 2. Seek out help with your classmates
 3. Seek out the help of instructors and TAs
 
 ## How to ask for help
+
 1. **WHAT YOU ARE TRYING TO SOLVE:**
   - Be able to give a thorough explanation of the feature or user story you're working on.
 
@@ -186,3 +192,25 @@ If you have ideas on how you can help a fellow-student with work that they are s
 
 4. **QUESTION**
   - After going through all this what is your questions specifically, more specifically than how can I make this work?
+
+## Plagiarism Review
+
+### Statement
+
+General Assembly takes academic honesty very seriously, and as such will not tolerate any student who plagiarizes in order to satisfy class requirements.  Programs at General Assembly are intensive, require a lot of work on the part of the student, and students will occasionally not be able to complete work in a timely fashion.
+
+Rather than rely on work that’s not your own to create the appearance of success, let your instructional team know as early as possible that you are not prepared for the work.  It is much easier to come up with a plan, than it is to succeed if you’ve been removed from the program.
+
+### Definition
+
+Plagiarism is the act of claiming that work that does not belong to you is in fact your own.  It can take many forms, and each concentration at General Assembly will have a slightly different guideline to identify plagiarism in their field.
+
+Generally it is safe to assume that if you are including work that does not belong to you in an effort to build on your own work — cite it.  If you are using work that does not belong to you as a replacement for your own work, you’re probably plagiarizing.
+
+Plagiarism can unintentionally occur.  While it is fine to use outside sources, if **all** or **most** of your code (specifically logic/JS/Ruby) is from other git repos/videos/blog posts, you are in violation of the plagiarism rules cited above.  If you do use outside resources, make sure you **cite** those resources in your README.md file.
+
+### Procedure
+
+If an instructor is in doubt of a students work or has evidence of plagiarism, the student will be asked to justify the work they've submitted. This often is in the context of making you explain your code line by line. Should they be unable to show the work they have claimed as their own is in fact theirs, the student will face disciplinary action.
+
+Instances of plagiarism will be evaluated on a case by case basis, but will most likely result in removal from the program
