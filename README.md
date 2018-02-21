@@ -5,15 +5,15 @@
 
 ### Instructors
 ##### Instructional Leads
-- Danny Hurley
-    - danny.hurley@generalassemb.ly
 - Jamie King
-    - james.king@generalassemb.ly
+    - jamie.king@generalassemb.ly
+- Daniel Pino
+    - daniel.pino@generalassemb.ly
   
 ##### Slack
 
-- Danny: @dp_hurley
 - Jamie: @jamieking
+- Daniel: @Daniel Pino
 
 ### Class Hours
 - Monday - Friday: 9:00am - 5:00pm EDT
@@ -35,11 +35,11 @@
 
 ### Attendance
 - Attendance is taken twice daily at 9:00AM and 2:30PM
-- No more than 3 unexcused absences
+- No more than 3 total absences
 - 3 tardies (more than 30 minutes late) = 1 absence
 - Missing part of the day counts as 1/2 absence.
 - You must inform BOTH instructors if you are anticipating any absences or need to leave early.
-
+- If a student misses more than 3 total absenses, he/she loses the ability to gain a certificate of completion and eligibility for outcomes
 
 ### HW & Projects
 - You must have an average of 80% across all homework assignments to qualify for a letter of completion / Outcomes support.
@@ -55,9 +55,3 @@
 
 
 #### [Class Wiki!](https://git.generalassemb.ly/atl-wdi/wdi-curriculum/wiki)
-
-#### [Bug Journal](https://git.generalassemb.ly/atl-wdi/wdi-curriculum-10/wiki/Bug-Journal)
-
-#### Google Calendar Schedule
-
-- [Calendar](https://calendar.google.com/calendar/embed?src=26j8bskc5mh5vbfr6fr1bk5qi0%40group.calendar.google.com&ctz=America/New_York)
