@@ -1,6 +1,7 @@
 # Intro to HTML & the DOM
 
 ## Table of Contents
+
 * [Learning Objectives](#learning-objectives)
 * [Preparation](#preparation)
 * [Differentiation between HTML and DOM](#differentiation-between-html-and-dom)
@@ -13,30 +14,33 @@
 * [Exercise #1](#exercise-#1)
 * [Exercise #2](#exercise-#2)
 
-
 ## Learning Objectives
+
 * Build a simple web page using HTML
 * Explain the various parts of an HTML document, including:
-  - the `<head>` and `<body>` tags
-  - container elements such as `<div>`, `<header>`, `<footer>`, `<section>`, and `<article>`
-  - common elements such as `<h1>`, `<h2>`, `<p>`, `<ul>`, and `<li>`
+  * the `<head>` and `<body>` tags
+  * container elements such as `<div>`, `<header>`, `<footer>`, `<section>`, and `<article>`
+  * common elements such as `<h1>`, `<h2>`, `<p>`, `<ul>`, and `<li>`
 * Explain the difference between _HTML_ and the _DOM_
 
 ## Preparation
-- Pre-work and About Me page completion
+
+* Pre-work and About Me page completion
 
 ## Hook (5m)
+
 This morning we are going to take a look at the DOM and how we can use the Chrome Dev Tools to manipulate it. Next Wednesday we will look at more advanced ways to perform DOM manipulation using Javascript.
 
 <details>
+
 <summary>To start, can someone describe the difference between HTML and the DOM in their own words?</summary>
 The DOM (Document Object Model) is the browser's interpretation of the HTML. Your browser creates objects out of the HTML elements.
 
-examples: 
+Examples:
 
-- skeleton => HTML, body => DOM
-- song chords/lyrics => HTML, recorded song => DOM
-- recipe ingredients => HTML, finished dish => DOM
+* skeleton => HTML, body => DOM
+* song chords/lyrics => HTML, recorded song => DOM
+* recipe ingredients => HTML, finished dish => DOM
 
 </details>
 
