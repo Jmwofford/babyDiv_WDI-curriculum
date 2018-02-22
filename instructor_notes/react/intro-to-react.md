@@ -127,7 +127,7 @@ Client-side routing requires manipulating the browser's [**history API**](https:
 
 As we will see a little later, the React ecosystem provides for us an easy-to-use router that will greatly simplify the amount of work we have to do to load many different templates within our application.
 
-### Apps Built with React (partially or completely):
+### Apps Built with React (partially or completely)
 
 - [Khan Academy](https://www.khanacademy.org/math/algebra/introduction-to-algebra/overview-hist-alg/v/origins-of-algebra)
 - [Codecademy](https://www.codecademy.com/learn/all)
