@@ -399,16 +399,16 @@ First, let's create the events whenever a user if a user clicks thumbs up or dow
 ...
 
   componentWillMount() {
-    this._getRandomGif();
+    this.getRandomGif();
   }
 
   // Event to be attached to thumbs down.
-  _disapprove = () => {
-    this._getRandomGif();
+  disapprove = () => {
+    this.getRandomGif();
   }
 
   // Event to be attached to thumbs up.
-  _approve = () => {
+  approve = () => {
     // Prepare the response that you are posting to the API
     const payload = {
       url: this.state.gifUrl,
@@ -418,12 +418,12 @@ First, let's create the events whenever a user if a user clicks thumbs up or dow
     // Use axios.post() and target the Heroku API and send the payload defined earlier
     axios.post(this.props.url + "/api", payload).then((res) => {
       // Get a new gif once the post is successful
-      this._getRandomGif();
+      this.getRandomGif();
     });
   }
 
   // Move the axios.get to it's own function to DRY up the code.
-  _getRandomGif = () => {
+  getRandomGif = () => {
     return axios.get("http://api.giphy.com/v1/gifs/random", {
       params: {
         api_key: "SECRET_API_KEY",
@@ -449,8 +449,8 @@ render(){
       <img className="randomGif" src={this.state.gifUrl}/>
       <br />
       <div className="thumbs">
-          <i onClick={this._disapprove} className="fa fa-3x fa-thumbs-down"></i>
-          <i onClick={this._approve} className="fa fa-3x fa-thumbs-up"></i>
+          <i onClick={this.disapprove} className="fa fa-3x fa-thumbs-down"></i>
+          <i onClick={this.approve} className="fa fa-3x fa-thumbs-up"></i>
       </div>
     </div>
   )
@@ -482,7 +482,7 @@ render() {
     <div>
       <img className="randomGif" src={this.state.gifUrl}/>
       <br />
-        <Thumbs approve={this._approve} disapprove={this._disapprove} /> 
+        <Thumbs approve={this.approve} disapprove={this.disapprove} /> 
     </div>
   );
 }
