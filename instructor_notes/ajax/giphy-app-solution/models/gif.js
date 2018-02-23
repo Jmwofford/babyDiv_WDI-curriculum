@@ -1,5 +1,5 @@
-var Schema = require('../db/schema');
-var mongoose = require('mongoose');
+let Schema = require('../db/schema')
+var mongoose = require('mongoose')
 
-var Gif = Schema.Gif;
-module.exports = Gif;
+var Gif = Schema.Gif
+module.exports = Gif
