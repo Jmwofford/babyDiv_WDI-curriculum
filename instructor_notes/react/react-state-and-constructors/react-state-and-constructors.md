@@ -51,6 +51,14 @@ In many ways state and props operate similarly.  Both are plain JS Objects that 
     }
   }
   ...
+  
+  --OR--
+  
+  ...
+  state = {
+    movie: "Blade Runner",
+    year: 1982
+  }
 ```
 
 ### Props Are Immutable, State is Not
@@ -753,7 +761,7 @@ This `...` syntax tells Javascript to make a copy of our `this.state.newProduct`
   // src/components/HomePage.js
 
   ...
-  _addNewProductToProductList = (newProduct) => {
+  addNewProductToProductList = (newProduct) => {
       const productList = [...this.state.productList];
       productList.push(newProduct);
       this.setState({productList});
