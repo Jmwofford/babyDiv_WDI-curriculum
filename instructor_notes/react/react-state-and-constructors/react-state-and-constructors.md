@@ -761,7 +761,7 @@ This `...` syntax tells Javascript to make a copy of our `this.state.newProduct`
   // src/components/HomePage.js
 
   ...
-  _addNewProductToProductList = (newProduct) => {
+  addNewProductToProductList = (newProduct) => {
       const productList = [...this.state.productList];
       productList.push(newProduct);
       this.setState({productList});
