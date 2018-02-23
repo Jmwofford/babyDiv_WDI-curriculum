@@ -51,6 +51,14 @@ In many ways state and props operate similarly.  Both are plain JS Objects that 
     }
   }
   ...
+  
+  --OR--
+  
+  ...
+  state = {
+    movie: "Blade Runner",
+    year: 1982
+  }
 ```
 
 ### Props Are Immutable, State is Not
