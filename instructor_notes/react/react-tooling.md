@@ -115,7 +115,7 @@ export default App;
 
 #### Wait, what is that HTML doing in my Javascript?
 
-Until now, if we've wanted to write any HTML in our Javascript we've had to use `template strings`. Because this can be pretty messy, we've generally opted not to write HTML outside of our HTML files when we can avoid it. With React, we will instead use a built-in tool called **`JSX`** to write "HTML" directly into our Javascript. I put "HTML" in quotes because this is not actually HTML but a `markup language` called `XML`. `XML` is very similar to `JSON` in purpose, but the syntax is much more similar to HTML. Using this tool, we can effectively write HTML directly into our `.render()` function and React will take care of the conversion from XML to HTML for us.
+Until now, if we've wanted to write any HTML in our Javascript we've had to use `template strings`. Because this can be pretty messy, we've generally opted not to write HTML outside of our HTML files when we can avoid it. With React, we will instead use a built-in tool called **`JSX`** to write "HTML" directly into our Javascript. I put "HTML" in quotes because this is not actually HTML but a `markup language` inspired by `HTML` and `XML`. `XML` is very similar to `JSON` in purpose, but the syntax is much more similar to HTML. Using this tool, we can effectively write HTML directly into our `.render()` function and React will take care of the conversion from XML to HTML for us.
 
 This means that all of the Javascript and HTML our component needs will now live in one file. Obviously, this new paradigm is a little different than the way we've been writing code up to this point. Don't worry, we'll talk about the nuances of this new structure in the coming days. 
 
