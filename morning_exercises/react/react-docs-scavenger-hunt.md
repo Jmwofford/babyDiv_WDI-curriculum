@@ -12,14 +12,19 @@
 
 4. Should we ever change `props` (or parameters) inside of a component? 
 
-5. Are all components classes? 
+5. Are all components classes?
 
 6. List five "Synthetic Events" provided by React:
-
-7. Do we have to use ES6 syntax with React?
 
 8. Where can I go to check out React's built-in Accessibility features?
 
 9. List five React Component Lifecycle Methods:
 
 10. Where would I go to check out React's built-in testing tools?
+
+
+### With a partner, choose a site that is highly interactive such as [eBay](http://www.ebay.com), [Pinterest](http://www.pinterest.com), or [Instagram](http://www.instagram.com) and list the following:
+
+- What are all of the components that make up your page?
+- Are there any components that might be rendered multiple times on the same page?
+- Draw a diagram of the page with boxes around each component. Alongside your diagram, list the components and the data that each component might require.

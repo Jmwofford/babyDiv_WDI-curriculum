@@ -1,29 +1,6 @@
 # Introduction to GA
 
-## WELCOME TO WDI!
-
-### Introduction
-
-## Roles
-1. Instructional Lead
-  - Who are you?
-  - What is your background?
-  - Roles:
-    - Leading Lessons and Code Alongs
-    - Shaping the Curriculum
-    - Supporting Students
-
-2. Instructional Associate
-  - Who are you?
-  - Roles:
-    - Introduce Morning Exercises and Homework
-    - Leading Some Lessons
-    - Debugging Support
-
-3. Evening TAs
-4. Homework Graders
-
-<!-- ## Instructor Introduction
+## Instructor Introduction
 
 ## Roles
 1. Instructional Lead
@@ -36,16 +13,7 @@
 3. TAs
   - Classroom / LAB help
   - Morning exercises
-  - Homework help / grading -->
-
-
-## Student Introductions
-
-- What's your name?
-- What were you doing previous to WDI?
-- What do you hope to do with your WDI skills?
-- Who is your hero and why? (a parent, a celebrity, an influential person in one’s life)
-
+  - Homework help / grading
 
 ## Emotional Framing
 - Programming is not about learning a sequence of steps, it's about developing a mindset to solve problems and think programmatically.
@@ -202,4 +170,10 @@ Instances of plagiarism will be evaluated on a case by case basis, but will most
         - receiving an answer stops the learning process
         - only ask a question if you've been stuck for about a day
 
+# Activities
 
+## Briefly Tell Us About You
+- What's your name?
+- What were you doing previous to WDI?
+- What do you hope to do with your WDI skills?
+- Who is your hero and why? (a parent, a celebrity, an influential person in one’s life)

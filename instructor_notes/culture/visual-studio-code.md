@@ -1,4 +1,4 @@
-# Efficient Text Editing with Sublime
+# Efficient Text Editing with Visual Studio Code
 
 *Submitted by Mike Hopper, WDI Atlanta.*
 
