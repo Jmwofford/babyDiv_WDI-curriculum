@@ -56,12 +56,12 @@ When a component is rendered on screen for the first time, there are 5 methods t
 
 **`getInitialState()`**: Like get default props, this is just setting up the default state object.  This is defined in your component's constructor function.  You will never need to overwrite this method.
 
-**`componentWillMount()`**: `componentWillMount` is the lifecycle method called immediately after the Component has set it's default state and props and directly before the component is rendered in the DOM.  In this method, we are able to handle configuration, update our state, and prepare for our first render. We can safely refer to our state and props within this method, and we can update our state.  This lifecycle method is where we make AJAX calls to update the state of a component. 
+**`componentWillMount()`**: `componentWillMount` is the lifecycle method called immediately after the Component has set it's default state and props and directly before the component is rendered in the DOM.  In this method, we can handle configuration, update our state, and prepare for our first render. We can safely refer to our state and props within this method, and we can update our state.  It was recently announced that this lifecycle method will be depricated when React 17 is released.  We should always use `componentDidMount` instead.
 
 **`render()`**: The `render()` method is the only lifecycle method that is required to be called in every component. We should all be pretty familiar with this one by now.  In the render function, you return the JSX that you want to render on the page.  Best practices state that the render function should be _pure_. This means that you should not modify the state when rendering. (This is why we make our API calls in `componentWillMount`) 
 
 
-**`componentDidMount()`**: This is invoked immediately after a component is mounted and available within the DOM.  This allows you to execute code once the component is available and visible on the client's screen.  This is most commonly used when connecting React to another library like jQuery or to set up web analytics.
+**`componentDidMount()`**: This is invoked immediately after a component is mounted and available within the DOM.  This allows you to execute code once the component is available and visible on the client's screen.  We will be using this method to start API calls with our server.  This is most commonly used when connecting React to another library like jQuery or to set up web analytics.
 
 
 #### Updating State and Props
@@ -71,7 +71,7 @@ The mounting lifecycle only takes place when the component is initially being re
 
 **`shouldComponentUpdate(nextProps, nextState)`**: Generally, whenever our component receives any new state or props it will update. However, React gives us a method that asks permission.  The argument contains the nextState and nextProps, and it returns a boolean value.  If `shouldComponentUpdate` evaluates to false, it will break out of the rest of the update cycle.
 
-**`componentWillUpdate(nextProps, nextState)`**: Just like `componentWillMount` but get's called everytime there is an update. You cannot `setState` here, which should be done in `componentWillReceiveProps`.
+**`componentWillUpdate(nextProps, nextState)`**: Just like `componentWillMount` but get's called everytime there is an update. You cannot `setState` here, which should be done in `componentWillReceiveProps`.  This is also being depricated in favor of `componentDidUpdate`
 
 **`render()`**: The same `render` method from mounting also gets called whenever doing an update.  See why we want to keep this function pure.
 

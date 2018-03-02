@@ -114,7 +114,7 @@ APIs are published everywhere. Chances are good that most major content sources 
 
 **That sounds hard. Can't you just give me a freebie?**
 
-Try the [Programmable Web API Directory](http://www.programmableweb.com/apis/directory), [Mashape](https://market.mashape.com/explore) or the [Public APIs Directory](http://www.publicapis.com/).
+Try the [Programmable Web API Directory](http://www.programmableweb.com/apis/directory), [Mashape](https://market.mashape.com/explore) or the [Public APIs Github Repo](https://github.com/abhishekbanthia/Public-APIs/).
 
 ## You do
 Spend 10 minutes exploring these APIs and post some of the interesting data sets to the classroom channel in Slack.
@@ -327,7 +327,7 @@ We should now see `Hello From SavedGifs` in our UI.  Now we are ready to use axi
 
 We want axios to make an API call whenever React is ready to mount the `SavedGifs` component.  Think back to our previous lesson on the React Component Lifecycle, what special method would be able to do this for us? 
 
-`componentWillMount` will allow us to initiate an API call and `setState` whenever the data gets back. Let's add that to our `SavedGifs` component.  We'll walk through this process step-by-step.
+`componentDidMount` will allow us to initiate an API call and `setState` whenever the data gets back. Let's add that to our `SavedGifs` component.  We'll walk through this process step-by-step.
 
 ```js
 import React, { Component } from 'react';
@@ -340,8 +340,8 @@ class SavedGifs extends Component{
     savedGifs: []
   };
 
-  // Step 3: Call 'componentWillMount' for making your API call
-  componentWillMount(){
+  // Step 3: Call 'componentDidMount' for making your API call
+  componentDidMount(){
     // Step 4: Use axios.get to retrieve all saved gifs from our API
     axios.get("https://strange-thing-api.herokuapp.com/api")
          // Step 5: Save the response array to this.state.savedGifs
@@ -398,7 +398,7 @@ First, let's create the events whenever a user if a user clicks thumbs up or dow
 // ./components/RandomGif.js
 ...
 
-  componentWillMount() {
+  componentDidMount() {
     this.getRandomGif();
   }
 

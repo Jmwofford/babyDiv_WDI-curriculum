@@ -8,6 +8,9 @@ Let's add a shopping cart to our Hardware Store. Starting with the code from tod
 
 * **BONUS: If an item already exists in the cart, add a "quantity" display and increment it when "Add To Cart" is clicked again.**
 
+Your end result should look something like this.
+![https://i.imgur.com/XjX70FQ.png](https://i.imgur.com/XjX70FQ.png)
+
 # Turning In
 
 * Create a new Git repository with your solution.
