@@ -114,7 +114,7 @@ APIs are published everywhere. Chances are good that most major content sources 
 
 **That sounds hard. Can't you just give me a freebie?**
 
-Try the [Programmable Web API Directory](http://www.programmableweb.com/apis/directory), [Mashape](https://market.mashape.com/explore) or the [Public APIs Directory](http://www.publicapis.com/).
+Try the [Programmable Web API Directory](http://www.programmableweb.com/apis/directory), [Mashape](https://market.mashape.com/explore) or the [Public APIs Github Repo](https://github.com/abhishekbanthia/Public-APIs/).
 
 ## You do
 Spend 10 minutes exploring these APIs and post some of the interesting data sets to the classroom channel in Slack.
