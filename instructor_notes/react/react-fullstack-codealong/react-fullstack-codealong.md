@@ -60,18 +60,17 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
-mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI); //mongodb://localhost/idea-board
 
 const connection = mongoose.connection;
 connection.on('connected', () => {
-  console.log('Mongoose Connected Successfully');    
-}); 
+  console.log('Mongoose Connected Successfully')
+})
 
 // If the connection throws an error
 connection.on('error', (err) => {
   console.log('Mongoose default connection error: ' + err);
-}); 
+}) 
 
 app.use(bodyParser.json());
 app.get('/', (req,res) => {
@@ -176,7 +175,7 @@ Let's update the `package.json` to help Heroku understand more about our app.  W
 ...
   //Set the Heroku version of Node to the most recent available.
   "engines": {
-    "node": "8.6.0"
+    "node": "9.7.0"
   },
 ...
 //Postinstall will install the client packages and build the minified UI in Heroku.
@@ -206,7 +205,7 @@ Now that we've verified that we can run both apps at the same time and gotten th
 Today's example app is going to have 2 Models. User and Idea
 
 ### You Do
-Create a new directory called `db` and create a `schema.js` within there. Create a Mongoose model for each model.
+Create a new directory called `db` and create a `schema.js` within there. Also create a `models` folder to create a Mongoose model for each schema.
 
 * User has name, password(string), and ideas.
 * Idea has title, description, and created(Date)
@@ -222,10 +221,10 @@ Now that we have out 2 models, let's go ahead and supply some seed data.  Let's 
 ```js
 require('dotenv').config()
 const mongoose = require('mongoose')
-mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true})
-mongoose.Promise = global.Promise
+mongoose.connect(process.env.MONGODB_URI)
 
-const { User, Idea } = require('./schema')
+const User = require('../models/User')
+const Idea = require('../models/Idea')
 
 const mars = new Idea({
   title: 'Fly to Mars',
@@ -257,10 +256,10 @@ Now that we have data within our database, let's use Express to retrieve that in
 ```js
 // ./server.js
   app.use('/api/users', UsersController)
-  `
+
 // ./controllers/users
 const express = require('express')
-const { User } = require('../db/schema')
+const User = require('../models/User')
 const router = express.Router()
 
 router.get('/', (req, res) => {
@@ -359,7 +358,7 @@ class LogIn extends Component {
       this.setState({users: res.data})
     })
   }
-  
+
   render () {
     return (
       <div>
@@ -592,6 +591,7 @@ router.post('/', (req, res) => {
 We will write similar code to delete an idea.  Work with the student's around you to write an Express route, create a custom method, and pass it down through props.
 
 Hint: You will need one argument
+
 ```js
   deleteIdea = (idea) => {//Your code here}
 ```
@@ -635,6 +635,7 @@ Let's focus on creating a handleChange event to update our local state.
 The final step in our app is to create the ability to update an idea.
 
 First, we'll add a route to the IdeasController
+
 ```js
 // /api/user/:userId/ideas/:id
 router.patch('/:id', (req, res) => {
@@ -656,6 +657,7 @@ router.patch('/:id', (req, res) => {
 ```
 
 Next, we will add a method that will trigger the patch and update the local state. This will look pretty similar to our last method.
+
 ```js
   updateIdea = (idea, e) => {
     axios.patch(`/api/users/${this.state.user.id}/ideas/${idea._id}`, {idea}).then(res => {
@@ -674,7 +676,7 @@ Check out the [Synthetic Event docs](https://reactjs.org/docs/events.html) and f
 
 We did it! We now have an app that updates our ideas in real time.  And through using React, we built it in a scalable and easy to read way.
 
-## Further Reading:
+## Further Reading
 
 * [Using `create-react-app` with a server](https://www.fullstackreact.com/articles/using-create-react-app-with-a-server/)
 * [94 Examples of Fullstack React Apps](https://react.rocks/tag/FullStack)

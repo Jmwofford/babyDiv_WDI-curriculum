@@ -8,8 +8,8 @@ In this repo, we have many different exercises to help you learn the ins and out
 [React Review](https://git.generalassemb.ly/ga-wdi-exercises/react-review): Questions to help you understand the various features of React.  Includes some simple component building exercises.
 
 ### Component Extravaganza
-[Component Extravaganza](https://git.generalassemb.ly/ga-wdi-exercises/component-extravaganza): Build a password validator, stopwatch, and shopping cart all in React.  
-Deployed Versions here: 
+[Component Extravaganza](https://git.generalassemb.ly/ga-wdi-exercises/component-extravaganza): Build a password validator, stopwatch, and shopping cart all in React.
+Deployed Versions here:
  - [Password Validator](http://excellent-tail.surge.sh/)
  - [Stopwatch](http://scary-religion.surge.sh/)
  - [Shopping Cart](http://shopping-cart-react.surge.sh/)
