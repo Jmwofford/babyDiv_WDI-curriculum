@@ -64,6 +64,19 @@ Most importantly a **technical demonstration** of your app which:
 
 ---
 
+### Project 3 Project & Readme Samples
+
+- https://github.com/jacksonmcgehee/wdi-third-project
+- https://github.com/rubinj30/wdi-project-3
+- https://github.com/pittsblake/atlanta-rides
+
+Github `readme.md` files are written in a language called Markdown which is compiled into HTML. You'll be using this a lot so it's good to learn some simple syntax rules now.
+
+- https://guides.github.com/features/mastering-markdown/
+- http://www.markdowntutorial.com/
+
+---
+
 ### To Submit
 
 * Submit your project to Schoology by the time indicated on the class schedule.
