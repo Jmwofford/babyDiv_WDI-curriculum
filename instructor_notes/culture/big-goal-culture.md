@@ -5,7 +5,9 @@
 ### Introduction
 
 ## Roles
+
 1. Instructional Lead
+
   - Who are you?
   - What is your background?
   - Roles:
@@ -14,6 +16,7 @@
     - Supporting Students
 
 2. Instructional Associate
+
   - Who are you?
   - Roles:
     - Introduce Morning Exercises and Homework
@@ -21,7 +24,6 @@
     - Debugging Support
 
 3. Evening TAs
-4. Homework Graders
 
 <!-- ## Instructor Introduction
 
@@ -37,7 +39,6 @@
   - Classroom / LAB help
   - Morning exercises
   - Homework help / grading -->
-
 
 ## Student Introductions
 
@@ -59,14 +60,14 @@
     - Debugging your own mistakes
     - Being a good "Googler" and reading tech documents takes practice
     - You learn more by doing than by listening
-    - We will not to hold your hand
-        - There is a decent amount of failure that happens initially
-            - good to get that out of the way before starting work
+    - Failure happens.  Failure allows you to learn and grow.  Lean into it.
 - ERRORS are GOOD
 - Hard Work: 80-90hrs/wk minimum
 - The maximum point of learning is right at the edge of learning and panic.
+
 ![learning zone](https://i.imgur.com/SqHDJtV.png)
 - This experience is a rollercoaster.
+
 ![informed optimism?](https://i.imgur.com/0XjqOPa.png)
 
 ## You Are Not Your Code!
@@ -74,6 +75,7 @@
 https://vimeo.com/85040589
 
 ## Classroom Culture
+
 - Open safe environment
 - Take ownership of your experience
 - Check your ego at the door
@@ -82,6 +84,7 @@ https://vimeo.com/85040589
 - You get what you put in
 
 ## Mentorship Culture
+
 - Take care of each other
 - Benchmarking; some are good at one thing, others at another. Leverage each other's strengths.
 - Teaching is the best way of truly solidifying your understanding of a concept.
@@ -92,19 +95,23 @@ https://vimeo.com/85040589
   - COLLABORATE!!
 
 ## Student Expectations
+
+1. Treat this like your job.
 1. Be Present
-  - Attendance at 9:00 AM
-  - Pay attention
-  - Let us know if you are running late
-  - Excused Absences
-  - Multiple lateness = absence 
-  - Contractual limit of absences in order to complete the program
+    - Attendance at 9:00 AM
+    - Pay attention
+    - Let us know if you are running late
+    - Excused Absences
+    - 3 lates = 1 absence 
+    - You can may have up to 3 total excused absenses
+    - Unexcused absenses are not allowed
 1. Be Persistent
 1. Be Independent
 1. Be Thoughtful
 1. Be Creative
-  - this is not paint by numbers
-  
+  - This is not paint by numbers
+  - There is no single step by step solution
+
 ## Feedback
 
 The WDI classroom culture is firmly rooted in a cycle of `constant`, `constructive`, and `actionable` feedback. These feedback loops go both ways, from General Assembly to our students and from students back to General Assembly.
@@ -151,17 +158,17 @@ A good test for whether or not a goal is `actionable` is to check that it includ
 ## Plagiarism
 ### Statement
 
-General Assembly takes academic honesty very seriously, and as such will not tolerate any student who plagiarizes in order to satisfy class requirements.  Programs at General Assembly are intensive, require a lot of work on the part of the student, and students will occasionally not be able to complete work in a timely fashion.  
+General Assembly takes academic honesty very seriously, and as such will not tolerate any student who plagiarizes in order to satisfy class requirements.  Programs at General Assembly are intensive, require a lot of work on the part of the student, and students will occasionally not be able to complete work in a timely fashion.
 
 Rather than rely on work that’s not your own to create the appearance of success, let your instructional team know as early as possible that you are not prepared for the work.  It is much easier to come up with a plan, than it is to succeed if you’ve been removed from the program.
 
 ### Definition
 
-Plagiarism is the act of claiming that work that does not belong to you is in fact your own.  It can take many forms, and each concentration at General Assembly will have a slightly different guideline to identify plagiarism in their field.  
+Plagiarism is the act of claiming that work that does not belong to you is in fact your own.  It can take many forms, and each concentration at General Assembly will have a slightly different guideline to identify plagiarism in their field.
 
 Generally it is safe to assume that if you are including work that does not belong to you in an effort to build on your own work — cite it.  If you are using work that does not belong to you as a replacement for your own work, you’re probably plagiarizing.
 
-Plagiarism includes copying homework solutions and switching content around.
+Plagiarism can unintentionally occur.  While it is fine to use outside sources, if **all** or **most** of your code (specifically logic/JS/Ruby) is from other git repos/videos/blog posts, you are in violation of the plagiarism rules cited above.  If you do use outside resources, make sure you **cite** those resources in your README.md file.
 
 ### Procedure
 
@@ -170,10 +177,13 @@ If an instructor is in doubt of a students work or has evidence of plagiarism, t
 Instances of plagiarism will be evaluated on a case by case basis, but will most likely result in removal from the program
 
 ## Stand-Up
+
 - Yesterday (What's been a win since your last Standup?)
 - Blockers (What is something you'd like to see again since your last standup? What is still challenging you?)
 - Today's wins (What would you like to accomplish today?)
 - `Stand-ups should focus on generating ACTIONABLE goals for each day.`
+- More info here (We will review this tomorrow)
+  - [Stand Ups](./stand-ups.md)
 
 ## Common Student Worries
 1. I'm making a lot of mistakes

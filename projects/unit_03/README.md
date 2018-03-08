@@ -152,23 +152,40 @@ If you have ideas on how you can help a fellow-student with work that they are s
 ## Where to go for help during project week
 1. Seek out help online
 2. Seek out help with your classmates
-3. Seek out help with Jesse (TA)
-4. Submit a Github issue **on the wdi-remote** class Github account to receive help from an instructor
+3. Seek out the help of instructors and TAs
 
-## Formatting your GitHub Issue to ask for help
-
-*PUSH OFTEN! Your code on GitHub should be up to date. Submiting an issue and linking us to old, out-of-date code will hinder the process.*
+## How to ask for help
 
 1. **WHAT YOU ARE TRYING TO SOLVE:**
-  - Write a detailed explanation of the feature or user story you're working on.
+  - Be able to give a thorough explanation of the feature or user story you're working on.
 
 2. **DETAILED DESCRIPTION OF THE BUG/ERROR:**
-  - A detailed description of the problem, the bug, and/or the error. This means: the full steps to reproduce, a link to the file on github, and the line number of where the relavent code is.
-The error(s) returned, copy and pasted/typed out/screenshot, not paraphrased.
-  - If there is other code in a different file that is also essential to the functioning of the code that currently works point us to that and explain the relationship.
+  - A detailed description of the problem, the bug, and/or the error. This means: the full steps to reproduce and references to the line number of where the relavent code is.
 
 3. **WHAT I'VE TRIED**
-  - List everything you've done to solve the bug on your own in detail. list all resources you've looked up and tried to implement and provide links. Providing code if you have it surrounded by the md syntax to display nicely is very helpful.
+  - List everything you've done to solve the bug on your own in detail. List all resources you've looked up and tried to implement and provide links. 
 
 4. **QUESTION**
   - After going through all this what is your questions specifically, more specifically than how can I make this work?
+
+## Plagiarism Review
+
+### Statement
+
+General Assembly takes academic honesty very seriously, and as such will not tolerate any student who plagiarizes in order to satisfy class requirements.  Programs at General Assembly are intensive, require a lot of work on the part of the student, and students will occasionally not be able to complete work in a timely fashion.
+
+Rather than rely on work that’s not your own to create the appearance of success, let your instructional team know as early as possible that you are not prepared for the work.  It is much easier to come up with a plan, than it is to succeed if you’ve been removed from the program.
+
+### Definition
+
+Plagiarism is the act of claiming that work that does not belong to you is in fact your own.  It can take many forms, and each concentration at General Assembly will have a slightly different guideline to identify plagiarism in their field.
+
+Generally it is safe to assume that if you are including work that does not belong to you in an effort to build on your own work — cite it.  If you are using work that does not belong to you as a replacement for your own work, you’re probably plagiarizing.
+
+Plagiarism can unintentionally occur.  While it is fine to use outside sources, if **all** or **most** of your code (specifically logic/JS/Ruby) is from other git repos/videos/blog posts, you are in violation of the plagiarism rules cited above.  If you do use outside resources, make sure you **cite** those resources in your README.md file.
+
+### Procedure
+
+If an instructor is in doubt of a students work or has evidence of plagiarism, the student will be asked to justify the work they've submitted. This often is in the context of making you explain your code line by line. Should they be unable to show the work they have claimed as their own is in fact theirs, the student will face disciplinary action.
+
+Instances of plagiarism will be evaluated on a case by case basis, but will most likely result in removal from the program
