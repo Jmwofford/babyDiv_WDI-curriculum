@@ -65,7 +65,7 @@
 - Hard Work: 80-90hrs/wk minimum
 - The maximum point of learning is right at the edge of learning and panic.
 
-![learning zone](https://i.imgur.com/SqHDJtV.png)
+![learning zone](https://slack-imgs.com/?c=1&url=https%3A%2F%2Fdeliveryimages.acm.org%2F10.1145%2F1140000%2F1132485%2Ffigs%2Ff3.jpg)
 - This experience is a rollercoaster.
 
 ![informed optimism?](https://i.imgur.com/0XjqOPa.png)
