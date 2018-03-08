@@ -38,7 +38,7 @@ One way to create optimal experiences for mobile users is a dedicated mobile sit
 
 You know you're on one when you see `m.` in the url!
 
-Compare https://m.ups.com with https://ups.com
+Compare https://m.xkcd.com with https://xkcd.com
 
 ![](https://imgs.xkcd.com/comics/server_attention_span.png)
 
