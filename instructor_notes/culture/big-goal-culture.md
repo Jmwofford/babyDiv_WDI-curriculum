@@ -85,9 +85,10 @@ https://vimeo.com/85040589
 
 ## Mentorship Culture
 
-- Take care of each other
-- Benchmarking; some are good at one thing, others at another. Leverage each other's strengths.
-- Teaching is the best way of truly solidifying your understanding of a concept.
+- Take care of each other.
+- Benchmark only against yourself; some are good at one thing, others at another. 
+- Leverage each other's strengths.
+- Prove your understanding by teaching others.
 - Your classmates will be the best foundation for establishing a professional network in tech!
 - Your classmates will be your number one best resource!
   - During projects
