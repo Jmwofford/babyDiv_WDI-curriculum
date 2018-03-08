@@ -211,5 +211,3 @@ Instances of plagiarism will be evaluated on a case by case basis, but will most
         - the more time you spend fixing, the more you learn
         - receiving an answer stops the learning process
         - only ask a question if you've been stuck for about a day
-
-
