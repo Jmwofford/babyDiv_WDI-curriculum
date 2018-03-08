@@ -43,7 +43,7 @@
 ## Student Introductions
 
 In pairs or groups of three:
-Create and present another student's elevator pitch -- Include
+Create and present another student's elevator pitch -- Include =>
   - Name
   - How did you get here (previous jobs, reason for coming to GA)
   - What do you hope to do with your WDI skills?
@@ -75,6 +75,21 @@ Create and present another student's elevator pitch -- Include
 ## You Are Not Your Code!
 
 https://vimeo.com/85040589
+
+## Team Norming
+
+Values, House Rules, and Logistics
+
+- Values are: emotional, ways to think, mind sets, perspectives
+  Examples:
+  - **Be Bold** - Don't hold ideas in, share with the group
+  - **Honesty over Politeness** - Tell a team mate about stinky breath rather than festering on it all day
+- House Rules are: Dos and Don'ts, preemptively avoid pet peeves
+  - No microwaving fish
+  - No cell phones during team meetings
+- Logistics are: how and when to do things, largely decided by instructors during the course
+  - Working hours 9-5
+  - Stand ups 9:50
 
 ## Classroom Culture
 
