@@ -81,7 +81,6 @@ https://vimeo.com/85040589
 Values, House Rules, and Logistics
 
 - Values are: emotional, ways to think, mind sets, perspectives
-  Examples:
   - **Be Bold** - Don't hold ideas in, share with the group
   - **Honesty over Politeness** - Tell a team mate about stinky breath rather than festering on it all day
 - House Rules are: Dos and Don'ts, preemptively avoid pet peeves
@@ -90,6 +89,14 @@ Values, House Rules, and Logistics
 - Logistics are: how and when to do things, largely decided by instructors during the course
   - Working hours 9-5
   - Stand ups 9:50
+
+### We Do (5 minutes work, 5 minutes discuss) - Create our Team Norms!
+
+Split into groups of 3-4 and come up with:
+- 2+ Team Values
+- 2+ House Rules
+
+We will then come back as a class and create our own new Team Norms!
 
 ## Classroom Culture
 
