@@ -32,7 +32,7 @@ creator:
 
 ---
 
-## YOU DO (15m)
+## YOU DO (15 minutes, 0:15)
 
 Spend the next 15 minutes reading the first 4 sections from this website, Pro Git: https://git-scm.com/book/en/v2
 - Getting Started - About Version Control
@@ -47,7 +47,7 @@ Spend the next 15 minutes reading the first 4 sections from this website, Pro Gi
 
 <br />
 
-### Then, discussing the following questions with your buddy (3m)
+### Then, discussing the following questions with your buddy (5 minutes, 0:20)
   - Assuming that version control systems did not exist, how would you:
     - Share your source code with other developers?
     - Collaborate with other developers
@@ -62,7 +62,7 @@ Spend the next 15 minutes reading the first 4 sections from this website, Pro Gi
 
 ---
 
-## What is Version Control? (5m)
+## What is Version Control? (10 minutes, 0:30)
 * _Version Control_ is the management of changes to documents, computer programs, web sites, and other collections of information.
 
 * _Version Control_ provides:
@@ -97,7 +97,7 @@ Spend the next 15 minutes reading the first 4 sections from this website, Pro Gi
 
 ---
 
-## Git vs GitHub and Version Control - Intro (5m)
+## Git vs GitHub and Version Control - Intro (15 minutes, 0:45)
 
 First things first - Git is not GitHub. This is a common mistake that people make.
 
@@ -152,7 +152,7 @@ You can certainly use Git without GitHub! The Visual Studio Team offers a versio
 
 <br />
 
-## Why is Git tricky to understand? Demo (5m)
+## Why is Git tricky to understand? Demo (10 minutes, 0:55)
 
 Git is tricky to understand because describing 'how' it works, like many things in programming, requires a breadth of technical knowledge. 
 
@@ -203,7 +203,7 @@ We can see that there is a large number of commands, however, during this course
 
 ---
 
-## Let's use Git (25m)
+## Let's use Git (25 minutes, 1:20)
 
 1. First, create a directory on your Desktop:
 
@@ -416,7 +416,7 @@ Once you have committed a file and it becomes "unmodified" then it's contents ar
 
 <br />
 
-### Creating repositories - Codealong (10m)
+### Creating repositories - Codealong (10 minutes, 1:30)
 
 Let's do this together:
 
@@ -438,7 +438,7 @@ Let's do this together:
 git remote add origin + <git@github.com:your-github-name/planets.git>
 ```
 
-## Pushing to a Remote Repository - Codealong (10m)
+## Pushing to a Remote Repository - Codealong (10 minutes, 1:40)
 
 ### What are Remotes? 
 
@@ -491,7 +491,7 @@ Refresh your GitHub repo webpage, and the files should be there.
 
 ---
 
-# Forking and Cloning your first repository (20m)
+# Forking and Cloning your first repository (20 minutes, 2:00)
 
 ## What is forking? Intro
 

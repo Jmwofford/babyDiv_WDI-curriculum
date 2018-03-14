@@ -46,7 +46,7 @@ Turn & Talk: Given your exposure to the command line so far (prework and install
 
 ---------------------------------------------------------------------------
 
-## Background
+## Background (5 minutes, 0:05)
 
 ### What is an Operating System?
 An operating system (OS) is a resource manager. It takes the form of a set of software routines that allow users and application programs to access system resources (e.g. the CPU, memory, disks, printers, network cards, etc.) in a safe, efficient and abstract way.
@@ -61,7 +61,7 @@ An operating system (OS) is a resource manager. It takes the form of a set of so
 * In 2007 OSX became a certified UNIX.
 * Linux is a free open source UNIX OS for PCs that was originally developed in 1991 by Linus Torvalds, a Finnish undergraduate student.
 
-## Why The CLI?
+## Why The CLI? (15 minutes, 0:20)
 
 The CLI has many benefits over a GUI:
 
@@ -94,13 +94,13 @@ After you master the command line you can impress your friends and star in a spy
 
 --------------------------------------------------------------------------------
 
-## Some TERMinology
+## Some TERMinology (5 minutes, 0:25)
 * **Terminal** - the application that presents a command line interface to the user.
 * **Shell** - a command line interpreter that executes the commands that the user types. Common shells are sh, bsh, csh, ksh, bash, fish, and zsh (we will be using bash in this class)
 * **Process** - a program that is currently running on the computer
 * **Application** - a program that consists of one or more processes
 
-## The Basics of CLI
+## The Basics of CLI (15 minutes, 0:40)
 
 You may already be familiar with some of these concepts, but it's worth reviewing them now, cementing the concepts and getting some more practice in.
 
@@ -144,7 +144,7 @@ We won't go deep into environments yet, but everytime a command is run, it may c
 
 --------------------------------------------------------------------------------
 
-## Paths
+## Paths (15 minutes, 0:55)
 ### What is a 'path'?
 
 A path is the description that tells us (or a computer) where a file or directory is on our computer.
@@ -218,7 +218,7 @@ We can use multiple `..` to go up multiple levels:
 
 --------------------------------------------------------------------------------
 
-## The BASH Shell
+## The BASH Shell (25 minutes, 1:20)
 * Important configuration files
   - ~/.bash_profile
   - ~/.bashrc
@@ -278,7 +278,7 @@ NOTE: files that begin with a dot are considered `hidden` files in that they are
 
 --------------------------------------------------------------------------------
 
-## Common Commands
+## Common Commands (20 minutes, 1:40)
 
 ### Getting help / info
 
@@ -308,7 +308,7 @@ of your command. Focus on:
 * mv
 * rm
 
-## Unsafe Commands
+## Unsafe Commands (5 minutes, 1:45)
 
 ### sudo
 
@@ -320,7 +320,7 @@ Generally, you shouldn't need to run commands with sudo in this course. If you'r
 
 `rm` deletes files with no confirmation, and there's no `trash` to recover them from. Use `rm`, and especially `rm -rf` ___with caution!!!___
 
-## WDI Environment
+## WDI Environment (5 minutes, 1:50)
 
 ### Directory Structure
 
@@ -343,13 +343,9 @@ Here's the suggested structure for your WDI directory. Please create the followi
 * pushd
 * popd
 
-## Setting Up Your BASH Prompt
-
-To setup a very nice BASH Prompt, see [LiquidPrompt](liquidprompt.md).
-
 --------------------------------------------------------------------------------
 
-## Homework / Practice
+## Homework / Practice (30 minutes, 2:20)
 
 ### A New Terminal
 
@@ -369,7 +365,7 @@ To setup a very nice BASH Prompt, see [LiquidPrompt](liquidprompt.md).
 
 --------------------------------------------------------------------------------
 
-## Sample Quiz Questions
+## Sample Quiz Questions (10 minutes, 2:30)
 
 - Why would a developer prefer the command line over a GUI?
 - Write a command to list only files beginning with your first name.  Label the parts of the command.

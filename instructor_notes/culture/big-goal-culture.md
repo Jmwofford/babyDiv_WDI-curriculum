@@ -42,10 +42,12 @@
 
 ## Student Introductions
 
-- What's your name?
-- What were you doing previous to WDI?
-- What do you hope to do with your WDI skills?
-- Who is your hero and why? (a parent, a celebrity, an influential person in one’s life)
+In pairs or groups of three:
+Create and present another student's elevator pitch -- Include =>
+  - Name
+  - How did you get here (previous jobs, reason for coming to GA)
+  - What do you hope to do with your WDI skills?
+  - Who is your hero and why? (a parent, a celebrity, an influential person in one’s life)
 
 
 ## Emotional Framing
@@ -65,7 +67,7 @@
 - Hard Work: 80-90hrs/wk minimum
 - The maximum point of learning is right at the edge of learning and panic.
 
-![learning zone](https://i.imgur.com/SqHDJtV.png)
+![learning zone](https://slack-imgs.com/?c=1&url=https%3A%2F%2Fdeliveryimages.acm.org%2F10.1145%2F1140000%2F1132485%2Ffigs%2Ff3.jpg)
 - This experience is a rollercoaster.
 
 ![informed optimism?](https://i.imgur.com/0XjqOPa.png)
@@ -73,6 +75,28 @@
 ## You Are Not Your Code!
 
 https://vimeo.com/85040589
+
+## Team Norming
+
+Values, House Rules, and Logistics
+
+- Values are: emotional, ways to think, mind sets, perspectives
+  - **Be Bold** - Don't hold ideas in, share with the group
+  - **Honesty over Politeness** - Tell a team mate about stinky breath rather than festering on it all day
+- House Rules are: Dos and Don'ts, preemptively avoid pet peeves
+  - No microwaving fish
+  - No cell phones during team meetings
+- Logistics are: how and when to do things, largely decided by instructors during the course
+  - Working hours 9-5
+  - Stand ups 9:50
+
+### We Do (5 minutes work, 5 minutes discuss) - Create our Team Norms!
+
+Split into groups of 3-4 and come up with:
+- 2+ Team Values
+- 2+ House Rules
+
+We will then come back as a class and create our own new Team Norms!
 
 ## Classroom Culture
 
@@ -85,9 +109,10 @@ https://vimeo.com/85040589
 
 ## Mentorship Culture
 
-- Take care of each other
-- Benchmarking; some are good at one thing, others at another. Leverage each other's strengths.
-- Teaching is the best way of truly solidifying your understanding of a concept.
+- Take care of each other.
+- Benchmark only against yourself; some are good at one thing, others at another. 
+- Leverage each other's strengths.
+- Prove your understanding by teaching others.
 - Your classmates will be the best foundation for establishing a professional network in tech!
 - Your classmates will be your number one best resource!
   - During projects
