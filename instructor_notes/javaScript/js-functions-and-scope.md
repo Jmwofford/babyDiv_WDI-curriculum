@@ -23,7 +23,7 @@
 
 ---
 <a name="opening"></a>
-## Introduction to Functions (25 min)
+## Introduction to Functions (25 min, 0:25)
 
 ![Imgur](https://i.imgur.com/ylb6WX9.gif)
 
@@ -45,7 +45,7 @@ Another important trait of functions is that they are similar to objects or stri
 
 ---
 <a name="codealong1"></a>
-## Function Declaration (30 min)
+## Function Declaration (30 min, 0:55)
 
 Before we call, or "use", a function, we must define it. In JavaScript, functions can be defined in several ways. Two common methods are __function declarations__ and __function expressions__.
 
@@ -147,20 +147,20 @@ person.speak();
 
 ![Imgur](https://i.imgur.com/ylb6WX9.gif)
 
-&#x1F535; **Activity (4 min)**
+&#x1F535; **Activity (4 min, 0:59)**
 
 * Write a function that logs "I come from out of a function!" to the console.
 * Invoke the function
 * **Give me a thumbs up in Slack when you're done**
 
 
-&#x1F535; **Activity (4 min)**
+&#x1F535; **Activity (4 min, 1:03)**
 
 * Write a function that logs the sum of 2 + 2
 * Invoke the function
 * **Give me a thumbs up in Slack when you're done**
 
-&#x1F535; **Activity (2 min)**
+&#x1F535; **Activity (2 min, 1:05)**
 
 EXPERIMENT
 
@@ -170,7 +170,7 @@ EXPERIMENT
 
 <br>
  
-## Parameters (25 min)
+## Parameters (25 min, 1:30)
 
 If a function did the same thing every time it was called, it wouldn't be a very powerful codebase. We would also have to write a new function for each new feature in order to enable additional behaviors in our application:
 
@@ -230,7 +230,7 @@ doSomething(argument);
 
 <br>
 
-&#x1F535; **Activity (5 min)**
+&#x1F535; **Activity (5 min, 1:35)**
 
 * Write a function that takes a parameter. The function should simply console.log() the value of the parameter.
 * Invoke the function with an argument.
@@ -238,7 +238,7 @@ doSomething(argument);
 
 <br>
 
-**Multiple parameters (5 mins)**
+**Multiple parameters (5 mins, 1:40)**
 
 We can also use multiple parameters in our functions. A function can take any number of parameters.
 
@@ -259,7 +259,7 @@ multiply(4, 4);
 
 ![Imgur](https://i.imgur.com/ylb6WX9.gif)
 
-&#x1F535; **Activity (15 min)**
+&#x1F535; **Activity (15 min, 1:55)**
 
 **In Pairs**
 
@@ -285,7 +285,7 @@ EXPERIMENT
 ---
 <a name="codealong3"></a>
 
-## The Return Statement (25 min)
+## The Return Statement (25 min, 2:20)
 
 Sometimes we don't want to print to the console or update the DOM, rather, we want to update a variable or even call another function. This requires a `return` statement. When we return something, it ends the function's execution and "spits out" what we are returning. We can then store this returned value in another variable...
 
@@ -335,7 +335,7 @@ By default, JavaScript functions will return an `undefined` value. To test this,
 
 ![Imgur](https://i.imgur.com/ylb6WX9.gif)
 
-&#x1F535; **Activity (20 min)**
+&#x1F535; **Activity (20 min, 2:40)**
 
 **In Pairs**
 
@@ -355,7 +355,7 @@ PROBLEM SOLVING
 ---
 <a name="introduction1"></a>
 
-## Introduction to Scope (25 min)
+## Introduction to Scope (25 min, 3:05)
 
 Scope is the set of variables you have access to. As we learned in the beginning of this class, JavaScript reads from top to bottom. Sometimes, however, we declare variables inside functions (just like arguments), which aren't accessible in other parts of our code. This is the concept of scope.
 
@@ -384,7 +384,7 @@ A variable with local scope cannot be referenced outside of that function.
 
 <a name="codealong4"></a>
 
-## Local and Global Scope Usage (25 mins)
+## Local and Global Scope Usage (25 mins, 3:30)
 
 Take a look at the code below:
 
@@ -446,7 +446,7 @@ add()
 
 ---
 
-### `this` - Codealong (5 mins)
+### `this` - Codealong (5 mins, 3:35)
 
 
 
@@ -488,7 +488,7 @@ wdi.whatsTheName();
 
 **IMPORTANT**: Notice that when we use an object method, we use that ES5 function expressions.  This is because the newer arrow functions do not bind to `this`.  In other words, if you need to use a function that includes the `this` keyword, make sure to use the anonymous function syntax.
 
-## Independent Practice #1 - Write some functions (20 mins)
+## Independent Practice #1 - Write some functions (20 mins, 3:55)
 
 Work through as many as these exercises as you can within the next 15 mins - use the `js-independent-practice starter-code` provided in your student_labs folder!
 
@@ -526,7 +526,7 @@ about punctuation.
 
 <br>
 
-## Independent Practice #2 - JS Functions Lab 
+## Independent Practice #2 - JS Functions Lab (30 min, 4:25)
 
 [js-functions-lab](../../labs/javaScript/js-functions) in student labs folder
 
@@ -534,7 +534,7 @@ about punctuation.
 <br>
 
 <a name="lab1"></a>
-## BONUS Independent Practice #3 - Rolling Dice: Lab
+## BONUS Independent Practice #3 - Rolling Dice: Lab (30 min, 4:55)
 [JavaScript Dice](https://git.generalassemb.ly/atl-wdi/wdi-curriculum/blob/master/labs/javaScript/js-dice)
 
 For this lab, you'll be creating a page that displays a random update of two dice every time the user hits the "Roll Dice" button. To get started, open the [app.js file](https://git.generalassemb.ly/atl-wdi/wdi-curriculum/blob/master/labs/javaScript/js-dice/starter-code/js/app.js). Use the HTML and CSS code included in the starter code folder.
@@ -548,7 +548,7 @@ Before creating code, be sure to write down the pseudocode for the exercise!
 
 <a name="conclusion"></a>
 
-## Conclusion (5 mins)
+## Conclusion (5 mins, 5:00)
 
 The only way to master JavaScript scope is to practice. You'll have a lot of confusing errors with the JavaScript you write at the beginning of your journey into programming! This will force you to name variables and functions the right way to make sure there is no conflict.
 
