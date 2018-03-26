@@ -2,6 +2,10 @@
 
 We're going to building a fridge management app to keep track of all of our food and drink using ActiveRecord. It may be helpful to review the docs for [ActiveRecord Basics](http://edgeguides.rubyonrails.org/active_record_basics.html) and [ActiveRecord Associations](http://edgeguides.rubyonrails.org/association_basics.html) for this.
 
+Make sure to go into your labs or homework folder and run `rails new fridge_app -d postgresql`.  For this app, you will be using the build in ERB view engine to create very simple views.  ERB has several built in helpers... for example, you can build forms with ease. Make sure to check out the link here: http://edgeguides.rubyonrails.org/form_helpers.html
+
+This exercise will prepare you to build multiple models, link them together in a one-to-many relationship, and add validation to the application.
+
 ### Menu Spec
 
 Your program should have a menu that allows you to perform the following actions:
