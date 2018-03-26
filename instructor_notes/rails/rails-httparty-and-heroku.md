@@ -48,13 +48,11 @@ Let's make a basic api call in Ruby.
 require 'HTTParty'
 require 'pp'
 
-response = HTTParty.get('http://www.catfact.info/api/v1/facts.json')
+response = HTTParty.get('https://catfact.ninja/facts?limit=10')
 
 pp response.code, response.message, response.headers.inspect
 
-response.each_with_index do |res, index|
-  pp res
-end
+pp response["data"]
 ```
 
 > Hold up, what is require 'pp' supposed to mean?
@@ -75,7 +73,7 @@ class CatFacts
   include HTTParty
   attr_accessor :facts
 
-  base_uri 'http://www.catfact.info/api/v1'
+  base_uri 'https://catfact.ninja'
   default_params output: :json
 
   def initialize(facts)
@@ -83,16 +81,16 @@ class CatFacts
   end
 
   def random_fact
-    @facts.sample["details"]
+    @facts.sample["fact"]
   end
   
   # Class Methods
-  def self.fetch(page, per_page)
-    response = get('/facts.json', query: { page: page, per_page: per_page })
+  def self.fetch(limit)
+    response = get('/facts', query: { limit: limit })
 
     if response.success?
       puts "success"
-      self.new(response["facts"])
+      self.new(response["data"])
     else
       puts "failure"
       raise response.response
