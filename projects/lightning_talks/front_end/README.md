@@ -7,7 +7,7 @@ You should aim to answer the following questions:
 - What problem does the library solve?
 - How do you use it?
 
-You can sign up <a href="https://docs.google.com/spreadsheets/d/1GRwFH3TNqWq_CewYZIi-BUNxvdsNKUlsO2pxQkY7T0w/edit?usp=sharing">here</a>.
+You can sign up <a href="https://docs.google.com/spreadsheets/d/1SuaG9DA391Czv-C67JGEV42wnPDq1rNTeQjAyotgQXs/edit?usp=sharing">here</a>.
 
 ## Topics:
 
