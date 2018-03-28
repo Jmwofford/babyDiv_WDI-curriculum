@@ -1,0 +1,23 @@
+{
+  "todos": [{
+    "id": 1,
+    "task": "clean room",
+    "completed": false
+  }, {
+    "id": 2,
+    "task": "read books",
+    "completed": true
+  }, {
+    "id": 3,
+    "task": "buy groceries",
+    "completed": false
+  }, {
+    "id": 4,
+    "task": "meal prep",
+    "completed": false
+  }, {
+    "id": 5,
+    "task": "master react again",
+    "completed": false
+  }]
+}

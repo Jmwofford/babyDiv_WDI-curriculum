@@ -48,7 +48,7 @@ Let's make a basic api call in Ruby.
 require 'HTTParty'
 require 'pp'
 
-response = HTTParty.get('http://www.catfact.info/api/v1/facts.json')
+response = HTTParty.get('https://www.catfact.ninja/facts?limit=10')
 
 pp response.code, response.message, response.headers.inspect
 
