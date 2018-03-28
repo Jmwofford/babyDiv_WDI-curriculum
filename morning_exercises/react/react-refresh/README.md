@@ -1,6 +1,6 @@
 # React Refresh!
 
-It's been a few weeks since the last time we built a UI using React.  This morning, use `create-react-app` to build a basic ToDo list.
+It's been a few weeks since the last time we built a UI using React.  This morning, use `create-react-app` to build a basic ToDo list.  Example solution is provided in the `todo` directory.
 
 Requirements:
 
