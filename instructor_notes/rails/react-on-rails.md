@@ -54,7 +54,7 @@ This sets up our Ruby on Rails API and generates our file structure.  At this po
 {
   "name": "YOUR PROJECT NAME",
   "engines": {
-    "node": "8.7.0"
+    "node": "9.9.0"
   },
   "scripts": {
     "build": "cd client && npm install && npm run build && cd ..",
