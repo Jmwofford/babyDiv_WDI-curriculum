@@ -216,13 +216,17 @@ export default connect(mapStateToProps)(Todos)
 
 8. **Create an Add Todo Action**: So far we are only have a static global state, which is impossible to update.  In order to update it, we will need to do a few things.  Our first step for adding updates is to build an action creator that will dispatch a new todo. Remember that actions are require a `type` in order for reducers to pick up any pending changes.
 
+Notice you will need to install a new library called uuid. This will generate a **U**niversally **Unique** **ID** for each new todo list item in our app.
+
 ```js
 // ./actions/todoActions
+import uuid from 'uuid'
+
 export function addTodo (task) {
   return {
     type: 'ADD_TODO',
     todo: {
-      id: Math.floor(Math.random() * 5000), //replace with UUID,
+      id: uuid(),
       task: task,
       completed: false
     }
