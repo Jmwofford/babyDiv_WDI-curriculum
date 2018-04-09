@@ -35,8 +35,13 @@ PUT, and DELETE
 * **Include User Stories**
 * **Include ERDs**
 * Have **semantically clean HTML and CSS**
-* Have at least **100 lines of CSS** (not including whitespace)
+* Polished an dprofessional looking front-end, either using custom CSS (via styled-components) or a library. Or Both!!
 * **Be deployed online** and accessible to the public via Heroku
+
+Stretch Goals: 
+ * Auth using Devise
+ * Redux
+ * Automated Tests Using Jest / Rails
 
 ---
 
