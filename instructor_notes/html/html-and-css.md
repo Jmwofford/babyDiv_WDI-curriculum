@@ -139,7 +139,7 @@ The `body` element contains the information actually presented to the user; it r
 
 Before we start adding content to the body lets create a file localy for our work so we can open it.
 
-Create a directory in you sandbox called `html-and-css`
+Create a directory in you in-class directory called `html-and-css`
 
 ```bash
 cd ~/ga/wdi/in-class
@@ -147,11 +147,11 @@ mkdir html-and-css
 cd html-and-css
 ```
 
-Create a file `index.html` and open it with atom
+Create a file `index.html` and open it with VSCode
 
 ```bash
 touch index.html
-atom .
+code .
 ```
 
 Note: All code for this lesson is available in [this repo](https://github.com/ga-wdi-exercises/html-css-in-class/tree/master) with branches for each step.
