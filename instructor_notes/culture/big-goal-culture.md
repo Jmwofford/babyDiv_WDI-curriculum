@@ -43,7 +43,7 @@
 ## Student Introductions
 
 In pairs or groups of three:
-Create and present another student's elevator pitch -- Include =>
+Create and present another student's elevator pitch -- Include:
   - Name
   - How did you get here (previous jobs, reason for coming to GA)
   - What do you hope to do with your WDI skills?

@@ -22,6 +22,8 @@ competencies: Course Prep
 
 
 ## Installing Homebrew
+![](https://brew.sh/img/homebrew-256x256.png)
+
 #### What is Homebrew?
 
 Brew is a piece of software that runs in the Terminal. The Homebrew commands can be run from any directory on your computer. Using the Homebrew command `brew` you can install other pieces of software, frequently referred to as packages.
@@ -46,9 +48,11 @@ According to the documentation we simple have to paste the following command int
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   ```
 
-  ![](.md_resources/brew_install.gif)
+  After a minute or so you should see a message like this one.  (Don't worry if your colors are slightly different)
 
-2. Restart your Terminal
+  ![](../images/brew-install.png)
+
+2. We've successfully installed our first command line app! Restart your Terminal and lets use `brew` to install other tools.
 
 3. To test that brew successfully installed we need to try and run the base command. If you run `$ brew` in the Terminal you should see what looks like a manual page. This is almost ubiquitous for Terminal applications.
 
@@ -61,7 +65,7 @@ According to the documentation we simple have to paste the following command int
 
 If brew is used to install packages you might guess what our next step is... We're going to install a package!
 
-We're going install Node using brew. We're going to learn a lot about Node over the next two months.
+Node.js is one of the major tools we are going to use throughout this course.  We don't need to know what it does just yet, but lets go ahead and get it installed using brew:
 
 1. Run the following command from any directory:
 
@@ -69,14 +73,25 @@ We're going install Node using brew. We're going to learn a lot about Node over 
   brew install node
   ```
 
+2. If everything goes well, you should see something like this... 
+
+> Don't worry too much about anything that says 'WARNING'.  As a rule of thumb, warnings don't necessarily mean that it's failed. If you get 'ERRORS', make sure to grab an instructor.
+
+![](https://media.giphy.com/media/T98d0GwaZvszASGmRQ/giphy.gif)
+
 ## Installing Brew Cask
 
-#### What is brew cask?
+#### What is Brew Cask?
 
-Where Homebrew lets us install packages and tools for the Terminal and other low level processes, brew cask let's us install Apps. Things like Chrome, Atom or Sublime Text, Spectacle, Slack and so on!
+Where Homebrew lets us install packages and tools for the Terminal and other low level processes, `brew cask` let's us install Apps. Things like Chrome, Atom or Sublime Text, Spectacle, Slack and so on!
 
+It's an important but simple difference:
 
-#### To install brew cask
+  *Use Brew To Install Languages and Command Line Tools* aka Tools without a UI (User Interface)
+
+  *Use Brew Cask To Install Apps* aka Tools with a UI (User Interface)
+
+#### To Install Brew Cask
 
 According the [documentation](https://caskroom.github.io/) we need to run the following command in our terminal and then restart.
 
@@ -88,9 +103,16 @@ According the [documentation](https://caskroom.github.io/) we need to run the fo
 
 2. Restart your terminal.
 
+> Did You Know: You don't have to close out the program in order to restart your terminal.  Try writing `source ~/.bash_profile` instead.
+
 Now you'll be able to install regular applications like Chrome using the command `$ brew cask install`
 
-You should already have VS Code installed but I'm going to ask you to uninstall it by dragging the application to the trash and emptying it. Then we're going to install VS Code using brew cask.
+
+### Installing Our Text Editor
+
+<img src="https://user-images.githubusercontent.com/49339/32078472-5053adea-baa7-11e7-9034-519002f12ac7.png" style="height: 200px"/>
+
+You may already have VS Code or another text editor installed but I'm going to ask you to uninstall it by dragging the application to the trash and emptying it. Instead, we're going to install VS Code using brew cask.
 
 ```bash
 $ brew cask install visual-studio-code
@@ -104,9 +126,11 @@ Let's test it out.
 
 We're going to install a few more applications using brew cask. 
 
-#### Spectacle
+# Spectacle
 
-The first is an App called [Spectacle](https://github.com/eczarny/spectacle) which is going to make organizing your screen much simpler!
+<img src="https://media.giphy.com/media/O12YB8XiOHIcw/giphy.gif"/>
+
+The first is an app called [Spectacle](https://github.com/eczarny/spectacle) which is going to make organizing your screen much simpler!
 
 1. using `brew cask`:
   ```bash
@@ -119,12 +143,26 @@ The first is an App called [Spectacle](https://github.com/eczarny/spectacle) whi
 
   Click the padlock in the bottom left corner so you can make changes and then check the box next to Spectacle to allow the app to control your computer.
 
-  Spectacle gives you the ability to move your windows around quickly so you're not wasting time dragging your mouse around
-  ![](.md_resources/specs.gif)
+  Spectacle gives you the ability to move your windows around quickly so you're not wasting time dragging your mouse around.
   
-#### Flycut
+  Here are all of the shortcuts that Spectacle gives you
+
+  <img src='../images/flycut-shortcuts.png'/>
+
+| Symbol        | Meaning           | 
+| ------------- |:-------------:| 
+| ⌘  | Command Key | 
+| ⌥  | Option Key | 
+| ⌃  | Control Key | 
+| ⇧  | Shift Key | 
+
+# Flycut
+
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Purple/v4/47/77/1c/47771c05-6b8a-a3b2-b557-575c91e1f320/source/512x512bb.png" style="width: 200px">
 
 The second is a clipboard manager called [Flycut](https://github.com/TermiT/Flycut). This will allow us to copy multiple things in a row and then paste all of them later, instead of the standard one at a time.
+
+
 
 1. using `brew cask`:
 
@@ -136,7 +174,10 @@ The second is a clipboard manager called [Flycut](https://github.com/TermiT/Flyc
 
 3. Select "Launch Flycut on Login" from the Flycut preferences. (It's the red icon near your clock.)
 
-#### iTerm
+4. Now when you press `⌘ + ⇧ + V` you can select from your 40 most recent items on your clip board
+
+# iTerm
+<img src="https://dl2.macupdate.com/images/icons256/40028.png?d=1524472110">
 
 Finally, we'll install a new, upgraded Terminal application called `iTerm`.
 1. using `brew cask`:
@@ -151,13 +192,14 @@ Finally, we'll install a new, upgraded Terminal application called `iTerm`.
 
 4. Go to the `Profiles` tab and under the `Working Directory` section, select "Reuse previous session's directory." This will enable us to open multiple terminal panes easily within the same root folder. This will become more and more useful for us over the life of the class.
 
-### Extra: Command Line Helpers w/ Bash-It
+# Extra: Command Line Helpers w/ Bash-It
 
 You might notice the instructors command line looks a little different than what you have.  Over time, you may find all sorts of tools and scripts to customize your development environment.  
 
 One popular tool is called [Bash-It](https://github.com/Bash-it/bash-it). Bash-it is a collection of a lot of different scripts and tools to help you be a more effective developer.  It includes helpers that keep track of git, provide more colors, and is highly customizable.  
 
 You can install bash-it by running the following commands
+
 ```
 $ git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
 $ ~/.bash_it/install.sh --silent

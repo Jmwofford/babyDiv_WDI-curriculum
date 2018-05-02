@@ -218,7 +218,7 @@ We can use multiple `..` to go up multiple levels:
 
 --------------------------------------------------------------------------------
 
-## The BASH Shell (25 minutes, 1:20)
+## The BASH Shell (25 minutes, 1:20) 
 * Important configuration files
   - ~/.bash_profile
   - ~/.bashrc
