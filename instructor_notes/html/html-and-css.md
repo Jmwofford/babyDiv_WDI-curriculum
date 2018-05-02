@@ -139,7 +139,7 @@ The `body` element contains the information actually presented to the user; it r
 
 Before we start adding content to the body lets create a file localy for our work so we can open it.
 
-Create a directory in you in-class directory called `html-and-css`
+Create a directory in you `in-class` directory called `html-and-css`
 
 ```bash
 cd ~/ga/wdi/in-class
