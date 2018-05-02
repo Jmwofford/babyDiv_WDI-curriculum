@@ -20,7 +20,7 @@
   - Who are you?
   - Roles:
     - Introduce Morning Exercises and Homework
-    - Leading Some Lessons
+    - Leading Labs
     - Debugging Support
 
 3. Evening TAs
