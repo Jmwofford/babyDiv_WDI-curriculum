@@ -324,7 +324,7 @@ We use CSS to tell browsers how we would like for them to **paint** or display t
 To get started writing styles we will create a new file.
 
 ```bash
-touch ~/wdi/in-class/css-and-html/style.css
+touch ~/ga/wdi/in-class/css-and-html/style.css
 ```
 > notice, this is an absolute path, if you're in the `css-and-html` directory you can just `touch style.css`
 
