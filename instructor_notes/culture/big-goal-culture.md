@@ -20,7 +20,7 @@
   - Who are you?
   - Roles:
     - Introduce Morning Exercises and Homework
-    - Leading Some Lessons
+    - Leading Labs
     - Debugging Support
 
 3. Evening TAs
@@ -200,15 +200,6 @@ Plagiarism can unintentionally occur.  While it is fine to use outside sources, 
 If an instructor is in doubt of a students work or has evidence of plagiarism, the student will be asked to justify the work they've submitted. This often is in the context of making you explain your code line by line. Should they be unable to show the work they have claimed as their own is in fact theirs, the student will face disciplinary action.
 
 Instances of plagiarism will be evaluated on a case by case basis, but will most likely result in removal from the program
-
-## Stand-Up
-
-- Yesterday (What's been a win since your last Standup?)
-- Blockers (What is something you'd like to see again since your last standup? What is still challenging you?)
-- Today's wins (What would you like to accomplish today?)
-- `Stand-ups should focus on generating ACTIONABLE goals for each day.`
-- More info here (We will review this tomorrow)
-  - [Stand Ups](./stand-ups.md)
 
 ## Common Student Worries
 1. I'm making a lot of mistakes

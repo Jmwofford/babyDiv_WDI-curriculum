@@ -142,7 +142,7 @@ Before we start adding content to the body lets create a file localy for our wor
 Create a directory in you sandbox called `html-and-css`
 
 ```bash
-cd ~/wdi/sandbox
+cd ~/ga/wdi/in-class
 mkdir html-and-css
 cd html-and-css
 ```
@@ -156,7 +156,7 @@ atom .
 
 Note: All code for this lesson is available in [this repo](https://github.com/ga-wdi-exercises/html-css-in-class/tree/master) with branches for each step.
 
-In `index.html` type `html` and hit **tab**.
+In `index.html` type `!` and hit **tab**.
 You will see the same boilerplate from above.
 
 Add the paragraph we used as an example to the page body and give the page a title.
@@ -324,7 +324,7 @@ We use CSS to tell browsers how we would like for them to **paint** or display t
 To get started writing styles we will create a new file.
 
 ```bash
-touch ~/wdi/sandbox/css-and-html/style.css
+touch ~/wdi/in-class/css-and-html/style.css
 ```
 > notice, this is an absolute path, if you're in the `css-and-html` directory you can just `touch style.css`
 

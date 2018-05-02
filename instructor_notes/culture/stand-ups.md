@@ -36,3 +36,13 @@ Once your team has gone around and answered these questions individually, you wi
 Once your team has come up with a single goal for the day, we will go around the room and put each team's goal on the board.
 
 This process will let us set the tone for the day and make sure we are accomplishing at least 2-3 meaningful goals every single day. This also sets up an easy way for us to track our progress as a class.
+
+
+## Stand-Up
+
+- Yesterday (What's been a win since your last Standup?)
+- Blockers (What is something you'd like to see again since your last standup? What is still challenging you?)
+- Today's wins (What would you like to accomplish today?)
+- `Stand-ups should focus on generating ACTIONABLE goals for each day.`
+- More info here (We will review this tomorrow)
+  - [Stand Ups](./stand-ups.md)
