@@ -142,7 +142,7 @@ Before we start adding content to the body lets create a file localy for our wor
 Create a directory in you sandbox called `html-and-css`
 
 ```bash
-cd ~/wdi/sandbox
+cd ~/ga/wdi/in-class
 mkdir html-and-css
 cd html-and-css
 ```
@@ -324,7 +324,7 @@ We use CSS to tell browsers how we would like for them to **paint** or display t
 To get started writing styles we will create a new file.
 
 ```bash
-touch ~/wdi/sandbox/css-and-html/style.css
+touch ~/wdi/in-class/css-and-html/style.css
 ```
 > notice, this is an absolute path, if you're in the `css-and-html` directory you can just `touch style.css`
 
