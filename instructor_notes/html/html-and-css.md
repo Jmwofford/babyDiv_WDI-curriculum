@@ -272,7 +272,7 @@ I've gone with `html5logo.png`.
 Move the file from your Downloads folder to the `css-and-html` directory.
 
 ```bash
-mv ~/Downloads/html5logo.png ~/wdi/sandbox/css-and-html/
+mv ~/Downloads/html5logo.png ~/ga/wdi/in-class/css-and-html/
 ```
 
 We tell the browser to request an image and load it into the page by giving an image tag's source attribute a path to the image.
