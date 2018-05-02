@@ -22,7 +22,9 @@ competencies: Course Prep
 
 
 ## Installing Homebrew
-![](https://brew.sh/img/homebrew-256x256.png)
+<p align="center">
+  ![](https://brew.sh/img/homebrew-256x256.png | width=100)
+</p>
 
 #### What is Homebrew?
 
