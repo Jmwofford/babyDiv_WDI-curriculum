@@ -156,7 +156,7 @@ atom .
 
 Note: All code for this lesson is available in [this repo](https://github.com/ga-wdi-exercises/html-css-in-class/tree/master) with branches for each step.
 
-In `index.html` type `html` and hit **tab**.
+In `index.html` type `!` and hit **tab**.
 You will see the same boilerplate from above.
 
 Add the paragraph we used as an example to the page body and give the page a title.
