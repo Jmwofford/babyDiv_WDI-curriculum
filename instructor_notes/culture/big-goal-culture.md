@@ -201,15 +201,6 @@ If an instructor is in doubt of a students work or has evidence of plagiarism, t
 
 Instances of plagiarism will be evaluated on a case by case basis, but will most likely result in removal from the program
 
-## Stand-Up
-
-- Yesterday (What's been a win since your last Standup?)
-- Blockers (What is something you'd like to see again since your last standup? What is still challenging you?)
-- Today's wins (What would you like to accomplish today?)
-- `Stand-ups should focus on generating ACTIONABLE goals for each day.`
-- More info here (We will review this tomorrow)
-  - [Stand Ups](./stand-ups.md)
-
 ## Common Student Worries
 1. I'm making a lot of mistakes
 2. Imposter syndrome
