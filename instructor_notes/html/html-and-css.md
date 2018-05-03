@@ -139,7 +139,7 @@ The `body` element contains the information actually presented to the user; it r
 
 Before we start adding content to the body lets create a file localy for our work so we can open it.
 
-Create a directory in you sandbox called `html-and-css`
+Create a directory in you `in-class` directory called `html-and-css`
 
 ```bash
 cd ~/ga/wdi/in-class
@@ -147,11 +147,11 @@ mkdir html-and-css
 cd html-and-css
 ```
 
-Create a file `index.html` and open it with atom
+Create a file `index.html` and open it with VSCode
 
 ```bash
 touch index.html
-atom .
+code .
 ```
 
 Note: All code for this lesson is available in [this repo](https://github.com/ga-wdi-exercises/html-css-in-class/tree/master) with branches for each step.
@@ -272,7 +272,7 @@ I've gone with `html5logo.png`.
 Move the file from your Downloads folder to the `css-and-html` directory.
 
 ```bash
-mv ~/Downloads/html5logo.png ~/wdi/sandbox/css-and-html/
+mv ~/Downloads/html5logo.png ~/ga/wdi/in-class/css-and-html/
 ```
 
 We tell the browser to request an image and load it into the page by giving an image tag's source attribute a path to the image.
@@ -324,7 +324,7 @@ We use CSS to tell browsers how we would like for them to **paint** or display t
 To get started writing styles we will create a new file.
 
 ```bash
-touch ~/wdi/in-class/css-and-html/style.css
+touch ~/ga/wdi/in-class/css-and-html/style.css
 ```
 > notice, this is an absolute path, if you're in the `css-and-html` directory you can just `touch style.css`
 

@@ -30,6 +30,11 @@ creator:
 
 <br />
 
+## Installing Git
+
+In order to install and use Git, make sure that you install it via Brew.  It's as easy as typing this command in the terminal: 
+`brew install git`
+
 ---
 
 ## YOU DO (15 minutes, 0:15)

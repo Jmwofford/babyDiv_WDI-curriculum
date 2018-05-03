@@ -22,7 +22,9 @@ competencies: Course Prep
 
 
 ## Installing Homebrew
-![](https://brew.sh/img/homebrew-256x256.png)
+<p align="center">
+  <img width="250" src="https://brew.sh/img/homebrew-256x256.png">
+</p>
 
 #### What is Homebrew?
 
@@ -31,7 +33,7 @@ Brew is a piece of software that runs in the Terminal. The Homebrew commands can
 We'll use it to install all kinds of things throughout WDI: from Git and Node to Ruby and Rails.
 
 
-#### To install homebrew
+#### To Install Homebrew
 
 Here is the link to the [homebrew documentation](http://brew.sh/), which explain what homebrew is, how to use it, and how to install it.
 
@@ -50,7 +52,9 @@ According to the documentation we simple have to paste the following command int
 
   After a minute or so you should see a message like this one.  (Don't worry if your colors are slightly different)
 
-  ![](../images/brew-install.png)
+  <p align="center">
+    <img width="450" src="../images/brew-install.png">
+  </p>
 
 2. We've successfully installed our first command line app! Restart your Terminal and lets use `brew` to install other tools.
 
@@ -77,7 +81,9 @@ Node.js is one of the major tools we are going to use throughout this course.  W
 
 > Don't worry too much about anything that says 'WARNING'.  As a rule of thumb, warnings don't necessarily mean that it's failed. If you get 'ERRORS', make sure to grab an instructor.
 
-![](https://media.giphy.com/media/T98d0GwaZvszASGmRQ/giphy.gif)
+<p align="center">
+  <img width="450" src="https://media.giphy.com/media/T98d0GwaZvszASGmRQ/giphy.gif">
+</p>
 
 ## Installing Brew Cask
 
@@ -110,7 +116,8 @@ Now you'll be able to install regular applications like Chrome using the command
 
 ### Installing Our Text Editor
 
-<img src="https://user-images.githubusercontent.com/49339/32078472-5053adea-baa7-11e7-9034-519002f12ac7.png" style="height: 200px"/>
+<img src="https://user-images.githubusercontent.com/49339/32078472-5053adea-baa7-11e7-9034-519002f12ac7.png" height="200px"/>
+
 
 You may already have VS Code or another text editor installed but I'm going to ask you to uninstall it by dragging the application to the trash and emptying it. Instead, we're going to install VS Code using brew cask.
 
@@ -128,7 +135,7 @@ We're going to install a few more applications using brew cask.
 
 # Spectacle
 
-<img src="https://media.giphy.com/media/O12YB8XiOHIcw/giphy.gif"/>
+<img src="https://media.giphy.com/media/O12YB8XiOHIcw/giphy.gif" height="200px"/>
 
 The first is an app called [Spectacle](https://github.com/eczarny/spectacle) which is going to make organizing your screen much simpler!
 
@@ -158,7 +165,7 @@ The first is an app called [Spectacle](https://github.com/eczarny/spectacle) whi
 
 # Flycut
 
-<img src="https://is1-ssl.mzstatic.com/image/thumb/Purple/v4/47/77/1c/47771c05-6b8a-a3b2-b557-575c91e1f320/source/512x512bb.png" style="width: 200px">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Purple/v4/47/77/1c/47771c05-6b8a-a3b2-b557-575c91e1f320/source/512x512bb.png" width="200px">
 
 The second is a clipboard manager called [Flycut](https://github.com/TermiT/Flycut). This will allow us to copy multiple things in a row and then paste all of them later, instead of the standard one at a time.
 
@@ -177,7 +184,7 @@ The second is a clipboard manager called [Flycut](https://github.com/TermiT/Flyc
 4. Now when you press `⌘ + ⇧ + V` you can select from your 40 most recent items on your clip board
 
 # iTerm
-<img src="https://dl2.macupdate.com/images/icons256/40028.png?d=1524472110">
+<img src="https://dl2.macupdate.com/images/icons256/40028.png?d=1524472110" width="200">
 
 Finally, we'll install a new, upgraded Terminal application called `iTerm`.
 1. using `brew cask`:
