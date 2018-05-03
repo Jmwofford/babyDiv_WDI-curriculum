@@ -202,6 +202,7 @@ If an instructor is in doubt of a students work or has evidence of plagiarism, t
 Instances of plagiarism will be evaluated on a case by case basis, but will most likely result in removal from the program
 
 ## Common Student Worries
+
 1. I'm making a lot of mistakes
 2. Imposter syndrome
 3. I don't "do" math
