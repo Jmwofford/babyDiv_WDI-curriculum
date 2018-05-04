@@ -269,10 +269,10 @@ I've gone with `html5logo.png`.
 
 ![HTML5 Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png)
 
-Move the file from your Downloads folder to the `css-and-html` directory.
+Move the file from your Downloads folder to the `html-and-css` directory.
 
 ```bash
-mv ~/Downloads/html5logo.png ~/ga/wdi/in-class/css-and-html/
+mv ~/Downloads/html5logo.png ~/ga/wdi/in-class/html-and-css/
 ```
 
 We tell the browser to request an image and load it into the page by giving an image tag's source attribute a path to the image.
