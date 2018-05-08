@@ -1,6 +1,3 @@
-# Typeracer
-
-Compete in some Typeracer races and post screenshots to Schoology of your three highest WPM scores.
 
 # A Smarter Way to Learn JavaScript (ch 1-5)
 

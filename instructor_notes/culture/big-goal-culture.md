@@ -47,7 +47,7 @@ Create and present another student's elevator pitch -- Include:
   - Name
   - How did you get here (previous jobs, reason for coming to GA)
   - What do you hope to do with your WDI skills?
-  - Who is your hero and why? (a parent, a celebrity, an influential person in one’s life)
+  - What is an interesting thing about you?
 
 
 ## Emotional Framing
