@@ -11,7 +11,7 @@ your respective GitHub accounts.
 
 1. Go to https://git.generalassemb.ly and create a new account.
   - git.generalassemb.ly is where you will manage your homework and work through GA specific exercises.
-  - *We recommend using the same username and email as your Github account.*
+  - **We recommend using the same username and email as your Github account.**
   
 2. Go to https://www.github.com and create a new account (or log into your existing one)
   - We will use this site for hosting projects and looking at tools available to the open source community.
