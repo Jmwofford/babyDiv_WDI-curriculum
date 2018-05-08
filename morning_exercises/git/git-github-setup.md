@@ -39,6 +39,12 @@ $ git config --get user.email
 
 - should output your email
 
+3. Add some config items that will assist with making sure all your changes get detected by git, and that git knows that vscode is your editor of choice.
+
+```
+git config --global core.ignorecase false
+git config --global mergetool.vscode.cmd "code --wait $MERGED"
+```
 
 ## Create a Github Enterprise account.
 
