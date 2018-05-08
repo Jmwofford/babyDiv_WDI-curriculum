@@ -2,10 +2,19 @@
 
 # Git & GitHub (15 minutes)
 
-This morning, we will install and configure Git, and set it up to work with
+Today, we will install and configure Git, and set it up to work with
 your respective GitHub accounts.
 
 <br />
+
+## Create a Github Enterprise account.
+
+1. Go to https://git.generalassemb.ly and create a new account.
+  - git.generalassemb.ly is where you will manage your homework and work through GA specific exercises.
+  - *We recommend using the same username and email as your Github account.*
+  
+2. Go to https://www.github.com and create a new account (or log into your existing one)
+  - We will use this site for hosting projects and looking at tools available to the open source community.
 
 ## Initial Setup : Homebrew
 
@@ -46,13 +55,6 @@ git config --global core.ignorecase false
 git config --global mergetool.vscode.cmd "code --wait $MERGED"
 ```
 
-## Create a Github Enterprise account.
-
-1. Go to https://git.generalassemb.ly and create a new account.
-  - git.generalassemb.ly is where you will manage your homework and work through GA specific exercises.
-  
-2. Go to https://www.github.com and create a new account (or log into your existing one)
-  - We will use this site for hosting projects and looking at tools available to the open source community.
 <!--
 2. After creating an account, we need to set up an SSH key for your account.  SSH is a super-secure way to transmit data.  This is going to be tough and highly technical, but just make sure you follow the instructions **EXACTLY** the way that Github suggests.
 
