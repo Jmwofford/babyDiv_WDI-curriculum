@@ -514,7 +514,7 @@ Cloning allows you to get a local copy of a remote repository.
 
 ```bash
 $ cd ~/Desktop/ga
-$ rm -Rf planets
+$ rm -rf planets
 ```
 
 2. Go to your GitHub repo for `planets`
