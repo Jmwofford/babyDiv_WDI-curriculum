@@ -518,7 +518,7 @@ $ rm -Rf planets
 ```
 
 2. Go to your GitHub repo for `planets`
-3. Click the green "Clone or Download" button and copy the URL. Make sure that you use **Clone with SSH** 
+3. Click the green "Clone or Download" button and copy the URL. Make sure that you use **Clone with HTTPS** 
 
 ![clone](../images/clone-or-download.png)
     
@@ -570,12 +570,12 @@ When you clone a repository, unless you have been added as a contributor, you wi
 ### Set your upstream remote to get updates using Git
 
 ```bash
-$ git remote add upstream git@github.com:atl-wdi/wdi-curriculum.git
+$ git remote add upstream https://git.generalassemb.ly/atl-wdi/wdi-curriculum
 ```
 
 Run `git remote -v` again! What's changed?
 
-- We just created an `upstream` link so that you can fetch from changes from the atl-wdi-10 repository.
+- We just created an `upstream` link so that you can fetch from changes from the atl-wdi repository.
 
 <br />
 
@@ -616,9 +616,3 @@ Use the internet and what you have learned today to answer the following questio
 As a developer, you will use Git everyday. The learning curve is steep and all of the principles of version control can be a bit confusing sometimes. This is why we ask students to pull from our class master repository everyday, create github repositories for your homework and to commit hourly during project time.
 
 Don't get frustrated by all of the new commands because we will have plenty of time to practice them during this course.
-
-
-## BREAK
-
-
-If you finish before lunch, finish reading the remaining chapters on git: https://swcarpentry.github.io/git-novice/05-history/
