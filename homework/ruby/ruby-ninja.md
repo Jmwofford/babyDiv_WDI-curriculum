@@ -113,7 +113,7 @@ This method can call on the previous `check_prime?` method.
 Check out Ruby's `Prime` class: http://ruby-doc.org/stdlib-1.9.3/libdoc/prime/rdoc/Prime.html
 
 ## Ninja Warrior Status
-![img](http://img.blogduwebdesign.com/benjamin-sanchez/578/couvRubyNinja.jpg)
+![img](https://img.blogduwebdesign.com/benjamin-sanchez/578/couvRubyNinja.jpg)
 
 ## Submitting Your Work
 
