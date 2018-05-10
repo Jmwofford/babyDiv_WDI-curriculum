@@ -334,10 +334,6 @@ With flexbox, just change the `flex-direction` for smaller screen sizes, make an
 
 ## You Do: [Hyrule Potion Shop](https://git.generalassemb.ly/ga-wdi-exercises/hyrule_potion_shop) (10 minutes / 1:40)
 
-## Break (10 minutes / 1:50)
-
-## You Do (Finish for HW): [Airbnb](https://git.generalassemb.ly/ga-wdi-exercises/css-airbnb) (30 minutes / 2:20)
-
 ## Closing / Questions (5 minutes / 2:25)
 ---
 
