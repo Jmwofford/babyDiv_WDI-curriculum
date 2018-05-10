@@ -6,6 +6,7 @@ http://www.cpp.edu/~jcmcgarvey/513_2016/ASmarterWaytoLearnJavaScript.pdf
 ### Discover Dev Tools
 
 Work through this Traversy Media tutorial on Youtube: https://www.youtube.com/watch?v=x4q86IjJFag
+
 When you are finished, submit answers to these questions on the Grading Tool:
 
   1. Write a 2 sentence description for each of the following DevTools tabs. How would you use each while developing a website?
