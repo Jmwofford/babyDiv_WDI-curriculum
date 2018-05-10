@@ -6,7 +6,7 @@ http://www.cpp.edu/~jcmcgarvey/513_2016/ASmarterWaytoLearnJavaScript.pdf
 ### Discover Dev Tools
 
 Work through this Traversy Media tutorial on Youtube: https://www.youtube.com/watch?v=x4q86IjJFag
-When you are finished, submit answers to these questions on Schoology:
+When you are finished, submit answers to these questions on the Grading Tool:
 
   1. Describe the "Elements" and "Console" tabs of Google dev tools. How would you use each while developing a website?
   2. How can you use Google dev tools to evaluate the responsiveness of your website?
