@@ -163,31 +163,26 @@ The bulk of Bootstrap's customizing power lies in its dozens of components, whic
 As a class, we're going to compile an appendix to the Bootstrap documentation, providing tips and tricks on the implementation of some of Bootstrap's Greatest Hits.
 
 **Group One**
-
+- Alert
 - Popover
 - Scrollspy
-- Affix
 
 **Group Two**
-
 - Jumbotron
-- Well
-- Glyphicon
+- Button & Button Group
+- Collapse
+
 
 **Group Three**
-
 - Badge
 - Progress bar
 - List groups
 
 **Group Four**
-
 - Navbar
 - Dropdowns
-- Panels
 
 **Group Five**
-
 - Carousel
 - Modal
 - Tooltip
