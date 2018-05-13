@@ -53,6 +53,14 @@ for (let i = 0; i < feist.length; i++) {
 }
 console.log('Tell me that you love me more.');
 ```
+Another way:
+
+```
+feist.forEach(element =>{
+    console.log(feist[element]);
+})
+console.log('Tell me that you love me more.');
+``` 
 
 <br />
 
