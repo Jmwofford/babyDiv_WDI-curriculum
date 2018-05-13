@@ -57,6 +57,7 @@ Another way:
 
 ```javascript
 const feist = [1, 2, 3, 4];
+
 feist.forEach(element => {
    console.log(feist[element]);
 })
