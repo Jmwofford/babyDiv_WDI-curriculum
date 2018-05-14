@@ -46,13 +46,23 @@ Iterating through the elements of an array, one at a time, is a very common prac
 We can use a `for` loop to iterate over the elements of an array like this:
 
 ```javascript
-var feist = [1, 2, 3, 4];
+const feist = [1, 2, 3, 4];
 
-for (var i = 0; i < feist.length; i++) {
+for (let i = 0; i < feist.length; i++) {
   console.log(feist[i]);
 }
 console.log('Tell me that you love me more.');
 ```
+Another way:
+
+```javascript
+const feist = [1, 2, 3, 4];
+
+feist.forEach(element => {
+   console.log(feist[element]);
+})
+console.log('Tell me that you love me more.');
+``` 
 
 <br />
 
@@ -61,7 +71,7 @@ console.log('Tell me that you love me more.');
 A `for` loop starts with the `for` keyword, and takes three arguments- the ititialization, the condition, and the increment:
 
 1. **initialExpression**:
-  `var i = 0;` 
+  `let i = 0;` 
     - A loop traditionally starts at zero. 
     - The `i` is the **counter**, a way to keep track of how many times we have looped, as well as how we keep track of where we are in the array. This value corresponds with an index in the array, and should not be higher than the last index of the array (`length - 1`).
 2. **condition**:
@@ -89,7 +99,7 @@ For each iteration through the loop (as long as the condition is true), the loop
 var favoriteMovies = ['The Five Obstructions', 'The Triplets of Belleville', 'About Time', 'Two Weeks Notice'];
 
 console.log('My favorite movies are: ');
-for (var i = 0; i < favoriteMovies.length; i++) {
+for (let i = 0; i < favoriteMovies.length; i++) {
   console.log([i + 1] + ". " + favoriteMovies[i]);
 }
 ```
@@ -111,7 +121,7 @@ We have explored how and why we would need to iterate through an array- to acces
 
 Let's think back for a second. What are the differences between arrays and objects?  Arrays are ordered lists.  Objects are unordered.  You can access the values within objects, via their keys.
 
-Knowing this, what is the difficult when iterating over an object?
+Knowing this, what is the difficulty when iterating over an object?
 
 Because objects are unordered, it makes them more tricky to loop through. Arrays are ordered, and we can therefore use the counter as a placeholder for the index.
 
@@ -120,7 +130,7 @@ We have two different ways of looping through an object.
 The first is `for ... in`, which we discussed earlier.
 
 ```javascript
-var instructors = { instructorOne: 'Danny', instructorTwo: 'Maren' };
+const instructors = { instructorOne: 'Danny', instructorTwo: 'Jamie' };
 
 for (instructor in instructors) {
   console.log(instructor);
@@ -133,9 +143,9 @@ We only see the keys returned, right?  So, can you think of a way to access the 
 
 ```javascript
 
-var instructors = { instructorOne: 'Danny', instructorTwo: 'Maren' };
+const instructors = { instructorOne: 'Danny', instructorTwo: 'Jamie' };
 
-for (var instructor in instructors) {
+for (let instructor in instructors) {
   console.log(instructor[instructor]);
 }
 ```
@@ -154,7 +164,7 @@ while (true) {
   // If the expression is always true, it will create an infinite loop! Be careful!
 }
 
-var i = 2;
+let i = 2;
 while (i >= 0) {
   console.log(i);
   i--;
@@ -165,7 +175,7 @@ A `do-while` loop makes sure that the code block is executed at least once, beca
 
 ```javascript
 // do-while syntax
-var j = 0;
+let j = 0;
 do {
   console.log(j);
   j++;
