@@ -59,7 +59,7 @@ Another way:
 const feist = [1, 2, 3, 4];
 
 feist.forEach(element => {
-   console.log(feist[element]);
+   console.log(element);
 })
 console.log('Tell me that you love me more.');
 ``` 
