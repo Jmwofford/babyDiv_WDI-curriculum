@@ -335,6 +335,9 @@ In WDI, we're trying to get that MVP during project week as soon as possible. So
 
 When we start to write user stories, break these user stories in these three categories.
 
+## WDIs choice for User Stories: [Trello](https://trello.com/)
+- [Trello Example](https://trello.com/b/IG0f60Oo/wdi-project-1)
+
 ## You Do: User Stories For Your Project (15 minutes / 1:45)
 
 > 15 minutes exercise.
@@ -358,8 +361,55 @@ Finally, see if you can halve your MVP feature-set for a third time.
 A wireframe is a blueprint/sketch/visual outline of the components of your website. Though there are some great digital wireframing tools out there, all you really need to make a wireframe for your personal use is pen and paper.
 
 - Curious to learn more about wireframes? Ask a UXDI student!
+
 - Checkout [this tutorial](http://webdesign.tutsplus.com/articles/a-beginners-guide-to-wireframing--webdesign-7399) on wireframing
-- Also checkout [these resources](http://mashable.com/2010/07/15/wireframing-tools/#y96DOFsQZgqb) if you want a free tool for wireframing if you don't like paper and pen.
+
+### WDIs choice of Wireframing Software: Pen & Paper or [Figma](https://www.figma.com/)
+
+## How to Start a Project
+
+### The Discovery Process: 
+
+Don’t get caught up in design, features, ux. Make sure you understand the project. Do research and make sure you know what you are building
+
+	- Who is the owner?
+	- What is important to the owner?
+	- Who is the audience?
+	- What is important to the audience?
+
+### Features:
+
+	- Not yet wire framing
+	- High level what are the features we need in order to satisfy the owner and audience
+	- This is where you start writing your user stories
+
+### Wireframes:
+
+	- High level structure and layout of your site.
+	- Keep mobile responsiveness in mind
+	- Build out high level views of all screens
+	- Make notes of all interactions on the page
+	- Best to do this on Pen and Paper/Sketch/Figma
+	- Give direction of the experience of that page
+	- This process will guide you into further understanding your product
+
+Wireframe Examples:
+
+[Complete Wireframes with Notes on Interactivity](https://dribbble.com/shots/2361675-Coolest-The-concept/attachments/452786)
+
+> You do not have to be THIS detailed with your wireframes.  This isn't UXDI
+
+[Same App, Different. Wireframes](https://www.behance.net/gallery/16401713/UX-Design-Wireframing-Prototyping
+)
+
+> Wireframes can go through many iterations before you finalize it.  For this class, use wireframes to focus in on your desired layout
+
+### Visual Design (more design heavy, you may skip over this if you want):
+
+	- Take the wireframes and ideas that you have been working through and iterate through them and polish the wireframes into something closer to what you want to build in real life.
+	- This is generally where images, fonts, and other assets become more finalized.
+	- Typically done by the designer
+
 
 ## Scheduling
 
