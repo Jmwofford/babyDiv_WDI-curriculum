@@ -26,9 +26,6 @@ Then on your github profile, go to the link for the data modeling repo and copy 
 
 #### On Schoology
 
-On the Schoology assignment, include:
+On the GA-Grader, include:
 
 -   A link that points back to your fork/github repo.
-
--   A 'comfort' score on how you feel about the material, from 1 (very
-    uncomfortable) to 5 (very comfortable)

@@ -135,7 +135,7 @@ newestVacations.length; // 11
 ```
 **Remember**: the length of the array is one more than the highest **index**.
 
-**EXERCISE**: Take the next 2 minutes to create an array of the four items that define you and save them to the variable `myLife`.  When you are done, add your array to slack. (make sure to end your line with a semi-colon!)
+**EXERCISE**: Take the next 2 minutes to create an array of the four items that define you and save them to the variable `myLife`.  When you are done, add your array to slack.
 
 ### Getting data from an array
 
