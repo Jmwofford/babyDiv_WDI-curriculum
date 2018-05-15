@@ -1,60 +1,60 @@
 // Question 1
-function maxOfTwoNumbers() {
+function maxOfTwoNumbers () {
 
 }
 
 // Question 2
-function maxOfThree() {
+function maxOfThree () {
 
 }
 
 // Question 3
-function isCharacterAVowel() {
+function isCharacterAVowel () {
 
 }
 
 // Question 4
-function sumArray() {
- 
+function sumArray () {
+
 }
 
 
 // Question 4
-function multiplyArray() {
+function multiplyArray () {
 
 }
 
 
 // Question 5
-var numberOfArguments = function(){
-  
+let numberOfArguments = function () {
+
 }
 
 
 
 // Question 6
-var reverseString = function (){
-  
-};
+let reverseString = function () {
+
+}
 
 
 // Question 7
 function findLongestWord () {
-  
+
 }
 
 
 // Question 8
 function filterLongWords () {
-  
+
 }
 
 
 // Bonus 1
-//??????
+// ??????
 
 
 // Bonus 2
-function charactersOccurencesCount() {
-  
+function charactersOccurencesCount () {
+
 }
