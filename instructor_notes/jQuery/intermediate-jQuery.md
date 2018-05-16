@@ -125,6 +125,11 @@ $(document).ready(function() {
 $(function(){
     alert("Everything is ready, let's do this");
 });
+
+//or, even shorter
+$(() => {
+    alert("Everything is ready, let's do this");
+});
 ```
 
 We're all set to get started. In VS Code, right-click anywhere on `index.html` in the editor and select `Open in Browser`.
