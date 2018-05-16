@@ -165,7 +165,7 @@ const jqObject = $('p'); // This is functionally identical to the version above 
 ```
 
 **Exercise:** (5m) 
-Do the first two prompts in [student_starter](https://git.generalassemb.ly/atl-wdi/wdi-curriculum/tree/master/instructor_notes/jQuery/in-class-exercises)
+Do the first two prompts in [student_starter](https://git.generalassemb.ly/atl-wdi/wdi-curriculum/tree/master/instructor_notes/jQuery/in-class_exercises)
 
 #### Selecting a DOM element and changing it's content
 
