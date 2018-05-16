@@ -177,7 +177,7 @@ In this HTML:
 ```
 
 ```JavaScript
-var divToManipulate = document.getElementById('myDiv');
+const divToManipulate = document.getElementById('myDiv');
 divToManipulate.innerHTML = "Goodbye world!";
 ```
 
