@@ -98,7 +98,7 @@ Four things to keep in mind:
 1. jQuery always starts with a `$` this might seem weird, but it's really just a variable. jQuery is essentially a giant object with a ton of methods and at the beginning it says:
 
     ```javascript
-    var $ = jQuery = {
+    const $ = jQuery = {
         // all of the jquery sourcecode!
     }
     ```
@@ -117,7 +117,7 @@ Four things to keep in mind:
 4. Final thing to keep in mind is that when we create variables that hold jQuery objects we always preface the variable with a `$`
 
 ```
-var $everyH1 = $('h1'); // query for all <h1> tags
+const $everyH1 = $('h1'); // query for all <h1> tags
 I
 $everyH1
 
@@ -157,10 +157,10 @@ If you use variable assignment when doing a selection, a "jQuery" object is retu
 ```
 
 // We prepend '$' to variable names when a variable is going to be a jQuery object to help us remember what that variable is for.
-var $jqObject = $('p'); // Returns a jQuery object containing all <p> tags on your web page.
+const $jqObject = $('p'); // Returns a jQuery object containing all <p> tags on your web page.
 
 // However, we don't have to prepend '$' to our variables. It's just so we can remember what a variable is being used for.
-var jqObject = $('p'); // This is functionally identical to the version above that includes the '$' in front of jqObject.
+const jqObject = $('p'); // This is functionally identical to the version above that includes the '$' in front of jqObject.
 
 ```
 
@@ -192,7 +192,7 @@ If we wanted to **save our selection as a jQuery object**, the code would look l
 - First we select the element we want and save it as a jQuery object
 
 ```javascript
-var $myDiv = $('#myDiv');
+const $myDiv = $('#myDiv');
 ```
 
 - Then we use our jQuery object to perform our task
@@ -223,8 +223,8 @@ If we had the following HTML page...
   If we want to add a new DIV that provides a nice greeting, our vanilla JavaScript would have to be:
 
 ```
-    var myDiv = document.getElementById('container');
-    var newP = document.createElement('p');
+    const myDiv = document.getElementById('container');
+    const newP = document.createElement('p');
 
     newP.innerHTML = "Hello complicated, multi-step world of adding an element to the DOM!";
     myDiv.appendChild(newP);
@@ -270,14 +270,14 @@ But that seems kind of boring. I mean, what if we want to do something with less
 [Here's a repeat of the last example](http://jsbin.com/wevoti/1/edit?htm,output) that sets the text in all elements of class="myClass" to a random color. Try to understand how it works before moving on:
 
 ```
-var randColorValue = function() {
+const randColorValue = function() {
     return Math.floor( Math.random() * 255 );
 }
 
-var randColor = function() {
-    var red = randColorValue();
-    var green = randColorValue();
-    var blue = randColorValue();
+const randColor = function() {
+    const red = randColorValue();
+    const green = randColorValue();
+    const blue = randColorValue();
 
     return "rgb(" + red + "," + green + "," + blue + ")";
 
