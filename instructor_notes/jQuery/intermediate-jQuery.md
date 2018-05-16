@@ -162,7 +162,7 @@ jQuery makes creating new elements easy. Lets add an anchor tag (link) to our pa
 The jQuery function isn't just for selecting elements - it can create them! Just give it a string holding the HTML:
 
 ```js
-var newLink = $( '<br><br><a id="zillowLink" href="http://www.zillow.com">Visit Zillow.com<a>' );
+const newLink = $( '<br><br><a id="zillowLink" href="http://www.zillow.com">Visit Zillow.com<a>' );
 ```
 
 #### Adding the Element to the DOM
@@ -306,7 +306,7 @@ We can use the `children()` method to select direct children (vs. all descendant
 For example, if we wanted to set the color of the text of our _Address_ and _Price_ cells in table header row blue and green respectively, we could do this:
 
 ```js
-var cells = $('#homes thead tr').children();
+const cells = $('#homes thead tr').children();
 cells.eq(0).css('color', 'blue');
 cells.eq(4).css('color', 'green');
 ```
@@ -320,7 +320,7 @@ Now for what would appear to be our biggest challenge. However, you've already s
 First, copy this array of new home data to your script:
 
 ```js
-var newHomes = [
+const newHomes = [
     {address: "27569 Cedarwood Drive", sf: "2,535", bedrooms: 3, baths: 2.5, price: "$496,500"},
     {address: "316 Annandale Drive", sf: "1,326", bedrooms: 4, baths: 2, price: "$275,000"},
     {address: "251 Grandview Road", sf: "3,800", bedrooms: 3, baths: 2, price: "$699,900"},
