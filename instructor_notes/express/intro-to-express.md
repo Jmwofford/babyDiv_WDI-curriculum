@@ -125,7 +125,7 @@ We could have also entered express manually- to the dependencies list in our pac
 
 <br />
 
-### STEP 3 - Create an `server.js`
+### STEP 3 - Create a `server.js`
 
 2. Let's make a new file `$ touch server.js` and add the following contents:
 
