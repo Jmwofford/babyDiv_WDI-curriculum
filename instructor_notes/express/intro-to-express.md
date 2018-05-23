@@ -71,7 +71,7 @@ I **HIGHLY** recommend that you pay attention, write the commands down, and refe
 In the terminal:
 
 ```bash
-$ cd ~/Desktop/ga/class-exercises
+$ cd ~/ga/wdi/in-class
 $ mkdir hello-express
 $ cd hello-express
 $ npm init
@@ -105,10 +105,15 @@ $ code .
 1. Let's install the express node module using `npm`. In the terminal type:
 
 ```bash
-$ npm install --save express
+$ npm install express
+```
+or
+
+```bash
+$ npm i express
 ```
 
-The `--save` flag is very important as it allows us to update the `package.json` to include the dependency that you just installed. In the terminal, run `$ cat package.json` to observe these changes. We could have also entered express manually- to the dependencies list in our package.json file.  If we added Express this way, we would need to run `npm install` afterwards in order to install the package. 
+We could have also entered express manually- to the dependencies list in our package.json file.  If we added Express this way, we would need to run `npm install` afterward in order to install the package. 
     
  **SIDE NOTE** As we saw during `npm init`, the default file for a node app is `index.js`.  If your package.json still uses this as the default, you should update it to `server.js`.
 
@@ -125,15 +130,15 @@ The `--save` flag is very important as it allows us to update the `package.json`
 2. Let's make a new file `$ touch server.js` and add the following contents:
 
 ```javascript
-var express = require('express'); // Loading the express module on our server
-var app = express(); // Creates a new instance of express on our server
+const express = require('express'); // Loading the express module on our server
+const app = express(); // Creates a new instance of express on our server
 
 
 app.get('/', function(req, res) { 
   // when a request comes in at localhost:3000, it will respond 
 });
 
-var port = process.env.PORT || 3000; // tells the server where to listen for requests
+const port = process.env.PORT || 3000; // tells the server where to listen for requests
 
 app.listen(port, function() {
   // tells the server where to listen for requests on port 3000
@@ -151,7 +156,7 @@ app.listen(port, function() {
 `require()` is a JS keyword with which we are going to become very, _very_ familiar. It is a Node.js feature that loads modules. We are "requiring" the Express module and saving all of that code to the variable `express` on line one. 
 
 
-#### `var app = express()`
+#### `const app = express()`
 
 Requiring Express isn't quite enough. We have required and assigned all of Express's code to the `express` variable, but Express is an application that needs to be invoked. 
 
