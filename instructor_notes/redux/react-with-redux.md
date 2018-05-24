@@ -91,18 +91,22 @@ npm i redux react-redux
 2. **Add New Files and Directories**: In order to handle the addition of *stores*, *reducers*, and *action creators*, we need to create a few new files and directories. Add the following folders and directories to the project.
   - in `src`, add 2 directories called `actions` and `reducers`
   - Within `reducers`, add a file called `index.js`
-  - Within `actions`, add a file called `todo.actions.js`
+  - Within `actions`, add a file called `todoActions.js`
   - In the `src` add a file called `configureStore.js`
 
 3. **Add the Provider Component**:  Now that we have our files and directories sorted, let's start integrating `redux` and `react-redux` into our application.  The starting point for this integration is the `Provider` component that is built into `react-redux`.  This component gets wrapped around your entire application and takes a single prop called `store`.  This does most of the work linking React and Redux together. We'll create this store in just a moment. Add the `Provider` in the `index.js` file. Let's also import our `configureStore` file which will handle the set up of our Redux store. (We'll do this in the next step)
 
 ```js
+// ./src/index.js
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './components/App'
 import { Provider } from 'react-redux'
 import registerServiceWorker from './registerServiceWorker'
+import configureStore from './configureStore'
 
+const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
@@ -111,6 +115,7 @@ ReactDOM.render(
   , document.getElementById('root'))
 
 registerServiceWorker()
+
 ```
 
 4. **Set Up The Redux Store**: The function we created earlier called `configureStore` is going to hold the logic that connects our store to our reducers and any additional middleware (more on that tomorrow)
@@ -120,11 +125,12 @@ For now, the only middleware we want to add is the Redux Devtools Extension.  If
 Additionally, we will import the reducers we will make soon.  Notice here that our import path is only `./reducers` instead of `./reducers/index`.  This is just a small shortcut that you can take with JavaScript.  If no file name is given, JavaScript will just use the file within the directory called `index`
 
 ```js
+// ./src/configureStore.js
 
 import { createStore } from 'redux'
 import reducer from './reducers'
 
-function configureStore () {
+function configureStore() {
   const store = createStore(
     reducer,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
@@ -139,8 +145,10 @@ export default configureStore
 5. **Building The Index Reducer**: Considering that our application may scale up to be really really large, it's easy to imagine that we will eventually have an **enormous** state object and a reducer with dozens or even hundreds of cases for updating our state.  This does not sound very pleasant, so Redux provides a great method called `combineReducers` that will allow us to write a lot of smaller, more specific reducers that get combined for you when the page loads.  Our `./reducers/index.js` file will hold that method and connect all the various reducers we will build over the lifespan or our application.  For now, we can just add create a file called `todosReducer.js` and bring it into our index.
 
 ```js
+// ./src/reducers/index.js
+
 import { combineReducers } from 'redux'
-import todos from './todosReducer'
+import todos from './todoReducer'
 
 // Combine all our reducers together
 const rootReducer = combineReducers({
@@ -148,11 +156,14 @@ const rootReducer = combineReducers({
 })
 
 export default rootReducer
+
 ```
 
 6. **Creating The Todo Reducer**: This is the file that will actually contain the reducers that we saw earlier in class.  Here we will set our default argument to the list of todos in the Todos component, and only provide the default action for our switch statement for now.
 
 ```js
+// ./src/reducers/todoReducer.js
+
 const defaultState = [
   {
     id: 0,
@@ -179,6 +190,7 @@ function todos (state = defaultState, action) {
 }
 
 export default todos
+
 ```
 
 **CHECKPOINT** We have now completed the boiler plate for our Redux app. It was a lot of set up, but now we can leverage the full power of Redux!!
@@ -188,6 +200,8 @@ From here we can open up the Redux Dev tools and see our state object.  Our next
 7. **Connect Redux Todos to React App**: Let's use our Redux store to replace the local state within `Todos` with the global state that we've placed within our todo reducer. In order to do this, we will need to bring in another method from the `react-redux` library called `connect`.  `connect` is a method that you wrap around your entire component as well as two additional functions that dictate what parts of your Redux state and actions you want to add to the component.  These functions are commonly known as `mapStateToProps` and `mapDispatchToProps`.  For now, we will just connect our Redux state to the component.
 
 ```js
+// ./src/components/Todos.js
+
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
@@ -212,6 +226,7 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(Todos)
+
 ```
 
 8. **Create an Add Todo Action**: So far we are only have a static global state, which is impossible to update.  In order to update it, we will need to do a few things.  Our first step for adding updates is to build an action creator that will dispatch a new todo. Remember that actions are require a `type` in order for reducers to pick up any pending changes.
@@ -220,6 +235,7 @@ Notice you will need to install a new library called uuid. This will generate a 
 
 ```js
 // ./actions/todoActions
+
 import uuid from 'uuid'
 
 export function addTodo (task) {
@@ -238,13 +254,20 @@ export function addTodo (task) {
 9. **Add A Case for the Action in the TodoReducer**: The next step is to add a case for 'ADD_TODO' in the todosReducer.  Within the case we need to make sure we return a new state that includes the newest todo coming from our action.
 
 ```js
+// ./src/reducers/todoReducer.js
+
+...
     case 'ADD_TODO':
       return [ ...state, action.todo ]
+...
+
 ```
 
 10. **Connect Action to TodoForm**: Finally, let's add our new action to the `TodoForm` component.  Here, we will be using the `connect` method to apply `mapDispatchToProps`.
 
 ```js
+// ./src/components/TodoForm.js
+
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addTodo } from '../actions/todoActions'
@@ -290,28 +313,45 @@ export default connect(null, { addTodo })(TodoForm)
 Now we can easily add more functionality to our application through utilizing actions and the reducer.  Let's try to add the ability to click a todo to mark it complete or incomplete.  Even though this simple interaction now requires editing 3 files, we gain the benefit of easily testable code and prevent our individual components from becoming really complicated.  Let's start by building the action we want to dispatch.
 
 ```js
+// ./src/actions/todoActions.js
+
+...
 export function toggleTodo (id) {
   return {
     type: 'TOGGLE_TODO',
     id
   }
 }
+
 ```
 
 Next up, let's attach the action to the onClick for a ToDo
 
 ```js
+// ./src/components/Todos.js
+
+import { toggleTodo } from '../actions/todoActions'
+
+...
+
   <li
     key={todo.id}
-    onClick={() => props.toggleTodo(todo.id)} //Why do we wrap this in an arrow function?
+    onClick={() => this.props.toggleTodo(todo.id)} //Why do we wrap this in an arrow function?
   >
     {todo.task}: {todo.completed.toString()}
   </li>
+
+...
+
+export default connect(mapStateToProps, { toggleTodo })(Todos)
+
 ```
 
 Finally, we add a case to our reducer to handle the action being dispatched. In this scenario, we need to clone our state object, then map through the array and change the todo that has the same id as what is given via the action.
 
 ```js
+// ./src/reducers/todoReducer.js
+
 ...
   case 'TOGGLE_TODO':
     const newState = state.map(todo => {
@@ -322,6 +362,7 @@ Finally, we add a case to our reducer to handle the action being dispatched. In 
     })
     return newState
 ...
+
 ```
 
 Voila! That wasn't too bad, right? This process becomes especially easy as you learn more keyboard shortcuts to hop between files.
