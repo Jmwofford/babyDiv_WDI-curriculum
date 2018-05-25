@@ -1,6 +1,5 @@
 # Node Tutorials
 
-* Code School- https://www.codeschool.com/courses/real-time-web-with-node-js
 * Node.js in a week- https://ilovecoding.org/courses/learn-node-js-in-a-week
 * Node School- https://nodeschool.io/
 * Node Tuts- http://nodetuts.com/
