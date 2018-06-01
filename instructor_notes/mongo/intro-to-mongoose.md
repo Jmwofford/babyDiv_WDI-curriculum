@@ -387,7 +387,7 @@ Run `node db/schema.js` in the Terminal to run it. We can also consolidate this 
 // in the db/schema.js
 
 StudentModel.create({ name: 'Frankie Q.', age: 31 })
-  .then((student) {
+  .then((student) => {
     console.log(student);
   })
   .catch((error) => {
