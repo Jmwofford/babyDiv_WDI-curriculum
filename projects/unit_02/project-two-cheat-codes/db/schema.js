@@ -1,11 +1,11 @@
 let mongoose = require('mongoose')
-var Schema = mongoose.Schema
+let Schema = mongoose.Schema
 
-var ItemSchema = new Schema({
+let ItemSchema = new Schema({
   name: String
 })
 
-var UserSchema = new Schema({
+let UserSchema = new Schema({
   first_name: String,
   email: { type: String, required: true, unique: true },
   created_at: Date,
@@ -23,8 +23,8 @@ UserSchema.pre('save', function (next) {
 })
 
 
-var UserModel = mongoose.model('User', UserSchema)
-var ItemModel = mongoose.model('Item', ItemSchema)
+let UserModel = mongoose.model('User', UserSchema)
+let ItemModel = mongoose.model('Item', ItemSchema)
 
 module.exports = {
   User: UserModel,
