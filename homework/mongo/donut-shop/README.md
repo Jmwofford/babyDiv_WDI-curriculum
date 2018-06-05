@@ -56,7 +56,8 @@ This is where mongoose comes in. Instead of making sure everything we are puttin
 
 Lets design a donut schema using mongoose and then use it to create and eventually query for those donuts.
 
-1. Inside the `db` directory in `schema`, you will create your schema in this file. Follow the prompts to guide you.
+1. Create a `db` directory. Inside there, create a `schema.js` file.
+2. Inside the `db` directory in `schema`, you will create your schema in this file. Follow the prompts to guide you.
 
 To start your schema:
 
