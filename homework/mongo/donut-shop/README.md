@@ -32,7 +32,6 @@ In this assignment, you will create a full CRUD MEN (Mongo, Express, Node) Donut
 
 - Your `server.js` file has been set up for you. You still have to set up the database and listener at the bottom of the file. Follow the prompts and set up your `server.js` file to connect to your `donut_store` database.
 - Test your database is connected when you run `node server.js` or `nodemon`.
-- Double check in the `mongo` tab to see if the `donut_store` database has been made by typing `show dbs`
 - :dart: Git add, git commit -m "successfully created donut_store database"
 
 
