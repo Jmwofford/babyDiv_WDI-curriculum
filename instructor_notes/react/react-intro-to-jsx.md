@@ -232,12 +232,12 @@ export default Profile;
 
 After wrapping the tags in a div, we should see the first bit of our profile page. Hooray!
 
-#### Building out a Specializations component 
+#### Building out a Specializations component (15 minutes, 1:00)
 Now that we have built out all the info we need for a splash page, let's add some more content to the page.  Next up, we want to build a section of the portfolio page that will show of what technologies we know.  Let's look at the wire-frame of what we want to build.
 
 ![](http://i.imgur.com/oQTKHBh.png)
 
-**WE DO** (5 minutes, 0:50)
+**WE DO** 
 * Create a component called `Specialties.js` and insert it into `App.js`.
 
 * Use JSX to add a `h2` tag that says "I specialize in..."
@@ -262,7 +262,7 @@ Specialty 3
   Description: Node.js is an open-source, cross-platform JavaScript run-time environment for executing JavaScript code server-side. Historically, JavaScript was used primarily for client-side scripting, in which scripts written in JavaScript are embedded in a webpage's HTML, to be run client-side by a JavaScript engine in the user's web browser. Node.js enables JavaScript to be used for server-side scripting, and runs scripts server-side to produce dynamic web page content before the page is sent to the user's web browser. 
 ```
 
-#### DRYing up your code with loops and props (5 minutes, 0:55)
+#### DRYing up your code with loops and props (15 minutes, 1:15)
 You may have noticed that we've repeated a lot of JSX within the Specialties component.  This is a bad practice.  The React philosophy is to make your components very small and ideally reusable.  We have 3 component's here that all look pretty similar, so lets extract them into their own smaller component.
 
 Let's create a `Specialization` component that will contain a single specialization.  We will then pass data into this generic component by taking advantage of React's unidirectional data flow.
@@ -271,7 +271,7 @@ Let's create a `Specialization` component that will contain a single specializat
 
 Data flow in React works in one direction to make the logic of your application simpler.  Because of this philosophy, we can only pass data from Parent element to Child element.  We are able to pass this data in JSX by adding attributes to the child elements. This data then is sent to a special object called `this.props`.
 
-### this.props (5 minutes, 1:00)
+### this.props (5 minutes, 1:20)
 
 `this.props` is how we are able to retrieve data that is passed down from Parent to Child element.  `this.props` allows us to write out reusable and dynamic JSX code. We can create multiple of the same element, and have it render different HTML in the DOM based on what elements we pass through the parent component.
 
@@ -309,7 +309,7 @@ Will output
 
 **AGAIN** Props can only be passed down from parent to child element.  You cannot pass props from child to parent component
 
-#### Looping in JSX (5 minutes, 1:05)
+#### Looping in JSX (5 minutes, 1:25)
 This example can still be cleaned up even further. In the `Tacos` example component, we call `Taco` three times.  What if we had 100 favorite tacos? That would be a huge pain to type out by hand.  Thankfully, we can use JavaScript to loop in JSX.  In order to do this, we use the array methods available to us in JavaScript. (i.e. Map, Filter, etc.)  
 
 ```js
@@ -329,12 +329,12 @@ class Tacos extends Component{
 
 **Whats the deal with `key={i}`?**: Whenever we use loops in JSX, we need to make sure that we add a key with a unique id for each looped element.  This is so React is able to keep track of which looped element is which.  
 
-#### We Do: (15 minutes, 1:20)
+#### We Do: (15 minutes, 1:40)
 Try refactoring the `Specializations` component to break up the code into smaller components, and use a `.map` to loop through an array of objects to display your info.
 
 **React Dev Tools** An easy way to keep track of props is through utilizing the React Dev Tools
 
-#### JSX Conditionals (10 minutes, 1:30)
+#### JSX Conditionals (10 minutes, 1:50)
 Since we are creating templates that output HTML within JavaScript, we can easily utilize Javascript's if/else, switch, and ternary statements.  This is a luxury that wasn't available when we were using handlebars, nor is it available in other popular front-end libraries like Angular and Vue. 
 The ability to mix JSX and JavaScript at will makes it fantastic for templating a UI.  Let's combine ternary equations with the JSX syntax.
 
@@ -367,7 +367,7 @@ class Taco extends Component{
 }
 ```
 
-### You Do: (15 minutes, 1:45)
+### You Do: (15 minutes, 2:05)
 Add a `Projects` and `Project` component to your React Portfolio page. 
   * Create an array of objects to represent all of the projects you will be working on during WDI.:
     ```
