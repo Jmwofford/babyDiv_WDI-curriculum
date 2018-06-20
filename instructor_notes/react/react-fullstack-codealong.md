@@ -55,14 +55,13 @@ touch server.js
 In our `app.js` file, we see all the basics that an express server needs to run! However, we are missing a few things that *we* need to get our server running. Notably absent are `dotenv`, `mongoose`, and `bodyParser`.  As our needs grow, we will refactor and build onto the file, but for now lets use the following setup:
 
 ```
-npm i dotenv body-parser mongoose
+npm i dotenv mongoose
 ```
 
 ```js
 require("dotenv").config();
 var express = require('express');
 var path = require('path');
-const bodyParser = require('body-parser');
 var logger = require('morgan');
 
 const mongoose = require('mongoose');
@@ -87,7 +86,6 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.json());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
