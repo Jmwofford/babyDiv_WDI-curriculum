@@ -116,7 +116,7 @@ Your folder structure should now look something like this.
   |- package.json
   |- ...
 |- node_modules
-|- server.js
+|- app.js
 |- package.json
 ...
 ```
@@ -148,8 +148,8 @@ npm i concurrently
 //Inside package.json
 ...
 "scripts": {
-  "start": "node server.js",
-  "dev": "concurrently \"nodemon server.js\" \"cd ./client  && npm start \" ",
+  "start": "node bin/www",
+  "dev": "concurrently \"nodemon bin/www\" \"cd ./client  && npm start \" ",
   "test": "echo \"Error: no test specified\" && exit 1"
 },
 ...
@@ -194,8 +194,8 @@ Let's update the `package.json` to help Heroku understand more about our app.  W
 //Postinstall will install the client packages and build the minified UI in Heroku.
 
   "scripts": {
-    "start": "node server.js",
-    "dev": "concurrently \"nodemon server.js\" \"cd ./client  && npm start \" ",
+    "start": "node bin/www",
+    "dev": "concurrently \"nodemon bin/www\" \"cd ./client  && npm start \" ",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "cd client && npm install && npm run build"
   },
