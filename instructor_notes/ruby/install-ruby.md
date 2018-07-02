@@ -39,10 +39,10 @@ brew install rbenv
 rbenv install -l
 
 # Find the latest one that looks like:
-# 2.4.1
+# 2.5.1
 # that DOES NOT have a -dev or -rc, but a -p is OK
-# At the current time, the latest one is 2.4.1
-rbenv install 2.4.1
+# At the current time, the latest one is 2.5.1
+rbenv install 2.5.1
 # This takes awhile!
 ```
 
