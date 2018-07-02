@@ -61,7 +61,7 @@ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 source ~/.bash_profile
 
 # Use your version here
-rbenv global 2.4.1
+rbenv global 2.5.1
 which ruby
 ```
 
@@ -70,22 +70,22 @@ The end result you should be similar to `/Users/<your user name>/.rbenv/shims/ru
 
 ## Easily switch Ruby versions
 
-Let's install another version of Ruby. Previously we had `2.4.1`. Let's install `2.3.0` for funsies.
+Let's install another version of Ruby. Previously we had `2.5.1`. Let's install `2.4.4` for funsies.
 
 ```bash
 # bash
 
 # This will take a minute
-rbenv install 2.3.0
+rbenv install 2.4.4
 
 # Now we can see what we have available to us
 rbenv versions
 
-# Let's set it to 2.3.0
-rbenv global 2.3.0
+# Let's set it to 2.4.4
+rbenv global 2.4.4
 
 # Print our current Ruby version
-# It should be 2.3.0
+# It should be 2.4.4
 ruby -v
 ```
 
