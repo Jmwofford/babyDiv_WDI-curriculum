@@ -34,9 +34,9 @@
 | 4:45-5:00     | Intro to Homework |
 
 ### Attendance
-- Attendance is taken twice daily at 9:00AM and 2:30PM
+- Attendance is taken twice daily at 9:05AM and 2:05PM
 - No more than 3 total absences
-- 3 tardies (more than 30 minutes late) = 1 absence
+- 3 tardies (more than 5 minutes late) = 1 absence
 - Missing part of the day counts as 1/2 absence.
 - You must inform BOTH instructors if you are anticipating any absences or need to leave early.
 - If a student misses more than 3 total absenses, he/she loses the ability to gain a certificate of completion and eligibility for outcomes

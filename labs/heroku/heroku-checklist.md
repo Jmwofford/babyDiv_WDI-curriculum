@@ -55,7 +55,7 @@
 17. Add these lines to your `app.js` or `server.js` file: 
 
 	```javascript
-	var mongoose = require('mongoose');
+	const mongoose = require('mongoose');
 	mongoose.connect(process.env.MONGODB_URI); 
 	```
 

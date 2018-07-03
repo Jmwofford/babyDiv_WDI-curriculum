@@ -23,9 +23,7 @@ remainder of your time.
 
 Your app must:
 
-* **Have at _least_ 3 models** (more if they make sense) – one representing someone 
-using your application (a user), and two that represent the main functional ideas 
-for your app
+* **Have at _least_ 2 models** (more if they make sense)
 * **Use React as a front-end framework**
 * **Have complete RESTful routes** for at least one of your resources with GET, POST, 
 PUT, and DELETE
@@ -38,6 +36,10 @@ queries!
 * Have **semantically clean HTML and CSS**
 * Have at least **100 lines of CSS** (not including whitespace)
 * **Be deployed online** and accessible to the public via Heroku
+
+#### Potential Bonues (awarded only after all other technical requirements are met)
+* 3rd model
+* External API
 
 ---
 

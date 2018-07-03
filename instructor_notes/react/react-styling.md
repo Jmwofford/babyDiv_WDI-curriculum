@@ -303,6 +303,7 @@ const PulsingDiv = styled.div`
 With the immense popularity of React, many of the large styling frameworks have been ported over to React.
 
 Here are a few of the most common:  
+ * [Semantic UI](https://react.semantic-ui.com/introduction)
  * [Material UI](http://www.material-ui.com/)
  * [React Bootstrap](https://react-bootstrap.github.io/)
  * [React Foundation](https://react.foundation/)

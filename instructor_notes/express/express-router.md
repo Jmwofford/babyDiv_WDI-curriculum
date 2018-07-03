@@ -72,6 +72,7 @@ The **DRY** principle is aimed at reducing repetition within your code.  This ma
 RESTful Routing is a naming convention for all of your routes which mixes HTTP Verbs with path names to create individual routes for each CRUD interaction.  RESTful routes always match 1 of 7 different actions.
 
 ![](https://i.stack.imgur.com/RyM1b.png)
+
 We'll go more in depth with RESTful routing tomorrow.
 
 #### Model View Controller

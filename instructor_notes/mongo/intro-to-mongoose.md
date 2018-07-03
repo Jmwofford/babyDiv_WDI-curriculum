@@ -379,13 +379,15 @@ frankie.save()
   })
 ```
 
+> Wait, what is this `.then` and `.catch` thing all about?  This is called a Promise!  Let's take a few minutes to explore what this is.  https://git.generalassemb.ly/atl-wdi/wdi-curriculum/blob/master/instructor_notes/javaScript/js-promises.md
+
 Run `node db/schema.js` in the Terminal to run it. We can also consolidate this code into a single `.create` method, like so...
 
 ```js
 // in the db/schema.js
 
 StudentModel.create({ name: 'Frankie Q.', age: 31 })
-  .then((student) {
+  .then((student) => {
     console.log(student);
   })
   .catch((error) => {

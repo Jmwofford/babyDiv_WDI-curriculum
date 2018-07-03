@@ -153,6 +153,7 @@ Our outcome will LOOK the same on the client, but we'll change things "under the
 1. Edit the 3 routes so that instead of sending a string with `res.send("Some String Message")`, you are now passing an OBJECT with data using `res.render(.....)`.
 
 <details><summary>Super Hint Example:</summary>
+
 ```javascript
 //app.js
 
@@ -166,6 +167,7 @@ app.get("/test/:someValue", (req, res, next) => {
 <h1>My test message</h1>
 My message is {{message}}, woohoo!
 ```
+
 </details>
 
 
@@ -175,9 +177,11 @@ My message is {{message}}, woohoo!
 3. git add, and git commit with the message "refactored routes and added views"
 
 <details><summary>.. Stuck?</summary>
+
 - Make sure Parts 1-3 are airtight.
 - Refer to the lesson's markdown for syntax and double check your syntax
 - Did you restart your server after making changes?
+
 </details>
 
 

@@ -18,7 +18,7 @@ competencies: Front-end frameworks
 * Share state across multiple React components
 * Use Constructors to manage state and set up default values
 
-## What is "State"?
+## What is "State"? (5 minutes, 0:05)
 
 As we have seen in our exploration so far, most of our job as web developers centers around displaying, storing, and manipulating `data`. This data is rarely "static", and nearly every action a user takes modifies some or all of the `data`. Because of this, the "shape" of our data is constantly changing as our application runs. Another word for the "shape" of our data at a given point in time is `state`.
 
@@ -26,13 +26,13 @@ Until now, we have stored "state" within our HTML `data-attributes` and `ids`. W
 
 React gives us a much simpler way to manage this state, and it allows us to keep all of it inside of our Javascript alone.
 
-## How does React manage state?
+## How does React manage state?(5 minutes, 0:10)
 
 Each Component class that we create in React has a `this.state` variable already set up for us! React, by default, gives us this very simple way of managing our state. If we want to preserve some data within a React component, all we have to do is attach it to the `this.state` object using `dot-notation`.
 
 While storing values in our `state` is really this simple, the complexity of `state-management` comes from sharing this `state` with multiple components. In this lesson, we will explore some common uses for React `state`. We will also practice modifying our `state` and then shared `state` to update multiple components at once.
 
-## How is state different from props?
+## How is state different from props? (10 minutes, 0:20)
 In many ways state and props operate similarly.  Both are plain JS Objects that hold data about your application and both of them trigger a render when they are updated.  However, there are some important differences between the two.
 
 ### Props Are Owned by a Parent Component, State is Owned by the Component
@@ -81,7 +81,7 @@ We'll need a few "views" for our store, and they'll all need to share the same l
 * A Shop view, where customers can see our list of products
 * A Cart view, where customers can add products they would like to purchase
 
-### Set-up
+### Set-up (5 minutes, 0:25)
 
 Let's create the initial structure for our app:
 
@@ -100,7 +100,7 @@ Let's create the initial structure for our app:
 
 * We should now see a default React application loaded in our browser!
 
-### Creating the Home Page
+### Creating the Home Page (20 minutes, 0:50)
 
 * Now that we've set up our basic React application, let's start adding in custom components! First, we'll create a `components` directory and a new `<HomePage />` component:
 
@@ -238,7 +238,7 @@ To add this item to our state, we'll follow best practices and add a `constructo
 
 #### Try it yourself! Update the value of `itemCurrentlyOnSale` to whatever you'd like and watch as React automatically updates the view!
 
-### Modifying State with Buttons
+### Modifying State with Buttons (20 minutes, 1:10)
 
 Now that we've created a variable to hold our sale item, we'll want to give our Admin users a quick way of updating it. We'll ultimately need to build a text-input to edit this value, but let's make our page extra-fancy by `toggling` this text-input on and off using a button.
 
@@ -359,7 +359,7 @@ The use of `setState()` is a best practice and will allow us to avoid many commo
 
 * Let's try it out! When the page refreshes, we can now toggle our input in and out of the page with the click of a button.
 
-### You Do: Updating the Button Value based on State
+### You Do: Updating the Button Value based on State (15 minutes, 1:25)
 
 Now that we are toggling our input field in and out of the page, we probably want to change the button text to reflect our state as well. Pair up and add the following functionality:
 
@@ -367,8 +367,7 @@ Now that we are toggling our input field in and out of the page, we probably wan
 * When `editSaleItem` is true, our button should say "Hide"
 
 <details>
-  <summary><b>SOLUTION</b>
-</summary>
+  <summary><b>SOLUTION</b></summary>
 
 ```javascript
 import React, {Component} from 'react';
@@ -414,7 +413,7 @@ export default HomePage;
 </details>
 ---
 
-## Modifying State with Forms
+## Modifying State with Forms (20 minutes, 1:45)
 
 Now that we are able to toggle our text-input on and off, it's time to update our sale item value.
 
@@ -517,7 +516,7 @@ We want to build both an Admin View and a Store View that show the same exact da
 
 Let's build an Admin view that will allow us to create some Products for our hardware store!
 
-### Creating the Component
+### Creating the Component (10 minutes, 1:55)
 
 * Let's create our new AdminView component:
 
@@ -569,7 +568,7 @@ Let's build an Admin view that will allow us to create some Products for our har
   ...
 ```
 
-### Showing Our Products
+### Showing Our Products (30 minutes, 2:15)
 
 * Now that we've mounted our component, we'll want to add some functionality. The first thing we'll want to see in our AdminView is a list of products. 
 
@@ -681,7 +680,7 @@ This `ProductList` will need access to the same `productList` we passed into our
   export default Product;
 ```
 
-## Adding Some Products
+## Adding Some Products (30 minutes, 2:45)
 
 * Now that we're able to view our product list, it's time to add some new products. As always, to update our existing information we'll need a form. Let's add a new `ProductForm` to our `AdminView`. Just as before, we'll need to use an `onChange()` function to update our Component's state. Let's create a `newProduct` on the state to keep track of the form's changes.
 
@@ -810,13 +809,17 @@ This `...` syntax tells Javascript to make a copy of our `this.state.newProduct`
 
 * Now when we submit, we will see our new product reflected in any and all components that display our `productList`!
 
-## You Do: Deleting Products
+## You Do: Deleting Products (20 minutes, 3:05)
 
 * Add a button to each product in the Admin view that will allow us to delete the product.
 
-## You Do: Create a ShopView Component
+## You Do: Create a ShopView Component (30 minutes, 3:35)
 
 Let's create a ShopView to show our product info in a different way. 
 
 * Create your ShopView component and any necessary components to display the product info without any ability to edit.
 * Remember that Products are able to be deleted now, so we may need to create a different type of product component that does not have this ability.
+
+## You Do: Start On Homework!
+
+[Add a shopping cart to our hardware store](../../../homework/react/hardware-store-shopping-cart.md)

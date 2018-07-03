@@ -43,45 +43,55 @@ Go ahead and create a repo on github called `idea-board`. Make sure to include t
 After creating the repo, go ahead and clone it locally into your class-exercises folder.
 
 ## Express Set Up
-We're going to be building a lean Express app that will focus mainly on retrieving and serving API information. To start, we are only going to install `express`, `dotenv`, `body-parser`, and `mongoose`
+Today, we're going to use the express generator to create everything we need to run our basic express server
 
 ```
-npm init -y
-npm install express dotenv body-parser mongoose
+express --no-view
+npm i
 touch server.js
 ```
 
-## Creating server.js
-In our `server.js` file, we are going to create the most basic server possible.  As our needs grow, we will refactor and build onto the file.
+## Modifying app.js
+In our `app.js` file, we see all the basics that an express server needs to run! However, we are missing a few things that *we* need to get our server running. Notably absent are `dotenv`, `mongoose`, and `bodyParser`.  As our needs grow, we will refactor and build onto the file, but for now lets use the following setup:
+
+```
+npm i dotenv mongoose
+```
 
 ```js
 require("dotenv").config();
-const express = require('express');
-const bodyParser = require('body-parser');
+var express = require('express');
+var path = require('path');
+var logger = require('morgan');
+
 const mongoose = require('mongoose');
-const app = express();
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI); //mongodb://localhost/idea-board
 
 const connection = mongoose.connection;
 connection.on('connected', () => {
-  console.log('Mongoose Connected Successfully');    
-}); 
-
+  console.log('Mongoose Connected Successfully');
+});
 // If the connection throws an error
 connection.on('error', (err) => {
   console.log('Mongoose default connection error: ' + err);
-}); 
+});
 
-app.use(bodyParser.json());
-app.get('/', (req,res) => {
-  res.send('Hello world!')
-})
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log("Magic happening on port " + PORT);
-})
+var app = express();
+
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+
+module.exports = app;
+
 ```
 
 Let's start our app and test that it is working.
@@ -104,7 +114,7 @@ Your folder structure should now look something like this.
   |- package.json
   |- ...
 |- node_modules
-|- server.js
+|- app.js
 |- package.json
 ...
 ```
@@ -130,14 +140,14 @@ In order to run both our server and app at the same time, we are going to use an
 
 ```bash
 # Inside idea-board directory
-npm install concurrently --save
+npm i concurrently
 ```
 ```json
 //Inside package.json
 ...
 "scripts": {
-  "start": "node server.js",
-  "dev": "concurrently \"nodemon server.js\" \"cd ./client  && npm start \" ",
+  "start": "node bin/www",
+  "dev": "concurrently \"nodemon bin/www\" \"cd ./client  && npm start \" ",
   "test": "echo \"Error: no test specified\" && exit 1"
 },
 ...
@@ -182,8 +192,8 @@ Let's update the `package.json` to help Heroku understand more about our app.  W
 //Postinstall will install the client packages and build the minified UI in Heroku.
 
   "scripts": {
-    "start": "node server.js",
-    "dev": "concurrently \"nodemon server.js\" \"cd ./client  && npm start \" ",
+    "start": "node bin/www",
+    "dev": "concurrently \"nodemon bin/www\" \"cd ./client  && npm start \" ",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "cd client && npm install && npm run build"
   },

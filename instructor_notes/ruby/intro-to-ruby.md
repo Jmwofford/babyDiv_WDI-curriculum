@@ -33,15 +33,6 @@ Performing everyday tasks, while intricate and complex, come to you naturally.
 
 > "Ruby is simple in appearance, but is very complex inside, just like our human body." — Yukihiro "Matz" Matsumoto
 
-### You Do: Ruby vs. JavaScript
-Think back to [Learn Ruby The Hard Way](https://git.generalassemb.ly/atl-wdi/wdi-curriculum/tree/master/homework/ruby/ruby-intro/1_Learn_Ruby_the_Hard_Way).
-
-With a partner, discuss and write down the following:
-* 3 differences between JavaScript and Ruby.  
-* 3 similarities between JS and Ruby.
-* Any opinions on Ruby so far?
-
-
 ## Why Use Ruby?
 
 Ruby and JavaScript each have unique features that you may find useful or ineffective.  At the end of the day, you'll find that they share many qualities.

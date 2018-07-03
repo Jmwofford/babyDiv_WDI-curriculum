@@ -32,7 +32,6 @@ In this assignment, you will create a full CRUD MEN (Mongo, Express, Node) Donut
 
 - Your `server.js` file has been set up for you. You still have to set up the database and listener at the bottom of the file. Follow the prompts and set up your `server.js` file to connect to your `donut_store` database.
 - Test your database is connected when you run `node server.js` or `nodemon`.
-- Double check in the `mongo` tab to see if the `donut_store` database has been made by typing `show dbs`
 - :dart: Git add, git commit -m "successfully created donut_store database"
 
 
@@ -57,7 +56,8 @@ This is where mongoose comes in. Instead of making sure everything we are puttin
 
 Lets design a donut schema using mongoose and then use it to create and eventually query for those donuts.
 
-1. Inside the `db` directory in `schema`, you will create your schema in this file. Follow the prompts to guide you.
+1. Create a `db` directory. Inside there, create a `schema.js` file.
+2. Inside the `db` directory in `schema`, you will create your schema in this file. Follow the prompts to guide you.
 
 To start your schema:
 

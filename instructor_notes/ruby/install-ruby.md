@@ -39,10 +39,10 @@ brew install rbenv
 rbenv install -l
 
 # Find the latest one that looks like:
-# 2.4.1
+# 2.5.1
 # that DOES NOT have a -dev or -rc, but a -p is OK
-# At the current time, the latest one is 2.4.1
-rbenv install 2.4.1
+# At the current time, the latest one is 2.5.1
+rbenv install 2.5.1
 # This takes awhile!
 ```
 
@@ -61,7 +61,7 @@ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 source ~/.bash_profile
 
 # Use your version here
-rbenv global 2.4.1
+rbenv global 2.5.1
 which ruby
 ```
 
@@ -70,22 +70,22 @@ The end result you should be similar to `/Users/<your user name>/.rbenv/shims/ru
 
 ## Easily switch Ruby versions
 
-Let's install another version of Ruby. Previously we had `2.4.1`. Let's install `2.3.0` for funsies.
+Let's install another version of Ruby. Previously we had `2.5.1`. Let's install `2.4.4` for funsies.
 
 ```bash
 # bash
 
 # This will take a minute
-rbenv install 2.3.0
+rbenv install 2.4.4
 
 # Now we can see what we have available to us
 rbenv versions
 
-# Let's set it to 2.3.0
-rbenv global 2.3.0
+# Let's set it to 2.4.4
+rbenv global 2.4.4
 
 # Print our current Ruby version
-# It should be 2.3.0
+# It should be 2.4.4
 ruby -v
 ```
 
@@ -99,11 +99,11 @@ Let's make a directory for our random Ruby scripts.
 
 ```bash
 # bash
-cd ~
+cd ~/ga/wdi/exercises
 mkdir ruby_scripts
 cd ruby_scripts
 touch example.rb
-subl example.rb	# or whatever your preferred editor is
+code example.rb
 ```
 
 ```ruby
@@ -117,12 +117,3 @@ ruby example.rb
 ```
 
 Yay!
-
-
-## Weekend Homework
-
-There's an awesome book for getting started with Ruby called [Learn Ruby the Hard Way](https://learnrubythehardway.org/book/).
-
-It's hosted online for free.
-
-This homework will not be graded, however the more you read through the book, the easier this week will be and the more you'll be able to do in your Rails project.
