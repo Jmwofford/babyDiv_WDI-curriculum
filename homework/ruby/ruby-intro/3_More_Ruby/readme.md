@@ -13,7 +13,7 @@
 
 ## Directions
 
-Read the first 3 chapters of POODR [available as a PDF here](https://github.com/edenzik/cs105b/blob/master/books/Practical%20Object-Oriented%20Design%20in%20Ruby.pdf) and answer the questions below.
+Read the first 3 chapters of POODR [available as a PDF here](https://github.com/mattswann/wdi_resources/blob/master/ebooks/Ruby/Practical%20Object-Oriented%20Design%20in%20Ruby%20(POODR).pdf) and answer the questions below.
 
 
 ### Short Answer Questions:
