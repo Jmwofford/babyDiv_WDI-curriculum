@@ -34,7 +34,7 @@ If you're not sure about something, be comfortable searching the `Ruby Docs` and
 2. :dart: Commit -m "2. Nil skills."
 
 ## Challenge 3: Integers
-1.  Create a variable `d` and set it equal to a Fixnum
+1.  Create a variable `d` and set it equal to a Integer
     -  puts the value of `d`  to the terminal
 2.  Create a variable `e` and set it equal to a Float
     -  puts the value of `e`  to the terminal
