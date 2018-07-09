@@ -74,7 +74,7 @@ the case in the real world.)
 - pub_date
 - author_id
 
-![one_to_many](images/one_to_many.png)
+![one_to_many](../images/one_to_many.png)
 
 ## Another Example of Relational Data
 
@@ -162,7 +162,7 @@ In our example, we might create a table called 'categorizations', and it would
 have a `book_id` and `category_id`. Each row would represent a specific book's
 association with a specific category.
 
-![many_to_many](images/many_to_many.png)
+![many_to_many](../images/many_to_many.png)
 
 Here's another look at a many-to-many relationship using the Harry Potter example from earlier.
 
