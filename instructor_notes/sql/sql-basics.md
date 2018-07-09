@@ -107,8 +107,6 @@ While this is a bit technical, it's worth clarifying some terminology...
 
 ## Exploring Postgres (15 minutes / 0:40)
 
-Start by spotlight searching (`command-space`) for Postgres and launching `Postgres.app`. Once you see the elephant in your Mac menu bar, you'll know Postgres is running.
-
 ### psql commands
 
 We'll use `psql` as our primary means of interacting with our databases. Later

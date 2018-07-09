@@ -705,7 +705,7 @@ This method has several components to point out:
 Passing arguments in Ruby works fairly similar to how to does in JS. They get passed as comma separated values after the method name
 
 ```ruby
-def hello(name, salutation, small_talk, punctuation)
+def hello(name, greeting, small_talk, punctuation)
   "#{greeting} #{name}, #{small_talk}#{punctuation}"
 end
 ```
