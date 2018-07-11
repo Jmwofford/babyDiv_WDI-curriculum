@@ -186,6 +186,53 @@ It allows you to work with Ruby objects in Ruby code, while persisting the data 
 
 <br>
 
+## Doing stuff with ActiveRecord
+
+Create a new Rails app.
+```
+rails new active_record_intro -d postgresql
+```
+
+### Creating Tables
+ActiveRecord provides Migrations to allow us to create and edit our database schema. Rails provides us with command line generators to quickly create Migrations for us.
+
+```
+$ rails generate migration CreatePeople name:string age:integer occupation:string
+```
+
+This creates a Migration file that looks like this:
+```ruby
+class CreatePeople < ActiveRecord::Migration[5.0]
+  def change
+    create_table :people do |t|
+      t.string :name
+      t.integer :age
+      t.string :occupation
+    end
+  end
+end
+
+```
+Because we passed in the name `CreatePeople` to the generator, ActiveRecord makes the assumption that this migration is meant to create a table called 'people'.
+
+Migrations essentially describe a change to the database schema. In this example, that change is the creation of a new table called 'people'.
+
+The equivalent SQL might look something like this:
+```
+CREATE TABLE people (
+  id INT SERIAL PRIMARY KEY,
+  name VARCHAR,
+  type INT,
+  occupation VARCHAR
+);
+```
+Notice that the SQL example has a primary key called `id`. ActiveRecord automatically creates a primary key called `id` and makes it serial.
+
+We can run our Migrations by calling:
+```
+$ rake db:migrate
+```
+
 ### Accessing attributes
 Using ActiveRecord in a model is super simple, it just needs to inherit `ActiveRecord::Base`.
 ```ruby
@@ -255,67 +302,6 @@ dude.destroy
 ```
 
 <br>
-
-### Creating Tables
-ActiveRecord provides Migrations to allow us to create and edit our database schema. Rails provides us with command line generators to quickly create Migrations for us.
-
-```
-$ rails generate migration CreatePeople name:string age:integer occupation:string
-```
-
-This creates a Migration file that looks like this:
-```ruby
-class CreatePeople < ActiveRecord::Migration[5.0]
-  def change
-    create_table :people do |t|
-      t.string :name
-      t.integer :age
-      t.string :occupation
-    end
-  end
-end
-
-```
-Because we passed in the name `CreatePeople` to the generator, ActiveRecord makes the assumption that this migration is meant to create a table called 'people'.
-
-Migrations essentially describe a change to the database schema. In this example, that change is the creation of a new table called 'people'.
-
-The equivalent SQL might look something like this:
-```
-CREATE TABLE people (
-  id INT SERIAL PRIMARY KEY,
-  name VARCHAR,
-  type INT,
-  occupation VARCHAR
-);
-```
-Notice that the SQL example has a primary key called `id`. ActiveRecord automatically creates a primary key called `id` and makes it serial.
-
-We can run our Migrations by calling:
-```
-$ rake db:migrate
-```
-
-
-
-## Doing stuff with ActiveRecord (5 mins, 0:35)
-Install Rails.
-```
-gem install rails
-```
-Create a new Rails app.
-```
-rails new active_record_intro
-```
-Create a model.
-```
-rails g model ModelName attribute:type attribute:type...
-```
-Rails' model generator creates a model file and a migration with one command. After running the migration, we can now start creating data to save in our new table.
-
-```ruby
-ModelName.create()
-```
 
 So far we've only seen how to create tables with ActiveRecord, what happens when we need to add or remove columns from an existing table?
 
