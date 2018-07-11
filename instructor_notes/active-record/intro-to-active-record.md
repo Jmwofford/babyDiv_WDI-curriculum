@@ -307,8 +307,20 @@ So far we've only seen how to create tables with ActiveRecord, what happens when
 
 Sometimes you'll need to use raw SQL along with ActiveRecord to get what you want:
 
+You can write partial SQL Queries:
+
 ```ruby
 Author.joins("JOIN books ON books.author_id = author.id")
+```
+
+Or you can write entire queries:
+
+```ruby
+Author.find_by_sql("
+  SELECT * FROM authors
+  INNER JOIN books ON author.id = books.author_id
+  ORDER BY author.created_at desc
+")
 ```
 
 ## Exercise (25 mins, 0:60)
