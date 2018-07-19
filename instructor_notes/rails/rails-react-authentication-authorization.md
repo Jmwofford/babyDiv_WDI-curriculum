@@ -475,7 +475,7 @@ The `index` route on our `PostsController` is using this helper to return only t
 
 Let's make a call to our new API using `axios` and display these `Posts` in a `PostsList` component. We'll also add in a `<Redirect />` to a new `/posts` route when the `User` signs in:
 
-```jsx 
+```jsx
 // ./client/src/App.js
 
 import React, {Component} from 'react'
@@ -572,7 +572,7 @@ class App extends Component {
 export default App
 ```
 
-```jsx 
+```jsx
 // ./client/src/components/PostsList.js
 
 import React from 'react'
